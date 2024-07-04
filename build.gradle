@@ -386,7 +386,7 @@ subprojects { subproj ->
     }
 
     dependencies {
-        if (subproj.name != 'airbyte-commons') {
+        if (subproj.name != 'airbyte-commons' && subproj.name != 'protocol-models') {
             implementation project(':airbyte-commons')
         }
 

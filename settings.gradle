@@ -84,6 +84,7 @@ if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD"
 
 if (!System.getenv().containsKey("SUB_BUILD") || (System.getenv().containsKey("SUB_BUILD") && System.getenv().get("SUB_BUILD") != "CDK")) {
     // shared
+    include ':airbyte-protocol:protocol-models'
     include ':airbyte-commons'
     include ':airbyte-api'
     include ':airbyte-commons-cli'

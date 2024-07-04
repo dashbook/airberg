@@ -10,7 +10,7 @@ dependencies {
     api libs.bundles.micronaut.annotation
 
     implementation project(':airbyte-json-validation')
-    implementation libs.airbyte.protocol
+    implementation project(':airbyte-protocol:protocol-models')
     implementation project(':airbyte-commons')
 }
 

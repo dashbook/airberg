@@ -23,7 +23,7 @@ dependencies {
     implementation project(':airbyte-commons-protocol')
     implementation project(':airbyte-config-oss:config-models-oss')
     implementation project(':airbyte-json-validation')
-    implementation libs.airbyte.protocol
+    implementation project(':airbyte-protocol:protocol-models')
 
     testAnnotationProcessor platform(libs.micronaut.bom)
     testAnnotationProcessor libs.bundles.micronaut.test.annotation.processor

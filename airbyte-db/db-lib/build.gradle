@@ -17,7 +17,7 @@ dependencies {
     api libs.jooq
     api libs.postgresql
 
-    implementation libs.airbyte.protocol
+    implementation project(':airbyte-protocol:protocol-models')
     implementation project(':airbyte-json-validation')
     implementation project(':airbyte-config-oss:config-models-oss')
     implementation libs.flyway.core

@@ -1,19 +1,19 @@
 plugins {
-    id 'application'
-    
-    id 'airbyte-integration-test-java'
+id 'application'
+
+id 'airbyte-integration-test-java'
 }
 
 application {
-    mainClass = 'io.airbyte.integrations.destination.{{snakeCase name}}.{{properCase name}}Destination'
+mainClass = 'io.airbyte.integrations.destination.{{snakeCase name}}.{{properCase name}}Destination'
 }
 
 dependencies {
-    implementation project(':airbyte-config-oss:config-models-oss')
-    implementation libs.airbyte.protocol
-    implementation project(':airbyte-integrations:bases:base-java')
+implementation project(':airbyte-config-oss:config-models-oss')
+implementation project(':airbyte-protocol:protocol-models')
+implementation project(':airbyte-integrations:bases:base-java')
 
 
-    integrationTestJavaImplementation project(':airbyte-integrations:bases:standard-destination-test')
-    integrationTestJavaImplementation project(':airbyte-integrations:connectors:destination-{{dashCase name}}')
+integrationTestJavaImplementation project(':airbyte-integrations:bases:standard-destination-test')
+integrationTestJavaImplementation project(':airbyte-integrations:connectors:destination-{{dashCase name}}')
 }

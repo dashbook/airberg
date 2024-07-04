@@ -15,7 +15,7 @@ dependencies {
     implementation project(':airbyte-integrations:connectors:source-jdbc')
     implementation project(':airbyte-integrations:connectors:source-relational-db')
     implementation project(':airbyte-integrations:connectors:source-clickhouse')
-    implementation libs.airbyte.protocol
+    implementation project(':airbyte-protocol:protocol-models')
 
 
     implementation group: 'com.clickhouse', name: 'clickhouse-jdbc', version: '0.3.2-patch9'

@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     implementation project(':airbyte-config-oss:config-models-oss')
-    implementation libs.airbyte.protocol
+    implementation project(':airbyte-protocol:protocol-models')
     implementation project(':airbyte-integrations:bases:base-java')
 
     implementation project(':airbyte-integrations:bases:bases-destination-jdbc')

@@ -4,10 +4,10 @@ plugins {
 }
 
 dependencies {
-    implementation libs.airbyte.protocol
     implementation project(':airbyte-config-oss:config-models-oss')
     implementation project(':airbyte-commons-cli')
     implementation project(':airbyte-json-validation')
+    implementation project(':airbyte-protocol:protocol-models')
 
     implementation 'commons-cli:commons-cli:1.4'
     implementation 'net.i2p.crypto:eddsa:0.3.0'
