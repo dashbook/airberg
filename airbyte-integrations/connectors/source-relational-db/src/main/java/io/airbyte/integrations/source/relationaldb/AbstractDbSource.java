@@ -679,7 +679,7 @@ public abstract class AbstractDbSource<DataType, Database extends AbstractDataba
    * @return A {@link AirbyteStateType} representing the state supported by this connector.
    */
   protected AirbyteStateType getSupportedStateType(final JsonNode config) {
-    return AirbyteStateType.LEGACY;
+    return AirbyteStateType.STREAM;
   }
 
 }
