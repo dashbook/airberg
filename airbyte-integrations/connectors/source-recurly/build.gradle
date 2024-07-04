@@ -1,5 +1,5 @@
 plugins {
-    id 'airbyte-docker'
+    
     id 'airbyte-python'
     id 'airbyte-connector-acceptance-test'
 }

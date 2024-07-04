@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'airbyte-docker'
+    
     id 'airbyte-integration-test-java'
     id 'airbyte-connector-acceptance-test'
 }
@@ -32,7 +32,7 @@ dependencies {
 
     integrationTestJavaImplementation libs.connectors.testcontainers.tidb
 
-    implementation files(project(':airbyte-integrations:bases:base-java').airbyteDocker.outputs)
-    integrationTestJavaImplementation files(project(':airbyte-integrations:bases:base-java').airbyteDocker.outputs)
+
+
 }
 

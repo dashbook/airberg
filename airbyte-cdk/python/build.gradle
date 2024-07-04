@@ -1,6 +1,6 @@
 plugins {
     id 'airbyte-python'
-    id 'airbyte-docker'
+    
 }
 
 airbytePython {
@@ -10,7 +10,6 @@ airbytePython {
 task generateComponentManifestClassFiles(type: Exec) {
     environment 'ROOT_DIR', rootDir.absolutePath
     commandLine 'bin/generate-component-manifest-files.sh'
-    dependsOn ':tools:code-generator:airbyteDocker'
 }
 
 task validateSourceYamlManifest(type: Exec) {

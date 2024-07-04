@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'airbyte-docker'
+    
     id 'airbyte-integration-test-java'
     id 'airbyte-connector-acceptance-test'
 }
@@ -13,7 +13,7 @@ dependencies {
     implementation project(':airbyte-config-oss:config-models-oss')
     implementation libs.airbyte.protocol
     implementation project(':airbyte-integrations:bases:base-java')
-    implementation files(project(':airbyte-integrations:bases:base-java').airbyteDocker.outputs)
+
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.13.2'
     implementation 'com.jcraft:jsch:0.1.55'
 

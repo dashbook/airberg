@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'airbyte-docker'
+    
     id 'airbyte-integration-test-java'
 }
 
@@ -31,14 +31,9 @@ dependencies {
     integrationTestJavaImplementation project(':airbyte-integrations:connectors:destination-bigquery')
     integrationTestJavaImplementation project(':airbyte-db:db-lib')
 
-    implementation files(project(':airbyte-integrations:bases:base-java').airbyteDocker.outputs)
+
 }
 
-tasks.named("airbyteDocker") {
-    // this is really inefficent (because base-normalization:airbyteDocker builds 9 docker images)
-    // but it's also just simple to implement
-    dependsOn project(':airbyte-integrations:bases:base-normalization').airbyteDocker
-}
 
 configurations.all {
   resolutionStrategy {

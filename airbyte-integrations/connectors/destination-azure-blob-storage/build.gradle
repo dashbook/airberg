@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'airbyte-docker'
+    
     id 'airbyte-integration-test-java'
 }
 
@@ -14,7 +14,7 @@ dependencies {
     implementation libs.airbyte.protocol
     implementation project(':airbyte-integrations:bases:base-java')
     implementation project(':airbyte-integrations:bases:bases-destination-jdbc')
-    implementation files(project(':airbyte-integrations:bases:base-java').airbyteDocker.outputs)
+
 
     implementation 'com.azure:azure-storage-blob:12.20.2'
     implementation 'org.apache.commons:commons-csv:1.4'

@@ -1,6 +1,6 @@
 plugins {
     id 'airbyte-python'
-    id 'airbyte-docker'
+    
     id 'airbyte-connector-acceptance-test'
 }
 
@@ -9,5 +9,5 @@ airbytePython {
 }
 
 dependencies {
-    implementation files(project(':airbyte-integrations:bases:connector-acceptance-test').airbyteDocker.outputs)
+
 }
