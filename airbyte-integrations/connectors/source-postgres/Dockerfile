@@ -1,28 +1,16 @@
-### WARNING ###
-# The Java connector Dockerfiles will soon be deprecated.
-# This Dockerfile is not used to build the connector image we publish to DockerHub.
-# The new logic to build the connector image is declared with Dagger here:
-# https://github.com/airbytehq/airbyte/blob/master/tools/ci_connector_ops/ci_connector_ops/pipelines/actions/environments.py#L649
+FROM gradle:7.6.4-jdk17 AS build
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle --no-daemon :airbyte-integrations:connectors:source-postgres:assemble
+RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-postgres/build/distributions/source-postgres*.tar --strip-components=1 
 
-# If you need to add a custom logic to build your connector image, you can do it by adding a finalize_build.sh or finalize_build.py script in the connector folder.
-# Please reach out to the Connectors Operations team if you have any question.
-FROM airbyte/integration-base-java:dev AS build
+FROM amazoncorretto:17
 
-WORKDIR /airbyte
+RUN mkdir /airbyte
 
-ENV APPLICATION source-postgres
+COPY --from=build /home/gradle/src/lib /airbyte/lib
+COPY --from=build /home/gradle/src/bin /airbyte/bin
 
-COPY build/distributions/${APPLICATION}*.tar ${APPLICATION}.tar
+ENTRYPOINT ["/airbyte/bin/source-postgres"]
 
-RUN tar xf ${APPLICATION}.tar --strip-components=1 && rm -rf ${APPLICATION}.tar
 
-FROM airbyte/integration-base-java:dev
-
-WORKDIR /airbyte
-
-ENV APPLICATION source-postgres
-
-COPY --from=build /airbyte /airbyte
-
-LABEL io.airbyte.version=2.0.34
-LABEL io.airbyte.name=airbyte/source-postgres
