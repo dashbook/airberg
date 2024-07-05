@@ -210,7 +210,25 @@ public class MySqlSourceOperations extends AbstractJdbcCompatibleSourceOperation
   }
 
   @Override
-  public JsonSchemaType getAirbyteType(final MysqlType mysqlType) {
+  public JsonSchemaType getAirbyteType(final MysqlType mysqlType, final Boolean optional) {
+    if (optional) {
+    return switch (mysqlType) {
+      case
+      // TINYINT(1) is boolean, but it should have been converted to MysqlType.BOOLEAN in {@link
+      // getFieldType}
+      TINYINT, TINYINT_UNSIGNED, SMALLINT, SMALLINT_UNSIGNED, INT, MEDIUMINT, MEDIUMINT_UNSIGNED, INT_UNSIGNED, BIGINT, BIGINT_UNSIGNED -> JsonSchemaType.INTEGER_NULL;
+      case FLOAT, FLOAT_UNSIGNED, DOUBLE, DOUBLE_UNSIGNED, DECIMAL, DECIMAL_UNSIGNED -> JsonSchemaType.NUMBER_NULL;
+      case BOOLEAN -> JsonSchemaType.BOOLEAN_NULL;
+      case NULL -> JsonSchemaType.NULL;
+      // BIT(1) is boolean, but it should have been converted to MysqlType.BOOLEAN in {@link getFieldType}
+      case BIT, TINYBLOB, BLOB, MEDIUMBLOB, LONGBLOB, BINARY, VARBINARY, GEOMETRY -> JsonSchemaType.STRING_BASE_64_NULL;
+      case TIME -> JsonSchemaType.STRING_TIME_WITHOUT_TIMEZONE_NULL;
+      case DATETIME -> JsonSchemaType.STRING_TIMESTAMP_WITHOUT_TIMEZONE_NULL;
+      case TIMESTAMP -> JsonSchemaType.STRING_TIMESTAMP_WITH_TIMEZONE_NULL;
+      case DATE -> JsonSchemaType.STRING_DATE_NULL;
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (mysqlType) {
       case
       // TINYINT(1) is boolean, but it should have been converted to MysqlType.BOOLEAN in {@link
@@ -227,6 +245,7 @@ public class MySqlSourceOperations extends AbstractJdbcCompatibleSourceOperation
       case DATE -> JsonSchemaType.STRING_DATE;
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
   @Override

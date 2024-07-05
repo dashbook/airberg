@@ -116,7 +116,18 @@ public class BigQuerySourceOperations implements SourceOperations<BigQueryResult
   }
 
   @Override
-  public JsonSchemaType getAirbyteType(final StandardSQLTypeName bigQueryType) {
+  public JsonSchemaType getAirbyteType(final StandardSQLTypeName bigQueryType, final Boolean optional) {
+    if (optional) {
+    return switch (bigQueryType) {
+      case BOOL -> JsonSchemaType.BOOLEAN_NULL;
+      case INT64 -> JsonSchemaType.INTEGER_NULL;
+      case FLOAT64, NUMERIC, BIGNUMERIC -> JsonSchemaType.NUMBER_NULL;
+      case STRING, BYTES, TIMESTAMP, DATE, TIME, DATETIME -> JsonSchemaType.STRING_NULL;
+      case ARRAY -> JsonSchemaType.ARRAY_NULL;
+      case STRUCT -> JsonSchemaType.OBJECT_NULL;
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (bigQueryType) {
       case BOOL -> JsonSchemaType.BOOLEAN;
       case INT64 -> JsonSchemaType.INTEGER;
@@ -126,6 +137,7 @@ public class BigQuerySourceOperations implements SourceOperations<BigQueryResult
       case STRUCT -> JsonSchemaType.OBJECT;
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
   private String getFormattedValue(final StandardSQLTypeName paramType, final String paramValue) {

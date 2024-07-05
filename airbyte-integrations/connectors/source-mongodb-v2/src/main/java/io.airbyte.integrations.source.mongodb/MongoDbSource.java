@@ -93,8 +93,8 @@ public class MongoDbSource extends AbstractDbSource<BsonType, MongoDatabase> {
   }
 
   @Override
-  protected JsonSchemaType getAirbyteType(final BsonType fieldType) {
-    return MongoUtils.getType(fieldType);
+  protected JsonSchemaType getAirbyteType(final BsonType fieldType, final Boolean optional) {
+    return MongoUtils.getType(fieldType, optional);
   }
 
   @Override

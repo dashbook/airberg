@@ -99,8 +99,8 @@ public class BigQuerySource extends AbstractDbSource<StandardSQLTypeName, BigQue
   }
 
   @Override
-  protected JsonSchemaType getAirbyteType(final StandardSQLTypeName columnType) {
-    return sourceOperations.getAirbyteType(columnType);
+  protected JsonSchemaType getAirbyteType(final StandardSQLTypeName columnType, final Boolean optional) {
+    return sourceOperations.getAirbyteType(columnType, optional);
   }
 
   @Override

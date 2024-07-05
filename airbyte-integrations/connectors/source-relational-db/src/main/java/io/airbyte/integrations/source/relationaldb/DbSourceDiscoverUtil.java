@@ -24,7 +24,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,7 +46,7 @@ public class DbSourceDiscoverUtil {
    */
   public static <DataType> void logSourceSchemaChange(final Map<String, TableInfo<CommonField<DataType>>> fullyQualifiedTableNameToInfo,
                                                       final ConfiguredAirbyteCatalog catalog,
-                                                      final Function<DataType, JsonSchemaType> airbyteTypeConverter) {
+                                                      final BiFunction<DataType, Boolean, JsonSchemaType> airbyteTypeConverter) {
     for (final ConfiguredAirbyteStream airbyteStream : catalog.getStreams()) {
       final AirbyteStream stream = airbyteStream.getStream();
       final String fullyQualifiedTableName = DbSourceDiscoverUtil.getFullyQualifiedTableName(stream.getNamespace(),
@@ -91,7 +91,7 @@ public class DbSourceDiscoverUtil {
 
   public static <DataType> AirbyteCatalog convertTableInfosToAirbyteCatalog(final List<TableInfo<CommonField<DataType>>> tableInfos,
                                                                             final Map<String, List<String>> fullyQualifiedTableNameToPrimaryKeys,
-                                                                            final Function<DataType, JsonSchemaType> airbyteTypeConverter) {
+                                                                            final BiFunction<DataType, Boolean, JsonSchemaType> airbyteTypeConverter) {
     final List<TableInfo<Field>> tableInfoFieldList = tableInfos.stream()
         .map(t -> {
           // some databases return multiple copies of the same record for a column (e.g. redshift) because
@@ -139,13 +139,13 @@ public class DbSourceDiscoverUtil {
     return nameSpace != null ? nameSpace + "." + tableName : tableName;
   }
 
-  private static <DataType> Field toField(final CommonField<DataType> commonField, final Function<DataType, JsonSchemaType> airbyteTypeConverter) {
-    if (airbyteTypeConverter.apply(commonField.getType()) == JsonSchemaType.OBJECT && commonField.getProperties() != null
+  private static <DataType> Field toField(final CommonField<DataType> commonField, final BiFunction<DataType, Boolean, JsonSchemaType> airbyteTypeConverter) {
+    if (airbyteTypeConverter.apply(commonField.getType(), false) == JsonSchemaType.OBJECT && commonField.getProperties() != null
         && !commonField.getProperties().isEmpty()) {
       final var properties = commonField.getProperties().stream().map(commField -> toField(commField, airbyteTypeConverter)).toList();
-      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType()), properties);
+      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), false), properties);
     } else {
-      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType()));
+      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), false));
     }
   }
 

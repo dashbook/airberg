@@ -97,7 +97,17 @@ public class MongoUtils {
   private static final int DISCOVER_LIMIT = 10000;
   private static final String ID = "_id";
 
-  public static JsonSchemaType getType(final BsonType dataType) {
+  public static JsonSchemaType getType(final BsonType dataType, final Boolean optional) {
+    if (optional) {
+    return switch (dataType) {
+      case BOOLEAN -> JsonSchemaType.BOOLEAN_NULL;
+      case INT32, INT64, DOUBLE, DECIMAL128 -> JsonSchemaType.NUMBER_NULL;
+      case STRING, SYMBOL, BINARY, DATE_TIME, TIMESTAMP, OBJECT_ID, REGULAR_EXPRESSION, JAVASCRIPT -> JsonSchemaType.STRING_NULL;
+      case ARRAY -> JsonSchemaType.ARRAY_NULL;
+      case DOCUMENT, JAVASCRIPT_WITH_SCOPE -> JsonSchemaType.OBJECT_NULL;
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (dataType) {
       case BOOLEAN -> JsonSchemaType.BOOLEAN;
       case INT32, INT64, DOUBLE, DECIMAL128 -> JsonSchemaType.NUMBER;
@@ -106,6 +116,7 @@ public class MongoUtils {
       case DOCUMENT, JAVASCRIPT_WITH_SCOPE -> JsonSchemaType.OBJECT;
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
   public static JsonNode toJsonNode(final Document document, final List<String> columnNames) {

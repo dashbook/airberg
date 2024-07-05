@@ -83,7 +83,25 @@ public class SnowflakeSourceOperations extends JdbcSourceOperations {
   }
 
   @Override
-  public JsonSchemaType getAirbyteType(final JDBCType jdbcType) {
+  public JsonSchemaType getAirbyteType(final JDBCType jdbcType, final Boolean optional) {
+    if (optional) {
+    return switch (jdbcType) {
+      case BIT, BOOLEAN -> JsonSchemaType.BOOLEAN_NULL;
+      case REAL, FLOAT, DOUBLE, NUMERIC, DECIMAL -> JsonSchemaType.NUMBER_NULL;
+      case TINYINT, SMALLINT, INTEGER, BIGINT -> JsonSchemaType.INTEGER_NULL;
+      case CHAR, NCHAR, NVARCHAR, VARCHAR, LONGVARCHAR -> JsonSchemaType.STRING_NULL;
+      case DATE -> JsonSchemaType.STRING_DATE_NULL;
+      case TIME -> JsonSchemaType.STRING_TIME_WITHOUT_TIMEZONE_NULL;
+      case TIMESTAMP -> JsonSchemaType.STRING_TIMESTAMP_WITHOUT_TIMEZONE_NULL;
+      case TIMESTAMP_WITH_TIMEZONE -> JsonSchemaType.STRING_TIMESTAMP_WITH_TIMEZONE_NULL;
+      case TIME_WITH_TIMEZONE -> JsonSchemaType.STRING_TIME_WITH_TIMEZONE_NULL;
+      case BLOB, BINARY, VARBINARY, LONGVARBINARY -> JsonSchemaType.STRING_BASE_64_NULL;
+      case ARRAY -> JsonSchemaType.ARRAY_NULL;
+      // since column types aren't necessarily meaningful to Airbyte, liberally convert all unrecgonised
+      // types to String
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (jdbcType) {
       case BIT, BOOLEAN -> JsonSchemaType.BOOLEAN;
       case REAL, FLOAT, DOUBLE, NUMERIC, DECIMAL -> JsonSchemaType.NUMBER;
@@ -100,6 +118,7 @@ public class SnowflakeSourceOperations extends JdbcSourceOperations {
       // types to String
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
   @Override

@@ -565,7 +565,7 @@ public abstract class AbstractDbSource<DataType, Database extends AbstractDataba
    * @param columnType source data type
    * @return airbyte data type
    */
-  protected abstract JsonSchemaType getAirbyteType(DataType columnType);
+  protected abstract JsonSchemaType getAirbyteType(DataType columnType, Boolean optional);
 
   /**
    * Get list of system namespaces(schemas) in order to exclude them from the `discover` result list.

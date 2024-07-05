@@ -444,7 +444,99 @@ public class PostgresSourceOperations extends AbstractJdbcCompatibleSourceOperat
   }
 
   @Override
-  public JsonSchemaType getAirbyteType(final PostgresType jdbcType) {
+  public JsonSchemaType getAirbyteType(final PostgresType jdbcType, final Boolean optional) {
+    if (optional) {
+    return switch (jdbcType) {
+      case BOOLEAN -> JsonSchemaType.BOOLEAN_NULL;
+      case TINYINT, SMALLINT, INTEGER, BIGINT -> JsonSchemaType.INTEGER_NULL;
+      case FLOAT, DOUBLE, REAL, NUMERIC, DECIMAL -> JsonSchemaType.NUMBER_NULL;
+      case BLOB, BINARY, VARBINARY, LONGVARBINARY -> JsonSchemaType.STRING_BASE_64_NULL;
+      case ARRAY -> JsonSchemaType.ARRAY_NULL;
+      case BIT_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.BOOLEAN)
+              .build())
+          .build();
+      case BOOL_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.BOOLEAN)
+              .build())
+          .build();
+      case BYTEA_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case NAME_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case VARCHAR_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case CHAR_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case BPCHAR_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case TEXT_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.STRING)
+              .build())
+          .build();
+      case INT4_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.INTEGER)
+          .build();
+      case INT2_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.INTEGER)
+          .build();
+      case INT8_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.INTEGER)
+          .build();
+      case MONEY_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER)
+              .build())
+          .build();
+      case OID_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER)
+              .build())
+          .build();
+      case NUMERIC_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER)
+              .build())
+          .build();
+      case FLOAT4_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER)
+              .build())
+          .build();
+      case FLOAT8_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER)
+              .build())
+          .build();
+      case TIMESTAMPTZ_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.STRING_TIMESTAMP_WITH_TIMEZONE)
+          .build();
+      case TIMESTAMP_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.STRING_TIMESTAMP_WITHOUT_TIMEZONE)
+          .build();
+      case TIMETZ_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.STRING_TIME_WITH_TIMEZONE)
+          .build();
+      case TIME_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.STRING_TIME_WITHOUT_TIMEZONE)
+          .build();
+      case DATE_ARRAY -> JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true)
+          .withItems(JsonSchemaType.STRING_DATE)
+          .build();
+
+      case DATE -> JsonSchemaType.STRING_DATE_NULL;
+      case TIME -> JsonSchemaType.STRING_TIME_WITHOUT_TIMEZONE_NULL;
+      case TIME_WITH_TIMEZONE -> JsonSchemaType.STRING_TIME_WITH_TIMEZONE_NULL;
+      case TIMESTAMP -> JsonSchemaType.STRING_TIMESTAMP_WITHOUT_TIMEZONE_NULL;
+      case TIMESTAMP_WITH_TIMEZONE -> JsonSchemaType.STRING_TIMESTAMP_WITH_TIMEZONE_NULL;
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (jdbcType) {
       case BOOLEAN -> JsonSchemaType.BOOLEAN;
       case TINYINT, SMALLINT, INTEGER, BIGINT -> JsonSchemaType.INTEGER;
@@ -535,6 +627,7 @@ public class PostgresSourceOperations extends AbstractJdbcCompatibleSourceOperat
       case TIMESTAMP_WITH_TIMEZONE -> JsonSchemaType.STRING_TIMESTAMP_WITH_TIMEZONE;
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
   @Override

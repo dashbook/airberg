@@ -131,7 +131,27 @@ public class JdbcSourceOperations extends AbstractJdbcCompatibleSourceOperations
   }
 
   @Override
-  public JsonSchemaType getAirbyteType(final JDBCType jdbcType) {
+  public JsonSchemaType getAirbyteType(final JDBCType jdbcType, final Boolean optional) {
+    if (optional) {
+    return switch (jdbcType) {
+      case BIT, BOOLEAN -> JsonSchemaType.BOOLEAN_NULL;
+      case TINYINT, SMALLINT -> JsonSchemaType.INTEGER_NULL;
+      case INTEGER -> JsonSchemaType.INTEGER_NULL;
+      case BIGINT -> JsonSchemaType.INTEGER_NULL;
+      case FLOAT, DOUBLE -> JsonSchemaType.NUMBER_NULL;
+      case REAL -> JsonSchemaType.NUMBER_NULL;
+      case NUMERIC, DECIMAL -> JsonSchemaType.NUMBER_NULL;
+      case CHAR, NCHAR, NVARCHAR, VARCHAR, LONGVARCHAR -> JsonSchemaType.STRING_NULL;
+      case DATE -> JsonSchemaType.STRING_NULL;
+      case TIME -> JsonSchemaType.STRING_NULL;
+      case TIMESTAMP -> JsonSchemaType.STRING_NULL;
+      case BLOB, BINARY, VARBINARY, LONGVARBINARY -> JsonSchemaType.STRING_BASE_64_NULL;
+      case ARRAY -> JsonSchemaType.ARRAY_NULL;
+      // since column types aren't necessarily meaningful to Airbyte, liberally convert all unrecgonised
+      // types to String
+      default -> JsonSchemaType.STRING_NULL;
+    };
+    } else {
     return switch (jdbcType) {
       case BIT, BOOLEAN -> JsonSchemaType.BOOLEAN;
       case TINYINT, SMALLINT -> JsonSchemaType.INTEGER;
@@ -150,6 +170,7 @@ public class JdbcSourceOperations extends AbstractJdbcCompatibleSourceOperations
       // types to String
       default -> JsonSchemaType.STRING;
     };
+    }
   }
 
 }

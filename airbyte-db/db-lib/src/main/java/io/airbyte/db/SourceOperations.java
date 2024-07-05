@@ -21,6 +21,6 @@ public interface SourceOperations<QueryResult, SourceType> {
    * Converts a database source type into an Airbyte type, which is currently represented by a
    * {@link JsonSchemaType}
    */
-  JsonSchemaType getAirbyteType(SourceType sourceType);
+  JsonSchemaType getAirbyteType(SourceType sourceType, Boolean optional);
 
 }
