@@ -11,6 +11,7 @@ public class CommonField<T> {
 
   private final String name;
   private final T type;
+  private final Boolean optional;
 
   private final List<CommonField<T>> properties;
 
@@ -18,12 +19,28 @@ public class CommonField<T> {
     this.name = name;
     this.type = type;
     this.properties = null;
+    this.optional = false;
   }
 
   public CommonField(final String name, final T type, final List<CommonField<T>> properties) {
     this.name = name;
     this.type = type;
     this.properties = properties;
+    this.optional = false;
+  }
+
+  public CommonField(final String name, final T type, final Boolean optional) {
+    this.name = name;
+    this.type = type;
+    this.properties = null;
+    this.optional = optional;
+  }
+
+  public CommonField(final String name, final T type, final List<CommonField<T>> properties, final Boolean optional) {
+    this.name = name;
+    this.type = type;
+    this.properties = properties;
+    this.optional = optional;
   }
 
   public String getName() {
@@ -32,6 +49,10 @@ public class CommonField<T> {
 
   public T getType() {
     return type;
+  }
+
+  public Boolean getOptional() {
+    return optional;
   }
 
   @Override

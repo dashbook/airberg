@@ -140,12 +140,12 @@ public class DbSourceDiscoverUtil {
   }
 
   private static <DataType> Field toField(final CommonField<DataType> commonField, final BiFunction<DataType, Boolean, JsonSchemaType> airbyteTypeConverter) {
-    if (airbyteTypeConverter.apply(commonField.getType(), false) == JsonSchemaType.OBJECT && commonField.getProperties() != null
+    if (airbyteTypeConverter.apply(commonField.getType(), commonField.getOptional()) == JsonSchemaType.OBJECT && commonField.getProperties() != null
         && !commonField.getProperties().isEmpty()) {
       final var properties = commonField.getProperties().stream().map(commField -> toField(commField, airbyteTypeConverter)).toList();
-      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), false), properties);
+      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), commonField.getOptional()), properties);
     } else {
-      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), false));
+      return Field.of(commonField.getName(), airbyteTypeConverter.apply(commonField.getType(), commonField.getOptional()));
     }
   }
 

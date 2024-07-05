@@ -184,15 +184,16 @@ public abstract class AbstractJdbcSource<Datatype> extends AbstractDbSource<Data
                 // read the column metadata Json object, and determine its type
                 .map(f -> {
                   final Datatype datatype = sourceOperations.getDatabaseFieldType(f);
-                  final JsonSchemaType jsonType = getAirbyteType(datatype, f.get(INTERNAL_IS_NULLABLE).asBoolean());
+                  final Boolean optional = f.get(INTERNAL_IS_NULLABLE).asText().equals("YES");
+                  final JsonSchemaType jsonType = getAirbyteType(datatype, optional);
                   LOGGER.debug("Table {} column {} (type {}[{}], nullable {}) -> {}",
                       fields.get(0).get(INTERNAL_TABLE_NAME).asText(),
                       f.get(INTERNAL_COLUMN_NAME).asText(),
                       f.get(INTERNAL_COLUMN_TYPE_NAME).asText(),
                       f.get(INTERNAL_COLUMN_SIZE).asInt(),
-                      f.get(INTERNAL_IS_NULLABLE).asBoolean(),
+                      optional,
                       jsonType);
-                  return new CommonField<Datatype>(f.get(INTERNAL_COLUMN_NAME).asText(), datatype) {};
+                  return new CommonField<Datatype>(f.get(INTERNAL_COLUMN_NAME).asText(), datatype, optional) {};
                 })
                 .collect(Collectors.toList()))
             .cursorFields(extractCursorFields(fields))
