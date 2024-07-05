@@ -92,6 +92,40 @@ public class JsonSchemaType {
   public static final JsonSchemaType JSONB =
       JsonSchemaType.builder(JsonSchemaPrimitive.JSONB).build();
 
+  public static final JsonSchemaType STRING_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true).build();
+  public static final JsonSchemaType NUMBER_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.NUMBER, true).build();
+  public static final JsonSchemaType INTEGER_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.INTEGER, true).build();
+  public static final JsonSchemaType BOOLEAN_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.BOOLEAN, true).build();
+  public static final JsonSchemaType OBJECT_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.OBJECT, true).build();
+  public static final JsonSchemaType ARRAY_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.ARRAY, true).build();
+  public static final JsonSchemaType STRING_BASE_64_NULL = JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true).withContentEncoding(BASE_64).build();
+  public static final JsonSchemaType STRING_TIME_WITH_TIMEZONE_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .withFormat(TIME)
+          .build();
+  public static final JsonSchemaType STRING_TIME_WITHOUT_TIMEZONE_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .withFormat(TIME)
+          .build();
+  public static final JsonSchemaType STRING_TIMESTAMP_WITH_TIMEZONE_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .withFormat(DATE_TIME)
+          .build();
+  public static final JsonSchemaType STRING_TIMESTAMP_WITHOUT_TIMEZONE_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .withFormat(DATE_TIME)
+          .build();
+  public static final JsonSchemaType STRING_DATE_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .withFormat(DATE)
+          .build();
+  public static final JsonSchemaType NUMBER_BIGINT_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.STRING, true)
+          .build();
+  public static final JsonSchemaType JSONB_NULL =
+      JsonSchemaType.builder(JsonSchemaPrimitive.JSONB, true).build();
+
   private final Map<String, Object> jsonSchemaTypeMap;
 
   private JsonSchemaType(final Map<String, Object> jsonSchemaTypeMap) {
@@ -100,6 +134,10 @@ public class JsonSchemaType {
 
   public static Builder builder(final JsonSchemaPrimitive type) {
     return new Builder(type);
+  }
+
+  public static Builder builder(final JsonSchemaPrimitive type, final Boolean optional) {
+    return new Builder(type, optional);
   }
 
   public Map<String, Object> getJsonSchemaTypeMap() {
@@ -115,6 +153,21 @@ public class JsonSchemaType {
       if (JsonSchemaPrimitiveUtil.isV0Schema(type)) {
         if (type.equals(JsonSchemaPrimitive.JSONB)) {
           buildJsonbSchema();
+        } else {
+          typeMapBuilder.put(TYPE, type.name().toLowerCase());
+        }
+      } else {
+        typeMapBuilder.put(REF, PRIMITIVE_TO_REFERENCE_BIMAP.get(type));
+      }
+    }
+
+    private Builder(final JsonSchemaPrimitive type, final Boolean optional) {
+      typeMapBuilder = ImmutableMap.builder();
+      if (JsonSchemaPrimitiveUtil.isV0Schema(type)) {
+        if (type.equals(JsonSchemaPrimitive.JSONB)) {
+          buildJsonbSchema();
+        } else if (optional) {
+          typeMapBuilder.put(TYPE, new String[]{"null", type.name().toLowerCase()});
         } else {
           typeMapBuilder.put(TYPE, type.name().toLowerCase());
         }
