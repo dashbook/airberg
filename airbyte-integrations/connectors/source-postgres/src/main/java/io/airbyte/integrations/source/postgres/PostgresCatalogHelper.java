@@ -78,10 +78,11 @@ public final class PostgresCatalogHelper {
     final ObjectNode properties = (ObjectNode) jsonSchema.get("properties");
 
     final JsonNode stringType = Jsons.jsonNode(ImmutableMap.of("type", "string"));
-    final JsonNode numberType = Jsons.jsonNode(ImmutableMap.of("type", "number"));
-    properties.set(DebeziumEventUtils.CDC_LSN, numberType);
+    final JsonNode stringNullType = Jsons.jsonNode(ImmutableMap.of("type", new String[]{"null", "string"}));
+    final JsonNode integerType = Jsons.jsonNode(ImmutableMap.of("type", "integer"));
+    properties.set(DebeziumEventUtils.CDC_LSN, integerType);
     properties.set(DebeziumEventUtils.CDC_UPDATED_AT, stringType);
-    properties.set(DebeziumEventUtils.CDC_DELETED_AT, stringType);
+    properties.set(DebeziumEventUtils.CDC_DELETED_AT, stringNullType);
 
     return stream;
   }

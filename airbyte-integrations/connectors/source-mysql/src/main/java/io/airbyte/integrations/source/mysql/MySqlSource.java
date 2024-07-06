@@ -142,12 +142,13 @@ public class MySqlSource extends AbstractJdbcSource<MysqlType> implements Source
     final ObjectNode jsonSchema = (ObjectNode) stream.getJsonSchema();
     final ObjectNode properties = (ObjectNode) jsonSchema.get("properties");
 
-    final JsonNode numberType = Jsons.jsonNode(ImmutableMap.of("type", "number"));
+    final JsonNode integerType = Jsons.jsonNode(ImmutableMap.of("type", "integer"));
     final JsonNode stringType = Jsons.jsonNode(ImmutableMap.of("type", "string"));
+    final JsonNode stringNullType = Jsons.jsonNode(ImmutableMap.of("type", new String[]{"null", "string"}));
     properties.set(CDC_LOG_FILE, stringType);
-    properties.set(CDC_LOG_POS, numberType);
+    properties.set(CDC_LOG_POS, integerType);
     properties.set(CDC_UPDATED_AT, stringType);
-    properties.set(CDC_DELETED_AT, stringType);
+    properties.set(CDC_DELETED_AT, stringNullType);
 
     return stream;
   }
