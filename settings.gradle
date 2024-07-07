@@ -71,18 +71,19 @@ if (!System.getenv().containsKey("SUB_BUILD")) {
 } else {
     def subBuild = System.getenv().get("SUB_BUILD")
     println("Building Airbyte Sub Build: " + subBuild)
-    if (subBuild != "CONNECTORS_BASE" && subBuild != "ALL_CONNECTORS" && subBuild != "OCTAVIA_CLI" && subBuild != "CDK") {
+    if (subBuild != "CONNECTORS_BASE" && subBuild != "ALL_CONNECTORS" && subBuild != "OCTAVIA_CLI" && subBuild != "CDK" && subBuild != "PYTHON_SOURCES" && subBuild != "JAVA_SOURCES") {
         throw new IllegalArgumentException(String.format("%s is invalid. Must be unset or CONNECTORS_BASE, CDK, ALL_CONNECTORS or OCTAVIA_CLI", subBuild))
     }
 }
 
 if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "CDK" || System.getenv().get("SUB_BUILD") == "ALL_CONNECTORS") {
+    include ':airbyte-protocol:protocol-models'
     include ':airbyte-commons' // this wouldn't be necessary if it wasn't from https://github.com/airbytehq/airbyte/blob/645558b74aab0b91fda1b4628b37b7095d92b4cc/build.gradle
     include ':tools:code-generator:airbyteDocker'
     include ':airbyte-cdk:python'
 }
 
-if (!System.getenv().containsKey("SUB_BUILD") || (System.getenv().containsKey("SUB_BUILD") && System.getenv().get("SUB_BUILD") != "CDK")) {
+if (!System.getenv().containsKey("SUB_BUILD") || (System.getenv().containsKey("SUB_BUILD") && System.getenv().get("SUB_BUILD") != "CDK" && System.getenv().get("SUB_BUILD") != "PYTHON_SOURCES")) {
     // shared
     include ':airbyte-protocol:protocol-models'
     include ':airbyte-commons'
@@ -96,6 +97,10 @@ if (!System.getenv().containsKey("SUB_BUILD") || (System.getenv().containsKey("S
     include ':airbyte-test-utils'
 
     include ':airbyte-connector-test-harnesses:acceptance-test-harness'
+}
+
+if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "PYTHON_SOURCES") {
+    include ':airbyte-cdk:python'
 }
 
 // connectors base
@@ -136,6 +141,15 @@ if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD"
     include 'airbyte-integrations:connectors-performance:destination-harness'
 }
 
+// connectors base
+if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "JAVA_SOURCES") {
+    include ':airbyte-integrations:bases:base'
+    include ':airbyte-integrations:bases:base-java'
+    include ':airbyte-integrations:bases:base-java-s3'
+    include ':airbyte-integrations:bases:standard-source-test'
+    include ':airbyte-integrations:bases:debezium'
+}
+
 if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "OCTAVIA_CLI") {
     include ':octavia-cli'
 }
@@ -152,4 +166,51 @@ if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD"
             include ":airbyte-integrations:connectors:${dir.getFileName()}"
         }
     }
+}
+
+// connectors
+if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "PYTHON_SOURCES") {
+    // include all connector projects
+    def integrationsPath = rootDir.toPath().resolve('airbyte-integrations/connectors')
+    println integrationsPath
+    integrationsPath.eachDir { dir ->
+        def buildFiles = file(dir).list { file, name -> name == "build.gradle" }
+        def requirementsFiles = file(dir).list { file, name -> name == "requirements.txt" }
+
+        if (buildFiles.length == 1 && requirementsFiles.length == 1) {
+            include ":airbyte-integrations:connectors:${dir.getFileName()}"
+        }
+    }
+}
+
+// connectors
+if (!System.getenv().containsKey("SUB_BUILD") || System.getenv().get("SUB_BUILD") == "JAVA_SOURCES") {
+    include ":airbyte-integrations:connectors:source-relational-db"
+    include ":airbyte-integrations:connectors:source-db2"
+    // include ":airbyte-integrations:connectors:source-sftp"
+    // include ":airbyte-integrations:connectors:source-tidb"
+    include ":airbyte-integrations:connectors:source-jdbc"
+    include ":airbyte-integrations:connectors:source-kafka"
+    include ":airbyte-integrations:connectors:source-mssql"
+    include ":airbyte-integrations:connectors:source-mysql"
+    include ":airbyte-integrations:connectors:source-oracle"
+    include ":airbyte-integrations:connectors:source-alloydb"
+    include ":airbyte-integrations:connectors:source-teradata"
+    include ":airbyte-integrations:connectors:source-redshift"
+    // include ":airbyte-integrations:connectors:source-dynamodb"
+    include ":airbyte-integrations:connectors:source-bigquery"
+    include ":airbyte-integrations:connectors:source-postgres"
+    include ":airbyte-integrations:connectors:source-snowflake"
+    include ":airbyte-integrations:connectors:source-mongodb-v2"
+    include ":airbyte-integrations:connectors:source-clickhouse"
+    include ":airbyte-integrations:connectors:source-cockroachdb"
+    include ":airbyte-integrations:connectors:source-elasticsearch"
+    include ":airbyte-integrations:connectors:source-mssql-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-mysql-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-oracle-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-alloydb-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-postgres-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-mongodb-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-clickhouse-strict-encrypt"
+    include ":airbyte-integrations:connectors:source-cockroachdb-strict-encrypt"
 }
