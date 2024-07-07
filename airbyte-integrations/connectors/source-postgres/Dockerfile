@@ -1,6 +1,4 @@
-FROM gradle:7.6.4-jdk17 AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
+FROM dashbook/airbyte-java-source-builder:latest AS build
 RUN gradle --no-daemon :airbyte-integrations:connectors:source-postgres:assemble
 RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-postgres/build/distributions/source-postgres*.tar --strip-components=1 
 
