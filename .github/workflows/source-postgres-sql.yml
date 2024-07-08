@@ -27,6 +27,6 @@ jobs:
         with:
           context: "{{defaultContext}}:airbyte-integrations/connectors/source-postgres/"
           push: true
-          tags: dashbook/source-postgres:latest
-          cache-from: type=registry,ref=dashbook/source-postgres:latest
+          tags: dashbook/source-postgres:sql
+          cache-from: type=registry,ref=dashbook/source-postgres:sql
           cache-to: type=inline
