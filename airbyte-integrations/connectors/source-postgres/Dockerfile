@@ -11,6 +11,6 @@ COPY --from=build /home/gradle/src/lib /airbyte/lib
 COPY --from=build /home/gradle/src/bin /airbyte/bin
 COPY --from=build /home/gradle/src/airbyte-integrations/connectors/source-postgres/sync.sh /airbyte/bin
 
-ENTRYPOINT ["/airbyte/bin/sync.sh"]
+ENTRYPOINT ["/bin/bash","-c","/airbyte/bin/sync.sh"]
 
 
