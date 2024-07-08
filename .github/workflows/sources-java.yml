@@ -26,6 +26,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: "{{defaultContext}}:airbyte-integrations/connectors/source-postgres/"
+          file: Dockerfile_sql
           push: true
           tags: dashbook/source-postgres:sql
           cache-from: type=registry,ref=dashbook/source-postgres:sql

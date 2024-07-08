@@ -4,7 +4,6 @@ RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-postgres/bu
 
 FROM dashbook/destination-iceberg:java-sql
 
-RUN mkdir /airbyte
 WORKDIR /airbyte
 
 COPY --from=build /home/gradle/src/lib /airbyte/lib
