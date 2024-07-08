@@ -25,7 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: airbyte-integrations/connectors/source-postgres/
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-postgres/"
           push: true
           tags: dashbook/source-postgres:latest
           cache-from: type=registry,ref=dashbook/source-postgres:latest
