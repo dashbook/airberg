@@ -1,4 +1,4 @@
-name: Base-Java
+name: base-java
 
 on: push
 jobs:

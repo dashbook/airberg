@@ -2,13 +2,15 @@ FROM dashbook/airbyte-java-source-builder:latest AS build
 RUN gradle --no-daemon :airbyte-integrations:connectors:source-postgres:assemble
 RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-postgres/build/distributions/source-postgres*.tar --strip-components=1 
 
-FROM amazoncorretto:17
+FROM dashbook/destination-iceberg:java-sql
 
 RUN mkdir /airbyte
+WORKDIR /airbyte
 
 COPY --from=build /home/gradle/src/lib /airbyte/lib
 COPY --from=build /home/gradle/src/bin /airbyte/bin
+COPY --from=build /home/gradle/src/airbyte-integrations/connectors/source-postgres/sync.sh /airbyte/bin
 
-ENTRYPOINT ["/airbyte/bin/source-postgres"]
+ENTRYPOINT ["/airbyte/bin/sync.sh"]
 
 

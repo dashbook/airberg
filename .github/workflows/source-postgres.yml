@@ -2,7 +2,7 @@ name: source-postgres
 
 on:
     workflow_run:
-        workflows: ['Base-Java']
+        workflows: ['base-java']
         types: [completed]
 
 jobs:
