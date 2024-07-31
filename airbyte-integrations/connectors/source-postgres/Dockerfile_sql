@@ -10,8 +10,8 @@ ENV AIRBYTE_SOURCE=source-postgres
 
 COPY --from=build /home/gradle/src/lib /airbyte/lib
 COPY --from=build /home/gradle/src/bin /airbyte/bin
-COPY --from=build /home/gradle/src/sync-java.sh /airbyte/bin/sync.sh
+COPY --from=build --chmod=0755 /home/gradle/src/sync-java.sh /airbyte/bin/entrypoint.sh
 
-ENTRYPOINT ["/bin/bash","-c","/airbyte/bin/sync.sh"]
+ENTRYPOINT [ "/airbyte/bin/entrypoint.sh"]
 
 
