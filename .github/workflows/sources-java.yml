@@ -1,4 +1,4 @@
-name: source-postgres
+name: source-java
 
 on:
     workflow_run:
@@ -30,4 +30,14 @@ jobs:
           push: true
           tags: dashbook/source-postgres:sql
           cache-from: type=registry,ref=dashbook/source-postgres:sql
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-mysql/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-mysql:sql
+          cache-from: type=registry,ref=dashbook/source-mysql:sql
           cache-to: type=inline
