@@ -10,4 +10,4 @@ echo "Getting state"
 destination-iceberg --config /tmp/config/destination.json --catalog discover.json --state > state.json
 
 echo "Syncing"
-bin/$AIRBYTE_SOURCE --config /tmp/config/source.json --catalog catalog.json --read | destination-iceberg --config /tmp/config/destination.json --catalog catalog.json --write
+bin/$AIRBYTE_SOURCE --config /tmp/config/source.json --catalog catalog.json --state state.json --read | destination-iceberg --config /tmp/config/destination.json --catalog catalog.json --write
