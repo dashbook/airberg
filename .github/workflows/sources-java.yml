@@ -51,3 +51,13 @@ jobs:
           tags: dashbook/source-kafka:sql
           cache-from: type=registry,ref=dashbook/source-kafka:sql
           cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-mongodb-v2/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-mongodb-v2:sql
+          cache-from: type=registry,ref=dashbook/source-mongodb-v2:sql
+          cache-to: type=inline
