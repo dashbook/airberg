@@ -1,28 +1,17 @@
-### WARNING ###
-# The Java connector Dockerfiles will soon be deprecated.
-# This Dockerfile is not used to build the connector image we publish to DockerHub.
-# The new logic to build the connector image is declared with Dagger here:
-# https://github.com/airbytehq/airbyte/blob/master/tools/ci_connector_ops/ci_connector_ops/pipelines/actions/environments.py#L649
+FROM dashbook/airbyte-java-source-builder:latest AS build
+RUN gradle --no-daemon :airbyte-integrations:connectors:source-kafka:assemble
+RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-kafka/build/distributions/source-kafka*.tar --strip-components=1 
 
-# If you need to add a custom logic to build your connector image, you can do it by adding a finalize_build.sh or finalize_build.py script in the connector folder.
-# Please reach out to the Connectors Operations team if you have any question.
-FROM airbyte/integration-base-java:dev AS build
+FROM dashbook/destination-iceberg:java-sql
 
 WORKDIR /airbyte
 
-ENV APPLICATION source-kafka
+ENV AIRBYTE_SOURCE=source-kafka
 
-COPY build/distributions/${APPLICATION}*.tar ${APPLICATION}.tar
+COPY --from=build /home/gradle/src/lib /airbyte/lib
+COPY --from=build /home/gradle/src/bin /airbyte/bin
+COPY --from=build --chmod=0755 /home/gradle/src/sync-java.sh /airbyte/bin/entrypoint.sh
 
-RUN tar xf ${APPLICATION}.tar --strip-components=1 && rm -rf ${APPLICATION}.tar
+ENTRYPOINT [ "/airbyte/bin/entrypoint.sh"]
 
-FROM airbyte/integration-base-java:dev
 
-WORKDIR /airbyte
-
-ENV APPLICATION source-kafka
-
-COPY --from=build /airbyte /airbyte
-
-LABEL io.airbyte.version=0.2.3
-LABEL io.airbyte.name=airbyte/source-kafka
