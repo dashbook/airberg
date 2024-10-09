@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Discovering"
-python main.py discover --config /tmp/config/source.json | grep "^{\"type\":\"CATALOG\".*}" > discover.json
+python main.py discover --config /tmp/config/source.json | grep "^{\"type\": \"CATALOG\".*}" > discover.json
 
 echo "Configuring catalog"
 destination-iceberg --config /tmp/config/destination.json --catalog discover.json > catalog.json
