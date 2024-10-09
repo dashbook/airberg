@@ -63,3 +63,14 @@ jobs:
           tags: dashbook/source-google-sheets:sql
           cache-from: type=registry,ref=dashbook/source-google-sheets:sql
           cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-hubspot/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-hubspot:sql
+          cache-from: type=registry,ref=dashbook/source-hubspot:sql
+          cache-to: type=inline
