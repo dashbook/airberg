@@ -74,3 +74,14 @@ jobs:
           tags: dashbook/source-hubspot:sql
           cache-from: type=registry,ref=dashbook/source-hubspot:sql
           cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-salesforce/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-salesforce:sql
+          cache-from: type=registry,ref=dashbook/source-salesforce:sql
+          cache-to: type=inline
