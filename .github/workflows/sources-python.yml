@@ -52,3 +52,14 @@ jobs:
           tags: dashbook/source-facebook-marketing:sql
           cache-from: type=registry,ref=dashbook/source-facebook-marketing:sql
           cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-google-sheets/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-google-sheets:sql
+          cache-from: type=registry,ref=dashbook/source-google-sheets:sql
+          cache-to: type=inline
