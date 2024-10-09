@@ -6,10 +6,10 @@
 from setuptools import find_packages, setup
 
 MAIN_REQUIREMENTS = [
-    "airbyte-cdk",
+    "airbyte-cdk==0.43.1",
     "pyarrow==9.0.0",
     "smart-open[s3]==5.1.0",
-    "wcmatch==8.2",
+    "wcmatch==8.4",
     "dill==0.3.4",
     "pytz",
     "fastavro==1.4.11",

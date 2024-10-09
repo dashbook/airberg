@@ -30,3 +30,14 @@ jobs:
           tags: dashbook/source-google-analytics-v4:sql
           cache-from: type=registry,ref=dashbook/source-google-analytics-v4:sql
           cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-s3/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-s3:sql
+          cache-from: type=registry,ref=dashbook/source-s3:sql
+          cache-to: type=inline
