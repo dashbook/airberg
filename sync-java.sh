@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cat /tmp/config/source.json | envsubst > /tmp/config/temp.json && mv /tmp/config/temp.json /tmp/config/source.json
+cat /tmp/config/destination.json | envsubst > /tmp/config/temp.json && mv /tmp/config/temp.json /tmp/config/destination.json
+
 echo "Discovering"
 bin/$AIRBYTE_SOURCE --config /tmp/config/source.json --discover | grep "^{\"type\":\"CATALOG\".*}" > discover.json
 
