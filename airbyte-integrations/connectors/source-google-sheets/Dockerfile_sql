@@ -4,7 +4,7 @@ WORKDIR /airbyte
 COPY setup.py ./
 COPY source_google_sheets ./source_google_sheets
 COPY main.py ./
-COPY --chmod=0755 ../../../sync-python.sh /airbyte/entrypoint.sh
+COPY --chmod=0755 sync-python.sh /airbyte/entrypoint.sh
 
 RUN pip install "cython<3.0.0" wheel
 RUN pip install "pyyaml==5.4.1" --no-build-isolation
