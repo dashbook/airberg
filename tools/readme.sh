@@ -22,17 +22,25 @@ for file in $(find airbyte-integrations/connectors/ -iname "README_old.md"); do
 
     spec_table="$(schema_markdown $spec)";
 
-    # spec_example="$(schema_example $spec)"
+    spec_example="$(schema_example $spec)"
 
     echo "# Source ${name#source-}" > $new;
 
+    echo "" >> $new;
+
     echo "## Example" >> $new;
 
-    # echo "$spec_example" >> $new;
+    echo "$spec_example" >> $new;
+
+    echo "" >> $new;
 
     echo "## Configuration" >> $new;
 
     echo "$spec_table" >> $new;
+
+    echo "" >> $new;
+
+    cat $file >> $new;
 
 done
 
