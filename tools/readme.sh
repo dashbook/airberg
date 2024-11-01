@@ -16,12 +16,24 @@ for file in $(find airbyte-integrations/connectors/ -iname "README_old.md"); do
     directory=${file/%\/README_old.md/};
     spec=$(find $directory -iname "spec.json" -print -quit);
     name=$(basename $directory);
+    new=$directory/README.md
 
     if [[ -z $spec ]]; then continue; fi
 
     spec_table="$(schema_markdown $spec)";
 
-    spec_example="$(schema_example $spec)"
+    # spec_example="$(schema_example $spec)"
+
+    echo "# Source ${name#source-}" > $new;
+
+    echo "## Example" >> $new;
+
+    # echo "$spec_example" >> $new;
+
+    echo "## Configuration" >> $new;
+
+    echo "$spec_table" >> $new;
 
 done
+
 
