@@ -20,6 +20,8 @@ for file in $(find airbyte-integrations/connectors/ -iname "README_old.md"); do
 
     if [[ -z $spec ]]; then continue; fi
 
+    if [[ -f $new ]]; then continue; fi
+
     spec_table="$(schema_markdown $spec)";
 
     spec_example="$(schema_example $spec)"
