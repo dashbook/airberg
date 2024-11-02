@@ -3,7 +3,7 @@ function schema_markdown(){
     
     echo "| Name | Type | Constant | Default | Description |" 
     echo "| --- | --- | --- | --- | --- |"
-    echo "$(jq -r '.connectionSpecification | [paths(values) as $path | select($path[-1] == "properties" or $path[-1] == "oneOf") | getpath($path) | to_entries | flatten | map(select(.value | has("properties") | not)) | map({"name": ($path + [.key]) | map(select(. != "properties" and . != "oneOf")) | join("."), "type": .value.type, "constant": .value.const, "default": .value.default, "description": .value.description})] | flatten | map("|" + .name + "|" + .type + "|" + .constant + "|" + (.default | tostring ) + "|" + .description + "|") | join("\n")' $file)";
+    echo "$(jq -r '.connectionSpecification | [paths(values) as $path | select($path[-1] == "properties" or $path[-1] == "oneOf") | getpath($path) | to_entries | flatten | map(select(.value | has("properties") | not)) | map({"name": (($path + [.key]) | map(select(. != "properties" and . != "oneOf" and (. | type == "string"))) | join(".") + " " + ( $path | map(select(. | type == "number")) | join(","))), "type": .value.type, "constant": .value.const, "default": .value.default, "description": .value.description})] | flatten | map("|" + .name + "|" + .type + "|" + .constant + "|" + (.default | tostring ) + "|" + .description + "|") | join("\n")' $file)";
 }
 
 function schema_example(){
