@@ -7,7 +7,7 @@
   "subdomain": "example",
   "credentials": {
     "credentials": "oauth2.0",
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    "access_token": "my_access_token"
   },
   "ignore_pagination": false
 }
@@ -16,15 +16,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date from which you'd like to replicate data for Zendesk Support API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
-|subdomain|string||null|This is your Zendesk subdomain that can be found in your account URL. For example, in https://{MY_SUBDOMAIN}.zendesk.com/, where MY_SUBDOMAIN is the value of your subdomain.|
-|credentials|object||null|Zendesk service provides two authentication methods. Choose between: `OAuth2.0` or `API token`.|
-|ignore_pagination|boolean||false|Makes each stream read a single page of data.|
-|credentials.0.credentials|string|oauth2.0|null||
-|credentials.0.access_token|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-support">docs</a> for more information.|
-|credentials.1.credentials|string|api_token|null||
-|credentials.1.email|string||null|The user email for your Zendesk account.|
-|credentials.1.api_token|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-support#setup-guide">docs</a> for more information.|
+|start_date |string||null|The date from which you'd like to replicate data for Zendesk Support API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|subdomain |string||null|This is your Zendesk subdomain that can be found in your account URL. For example, in https://{MY_SUBDOMAIN}.zendesk.com/, where MY_SUBDOMAIN is the value of your subdomain.|
+|ignore_pagination |boolean||false|Makes each stream read a single page of data.|
+|credentials.credentials 0|string|oauth2.0|null||
+|credentials.access_token 0|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-support">docs</a> for more information.|
+|credentials.credentials 1|string|api_token|null||
+|credentials.email 1|string||null|The user email for your Zendesk account.|
+|credentials.api_token 1|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-support#setup-guide">docs</a> for more information.|
 
 # Source Zendesk Support Source
 

@@ -1,6 +1,7 @@
 # Source public-apis
 
 ## Example
+```
 {
   "documentationUrl": "https://docs.airbyte.com/integrations/sources/public-apis",
   "connectionSpecification": {
@@ -11,6 +12,7 @@
     "properties": {}
   }
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |

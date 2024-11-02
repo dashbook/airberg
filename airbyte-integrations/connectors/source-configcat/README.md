@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "username": "example_username",
+  "username": "example_user",
   "password": "example_password"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|username|string||null|Basic auth user name. See <a href="https://api.configcat.com/docs/#section/Authentication">here</a>.|
-|password|string||null|Basic auth password. See <a href="https://api.configcat.com/docs/#section/Authentication">here</a>.|
+|username |string||null|Basic auth user name. See <a href="https://api.configcat.com/docs/#section/Authentication">here</a>.|
+|password |string||null|Basic auth password. See <a href="https://api.configcat.com/docs/#section/Authentication">here</a>.|
 
 # Configcat Source
 

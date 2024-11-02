@@ -1,18 +1,18 @@
 # Source recreation
 
 ## Example
-```
+```json
 {
-  "apikey": "1234567890",
-  "query_campsites": "campsite_query"
+  "apikey": "my_secret_api_key",
+  "query_campsites": "campsites?features[]=camping&features[]=sunset"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|apikey|string||null|API Key|
-|query_campsites|string||null||
+|apikey |string||null|API Key|
+|query_campsites |string||null||
 
 # Recreation Source
 

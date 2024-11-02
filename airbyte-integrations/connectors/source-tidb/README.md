@@ -1,28 +1,28 @@
 # Source tidb
 
 ## Example
-```json
+```
 {
   "host": "localhost",
   "port": 4000,
-  "database": "example",
-  "username": "user",
-  "password": "password123",
-  "jdbc_url_params": "",
-  "ssl": false
+  "database": "mydb",
+  "username": "myuser",
+  "password": "mypass",
+  "jdbc_url_params": "param1=value1&param2=value2&param3=value3",
+  "ssl": true
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the database.|
-|port|integer||4000|Port of the database.|
-|database|string||null|Name of the database.|
-|username|string||null|Username to use to access the database.|
-|password|string||null|Password associated with the username.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
-|ssl|boolean||false|Encrypt data using SSL.|
+|host |string||null|Hostname of the database.|
+|port |integer||4000|Port of the database.|
+|database |string||null|Name of the database.|
+|username |string||null|Username to use to access the database.|
+|password |string||null|Password associated with the username.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
+|ssl |boolean||false|Encrypt data using SSL.|
 
 # Source TiDB
 

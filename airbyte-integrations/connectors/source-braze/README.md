@@ -1,10 +1,10 @@
 # Source braze
 
 ## Example
-```json
+```
 {
-  "url": "https://example.com/braze",
-  "api_key": "secret-key",
+  "url": "https://api.braze.com",
+  "api_key": "1234567890abcdef",
   "start_date": "2022-01-01"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|url|string||null|Braze REST API endpoint|
-|api_key|string||null|Braze REST API key|
-|start_date|string||null|Rows after this date will be synced|
+|url |string||null|Braze REST API endpoint|
+|api_key |string||null|Braze REST API key|
+|start_date |string||null|Rows after this date will be synced|
 
 # Braze Source
 

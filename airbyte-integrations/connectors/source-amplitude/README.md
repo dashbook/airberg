@@ -3,22 +3,22 @@
 ## Example
 ```json
 {
-  "data_region": "EU Residency Server",
-  "api_key": "my_api_key",
-  "secret_key": "my_secret_key",
+  "api_key": "your_api_key",
+  "secret_key": "your_secret_key",
   "start_date": "2021-01-25T00:00:00Z",
-  "request_time_range": 12
+  "data_region": "Standard Server",
+  "request_time_range": 24
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|data_region|string||Standard Server|Amplitude data region server|
-|api_key|string||null|Amplitude API Key. See the <a href="https://docs.airbyte.com/integrations/sources/amplitude#setup-guide">setup guide</a> for more information on how to obtain this key.|
-|secret_key|string||null|Amplitude Secret Key. See the <a href="https://docs.airbyte.com/integrations/sources/amplitude#setup-guide">setup guide</a> for more information on how to obtain this key.|
-|start_date|string||null|UTC date and time in the format 2021-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|request_time_range|integer||24|According to <a href="https://www.docs.developers.amplitude.com/analytics/apis/export-api/#considerations">Considerations</a> too big time range in request can cause a timeout error. In this case, set shorter time interval in hours.|
+|data_region |string||Standard Server|Amplitude data region server|
+|api_key |string||null|Amplitude API Key. See the <a href="https://docs.airbyte.com/integrations/sources/amplitude#setup-guide">setup guide</a> for more information on how to obtain this key.|
+|secret_key |string||null|Amplitude Secret Key. See the <a href="https://docs.airbyte.com/integrations/sources/amplitude#setup-guide">setup guide</a> for more information on how to obtain this key.|
+|start_date |string||null|UTC date and time in the format 2021-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|request_time_range |integer||24|According to <a href="https://www.docs.developers.amplitude.com/analytics/apis/export-api/#considerations">Considerations</a> too big time range in request can cause a timeout error. In this case, set shorter time interval in hours.|
 
 # Amplitude Source
 

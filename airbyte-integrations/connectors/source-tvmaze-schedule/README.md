@@ -1,10 +1,10 @@
 # Source tvmaze-schedule
 
 ## Example
-```
+```json
 {
   "start_date": "2024-03-16",
-  "end_date": "2024-03-17",
+  "end_date": "2024-03-18",
   "domestic_schedule_country_code": "US",
   "web_schedule_country_code": "GB"
 }
@@ -13,11 +13,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|Start date for TV schedule retrieval. May be in the future.|
-|end_date|string||null|End date for TV schedule retrieval. May be in the future. Optional.
+|start_date |string||null|Start date for TV schedule retrieval. May be in the future.|
+|end_date |string||null|End date for TV schedule retrieval. May be in the future. Optional.
 |
-|domestic_schedule_country_code|string||null|Country code for domestic TV schedule retrieval.|
-|web_schedule_country_code|string||null|ISO 3166-1 country code for web TV schedule retrieval. Leave blank for
+|domestic_schedule_country_code |string||null|Country code for domestic TV schedule retrieval.|
+|web_schedule_country_code |string||null|ISO 3166-1 country code for web TV schedule retrieval. Leave blank for
 all countries plus global web channels (e.g. Netflix). Alternatively,
 set to 'global' for just global web channels.
 |

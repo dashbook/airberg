@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://dev.mailjet.com/email/guides/#authentication">here</a>.|
-|api_key_secret|string||null|Your API Secret Key. See <a href="https://dev.mailjet.com/email/guides/#authentication">here</a>.|
+|api_key |string||null|Your API Key. See <a href="https://dev.mailjet.com/email/guides/#authentication">here</a>.|
+|api_key_secret |string||null|Your API Secret Key. See <a href="https://dev.mailjet.com/email/guides/#authentication">here</a>.|
 
 # Mailjet Mail Source
 

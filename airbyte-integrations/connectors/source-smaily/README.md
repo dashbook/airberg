@@ -4,17 +4,17 @@
 ```
 {
   "api_subdomain": "example",
-  "api_username": "user",
-  "api_password": "password"
+  "api_username": "example",
+  "api_password": "mysecretpassword"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_subdomain|string||null|API Subdomain. See https://smaily.com/help/api/general/create-api-user/|
-|api_username|string||null|API user username. See https://smaily.com/help/api/general/create-api-user/|
-|api_password|string||null|API user password. See https://smaily.com/help/api/general/create-api-user/|
+|api_subdomain |string||null|API Subdomain. See https://smaily.com/help/api/general/create-api-user/|
+|api_username |string||null|API user username. See https://smaily.com/help/api/general/create-api-user/|
+|api_password |string||null|API user password. See https://smaily.com/help/api/general/create-api-user/|
 
 # Smaily Source
 

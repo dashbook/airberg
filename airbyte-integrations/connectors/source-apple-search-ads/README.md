@@ -1,11 +1,11 @@
 # Source apple-search-ads
 
 ## Example
-```
+```json
 {
   "org_id": 123456,
-  "client_id": "my_client_id",
-  "client_secret": "my_client_secret",
+  "client_id": "abc123",
+  "client_secret": "secret456",
   "start_date": "2020-01-01",
   "end_date": "2021-01-01"
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|org_id|integer||null|The identifier of the organization that owns the campaign. Your Org Id is the same as your account in the Apple Search Ads UI.|
-|client_id|string||null|A user identifier for the token request. See <a href="https://developer.apple.com/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api">here</a>|
-|client_secret|string||null|A string that authenticates the user’s setup request. See <a href="https://developer.apple.com/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api">here</a>|
-|start_date|string||null|Start getting data from that date.|
-|end_date|string||null|Data is retrieved until that date (included)|
+|org_id |integer||null|The identifier of the organization that owns the campaign. Your Org Id is the same as your account in the Apple Search Ads UI.|
+|client_id |string||null|A user identifier for the token request. See <a href="https://developer.apple.com/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api">here</a>|
+|client_secret |string||null|A string that authenticates the user’s setup request. See <a href="https://developer.apple.com/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api">here</a>|
+|start_date |string||null|Start getting data from that date.|
+|end_date |string||null|Data is retrieved until that date (included)|
 
 # Apple Search Ads Source
 

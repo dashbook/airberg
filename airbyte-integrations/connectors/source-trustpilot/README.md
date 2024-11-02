@@ -5,12 +5,9 @@
 {
   "credentials": {
     "auth_type": "apikey",
-    "client_id": "1234567890abcdef"
+    "client_id": "myclientid"
   },
-  "business_units": [
-    "mydomain.com",
-    "www.mydomain.com"
-  ],
+  "business_units": ["mydomain.com", "www.mydomain.com"],
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -18,17 +15,16 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|business_units|array||null|The names of business units which shall be synchronized. Some streams e.g. configured_business_units or private_reviews use this configuration.|
-|start_date|string||null|For streams with sync. method incremental the start date time to be used|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The API key of the Trustpilot API application. (represents the OAuth Client ID)|
-|credentials.0.client_secret|string||null|The Secret of the Trustpilot API application. (represents the OAuth Client Secret)|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.token_expiry_date|string||null|The date-time when the access token should be refreshed.|
-|credentials.0.refresh_token|string||null|The key to refresh the expired access_token.|
-|credentials.1.auth_type|string|apikey|null||
-|credentials.1.client_id|string||null|The API key of the Trustpilot API application.|
+|business_units |array||null|The names of business units which shall be synchronized. Some streams e.g. configured_business_units or private_reviews use this configuration.|
+|start_date |string||null|For streams with sync. method incremental the start date time to be used|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The API key of the Trustpilot API application. (represents the OAuth Client ID)|
+|credentials.client_secret 0|string||null|The Secret of the Trustpilot API application. (represents the OAuth Client Secret)|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.token_expiry_date 0|string||null|The date-time when the access token should be refreshed.|
+|credentials.refresh_token 0|string||null|The key to refresh the expired access_token.|
+|credentials.auth_type 1|string|apikey|null||
+|credentials.client_id 1|string||null|The API key of the Trustpilot API application.|
 
 # Trustpilot Source
 

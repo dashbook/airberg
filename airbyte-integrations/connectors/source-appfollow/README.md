@@ -1,11 +1,11 @@
 # Source appfollow
 
 ## Example
-```
+```json
 {
   "ext_id": "1234567890",
-  "cid": "client123",
-  "api_secret": "super_secret",
+  "cid": "client-id-123",
+  "api_secret": "api-secret-123",
   "country": "USA"
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|ext_id|string||null|for App Store — this is 9-10 digits identification number; for Google Play — this is bundle name;|
-|cid|string||null|client id provided by Appfollow|
-|api_secret|string||null|api secret provided by Appfollow|
-|country|string||null|getting data by Country|
+|ext_id |string||null|for App Store — this is 9-10 digits identification number; for Google Play — this is bundle name;|
+|cid |string||null|client id provided by Appfollow|
+|api_secret |string||null|api secret provided by Appfollow|
+|country |string||null|getting data by Country|
 
 # Appfollow Source
 

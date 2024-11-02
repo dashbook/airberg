@@ -1,13 +1,15 @@
 # Source e2e-test
 
 ## Example
-```
+```json
 {
-  "type": "BENCHMARK",
-  "schema": "FIVE_STRING_COLUMNS",
-  "terminationCondition": {
-    "type": "MAX_RECORDS",
-    "max": 1000
+  "type": "CONTINUOUS_FEED",
+  "max_messages": 100,
+  "mock_catalog": {
+    "type": "SINGLE_STREAM",
+    "stream_name": "data_stream",
+    "stream_schema": "{\"type\": \"object\", \"properties\": { \"column1\": { \"type\": \"string\" } } }",
+    "stream_duplication": 2
   }
 }
 ```
@@ -15,27 +17,25 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|0.type|string|INFINITE_FEED|INFINITE_FEED||
-|0.max_records|integer||null|Number of records to emit. If not set, defaults to infinity.|
-|0.message_interval|integer||null|Interval between messages in ms.|
-|1.type|string|EXCEPTION_AFTER_N|EXCEPTION_AFTER_N||
-|1.throw_after_n_records|integer||null|Number of records to emit before throwing an exception. Min 1.|
-|2.type|string|CONTINUOUS_FEED|CONTINUOUS_FEED||
-|2.max_messages|integer||100|Number of records to emit per stream. Min 1. Max 100 billion.|
-|2.seed|integer||0|When the seed is unspecified, the current time millis will be used as the seed. Range: [0, 1000000].|
-|2.message_interval_ms|integer||0|Interval between messages in ms. Min 0 ms. Max 60000 ms (1 minute).|
-|2.mock_catalog|object||null||
-|2.mock_catalog.0.type|string|SINGLE_STREAM|SINGLE_STREAM||
-|2.mock_catalog.0.stream_name|string||data_stream|Name of the data stream.|
-|2.mock_catalog.0.stream_schema|string||{ "type": "object", "properties": { "column1": { "type": "string" } } }|A Json schema for the stream. The schema should be compatible with <a href="https://json-schema.org/draft-07/json-schema-release-notes.html">draft-07</a>. See <a href="https://cswr.github.io/JsonSchema/spec/introduction/">this doc</a> for examples.|
-|2.mock_catalog.0.stream_duplication|integer||1|Duplicate the stream for easy load testing. Each stream name will have a number suffix. For example, if the stream name is "ds", the duplicated streams will be "ds_0", "ds_1", etc.|
-|2.mock_catalog.1.type|string|MULTI_STREAM|MULTI_STREAM||
-|2.mock_catalog.1.stream_schemas|string||{ "stream1": { "type": "object", "properties": { "field1": { "type": "string" } } }, "stream2": { "type": "object", "properties": { "field1": { "type": "boolean" } } } }|A Json object specifying multiple data streams and their schemas. Each key in this object is one stream name. Each value is the schema for that stream. The schema should be compatible with <a href="https://json-schema.org/draft-07/json-schema-release-notes.html">draft-07</a>. See <a href="https://cswr.github.io/JsonSchema/spec/introduction/">this doc</a> for examples.|
-|3.type|string|BENCHMARK|BENCHMARK||
-|3.schema|string||null|schema of the data in the benchmark.|
-|3.terminationCondition|object||null|when does the benchmark stop?|
-|3.terminationCondition.0.type|string|MAX_RECORDS|MAX_RECORDS||
-|3.terminationCondition.0.max|number||null||
+|type 0|string|INFINITE_FEED|INFINITE_FEED||
+|max_records 0|integer||null|Number of records to emit. If not set, defaults to infinity.|
+|message_interval 0|integer||null|Interval between messages in ms.|
+|type 1|string|EXCEPTION_AFTER_N|EXCEPTION_AFTER_N||
+|throw_after_n_records 1|integer||null|Number of records to emit before throwing an exception. Min 1.|
+|type 2|string|CONTINUOUS_FEED|CONTINUOUS_FEED||
+|max_messages 2|integer||100|Number of records to emit per stream. Min 1. Max 100 billion.|
+|seed 2|integer||0|When the seed is unspecified, the current time millis will be used as the seed. Range: [0, 1000000].|
+|message_interval_ms 2|integer||0|Interval between messages in ms. Min 0 ms. Max 60000 ms (1 minute).|
+|mock_catalog.type 2,0|string|SINGLE_STREAM|SINGLE_STREAM||
+|mock_catalog.stream_name 2,0|string||data_stream|Name of the data stream.|
+|mock_catalog.stream_schema 2,0|string||{ "type": "object", "properties": { "column1": { "type": "string" } } }|A Json schema for the stream. The schema should be compatible with <a href="https://json-schema.org/draft-07/json-schema-release-notes.html">draft-07</a>. See <a href="https://cswr.github.io/JsonSchema/spec/introduction/">this doc</a> for examples.|
+|mock_catalog.stream_duplication 2,0|integer||1|Duplicate the stream for easy load testing. Each stream name will have a number suffix. For example, if the stream name is "ds", the duplicated streams will be "ds_0", "ds_1", etc.|
+|mock_catalog.type 2,1|string|MULTI_STREAM|MULTI_STREAM||
+|mock_catalog.stream_schemas 2,1|string||{ "stream1": { "type": "object", "properties": { "field1": { "type": "string" } } }, "stream2": { "type": "object", "properties": { "field1": { "type": "boolean" } } } }|A Json object specifying multiple data streams and their schemas. Each key in this object is one stream name. Each value is the schema for that stream. The schema should be compatible with <a href="https://json-schema.org/draft-07/json-schema-release-notes.html">draft-07</a>. See <a href="https://cswr.github.io/JsonSchema/spec/introduction/">this doc</a> for examples.|
+|type 3|string|BENCHMARK|BENCHMARK||
+|schema 3|string||null|schema of the data in the benchmark.|
+|terminationCondition.type 3,0|string|MAX_RECORDS|MAX_RECORDS||
+|terminationCondition.max 3,0|number||null||
 
 # End-to-End Testing Source
 

@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "api_key": "1234567890abcdef",
+  "api_key": "your_api_key",
   "company": "google"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|authentication key required to access the api endpoints|
-|company|string||null|Company name that generates your base api url|
+|api_key |string||null|authentication key required to access the api endpoints|
+|company |string||null|Company name that generates your base api url|
 
 # Hellobaton Source
 

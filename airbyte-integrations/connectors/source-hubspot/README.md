@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|credentials|object||null|Choose how to authenticate to HubSpot.|
-|credentials.0.credentials_title|string|OAuth Credentials|null|Name of the credentials|
-|credentials.0.client_id|string||null|The Client ID of your HubSpot developer application. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this ID.|
-|credentials.0.client_secret|string||null|The client secret for your HubSpot developer application. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this secret.|
-|credentials.0.refresh_token|string||null|Refresh token to renew an expired access token. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this token.|
-|credentials.1.credentials_title|string|Private App Credentials|null|Name of the credentials set|
-|credentials.1.access_token|string||null|HubSpot Access token. See the <a href="https://developers.hubspot.com/docs/api/private-apps">Hubspot docs</a> if you need help finding this token.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|credentials.credentials_title 0|string|OAuth Credentials|null|Name of the credentials|
+|credentials.client_id 0|string||null|The Client ID of your HubSpot developer application. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this ID.|
+|credentials.client_secret 0|string||null|The client secret for your HubSpot developer application. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this secret.|
+|credentials.refresh_token 0|string||null|Refresh token to renew an expired access token. See the <a href="https://legacydocs.hubspot.com/docs/methods/oauth2/oauth2-quickstart">Hubspot docs</a> if you need help finding this token.|
+|credentials.credentials_title 1|string|Private App Credentials|null|Name of the credentials set|
+|credentials.access_token 1|string||null|HubSpot Access token. See the <a href="https://developers.hubspot.com/docs/api/private-apps">Hubspot docs</a> if you need help finding this token.|
 
 # HubSpot Source
 

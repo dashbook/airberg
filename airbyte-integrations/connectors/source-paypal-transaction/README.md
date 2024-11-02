@@ -3,10 +3,10 @@
 ## Example
 ```
 {
-  "client_id": "my_client_id",
-  "client_secret": "my_client_secret",
-  "refresh_token": "my_refresh_token",
-  "start_date": "2024-06-11T23:59:59",
+  "client_id": "abc123",
+  "client_secret": "secret",
+  "refresh_token": "xyz456",
+  "start_date": "2021-06-11T23:59:59",
   "is_sandbox": true
 }
 ```
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|The Client ID of your Paypal developer application.|
-|client_secret|string||null|The Client Secret of your Paypal developer application.|
-|refresh_token|string||null|The key to refresh the expired access token.|
-|start_date|string||null|Start Date for data extraction in <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">ISO format</a>. Date must be in range from 3 years till 12 hrs before present time.|
-|is_sandbox|boolean||false|Determines whether to use the sandbox or production environment.|
+|client_id |string||null|The Client ID of your Paypal developer application.|
+|client_secret |string||null|The Client Secret of your Paypal developer application.|
+|refresh_token |string||null|The key to refresh the expired access token.|
+|start_date |string||null|Start Date for data extraction in <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">ISO format</a>. Date must be in range from 3 years till 12 hrs before present time.|
+|is_sandbox |boolean||false|Determines whether to use the sandbox or production environment.|
 
 # Paypal Transaction Source
 

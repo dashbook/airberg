@@ -1,7 +1,7 @@
 # Source recharge
 
 ## Example
-```
+```json
 {
   "start_date": "2021-05-14T00:00:00Z",
   "access_token": "your_access_token_here"
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date from which you'd like to replicate data for Recharge API, in the format YYYY-MM-DDT00:00:00Z. Any data before this date will not be replicated.|
-|access_token|string||null|The value of the Access Token generated. See the <a href="https://docs.airbyte.com/integrations/sources/recharge">docs</a> for more information.|
+|start_date |string||null|The date from which you'd like to replicate data for Recharge API, in the format YYYY-MM-DDT00:00:00Z. Any data before this date will not be replicated.|
+|access_token |string||null|The value of the Access Token generated. See the <a href="https://docs.airbyte.com/integrations/sources/recharge">docs</a> for more information.|
 
 # Recharge Source
 

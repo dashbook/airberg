@@ -3,8 +3,8 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here",
-  "site_id": "your_site_id_here",
+  "api_key": "secret-airbyte-plausible-api-key",
+  "site_id": "airbyte.com",
   "start_date": "2022-01-01"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Plausible API Key. See the <a href="https://plausible.io/docs/stats-api">docs</a> for information on how to generate this key.|
-|site_id|string||null|The domain of the site you want to retrieve data for. Enter the name of your site as configured on Plausible, i.e., excluding "https://" and "www". Can be retrieved from the 'domain' field in your Plausible site settings.|
-|start_date|string||null|Start date for data to retrieve, in ISO-8601 format.|
+|api_key |string||null|Plausible API Key. See the <a href="https://plausible.io/docs/stats-api">docs</a> for information on how to generate this key.|
+|site_id |string||null|The domain of the site you want to retrieve data for. Enter the name of your site as configured on Plausible, i.e., excluding "https://" and "www". Can be retrieved from the 'domain' field in your Plausible site settings.|
+|start_date |string||null|Start date for data to retrieve, in ISO-8601 format.|
 
 # Plausible Source
 

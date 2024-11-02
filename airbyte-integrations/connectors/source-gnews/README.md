@@ -1,10 +1,10 @@
 # Source gnews
 
 ## Example
-```json
+```
 {
-  "api_key": "your_api_key",
-  "query": "Microsoft Windows 10",
+  "api_key": "my_api_key",
+  "query": "Apple OR Microsoft",
   "language": "en",
   "country": "us",
   "in": [
@@ -12,20 +12,22 @@
     "description"
   ],
   "nullable": [
-    "content"
+    "title",
+    "description"
   ],
-  "start_date": "2022-08-21 00:00:00",
+  "start_date": "2022-08-21 16:27:09",
+  "end_date": "2022-08-22 16:27:09",
   "sortby": "publishedAt",
   "top_headlines_query": "Apple OR Microsoft",
-  "top_headlines_topic": "technology"
+  "top_headlines_topic": "business"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|query|string||null|This parameter allows you to specify your search keywords to find the news articles you are looking for. The keywords will be used to return the most relevant articles. It is possible to use logical operators  with keywords. - Phrase Search Operator: This operator allows you to make an exact search. Keywords surrounded by 
+|api_key |string||null|API Key|
+|query |string||null|This parameter allows you to specify your search keywords to find the news articles you are looking for. The keywords will be used to return the most relevant articles. It is possible to use logical operators  with keywords. - Phrase Search Operator: This operator allows you to make an exact search. Keywords surrounded by 
   quotation marks are used to search for articles with the exact same keyword sequence. 
   For example the query: "Apple iPhone" will return articles matching at least once this sequence of keywords.
 - Logical AND Operator: This operator allows you to make sure that several keywords are all used in the article
@@ -39,16 +41,16 @@
   specified keywords. To use it, you need to add NOT in front of each word or phrase surrounded by quotes.
   For example the query: Apple NOT iPhone will return all articles matching the keyword Apple but not the keyword
   iPhone|
-|language|string||null||
-|country|string||null|This parameter allows you to specify the country where the news articles returned by the API were published, the contents of the articles are not necessarily related to the specified country. You have to set as value the 2 letters code of the country you want to filter.|
-|in|array||null|This parameter allows you to choose in which attributes the keywords are searched. The attributes that can be set are title, description and content. It is possible to combine several attributes.|
-|nullable|array||null|This parameter allows you to specify the attributes that you allow to return null values. The attributes that  can be set are title, description and content. It is possible to combine several attributes|
-|start_date|string||null|This parameter allows you to filter the articles that have a publication date greater than or equal to the  specified value. The date must respect the following format: YYYY-MM-DD hh:mm:ss (in UTC)|
-|end_date|string||null|This parameter allows you to filter the articles that have a publication date smaller than or equal to the  specified value. The date must respect the following format: YYYY-MM-DD hh:mm:ss (in UTC)|
-|sortby|string||null|This parameter allows you to choose with which type of sorting the articles should be returned. Two values  are possible:
+|language |string||null||
+|country |string||null|This parameter allows you to specify the country where the news articles returned by the API were published, the contents of the articles are not necessarily related to the specified country. You have to set as value the 2 letters code of the country you want to filter.|
+|in |array||null|This parameter allows you to choose in which attributes the keywords are searched. The attributes that can be set are title, description and content. It is possible to combine several attributes.|
+|nullable |array||null|This parameter allows you to specify the attributes that you allow to return null values. The attributes that  can be set are title, description and content. It is possible to combine several attributes|
+|start_date |string||null|This parameter allows you to filter the articles that have a publication date greater than or equal to the  specified value. The date must respect the following format: YYYY-MM-DD hh:mm:ss (in UTC)|
+|end_date |string||null|This parameter allows you to filter the articles that have a publication date smaller than or equal to the  specified value. The date must respect the following format: YYYY-MM-DD hh:mm:ss (in UTC)|
+|sortby |string||null|This parameter allows you to choose with which type of sorting the articles should be returned. Two values  are possible:
   - publishedAt = sort by publication date, the articles with the most recent publication date are returned first
   - relevance = sort by best match to keywords, the articles with the best match are returned first|
-|top_headlines_query|string||null|This parameter allows you to specify your search keywords to find the news articles you are looking for. The keywords will be used to return the most relevant articles. It is possible to use logical operators  with keywords. - Phrase Search Operator: This operator allows you to make an exact search. Keywords surrounded by 
+|top_headlines_query |string||null|This parameter allows you to specify your search keywords to find the news articles you are looking for. The keywords will be used to return the most relevant articles. It is possible to use logical operators  with keywords. - Phrase Search Operator: This operator allows you to make an exact search. Keywords surrounded by 
   quotation marks are used to search for articles with the exact same keyword sequence. 
   For example the query: "Apple iPhone" will return articles matching at least once this sequence of keywords.
 - Logical AND Operator: This operator allows you to make sure that several keywords are all used in the article
@@ -62,7 +64,7 @@
   specified keywords. To use it, you need to add NOT in front of each word or phrase surrounded by quotes.
   For example the query: Apple NOT iPhone will return all articles matching the keyword Apple but not the keyword
   iPhone|
-|top_headlines_topic|string||null|This parameter allows you to change the category for the request.|
+|top_headlines_topic |string||null|This parameter allows you to change the category for the request.|
 
 # Gnews Source
 

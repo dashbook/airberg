@@ -1,11 +1,11 @@
 # Source commcare
 
 ## Example
-```json
+```
 {
-  "api_key": "secret_api_key",
-  "project_space": "my_project_space",
-  "app_id": "my_app_id",
+  "api_key": "secret_key",
+  "project_space": "project_space",
+  "app_id": "application_id",
   "start_date": "2022-10-01T00:00:00Z"
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Commcare API Key|
-|project_space|string||null|Project Space for commcare|
-|app_id|string||null|The Application ID we are interested in|
-|start_date|string||2022-10-01T00:00:00Z|UTC date and time in the format 2017-01-25T00:00:00Z. Only records after this date will be replicated.|
+|api_key |string||null|Commcare API Key|
+|project_space |string||null|Project Space for commcare|
+|app_id |string||null|The Application ID we are interested in|
+|start_date |string||2022-10-01T00:00:00Z|UTC date and time in the format 2017-01-25T00:00:00Z. Only records after this date will be replicated.|
 
 # Commcare Source
 

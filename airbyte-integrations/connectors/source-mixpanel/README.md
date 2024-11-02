@@ -1,14 +1,15 @@
 # Source mixpanel
 
 ## Example
+```json
 {
   "credentials": {
     "option_title": "Service Account",
-    "username": "mixpanel_service_account_username",
-    "secret": "mixpanel_service_account_secret"
+    "username": "service-account-username",
+    "secret": "mixpanel-service-account-secret"
   },
-  "project_id": 123,
-  "attribution_window": 5,
+  "project_id": 12345,
+  "attribution_window": 7,
   "project_timezone": "US/Pacific",
   "select_properties_by_default": true,
   "start_date": "2021-11-16",
@@ -16,24 +17,24 @@
   "region": "US",
   "date_window_size": 30
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to Mixpanel|
-|project_id|integer||null|Your project ID number. See the <a href="https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings#project-id">docs</a> for more information on how to obtain this.|
-|attribution_window|integer||5| A period of time for attributing results to ads and the lookback period after those actions occur during which ad results are counted. Default attribution window is 5 days.|
-|project_timezone|string||US/Pacific|Time zone in which integer date times are stored. The project timezone may be found in the project settings in the <a href="https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel">Mixpanel console</a>.|
-|select_properties_by_default|boolean||true|Setting this config parameter to TRUE ensures that new properties on events and engage records are captured. Otherwise new properties will be ignored.|
-|start_date|string||null|The date in the format YYYY-MM-DD. Any data before this date will not be replicated. If this option is not set, the connector will replicate data from up to one year ago by default.|
-|end_date|string||null|The date in the format YYYY-MM-DD. Any data after this date will not be replicated. Left empty to always sync to most recent date|
-|region|string||US|The region of mixpanel domain instance either US or EU.|
-|date_window_size|integer||30|Defines window size in days, that used to slice through data. You can reduce it, if amount of data in each window is too big for your environment.|
-|credentials.0.option_title|string|Service Account|null||
-|credentials.0.username|string||null|Mixpanel Service Account Username. See the <a href="https://developer.mixpanel.com/reference/service-accounts">docs</a> for more information on how to obtain this.|
-|credentials.0.secret|string||null|Mixpanel Service Account Secret. See the <a href="https://developer.mixpanel.com/reference/service-accounts">docs</a> for more information on how to obtain this.|
-|credentials.1.option_title|string|Project Secret|null||
-|credentials.1.api_secret|string||null|Mixpanel project secret. See the <a href="https://developer.mixpanel.com/reference/project-secret#managing-a-projects-secret">docs</a> for more information on how to obtain this.|
+|project_id |integer||null|Your project ID number. See the <a href="https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings#project-id">docs</a> for more information on how to obtain this.|
+|attribution_window |integer||5| A period of time for attributing results to ads and the lookback period after those actions occur during which ad results are counted. Default attribution window is 5 days.|
+|project_timezone |string||US/Pacific|Time zone in which integer date times are stored. The project timezone may be found in the project settings in the <a href="https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel">Mixpanel console</a>.|
+|select_properties_by_default |boolean||true|Setting this config parameter to TRUE ensures that new properties on events and engage records are captured. Otherwise new properties will be ignored.|
+|start_date |string||null|The date in the format YYYY-MM-DD. Any data before this date will not be replicated. If this option is not set, the connector will replicate data from up to one year ago by default.|
+|end_date |string||null|The date in the format YYYY-MM-DD. Any data after this date will not be replicated. Left empty to always sync to most recent date|
+|region |string||US|The region of mixpanel domain instance either US or EU.|
+|date_window_size |integer||30|Defines window size in days, that used to slice through data. You can reduce it, if amount of data in each window is too big for your environment.|
+|credentials.option_title 0|string|Service Account|null||
+|credentials.username 0|string||null|Mixpanel Service Account Username. See the <a href="https://developer.mixpanel.com/reference/service-accounts">docs</a> for more information on how to obtain this.|
+|credentials.secret 0|string||null|Mixpanel Service Account Secret. See the <a href="https://developer.mixpanel.com/reference/service-accounts">docs</a> for more information on how to obtain this.|
+|credentials.option_title 1|string|Project Secret|null||
+|credentials.api_secret 1|string||null|Mixpanel project secret. See the <a href="https://developer.mixpanel.com/reference/project-secret#managing-a-projects-secret">docs</a> for more information on how to obtain this.|
 
 # Mixpanel Source
 

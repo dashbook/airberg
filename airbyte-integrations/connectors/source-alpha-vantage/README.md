@@ -3,24 +3,24 @@
 ## Example
 ```json
 {
-  "api_key": "1234567890",
+  "api_key": "your-api-key",
   "symbol": "AAPL",
   "interval": "1min",
-  "adjusted": true,
-  "outputsize": "full"
+  "adjusted": false,
+  "outputsize": "compact"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|symbol|string||null|Stock symbol (with exchange code)|
-|interval|string||1min|Time-series data point interval. Required for intraday endpoints.
+|api_key |string||null|API Key|
+|symbol |string||null|Stock symbol (with exchange code)|
+|interval |string||1min|Time-series data point interval. Required for intraday endpoints.
 |
-|adjusted|boolean||false|Whether to return adjusted data. Only applicable to intraday endpoints.
+|adjusted |boolean||false|Whether to return adjusted data. Only applicable to intraday endpoints.
 |
-|outputsize|string||compact|Whether to return full or compact data (the last 100 data points).
+|outputsize |string||compact|Whether to return full or compact data (the last 100 data points).
 |
 
 # Alpha Vantage Source

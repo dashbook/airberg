@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Your API Token. See <a href="https://developers.mailerlite.com/docs/#authentication">here</a>.|
+|api_token |string||null|Your API Token. See <a href="https://developers.mailerlite.com/docs/#authentication">here</a>.|
 
 # Mailerlite Source
 

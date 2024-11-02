@@ -5,7 +5,7 @@
 {
   "email": "john@doe.com",
   "password": "mysecretpassword",
-  "start_date": "2016-01-01",
+  "start_date": "2022-01-01",
   "logs_batch_size": 30
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|email|string||null|Your My Hours username|
-|password|string||null|The password associated to the username|
-|start_date|string||null|Start date for collecting time logs|
-|logs_batch_size|integer||30|Pagination size used for retrieving logs in days|
+|email |string||null|Your My Hours username|
+|password |string||null|The password associated to the username|
+|start_date |string||null|Start date for collecting time logs|
+|logs_batch_size |integer||30|Pagination size used for retrieving logs in days|
 
 # My Hours Source
 

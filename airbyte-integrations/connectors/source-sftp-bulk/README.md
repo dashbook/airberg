@@ -3,9 +3,9 @@
 ## Example
 ```json
 {
-  "username": "test_user",
-  "password": "test_password",
-  "private_key": "-----BEGIN RSA PRIVATE KEY-----\n...\n-----END RSA PRIVATE KEY-----",
+  "username": "user123",
+  "password": "mysecretpassword",
+  "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnBQ0Azo\n-----END RSA PRIVATE KEY-----",
   "host": "www.host.com",
   "port": 22,
   "stream_name": "ftp_contacts",
@@ -14,25 +14,25 @@
   "folder_path": "/logs/2022",
   "file_pattern": "log-([0-9]{4})([0-9]{2})([0-9]{2})",
   "file_most_recent": false,
-  "start_date": "2022-01-01T00:00:00Z"
+  "start_date": "2017-01-25T00:00:00Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|username|string||null|The server user|
-|password|string||null|OS-level password for logging into the jump server host|
-|private_key|string||null|The private key|
-|host|string||null|The server host address|
-|port|integer||22|The server port|
-|stream_name|string||null|The name of the stream or table you want to create|
-|file_type|string||csv|The file type you want to sync. Currently only 'csv' and 'json' files are supported.|
-|separator|string||,|The separator used in the CSV files. Define None if you want to use the Sniffer functionality|
-|folder_path|string|||The directory to search files for sync|
-|file_pattern|string|||The regular expression to specify files for sync in a chosen Folder Path|
-|file_most_recent|boolean||false|Sync only the most recent file for the configured folder path and file pattern|
-|start_date|string||null|The date from which you'd like to replicate data for all incremental streams, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|username |string||null|The server user|
+|password |string||null|OS-level password for logging into the jump server host|
+|private_key |string||null|The private key|
+|host |string||null|The server host address|
+|port |integer||22|The server port|
+|stream_name |string||null|The name of the stream or table you want to create|
+|file_type |string||csv|The file type you want to sync. Currently only 'csv' and 'json' files are supported.|
+|separator |string||,|The separator used in the CSV files. Define None if you want to use the Sniffer functionality|
+|folder_path |string|||The directory to search files for sync|
+|file_pattern |string|||The regular expression to specify files for sync in a chosen Folder Path|
+|file_most_recent |boolean||false|Sync only the most recent file for the configured folder path and file pattern|
+|start_date |string||null|The date from which you'd like to replicate data for all incremental streams, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
 
 # SFTP Bulk Source
 

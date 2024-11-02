@@ -3,14 +3,14 @@
 ## Example
 ```
 {
-  "api_key": "your-api-key"
+  "api_key": "my_secret_key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Access Key. See <a href="https://docs.secoda.co/secoda-api/authentication">here</a>. The key is case sensitive.|
+|api_key |string||null|Your API Access Key. See <a href="https://docs.secoda.co/secoda-api/authentication">here</a>. The key is case sensitive.|
 
 # Secoda Source
 

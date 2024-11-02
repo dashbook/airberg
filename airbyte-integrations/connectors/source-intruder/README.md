@@ -1,16 +1,16 @@
 # Source intruder
 
 ## Example
-```json
+```
 {
-  "access_token": "your_api_access_token_here"
+  "access_token": "your_api_access_token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Your API Access token. See <a href="https://developers.intruder.io/docs/authentication">here</a>.|
+|access_token |string||null|Your API Access token. See <a href="https://developers.intruder.io/docs/authentication">here</a>.|
 
 # Intruder Source
 

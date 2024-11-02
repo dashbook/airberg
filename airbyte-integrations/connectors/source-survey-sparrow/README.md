@@ -3,26 +3,22 @@
 ## Example
 ```json
 {
-  "access_token": "my_secret_token",
+  "access_token": "abc123",
+  "survey_id": ["survey1", "survey2"],
   "region": {
     "url_base": "https://eu-api.surveysparrow.com/v3"
-  },
-  "survey_id": [
-    "12345",
-    "67890"
-  ]
+  }
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Your access token. See <a href="https://developers.surveysparrow.com/rest-apis#authentication">here</a>. The key is case sensitive.|
-|survey_id|array||null|A List of your survey ids for survey-specific stream|
-|region|object||{"title":"Global account","type":"object","properties":{"url_base":{"type":"string","const":"https://api.surveysparrow.com/v3"}}}|Is your account location is EU based? If yes, the base url to retrieve data will be different.|
-|region.0.url_base|string|https://eu-api.surveysparrow.com/v3|null||
-|region.1.url_base|string|https://api.surveysparrow.com/v3|null||
-|region.default.url_base|string|https://api.surveysparrow.com/v3|null||
+|access_token |string||null|Your access token. See <a href="https://developers.surveysparrow.com/rest-apis#authentication">here</a>. The key is case sensitive.|
+|survey_id |array||null|A List of your survey ids for survey-specific stream|
+|region.url_base 0|string|https://eu-api.surveysparrow.com/v3|null||
+|region.url_base 1|string|https://api.surveysparrow.com/v3|null||
+|region.default.url_base |string|https://api.surveysparrow.com/v3|null||
 
 # Survey Sparrow Source
 

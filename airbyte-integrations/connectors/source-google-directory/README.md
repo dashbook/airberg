@@ -5,8 +5,8 @@
 {
   "credentials": {
     "credentials_title": "Service accounts",
-    "credentials_json": "{\"key\": \"key-value\"}",
-    "email": "user@example.com"
+    "credentials_json": "-----BEGIN PRIVATE KEY-----...-----END PRIVATE KEY-----",
+    "email": "example@domain.com"
   }
 }
 ```
@@ -14,14 +14,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Google APIs use the OAuth 2.0 protocol for authentication and authorization. The Source supports <a href="https://developers.google.com/identity/protocols/oauth2#webserver" target="_blank">Web server application</a> and <a href="https://developers.google.com/identity/protocols/oauth2#serviceaccount" target="_blank">Service accounts</a> scenarios.|
-|credentials.0.credentials_title|string|Web server app|null|Authentication Scenario|
-|credentials.0.client_id|string||null|The Client ID of the developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of the developer application.|
-|credentials.0.refresh_token|string||null|The Token for obtaining a new access token.|
-|credentials.1.credentials_title|string|Service accounts|null|Authentication Scenario|
-|credentials.1.credentials_json|string||null|The contents of the JSON service account key. See the <a href="https://developers.google.com/admin-sdk/directory/v1/guides/delegation">docs</a> for more information on how to generate this key.|
-|credentials.1.email|string||null|The email of the user, which has permissions to access the Google Workspace Admin APIs.|
+|credentials.credentials_title 0|string|Web server app|null|Authentication Scenario|
+|credentials.client_id 0|string||null|The Client ID of the developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of the developer application.|
+|credentials.refresh_token 0|string||null|The Token for obtaining a new access token.|
+|credentials.credentials_title 1|string|Service accounts|null|Authentication Scenario|
+|credentials.credentials_json 1|string||null|The contents of the JSON service account key. See the <a href="https://developers.google.com/admin-sdk/directory/v1/guides/delegation">docs</a> for more information on how to generate this key.|
+|credentials.email 1|string||null|The email of the user, which has permissions to access the Google Workspace Admin APIs.|
 
 # Google Directory Source 
 

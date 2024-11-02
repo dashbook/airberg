@@ -3,12 +3,11 @@
 ## Example
 ```json
 {
-  "auth_method": "oauth2.0",
+  "developer_token": "DEVELOPER_TOKEN",
+  "client_id": "CLIENT_ID",
+  "refresh_token": "REFRESH_TOKEN",
   "tenant_id": "common",
-  "client_id": "client_id_value",
-  "client_secret": "client_secret_value",
-  "refresh_token": "refresh_token_value",
-  "developer_token": "developer_token_value",
+  "client_secret": "CLIENT_SECRET",
   "reports_start_date": "2020-01-01",
   "lookback_window": 0
 }
@@ -17,14 +16,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_method|string|oauth2.0|null||
-|tenant_id|string||common|The Tenant ID of your Microsoft Advertising developer application. Set this to "common" unless you know you need a different value.|
-|client_id|string||null|The Client ID of your Microsoft Advertising developer application.|
-|client_secret|string|||The Client Secret of your Microsoft Advertising developer application.|
-|refresh_token|string||null|Refresh Token to renew the expired Access Token.|
-|developer_token|string||null|Developer token associated with user. See more info <a href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-developer-token"> in the docs</a>.|
-|reports_start_date|string||2020-01-01|The start date from which to begin replicating report data. Any data generated before this date will not be replicated in reports. This is a UTC date in YYYY-MM-DD format.|
-|lookback_window|integer||0|Also known as attribution or conversion window. How far into the past to look for records (in days). If your conversion window has an hours/minutes granularity, round it up to the number of days exceeding. Used only for performance report streams in incremental mode.|
+|auth_method |string|oauth2.0|null||
+|tenant_id |string||common|The Tenant ID of your Microsoft Advertising developer application. Set this to "common" unless you know you need a different value.|
+|client_id |string||null|The Client ID of your Microsoft Advertising developer application.|
+|client_secret |string|||The Client Secret of your Microsoft Advertising developer application.|
+|refresh_token |string||null|Refresh Token to renew the expired Access Token.|
+|developer_token |string||null|Developer token associated with user. See more info <a href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-developer-token"> in the docs</a>.|
+|reports_start_date |string||2020-01-01|The start date from which to begin replicating report data. Any data generated before this date will not be replicated in reports. This is a UTC date in YYYY-MM-DD format.|
+|lookback_window |integer||0|Also known as attribution or conversion window. How far into the past to look for records (in days). If your conversion window has an hours/minutes granularity, round it up to the number of days exceeding. Used only for performance report streams in incremental mode.|
 
 # Bing Ads Source
 

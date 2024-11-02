@@ -4,8 +4,8 @@
 ```json
 {
   "database_name": "my_database",
-  "google_application_credentials": "{\"client_email\":\"my_email\",\"private_key\":\"my_key\",\"token_uri\":\"https://oauth2.googleapis.com/token\",\"project_id\":\"my_project\",\"auth_uri\":\"https://accounts.google.com/o/oauth2/auth\",\"auth_provider_x509_cert_url\":\"https://www.googleapis.com/oauth2/v1/certs\",\"client_id\":\"my_client\",\"redirect_uris\":[\"urn:ietf:wg:oauth:2.0:oob\",\"http://localhost\"]}",
-  "path": "my_path",
+  "google_application_credentials": "-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----",
+  "path": "/path/to/node",
   "buffer_size": 100
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|database_name|string||null|Database name (This will be part of the url pointing to the database, https://<database_name>.firebaseio.com/)|
-|google_application_credentials|string||null|Cert credentials in JSON format of Service Account with Firebase Realtime Database Viewer role. (see, https://firebase.google.com/docs/projects/iam/roles-predefined-product#realtime-database)|
-|path|string||null|Path to a node in the Firebase realtime database|
-|buffer_size|number||null|Number of records to fetch at once|
+|database_name |string||null|Database name (This will be part of the url pointing to the database, https://<database_name>.firebaseio.com/)|
+|google_application_credentials |string||null|Cert credentials in JSON format of Service Account with Firebase Realtime Database Viewer role. (see, https://firebase.google.com/docs/projects/iam/roles-predefined-product#realtime-database)|
+|path |string||null|Path to a node in the Firebase realtime database|
+|buffer_size |number||null|Number of records to fetch at once|
 
 # Firebase Realtime Database Source
 

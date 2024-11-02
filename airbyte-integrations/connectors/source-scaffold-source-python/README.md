@@ -1,16 +1,16 @@
 # Source scaffold-source-python
 
 ## Example
-```json
+```
 {
-  "fix-me": "this is a string"
+  "fix-me": "example"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|fix-me|string||null|describe me|
+|fix-me |string||null|describe me|
 
 # Scaffold Source Python Source
 

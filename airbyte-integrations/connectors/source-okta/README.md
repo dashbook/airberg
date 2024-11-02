@@ -7,7 +7,7 @@
   "start_date": "2022-07-22T00:00:00Z",
   "credentials": {
     "auth_type": "api_token",
-    "api_token": "your_okta_token"
+    "api_token": "my_api_token"
   }
 }
 ```
@@ -15,15 +15,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||null|The Okta domain. See the <a href="https://docs.airbyte.com/integrations/sources/okta">docs</a> for instructions on how to find it.|
-|start_date|string||null|UTC date and time in the format YYYY-MM-DDTHH:MM:SSZ. Any data before this date will not be replicated.|
-|credentials|object||null||
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your OAuth application.|
-|credentials.0.client_secret|string||null|The Client Secret of your OAuth application.|
-|credentials.0.refresh_token|string||null|Refresh Token to obtain new Access Token, when it's expired.|
-|credentials.1.auth_type|string|api_token|null||
-|credentials.1.api_token|string||null|An Okta token. See the <a href="https://docs.airbyte.com/integrations/sources/okta">docs</a> for instructions on how to generate it.|
+|domain |string||null|The Okta domain. See the <a href="https://docs.airbyte.com/integrations/sources/okta">docs</a> for instructions on how to find it.|
+|start_date |string||null|UTC date and time in the format YYYY-MM-DDTHH:MM:SSZ. Any data before this date will not be replicated.|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your OAuth application.|
+|credentials.client_secret 0|string||null|The Client Secret of your OAuth application.|
+|credentials.refresh_token 0|string||null|Refresh Token to obtain new Access Token, when it's expired.|
+|credentials.auth_type 1|string|api_token|null||
+|credentials.api_token 1|string||null|An Okta token. See the <a href="https://docs.airbyte.com/integrations/sources/okta">docs</a> for instructions on how to generate it.|
 
 # Okta Source
 

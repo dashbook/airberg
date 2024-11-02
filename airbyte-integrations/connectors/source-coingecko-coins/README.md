@@ -1,31 +1,29 @@
 # Source coingecko-coins
 
 ## Example
-```json
 {
+  "api_key": "my_secret_api_key",
   "coin_id": "bitcoin",
   "vs_currency": "usd",
-  "days": "max",
-  "start_date": "01-01-2022",
-  "end_date": "31-12-2022",
-  "api_key": "my_secret_api_key"
+  "days": "30",
+  "start_date": "10-01-2022",
+  "end_date": "15-01-2022"
 }
-```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key (for pro users)|
-|coin_id|string||null|CoinGecko coin ID (e.g. bitcoin). Can be retrieved from the
+|api_key |string||null|API Key (for pro users)|
+|coin_id |string||null|CoinGecko coin ID (e.g. bitcoin). Can be retrieved from the
 `/coins/list` endpoint.
 |
-|vs_currency|string||null|The target currency of market data (e.g. usd, eur, jpy, etc.)
+|vs_currency |string||null|The target currency of market data (e.g. usd, eur, jpy, etc.)
 |
-|days|string||30|The number of days of data for market chart.
+|days |string||30|The number of days of data for market chart.
 |
-|start_date|string||null|The start date for the historical data stream in dd-mm-yyyy format.
+|start_date |string||null|The start date for the historical data stream in dd-mm-yyyy format.
 |
-|end_date|string||null|The end date for the historical data stream in dd-mm-yyyy format.
+|end_date |string||null|The end date for the historical data stream in dd-mm-yyyy format.
 |
 
 # Coingecko Coins Source

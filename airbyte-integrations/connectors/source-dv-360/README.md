@@ -1,20 +1,39 @@
 # Source dv-360
 
 ## Example
-
+```
+{
+  "credentials": {
+    "access_token": "my_access_token",
+    "refresh_token": "my_refresh_token",
+    "token_uri": "https://example.com/token",
+    "client_id": "my_client_id",
+    "client_secret": "my_client_secret"
+  },
+  "partner_id": 123,
+  "start_date": "2022-01-01",
+  "end_date": "2022-12-31",
+  "filters": [
+    {
+      "type": "filter_type",
+      "value": "filter_value"
+    }
+  ]
+}
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|partner_id|integer||null|Partner ID|
-|start_date|string||null|UTC date and time in the format 2017-01-25. Any data before this date will not be replicated|
-|end_date|string||null|UTC date and time in the format 2017-01-25. Any data after this date will not be replicated.|
-|filters|array||[]|filters for the dimensions. each filter object had 2 keys: 'type' for the name of the dimension to be used as. and 'value' for the value of the filter|
-|credentials.access_token|string||null|Access token|
-|credentials.refresh_token|string||null|Refresh token|
-|credentials.token_uri|string||null|Token URI|
-|credentials.client_id|string||null|Client ID|
-|credentials.client_secret|string||null|Client secret|
+|partner_id |integer||null|Partner ID|
+|start_date |string||null|UTC date and time in the format 2017-01-25. Any data before this date will not be replicated|
+|end_date |string||null|UTC date and time in the format 2017-01-25. Any data after this date will not be replicated.|
+|filters |array||[]|filters for the dimensions. each filter object had 2 keys: 'type' for the name of the dimension to be used as. and 'value' for the value of the filter|
+|credentials.access_token |string||null|Access token|
+|credentials.refresh_token |string||null|Refresh token|
+|credentials.token_uri |string||null|Token URI|
+|credentials.client_id |string||null|Client ID|
+|credentials.client_secret |string||null|Client secret|
 
 # DISPLAY & VIDEO 360 Source
 

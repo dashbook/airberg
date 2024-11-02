@@ -1,16 +1,16 @@
 # Source k6-cloud
 
 ## Example
-```
+```json
 {
-  "api_token": "your_api_token_here"
+  "api_token": "your_secret_api_token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Your API Token. See <a href="https://k6.io/docs/cloud/integrations/token/">here</a>. The key is case sensitive.|
+|api_token |string||null|Your API Token. See <a href="https://k6.io/docs/cloud/integrations/token/">here</a>. The key is case sensitive.|
 
 # K6 Cloud Source
 

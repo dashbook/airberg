@@ -1,13 +1,13 @@
 # Source clickup-api
 
 ## Example
-```
+```json
 {
-  "api_token": "my_secret_api_token",
-  "team_id": "my_team_id",
-  "space_id": "my_space_id",
-  "folder_id": "my_folder_id",
-  "list_id": "my_list_id",
+  "api_token": "YourPersonalAPIToken",
+  "team_id": "YourTeamID",
+  "space_id": "YourSpaceID",
+  "folder_id": "YourFolderID",
+  "list_id": "YourListID",
   "include_closed_tasks": true
 }
 ```
@@ -15,12 +15,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Every ClickUp API call required authentication. This field is your personal API token. See <a href="https://clickup.com/api/developer-portal/authentication/#personal-token">here</a>.|
-|team_id|string||null|The ID of your team in ClickUp. Retrieve it from the `/team` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetAuthorizedTeams/">here</a>.|
-|space_id|string||null|The ID of your space in your workspace. Retrieve it from the `/team/{team_id}/space` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetSpaces/">here</a>.|
-|folder_id|string||null|The ID of your folder in your space. Retrieve it from the `/space/{space_id}/folder` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetFolders/">here</a>.|
-|list_id|string||null|The ID of your list in your folder. Retrieve it from the `/folder/{folder_id}/list` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetLists/">here</a>.|
-|include_closed_tasks|boolean||false|Include or exclude closed tasks. By default, they are excluded. See <a https://clickup.com/api/clickupreference/operation/GetTasks/#!in=query&path=include_closed&t=request">here</a>.|
+|api_token |string||null|Every ClickUp API call required authentication. This field is your personal API token. See <a href="https://clickup.com/api/developer-portal/authentication/#personal-token">here</a>.|
+|team_id |string||null|The ID of your team in ClickUp. Retrieve it from the `/team` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetAuthorizedTeams/">here</a>.|
+|space_id |string||null|The ID of your space in your workspace. Retrieve it from the `/team/{team_id}/space` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetSpaces/">here</a>.|
+|folder_id |string||null|The ID of your folder in your space. Retrieve it from the `/space/{space_id}/folder` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetFolders/">here</a>.|
+|list_id |string||null|The ID of your list in your folder. Retrieve it from the `/folder/{folder_id}/list` of the ClickUp API. See <a href="https://clickup.com/api/clickupreference/operation/GetLists/">here</a>.|
+|include_closed_tasks |boolean||false|Include or exclude closed tasks. By default, they are excluded. See <a https://clickup.com/api/clickupreference/operation/GetTasks/#!in=query&path=include_closed&t=request">here</a>.|
 
 # Clickup Api Source
 

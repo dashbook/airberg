@@ -1,18 +1,18 @@
 # Source freshsales
 
 ## Example
-```json
+```
 {
   "domain_name": "mydomain.myfreshworks.com",
-  "api_key": "my_api_key"
+  "api_key": "your_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain_name|string||null|The Name of your Freshsales domain|
-|api_key|string||null|Freshsales API Key. See <a href="https://crmsupport.freshworks.com/support/solutions/articles/50000002503-how-to-find-my-api-key-">here</a>. The key is case sensitive.|
+|domain_name |string||null|The Name of your Freshsales domain|
+|api_key |string||null|Freshsales API Key. See <a href="https://crmsupport.freshworks.com/support/solutions/articles/50000002503-how-to-find-my-api-key-">here</a>. The key is case sensitive.|
 
 # Freshsales Source
 

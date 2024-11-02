@@ -1,31 +1,32 @@
 # Source google-sheets
 
 ## Example
+```json
 {
   "spreadsheet_id": "https://docs.google.com/spreadsheets/d/1hLd9Qqti3UyLXZB2aFfUWDT7BG-arw2xy4HR3D-dwUb/edit",
-  "row_batch_size": 500,
-  "names_conversion": true,
   "credentials": {
     "auth_type": "Client",
-    "client_id": "YOUR_CLIENT_ID",
-    "client_secret": "YOUR_CLIENT_SECRET",
-    "refresh_token": "YOUR_REFRESH_TOKEN"
-  }
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "refresh_token": "your_refresh_token"
+  },
+  "row_batch_size": 200,
+  "names_conversion": false
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|spreadsheet_id|string||null|Enter the link to the Google spreadsheet you want to sync|
-|row_batch_size|integer||200|Number of rows fetched when making a Google Sheet API call. Defaults to 200.|
-|names_conversion|boolean||false|Columns name conversion using a set of rules, for example, 'My Name' -> 'my-name'.|
-|credentials|object||null|Credentials for connecting to the Google Sheets API|
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|Enter your Google application's Client ID|
-|credentials.0.client_secret|string||null|Enter your Google application's Client Secret|
-|credentials.0.refresh_token|string||null|Enter your Google application's refresh token|
-|credentials.1.auth_type|string|Service|null||
-|credentials.1.service_account_info|string||null|Enter your Google Cloud <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys">service account key</a> in JSON format|
+|spreadsheet_id |string||null|Enter the link to the Google spreadsheet you want to sync|
+|row_batch_size |integer||200|Number of rows fetched when making a Google Sheet API call. Defaults to 200.|
+|names_conversion |boolean||false|Columns name conversion using a set of rules, for example, 'My Name' -> 'my-name'.|
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|Enter your Google application's Client ID|
+|credentials.client_secret 0|string||null|Enter your Google application's Client Secret|
+|credentials.refresh_token 0|string||null|Enter your Google application's refresh token|
+|credentials.auth_type 1|string|Service|null||
+|credentials.service_account_info 1|string||null|Enter your Google Cloud <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys">service account key</a> in JSON format|
 
 # Google Sheets Source 
 

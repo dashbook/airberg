@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "token": "your_api_token_here"
+  "token": "1234567890abcdef"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|token|string||null|Your API Token. See <a href="https://todoist.com/app/settings/integrations/">here</a>. The token is case sensitive.|
+|token |string||null|Your API Token. See <a href="https://todoist.com/app/settings/integrations/">here</a>. The token is case sensitive.|
 
 # Todoist Source
 

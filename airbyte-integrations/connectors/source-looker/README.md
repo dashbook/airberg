@@ -3,20 +3,20 @@
 ## Example
 ```
 {
-  "domain": "domainname.looker.com",
-  "client_id": "1234567890",
-  "client_secret": "thisisasecret",
-  "run_look_ids": ["123", "456"]
+  "domain": "example.com",
+  "client_id": "my_client_id",
+  "client_secret": "my_client_secret",
+  "run_look_ids": ["12345", "67890"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||null|Domain for your Looker account, e.g. airbyte.cloud.looker.com,looker.[clientname].com,IP address|
-|client_id|string||null|The Client ID is first part of an API3 key that is specific to each Looker user. See the <a href="https://docs.airbyte.com/integrations/sources/looker">docs</a> for more information on how to generate this key.|
-|client_secret|string||null|The Client Secret is second part of an API3 key.|
-|run_look_ids|array||null|The IDs of any Looks to run|
+|domain |string||null|Domain for your Looker account, e.g. airbyte.cloud.looker.com,looker.[clientname].com,IP address|
+|client_id |string||null|The Client ID is first part of an API3 key that is specific to each Looker user. See the <a href="https://docs.airbyte.com/integrations/sources/looker">docs</a> for more information on how to generate this key.|
+|client_secret |string||null|The Client Secret is second part of an API3 key.|
+|run_look_ids |array||null|The IDs of any Looks to run|
 
 # Looker Source 
 

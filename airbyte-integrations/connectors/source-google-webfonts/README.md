@@ -4,7 +4,7 @@
 ```json
 {
   "api_key": "my_secret_api_key",
-  "sort": "alpha",
+  "sort": "none",
   "prettyPrint": "true",
   "alt": "json"
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API key is required to access google apis, For getting your's goto google console and generate api key for Webfonts|
-|sort|string||null|Optional, to find how to sort|
-|prettyPrint|string||null|Optional, boolean type|
-|alt|string||null|Optional, Available params- json, media, proto|
+|api_key |string||null|API key is required to access google apis, For getting your's goto google console and generate api key for Webfonts|
+|sort |string||null|Optional, to find how to sort|
+|prettyPrint |string||null|Optional, boolean type|
+|alt |string||null|Optional, Available params- json, media, proto|
 
 # Google Webfonts Source
 

@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|pokemon_name|string||null|Pokemon requested from the API.|
+|pokemon_name |string||null|Pokemon requested from the API.|
 
 # Pokeapi Source
 

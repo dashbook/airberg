@@ -1,29 +1,28 @@
 # Source mailchimp
 
 ## Example
-```json
+```
 {
   "credentials": {
     "auth_type": "oauth2.0",
-    "client_id": "your_client_id",
-    "client_secret": "your_client_secret",
-    "access_token": "your_access_token"
+    "client_id": "1234567890",
+    "client_secret": "very_secret",
+    "access_token": "abcdefghijklmnopqrstuvwxyz"
   },
-  "campaign_id": "your_campaign_id"
+  "campaign_id": "123"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|campaign_id|string||null||
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your OAuth application.|
-|credentials.0.client_secret|string||null|The Client Secret of your OAuth application.|
-|credentials.0.access_token|string||null|An access token generated using the above client ID and secret.|
-|credentials.1.auth_type|string|apikey|null||
-|credentials.1.apikey|string||null|Mailchimp API Key. See the <a href="https://docs.airbyte.com/integrations/sources/mailchimp">docs</a> for information on how to generate this key.|
+|campaign_id |string||null||
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your OAuth application.|
+|credentials.client_secret 0|string||null|The Client Secret of your OAuth application.|
+|credentials.access_token 0|string||null|An access token generated using the above client ID and secret.|
+|credentials.auth_type 1|string|apikey|null||
+|credentials.apikey 1|string||null|Mailchimp API Key. See the <a href="https://docs.airbyte.com/integrations/sources/mailchimp">docs</a> for information on how to generate this key.|
 
 # Mailchimp Source
 

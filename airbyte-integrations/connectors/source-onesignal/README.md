@@ -3,29 +3,34 @@
 ## Example
 ```json
 {
-  "user_auth_key": "secret",
+  "user_auth_key": "my_secret_key",
+  "start_date": "2022-01-01T00:00:00Z",
+  "outcome_names": "os__session_duration.count,os__click.count,MyOutcomeName.sum",
   "applications": [
     {
-      "app_name": "My App",
-      "app_id": "secret",
-      "app_api_key": "secret"
+      "app_name": "My OneSignal App",
+      "app_id": "app_id_1",
+      "app_api_key": "app_api_key_1"
+    },
+    {
+      "app_name": "My Other OneSignal App",
+      "app_id": "app_id_2",
+      "app_api_key": "app_api_key_2"
     }
-  ],
-  "start_date": "2020-11-16T00:00:00Z",
-  "outcome_names": "os__session_duration.count,os__click.count,CustomOutcomeName.sum"
+  ]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|user_auth_key|string||null|OneSignal User Auth Key, see the <a href="https://documentation.onesignal.com/docs/accounts-and-keys#user-auth-key">docs</a> for more information on how to obtain this key.|
-|applications|array||null|Applications keys, see the <a href="https://documentation.onesignal.com/docs/accounts-and-keys">docs</a> for more information on how to obtain this data|
-|start_date|string||null|The date from which you'd like to replicate data for OneSignal API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
-|outcome_names|string||null|Comma-separated list of names and the value (sum/count) for the returned outcome data. See the <a href="https://documentation.onesignal.com/reference/view-outcomes">docs</a> for more details|
-|applications.items.app_name|string||null||
-|applications.items.app_id|string||null||
-|applications.items.app_api_key|string||null||
+|user_auth_key |string||null|OneSignal User Auth Key, see the <a href="https://documentation.onesignal.com/docs/accounts-and-keys#user-auth-key">docs</a> for more information on how to obtain this key.|
+|applications |array||null|Applications keys, see the <a href="https://documentation.onesignal.com/docs/accounts-and-keys">docs</a> for more information on how to obtain this data|
+|start_date |string||null|The date from which you'd like to replicate data for OneSignal API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|outcome_names |string||null|Comma-separated list of names and the value (sum/count) for the returned outcome data. See the <a href="https://documentation.onesignal.com/reference/view-outcomes">docs</a> for more details|
+|applications.items.app_name |string||null||
+|applications.items.app_id |string||null||
+|applications.items.app_api_key |string||null||
 
 # Onesignal Source
 

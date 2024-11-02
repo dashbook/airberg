@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain_url|string||null|Your Marketo Base URL. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
-|client_id|string||null|The Client ID of your Marketo developer application. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
-|client_secret|string||null|The Client Secret of your Marketo developer application. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|domain_url |string||null|Your Marketo Base URL. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
+|client_id |string||null|The Client ID of your Marketo developer application. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
+|client_secret |string||null|The Client Secret of your Marketo developer application. See <a href="https://docs.airbyte.com/integrations/sources/marketo"> the docs </a> for info on how to obtain this.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Marketo Source
 

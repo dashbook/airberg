@@ -1,16 +1,16 @@
 # Source tempo
 
 ## Example
-```
+```json
 {
-  "api_token": "my_secret_api_token"
+  "api_token": "your_tempo_api_token_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Tempo API Token. Go to Tempo>Settings, scroll down to Data Access and select API integration.|
+|api_token |string||null|Tempo API Token. Go to Tempo>Settings, scroll down to Data Access and select API integration.|
 
 # Tempo Source 
 

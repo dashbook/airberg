@@ -1,18 +1,18 @@
 # Source aha
 
 ## Example
-```json
+```
 {
   "api_key": "my_secret_api_key",
-  "url": "https://my-aha-instance.aha.io"
+  "url": "https://example.com"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|url|string||null|URL|
+|api_key |string||null|API Key|
+|url |string||null|URL|
 
 # Aha Source
 

@@ -3,20 +3,20 @@
 ## Example
 ```
 {
-  "subdomain": "example",
-  "api_key": "example_api_key",
+  "subdomain": "example-subdomain",
+  "api_key": "example-api-key",
   "custom_reports_fields": "field1,field2",
-  "custom_reports_include_default_fields": true
+  "custom_reports_include_default_fields": false
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|subdomain|string||null|Sub Domain of bamboo hr|
-|api_key|string||null|Api key of bamboo hr|
-|custom_reports_fields|string|||Comma-separated list of fields to include in custom reports.|
-|custom_reports_include_default_fields|boolean||true|If true, the custom reports endpoint will include the default fields defined here: https://documentation.bamboohr.com/docs/list-of-field-names.|
+|subdomain |string||null|Sub Domain of bamboo hr|
+|api_key |string||null|Api key of bamboo hr|
+|custom_reports_fields |string|||Comma-separated list of fields to include in custom reports.|
+|custom_reports_include_default_fields |boolean||true|If true, the custom reports endpoint will include the default fields defined here: https://documentation.bamboohr.com/docs/list-of-field-names.|
 
 # Bamboo Hr Source
 

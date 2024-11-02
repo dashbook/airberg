@@ -1,26 +1,26 @@
 # Source commercetools
 
 ## Example
-```
+```json
 {
   "region": "us-central1",
   "host": "gcp",
   "start_date": "2021-01-01",
-  "project_key": "myproject",
-  "client_id": "myclientid",
-  "client_secret": "myclientsecret"
+  "project_key": "project_key_example",
+  "client_id": "client_id_example",
+  "client_secret": "client_secret_example"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|region|string||null|The region of the platform.|
-|host|string||null|The cloud provider your shop is hosted. See: https://docs.commercetools.com/api/authorization|
-|start_date|string||null|The date you would like to replicate data. Format: YYYY-MM-DD.|
-|project_key|string||null|The project key|
-|client_id|string||null|Id of API Client.|
-|client_secret|string||null|The password of secret of API Client.|
+|region |string||null|The region of the platform.|
+|host |string||null|The cloud provider your shop is hosted. See: https://docs.commercetools.com/api/authorization|
+|start_date |string||null|The date you would like to replicate data. Format: YYYY-MM-DD.|
+|project_key |string||null|The project key|
+|client_id |string||null|Id of API Client.|
+|client_secret |string||null|The password of secret of API Client.|
 
 # Commercetools Source
 

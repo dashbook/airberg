@@ -5,25 +5,24 @@
 {
   "credentials": {
     "auth_type": "api_key",
-    "api_key": "your_api_key"
-  },
-  "start_date": "2022-01-01T00:00:00Z"
+    "api_key": "1234567890",
+    "start_date": "2020-11-16T00:00:00Z"
+  }
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|start_date|string||null|The date from which you'd like to replicate data for Salesloft API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your Salesloft developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Salesloft developer application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.token_expiry_date|string||null|The date-time when the access token should be refreshed.|
-|credentials.0.refresh_token|string||null|The token for obtaining a new access token.|
-|credentials.1.auth_type|string|api_key|null||
-|credentials.1.api_key|string||null|API Key for making authenticated requests. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/salesloft#setup-guide">docs</a>|
+|start_date |string||null|The date from which you'd like to replicate data for Salesloft API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your Salesloft developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Salesloft developer application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.token_expiry_date 0|string||null|The date-time when the access token should be refreshed.|
+|credentials.refresh_token 0|string||null|The token for obtaining a new access token.|
+|credentials.auth_type 1|string|api_key|null||
+|credentials.api_key 1|string||null|API Key for making authenticated requests. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/salesloft#setup-guide">docs</a>|
 
 # Salesloft Source
 

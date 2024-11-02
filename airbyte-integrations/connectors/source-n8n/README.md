@@ -1,18 +1,18 @@
 # Source n8n
 
 ## Example
-```json
+```
 {
-  "host": "example.com",
-  "api_key": "abc123"
+  "host": "localhost",
+  "api_key": "your_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the n8n instance|
-|api_key|string||null|Your API KEY. See <a href="https://docs.n8n.io/api/authentication">here</a>|
+|host |string||null|Hostname of the n8n instance|
+|api_key |string||null|Your API KEY. See <a href="https://docs.n8n.io/api/authentication">here</a>|
 
 # N8n Source
 

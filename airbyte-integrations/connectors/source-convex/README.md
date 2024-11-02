@@ -1,18 +1,18 @@
 # Source convex
 
 ## Example
-```
+```json
 {
   "deployment_url": "https://murky-swan-635.convex.cloud",
-  "access_key": "my_secret_key"
+  "access_key": "your_access_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|deployment_url|string||null||
-|access_key|string||null|API access key used to retrieve data from Convex.|
+|deployment_url |string||null||
+|access_key |string||null|API access key used to retrieve data from Convex.|
 
 # Convex Source
 

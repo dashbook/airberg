@@ -1,28 +1,28 @@
 # Source orb
 
 ## Example
-```json
+```
 {
-  "api_key": "my_secret_api_key",
+  "api_key": "1234567890",
   "start_date": "2022-03-01T00:00:00Z",
   "lookback_window_days": 30,
   "string_event_properties_keys": ["string1", "string2"],
-  "numeric_event_properties_keys": ["num1", "num2"],
+  "numeric_event_properties_keys": ["numeric1", "numeric2"],
   "subscription_usage_grouping_key": "subscription_key",
-  "plan_id": "plan_id_123"
+  "plan_id": "plan_123"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Orb API Key, issued from the Orb admin console.|
-|start_date|string||null|UTC date and time in the format 2022-03-01T00:00:00Z. Any data with created_at before this data will not be synced. For Subscription Usage, this becomes the `timeframe_start` API parameter.|
-|lookback_window_days|integer||0|When set to N, the connector will always refresh resources created within the past N days. By default, updated objects that are not newly created are not incrementally synced.|
-|string_event_properties_keys|array||null|Property key names to extract from all events, in order to enrich ledger entries corresponding to an event deduction.|
-|numeric_event_properties_keys|array||null|Property key names to extract from all events, in order to enrich ledger entries corresponding to an event deduction.|
-|subscription_usage_grouping_key|string||null|Property key name to group subscription usage by.|
-|plan_id|string||null|Orb Plan ID to filter subscriptions that should have usage fetched.|
+|api_key |string||null|Orb API Key, issued from the Orb admin console.|
+|start_date |string||null|UTC date and time in the format 2022-03-01T00:00:00Z. Any data with created_at before this data will not be synced. For Subscription Usage, this becomes the `timeframe_start` API parameter.|
+|lookback_window_days |integer||0|When set to N, the connector will always refresh resources created within the past N days. By default, updated objects that are not newly created are not incrementally synced.|
+|string_event_properties_keys |array||null|Property key names to extract from all events, in order to enrich ledger entries corresponding to an event deduction.|
+|numeric_event_properties_keys |array||null|Property key names to extract from all events, in order to enrich ledger entries corresponding to an event deduction.|
+|subscription_usage_grouping_key |string||null|Property key name to group subscription usage by.|
+|plan_id |string||null|Orb Plan ID to filter subscriptions that should have usage fetched.|
 
 # Orb Source
 

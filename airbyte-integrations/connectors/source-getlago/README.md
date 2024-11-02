@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here"
+  "api_key": "my_secret_api_key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://doc.getlago.com/docs/api/intro">here</a>.|
+|api_key |string||null|Your API Key. See <a href="https://doc.getlago.com/docs/api/intro">here</a>.|
 
 # Getlago Source
 

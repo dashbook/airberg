@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here"
+  "api_key": "your_greenhouse_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Greenhouse API Key. See the <a href="https://docs.airbyte.com/integrations/sources/greenhouse">docs</a> for more information on how to generate this key.|
+|api_key |string||null|Greenhouse API Key. See the <a href="https://docs.airbyte.com/integrations/sources/greenhouse">docs</a> for more information on how to generate this key.|
 
 # Greenhouse Source 
 

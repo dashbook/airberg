@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "api_key": "1234567890",
-  "project_id": "abcdefghij"
+  "api_key": "your_api_key",
+  "project_id": "your_project_id"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Lokalise API Key with read-access. Available at Profile settings > API tokens. See <a href="https://docs.lokalise.com/en/articles/1929556-api-tokens">here</a>.|
-|project_id|string||null|Lokalise project ID. Available at Project Settings > General.|
+|api_key |string||null|Lokalise API Key with read-access. Available at Profile settings > API tokens. See <a href="https://docs.lokalise.com/en/articles/1929556-api-tokens">here</a>.|
+|project_id |string||null|Lokalise project ID. Available at Project Settings > General.|
 
 # Lokalise Source
 

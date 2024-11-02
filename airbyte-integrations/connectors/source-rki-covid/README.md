@@ -1,16 +1,16 @@
 # Source rki-covid
 
 ## Example
-```json
+```
 {
-  "start_date": "2020-01-01"
+  "start_date": "2022-01-01"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|UTC date in the format 2017-01-25. Any data before this date will not be replicated.|
+|start_date |string||null|UTC date in the format 2017-01-25. Any data before this date will not be replicated.|
 
 # RKI Covid Source
 

@@ -1,7 +1,7 @@
 # Source breezometer
 
 ## Example
-```json
+```
 {
   "api_key": "your_api_key_here",
   "latitude": "54.675003",
@@ -16,13 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Access Key. See <a href="https://docs.breezometer.com/api-documentation/introduction/#authentication/">here</a>.|
-|latitude|string||null|Latitude of the monitored location.|
-|longitude|string||null|Longitude of the monitored location.|
-|days_to_forecast|integer||null|Number of days to forecast. Minimum 1, maximum 3. Valid for Polen and Weather Forecast streams.|
-|hours_to_forecast|integer||null|Number of hours to forecast. Minimum 1, maximum 96. Valid for Air Quality Forecast stream.|
-|historic_hours|integer||null|Number of hours retireve from Air Quality History stream. Minimum 1, maximum 720.|
-|radius|integer||null|Desired radius from the location provided. Minimum 5, maximum 100. Valid for Wildfires streams.|
+|api_key |string||null|Your API Access Key. See <a href="https://docs.breezometer.com/api-documentation/introduction/#authentication/">here</a>.|
+|latitude |string||null|Latitude of the monitored location.|
+|longitude |string||null|Longitude of the monitored location.|
+|days_to_forecast |integer||null|Number of days to forecast. Minimum 1, maximum 3. Valid for Polen and Weather Forecast streams.|
+|hours_to_forecast |integer||null|Number of hours to forecast. Minimum 1, maximum 96. Valid for Air Quality Forecast stream.|
+|historic_hours |integer||null|Number of hours retireve from Air Quality History stream. Minimum 1, maximum 720.|
+|radius |integer||null|Desired radius from the location provided. Minimum 5, maximum 100. Valid for Wildfires streams.|
 
 # Breezometer Source
 

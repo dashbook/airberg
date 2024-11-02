@@ -3,10 +3,12 @@
 ## Example
 ```json
 {
-  "shop": "example-store",
+  "shop": "shop_name",
   "credentials": {
-    "auth_method": "api_password",
-    "api_password": "example-api-password"
+    "auth_method": "oauth2.0",
+    "client_id": "client_id",
+    "client_secret": "client_secret",
+    "access_token": "access_token"
   },
   "start_date": "2021-01-01"
 }
@@ -15,15 +17,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|shop|string||null|The name of your Shopify store found in the URL. For example, if your URL was https://NAME.myshopify.com, then the name would be 'NAME'.|
-|credentials|object||null|The authorization method to use to retrieve data from Shopify|
-|start_date|string||null|The date you would like to replicate data from. Format: YYYY-MM-DD. Any data before this date will not be replicated.|
-|credentials.0.auth_method|string|api_password|null||
-|credentials.0.api_password|string||null|The API Password for your private application in the `Shopify` store.|
-|credentials.1.auth_method|string|oauth2.0|null||
-|credentials.1.client_id|string||null|The Client ID of the Shopify developer application.|
-|credentials.1.client_secret|string||null|The Client Secret of the Shopify developer application.|
-|credentials.1.access_token|string||null|The Access Token for making authenticated requests.|
+|shop |string||null|The name of your Shopify store found in the URL. For example, if your URL was https://NAME.myshopify.com, then the name would be 'NAME'.|
+|start_date |string||null|The date you would like to replicate data from. Format: YYYY-MM-DD. Any data before this date will not be replicated.|
+|credentials.auth_method 0|string|api_password|null||
+|credentials.api_password 0|string||null|The API Password for your private application in the `Shopify` store.|
+|credentials.auth_method 1|string|oauth2.0|null||
+|credentials.client_id 1|string||null|The Client ID of the Shopify developer application.|
+|credentials.client_secret 1|string||null|The Client Secret of the Shopify developer application.|
+|credentials.access_token 1|string||null|The Access Token for making authenticated requests.|
 
 # Shopify Source
 

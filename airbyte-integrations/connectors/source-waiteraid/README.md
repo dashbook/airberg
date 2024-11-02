@@ -4,17 +4,17 @@
 ```
 {
   "start_date": "2022-01-01",
-  "auth_hash": "some_secret_key",
-  "restid": "some_restaurant_id"
+  "auth_hash": "1234567890abcdef",
+  "restid": "654321fedcba0987654321"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|Start getting data from that date.|
-|auth_hash|string||null|Your WaiterAid API key, obtained from API request with Username and Password|
-|restid|string||null|Your WaiterAid restaurant id from API request to getRestaurants|
+|start_date |string||null|Start getting data from that date.|
+|auth_hash |string||null|Your WaiterAid API key, obtained from API request with Username and Password|
+|restid |string||null|Your WaiterAid restaurant id from API request to getRestaurants|
 
 # Waiteraid Source
 

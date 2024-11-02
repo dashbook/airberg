@@ -1,9 +1,9 @@
 # Source ashby
 
 ## Example
-```
+```json
 {
-  "api_key": "your_api_key_here",
+  "api_key": "your_secret_api_key_here",
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|The Ashby API Key, see <a href=\"https://developers.ashbyhq.com/reference/authentication\">doc</a> here.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|api_key |string||null|The Ashby API Key, see <a href=\"https://developers.ashbyhq.com/reference/authentication\">doc</a> here.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Ashby Source
 

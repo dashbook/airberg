@@ -1,13 +1,12 @@
 # Source cart
 
 ## Example
-```
+```json
 {
   "credentials": {
-    "auth_type": "CENTRAL_API_ROUTER",
-    "user_name": "my_user",
-    "user_secret": "my_secret",
-    "site_id": "my_site_id"
+    "auth_type": "SINGLE_STORE_ACCESS_TOKEN",
+    "access_token": "your_access_token",
+    "store_name": "your_store_name"
   },
   "start_date": "2021-01-01T00:00:00Z"
 }
@@ -16,15 +15,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|start_date|string||null|The date from which you'd like to replicate the data|
-|credentials.0.auth_type|string|CENTRAL_API_ROUTER|null||
-|credentials.0.user_name|string||null|Enter your application's User Name|
-|credentials.0.user_secret|string||null|Enter your application's User Secret|
-|credentials.0.site_id|string||null|You can determine a site provisioning site Id by hitting https://site.com/store/sitemonitor.aspx and reading the response param PSID|
-|credentials.1.auth_type|string|SINGLE_STORE_ACCESS_TOKEN|null||
-|credentials.1.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.1.store_name|string||null|The name of Cart.com Online Store. All API URLs start with https://[mystorename.com]/api/v1/, where [mystorename.com] is the domain name of your store.|
+|start_date |string||null|The date from which you'd like to replicate the data|
+|credentials.auth_type 0|string|CENTRAL_API_ROUTER|null||
+|credentials.user_name 0|string||null|Enter your application's User Name|
+|credentials.user_secret 0|string||null|Enter your application's User Secret|
+|credentials.site_id 0|string||null|You can determine a site provisioning site Id by hitting https://site.com/store/sitemonitor.aspx and reading the response param PSID|
+|credentials.auth_type 1|string|SINGLE_STORE_ACCESS_TOKEN|null||
+|credentials.access_token 1|string||null|Access Token for making authenticated requests.|
+|credentials.store_name 1|string||null|The name of Cart.com Online Store. All API URLs start with https://[mystorename.com]/api/v1/, where [mystorename.com] is the domain name of your store.|
 
 # Cart.com Source
 

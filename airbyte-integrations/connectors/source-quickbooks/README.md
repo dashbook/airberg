@@ -1,35 +1,34 @@
 # Source quickbooks
 
 ## Example
-```json
+```
 {
   "credentials": {
     "auth_type": "oauth2.0",
-    "client_id": "abc123",
-    "client_secret": "xyz789",
-    "refresh_token": "1234567890",
-    "access_token": "abcdefghij",
+    "client_id": "client-id-value",
+    "client_secret": "client-secret-value",
+    "refresh_token": "refresh-token-value",
+    "access_token": "access-token-value",
     "token_expiry_date": "2022-01-01T00:00:00Z",
-    "realm_id": "qwerty"
+    "realm_id": "realm-id-value"
   },
   "start_date": "2021-03-20T00:00:00Z",
-  "sandbox": true
+  "sandbox": false
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|start_date|string||null|The default value to use if no bookmark exists for an endpoint (rfc3339 date string). E.g, 2021-03-20T00:00:00Z. Any data before this date will not be replicated.|
-|sandbox|boolean||false|Determines whether to use the sandbox or production environment.|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|Identifies which app is making the request. Obtain this value from the Keys tab on the app profile via My Apps on the developer site. There are two versions of this key: development and production.|
-|credentials.0.client_secret|string||null| Obtain this value from the Keys tab on the app profile via My Apps on the developer site. There are two versions of this key: development and production.|
-|credentials.0.refresh_token|string||null|A token used when refreshing the access token.|
-|credentials.0.access_token|string||null|Access token fot making authenticated requests.|
-|credentials.0.token_expiry_date|string||null|The date-time when the access token should be refreshed.|
-|credentials.0.realm_id|string||null|Labeled Company ID. The Make API Calls panel is populated with the realm id and the current access token.|
+|start_date |string||null|The default value to use if no bookmark exists for an endpoint (rfc3339 date string). E.g, 2021-03-20T00:00:00Z. Any data before this date will not be replicated.|
+|sandbox |boolean||false|Determines whether to use the sandbox or production environment.|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|Identifies which app is making the request. Obtain this value from the Keys tab on the app profile via My Apps on the developer site. There are two versions of this key: development and production.|
+|credentials.client_secret 0|string||null| Obtain this value from the Keys tab on the app profile via My Apps on the developer site. There are two versions of this key: development and production.|
+|credentials.refresh_token 0|string||null|A token used when refreshing the access token.|
+|credentials.access_token 0|string||null|Access token fot making authenticated requests.|
+|credentials.token_expiry_date 0|string||null|The date-time when the access token should be refreshed.|
+|credentials.realm_id 0|string||null|Labeled Company ID. The Make API Calls panel is populated with the realm id and the current access token.|
 
 # Quickbooks Source
 

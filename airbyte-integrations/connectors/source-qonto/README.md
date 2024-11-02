@@ -1,24 +1,24 @@
 # Source qonto
 
 ## Example
-```json
+```
 {
   "endpoint": "Production",
-  "organization_slug": "org-slug",
-  "secret_key": "my-secret-key",
-  "iban": "DE89370400404432013000",
-  "start_date": "2022-01-01"
+  "organization_slug": "example_org",
+  "secret_key": "abc123",
+  "iban": "FR76112345678901234567890",
+  "start_date": "2020-01-01"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|endpoint|string||null|Please choose the right endpoint to use in this connection|
-|organization_slug|string||null|Organization slug used in Qonto|
-|secret_key|string||null|Secret key of the Qonto account|
-|iban|string||null|International Bank Account Number linked used with your Qonto Account|
-|start_date|string||null|Start getting data from that date.|
+|endpoint |string||null|Please choose the right endpoint to use in this connection|
+|organization_slug |string||null|Organization slug used in Qonto|
+|secret_key |string||null|Secret key of the Qonto account|
+|iban |string||null|International Bank Account Number linked used with your Qonto Account|
+|start_date |string||null|Start getting data from that date.|
 
 # Qonto Source
 

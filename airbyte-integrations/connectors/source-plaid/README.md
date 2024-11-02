@@ -3,9 +3,9 @@
 ## Example
 ```json
 {
-  "access_token": "1234567890",
-  "api_key": "abcdefghijklmnopqrstuvwxyz",
-  "client_id": "1234567890",
+  "access_token": "example_access_token",
+  "api_key": "example_api_key",
+  "client_id": "example_client_id",
   "plaid_env": "sandbox",
   "start_date": "2021-03-01"
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|The end-user's Link access token.|
-|api_key|string||null|The Plaid API key to use to hit the API.|
-|client_id|string||null|The Plaid client id|
-|plaid_env|string||null|The Plaid environment|
-|start_date|string||null|The date from which you'd like to replicate data for Plaid in the format YYYY-MM-DD. All data generated after this date will be replicated.|
+|access_token |string||null|The end-user's Link access token.|
+|api_key |string||null|The Plaid API key to use to hit the API.|
+|client_id |string||null|The Plaid client id|
+|plaid_env |string||null|The Plaid environment|
+|start_date |string||null|The date from which you'd like to replicate data for Plaid in the format YYYY-MM-DD. All data generated after this date will be replicated.|
 
 # Plaid Source
 

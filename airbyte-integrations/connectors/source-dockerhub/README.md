@@ -1,7 +1,7 @@
 # Source dockerhub
 
 ## Example
-```
+```json
 {
   "docker_username": "airbyte"
 }
@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|docker_username|string||null|Username of DockerHub person or organization (for https://hub.docker.com/v2/repositories/USERNAME/ API call)|
+|docker_username |string||null|Username of DockerHub person or organization (for https://hub.docker.com/v2/repositories/USERNAME/ API call)|
 
 # Dockerhub Source
 

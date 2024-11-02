@@ -1,13 +1,15 @@
 # Source elasticsearch
 
 ## Example
-```json
+```
 {
   "endpoint": "https://localhost:9200",
   "authenticationMethod": {
     "method": "basic",
-    "username": "admin",
-    "password": "mypassword"
+    "username": "elastic",
+    "password": "MyPassword123",
+    "apiKeyId": "",
+    "apiKeySecret": ""
   }
 }
 ```
@@ -15,15 +17,17 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|endpoint|string||null|The full url of the Elasticsearch server|
-|authenticationMethod|object||null|The type of authentication to be used|
-|authenticationMethod.0.method|string|none|null||
-|authenticationMethod.1.method|string|secret|null||
-|authenticationMethod.1.apiKeyId|string||null|The Key ID to used when accessing an enterprise Elasticsearch instance.|
-|authenticationMethod.1.apiKeySecret|string||null|The secret associated with the API Key ID.|
-|authenticationMethod.2.method|string|basic|null||
-|authenticationMethod.2.username|string||null|Basic auth username to access a secure Elasticsearch server|
-|authenticationMethod.2.password|string||null|Basic auth password to access a secure Elasticsearch server|
+|endpoint |string||null|The full url of the Elasticsearch server|
+|authenticationMethod |||null|No authentication will be used|
+|authenticationMethod |||null|Use a api key and secret combination to authenticate|
+|authenticationMethod |||null|Basic auth header with a username and password|
+|authenticationMethod.method 0|string|none|null||
+|authenticationMethod.method 1|string|secret|null||
+|authenticationMethod.apiKeyId 1|string||null|The Key ID to used when accessing an enterprise Elasticsearch instance.|
+|authenticationMethod.apiKeySecret 1|string||null|The secret associated with the API Key ID.|
+|authenticationMethod.method 2|string|basic|null||
+|authenticationMethod.username 2|string||null|Basic auth username to access a secure Elasticsearch server|
+|authenticationMethod.password 2|string||null|Basic auth password to access a secure Elasticsearch server|
 
 # Elasticsearch source
 

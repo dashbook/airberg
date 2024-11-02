@@ -5,7 +5,7 @@
 {
   "authorization": {
     "auth_type": "Token",
-    "api_token": "1234567890abcdef"
+    "api_token": "your_api_token_here"
   },
   "replication_start_date": "2022-01-01T00:00:00Z"
 }
@@ -14,9 +14,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|replication_start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. When specified and not None, then stream will behave as incremental|
-|authorization.auth_type|string|Token|null||
-|authorization.api_token|string||null|The Pipedrive API Token.|
+|replication_start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. When specified and not None, then stream will behave as incremental|
+|authorization.auth_type |string|Token|null||
+|authorization.api_token |string||null|The Pipedrive API Token.|
 
 # Pipedrive Source
 

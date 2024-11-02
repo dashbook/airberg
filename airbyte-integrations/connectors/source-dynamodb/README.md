@@ -1,9 +1,9 @@
 # Source dynamodb
 
 ## Example
-```json
+```
 {
-  "endpoint": "https://{aws_dynamo_db_url}.com",
+  "endpoint": "https://dynamodb.us-east-1.amazonaws.com",
   "region": "us-east-1",
   "access_key_id": "A012345678910EXAMPLE",
   "secret_access_key": "a012345678910ABCDEFGH/AbCdEfGhEXAMPLEKEY",
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|endpoint|string|||the URL of the Dynamodb database|
-|region|string|||The region of the Dynamodb database|
-|access_key_id|string||null|The access key id to access Dynamodb. Airbyte requires read permissions to the database|
-|secret_access_key|string||null|The corresponding secret to the access key id.|
-|reserved_attribute_names|string||null|Comma separated reserved attribute names present in your tables|
+|endpoint |string|||the URL of the Dynamodb database|
+|region |string|||The region of the Dynamodb database|
+|access_key_id |string||null|The access key id to access Dynamodb. Airbyte requires read permissions to the database|
+|secret_access_key |string||null|The corresponding secret to the access key id.|
+|reserved_attribute_names |string||null|Comma separated reserved attribute names present in your tables|
 
 # Source Dynamodb
 

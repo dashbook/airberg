@@ -5,16 +5,16 @@
 {
   "tickers": "AAPL, GOOGL, GEO.MI",
   "interval": "1d",
-  "range": "1mo"
+  "range": "1y"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|tickers|string||null|Comma-separated identifiers for the stocks to be queried. Whitespaces are allowed.|
-|interval|string||null|The interval of between prices queried.|
-|range|string||null|The range of prices to be queried.|
+|tickers |string||null|Comma-separated identifiers for the stocks to be queried. Whitespaces are allowed.|
+|interval |string||null|The interval of between prices queried.|
+|range |string||null|The range of prices to be queried.|
 
 # Yahoo Finance Source
 

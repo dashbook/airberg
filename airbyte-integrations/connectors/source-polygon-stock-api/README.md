@@ -3,9 +3,9 @@
 ## Example
 ```json
 {
-  "apiKey": "my_secret_key",
-  "stocksTicker": "MSFT",
-  "multiplier": 2,
+  "apiKey": "1234567890",
+  "stocksTicker": "IBM",
+  "multiplier": 1,
   "timespan": "day",
   "start_date": "2020-10-14",
   "end_date": "2020-10-14",
@@ -18,15 +18,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|apiKey|string||null|Your API ACCESS Key|
-|stocksTicker|string||null|The exchange symbol that this item is traded under.|
-|multiplier|integer||null|The size of the timespan multiplier.|
-|timespan|string||null|The size of the time window.|
-|start_date|string||null|The beginning date for the aggregate window.|
-|end_date|string||null|The target date for the aggregate window.|
-|adjusted|string||null|Determines whether or not the results are adjusted for splits. By default, results are adjusted and set to true. Set this to false to get results that are NOT adjusted for splits.|
-|sort|string||null|Sort the results by timestamp. asc will return results in ascending order (oldest at the top), desc will return results in descending order (newest at the top).|
-|limit|integer||null|The target date for the aggregate window.|
+|apiKey |string||null|Your API ACCESS Key|
+|stocksTicker |string||null|The exchange symbol that this item is traded under.|
+|multiplier |integer||null|The size of the timespan multiplier.|
+|timespan |string||null|The size of the time window.|
+|start_date |string||null|The beginning date for the aggregate window.|
+|end_date |string||null|The target date for the aggregate window.|
+|adjusted |string||null|Determines whether or not the results are adjusted for splits. By default, results are adjusted and set to true. Set this to false to get results that are NOT adjusted for splits.|
+|sort |string||null|Sort the results by timestamp. asc will return results in ascending order (oldest at the top), desc will return results in descending order (newest at the top).|
+|limit |integer||null|The target date for the aggregate window.|
 
 # Polygon Stock Api Source
 

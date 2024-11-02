@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "auth_token": "my_secret_token"
+  "auth_token": "my_auth_token_12345"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_token|string||null|Bearer token|
+|auth_token |string||null|Bearer token|
 
 # Coda Source
 

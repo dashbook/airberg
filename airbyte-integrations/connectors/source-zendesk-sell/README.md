@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|The API token for authenticating to Zendesk Sell|
+|api_token |string||null|The API token for authenticating to Zendesk Sell|
 
 # Zendesk Sell Source
 

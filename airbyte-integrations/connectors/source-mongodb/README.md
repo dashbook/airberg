@@ -1,30 +1,30 @@
 # Source mongodb
 
 ## Example
-```json
+```
 {
   "host": "localhost",
   "port": 27017,
-  "database": "my_database",
-  "user": "my_user",
-  "password": "my_password",
+  "database": "mydb",
+  "user": "myuser",
+  "password": "mypassword",
   "auth_source": "admin",
-  "replica_set": "my_replica_set",
-  "ssl": true
+  "replica_set": "",
+  "ssl": false
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Host of a Mongo database to be replicated.|
-|port|integer||27017|Port of a Mongo database to be replicated.|
-|database|string||null|Database to be replicated.|
-|user|string||null|User|
-|password|string||null|Password|
-|auth_source|string||admin|Authentication source where user information is stored. See <a href="* [Authentication Source](https://docs.mongodb.com/manual/reference/connection-string/#mongodb-urioption-urioption.authSource)"> the Mongo docs</a> for more info.|
-|replica_set|string|||The name of the set to filter servers by, when connecting to a replica set (Under this condition, the 'TLS connection' value automatically becomes 'true'). See <a href="https://docs.mongodb.com/manual/reference/connection-string/#mongodb-urioption-urioption.replicaSet"> the Mongo docs </a> for more info.|
-|ssl|boolean||false|If this switch is enabled, TLS connections will be used to connect to MongoDB.|
+|host |string||null|Host of a Mongo database to be replicated.|
+|port |integer||27017|Port of a Mongo database to be replicated.|
+|database |string||null|Database to be replicated.|
+|user |string||null|User|
+|password |string||null|Password|
+|auth_source |string||admin|Authentication source where user information is stored. See <a href="* [Authentication Source](https://docs.mongodb.com/manual/reference/connection-string/#mongodb-urioption-urioption.authSource)"> the Mongo docs</a> for more info.|
+|replica_set |string|||The name of the set to filter servers by, when connecting to a replica set (Under this condition, the 'TLS connection' value automatically becomes 'true'). See <a href="https://docs.mongodb.com/manual/reference/connection-string/#mongodb-urioption-urioption.replicaSet"> the Mongo docs </a> for more info.|
+|ssl |boolean||false|If this switch is enabled, TLS connections will be used to connect to MongoDB.|
 
 # Mongodb Source 
 

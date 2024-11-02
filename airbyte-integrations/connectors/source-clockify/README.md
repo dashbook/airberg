@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "workspace_id": "123456",
-  "api_key": "my_secret_api_key"
+  "workspace_id": "example_workspace_id",
+  "api_key": "example_api_key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|workspace_id|string||null|WorkSpace Id|
-|api_key|string||null|You can get your api access_key <a href="https://app.clockify.me/user/settings">here</a> This API is Case Sensitive.|
+|workspace_id |string||null|WorkSpace Id|
+|api_key |string||null|You can get your api access_key <a href="https://app.clockify.me/user/settings">here</a> This API is Case Sensitive.|
 
 # Clockify Source
 

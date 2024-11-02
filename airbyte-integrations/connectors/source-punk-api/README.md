@@ -1,20 +1,20 @@
 # Source punk-api
 
 ## Example
-```
+```json
 {
   "id": "1",
-  "brewed_before": "01-2020",
-  "brewed_after": "01-2020"
+  "brewed_before": "01-2022",
+  "brewed_after": "06-2022"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|id|string||null|To extract specific data with Unique ID|
-|brewed_before|string||null|To extract specific data with Unique ID|
-|brewed_after|string||null|To extract specific data with Unique ID|
+|id |string||null|To extract specific data with Unique ID|
+|brewed_before |string||null|To extract specific data with Unique ID|
+|brewed_after |string||null|To extract specific data with Unique ID|
 
 # Punk Api Source
 

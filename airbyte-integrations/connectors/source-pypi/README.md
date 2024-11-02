@@ -1,7 +1,7 @@
 # Source pypi
 
 ## Example
-```
+```json
 {
   "project_name": "sampleproject",
   "version": "1.2.0"
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|project_name|string||null|Name of the project/package. Can only be in lowercase with hyphen. This is the name used using pip command for installing the package.|
-|version|string||null|Version of the project/package.  Use it to find a particular release instead of all releases.|
+|project_name |string||null|Name of the project/package. Can only be in lowercase with hyphen. This is the name used using pip command for installing the package.|
+|version |string||null|Version of the project/package.  Use it to find a particular release instead of all releases.|
 
 # Pypi Source
 

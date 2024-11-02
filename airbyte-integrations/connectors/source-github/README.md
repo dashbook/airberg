@@ -1,31 +1,30 @@
 # Source github
 
 ## Example
-```
+```json
 {
   "credentials": {
     "option_title": "OAuth Credentials",
-    "access_token": "your_oauth_access_token"
+    "access_token": "your_access_token_here"
   },
   "start_date": "2021-03-01T00:00:00Z",
-  "repository": "airbytehq/airbyte airbytehq/another-repo",
-  "branch": "airbytehq/airbyte/master airbytehq/airbyte/my-branch",
-  "requests_per_hour": 2500
+  "repository": "airbytehq/airbyte",
+  "branch": "airbytehq/airbyte/master",
+  "requests_per_hour": 1000
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to GitHub|
-|start_date|string||null|The date from which you'd like to replicate data from GitHub in the format YYYY-MM-DDT00:00:00Z. For the streams which support this configuration, only data generated on or after the start date will be replicated. This field doesn't apply to all streams, see the <a href="https://docs.airbyte.com/integrations/sources/github">docs</a> for more info|
-|repository|string||null|Space-delimited list of GitHub organizations/repositories, e.g. `airbytehq/airbyte` for single repository, `airbytehq/*` for get all repositories from organization and `airbytehq/airbyte airbytehq/another-repo` for multiple repositories.|
-|branch|string||null|Space-delimited list of GitHub repository branches to pull commits for, e.g. `airbytehq/airbyte/master`. If no branches are specified for a repository, the default branch will be pulled.|
-|requests_per_hour|integer||null|The GitHub API allows for a maximum of 5000 requests per hour (15000 for Github Enterprise). You can specify a lower value to limit your use of the API quota.|
-|credentials.0.option_title|string|OAuth Credentials|null||
-|credentials.0.access_token|string||null|OAuth access token|
-|credentials.1.option_title|string|PAT Credentials|null||
-|credentials.1.personal_access_token|string||null|Log into GitHub and then generate a <a href="https://github.com/settings/tokens">personal access token</a>. To load balance your API quota consumption across multiple API tokens, input multiple tokens separated with ","|
+|start_date |string||null|The date from which you'd like to replicate data from GitHub in the format YYYY-MM-DDT00:00:00Z. For the streams which support this configuration, only data generated on or after the start date will be replicated. This field doesn't apply to all streams, see the <a href="https://docs.airbyte.com/integrations/sources/github">docs</a> for more info|
+|repository |string||null|Space-delimited list of GitHub organizations/repositories, e.g. `airbytehq/airbyte` for single repository, `airbytehq/*` for get all repositories from organization and `airbytehq/airbyte airbytehq/another-repo` for multiple repositories.|
+|branch |string||null|Space-delimited list of GitHub repository branches to pull commits for, e.g. `airbytehq/airbyte/master`. If no branches are specified for a repository, the default branch will be pulled.|
+|requests_per_hour |integer||null|The GitHub API allows for a maximum of 5000 requests per hour (15000 for Github Enterprise). You can specify a lower value to limit your use of the API quota.|
+|credentials.option_title 0|string|OAuth Credentials|null||
+|credentials.access_token 0|string||null|OAuth access token|
+|credentials.option_title 1|string|PAT Credentials|null||
+|credentials.personal_access_token 1|string||null|Log into GitHub and then generate a <a href="https://github.com/settings/tokens">personal access token</a>. To load balance your API quota consumption across multiple API tokens, input multiple tokens separated with ","|
 
 # Github Source
 

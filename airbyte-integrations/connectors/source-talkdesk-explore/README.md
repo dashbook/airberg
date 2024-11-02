@@ -3,20 +3,20 @@
 ## Example
 ```
 {
-  "start_date": "2020-10-15T00:00:00",
+  "start_date": "2022-01-01T00:00:00",
   "timezone": "Europe/London",
   "auth_url": "https://xxxxxx.talkdeskid.com/oauth/token?grant_type=client_credentials",
-  "api_key": "your_api_key_here"
+  "api_key": "abc123"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date from which you'd like to replicate data for Talkdesk Explore API, in the format YYYY-MM-DDT00:00:00. All data generated after this date will be replicated.|
-|timezone|string||UTC|Timezone to use when generating reports. Only IANA timezones are supported (https://nodatime.org/TimeZones)|
-|auth_url|string||null|Talkdesk Auth URL. Only 'client_credentials' auth type supported at the moment.|
-|api_key|string||null|Talkdesk API key.|
+|start_date |string||null|The date from which you'd like to replicate data for Talkdesk Explore API, in the format YYYY-MM-DDT00:00:00. All data generated after this date will be replicated.|
+|timezone |string||UTC|Timezone to use when generating reports. Only IANA timezones are supported (https://nodatime.org/TimeZones)|
+|auth_url |string||null|Talkdesk Auth URL. Only 'client_credentials' auth type supported at the moment.|
+|api_key |string||null|Talkdesk API key.|
 
 # Talkdesk-Explore Source
 

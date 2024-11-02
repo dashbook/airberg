@@ -4,7 +4,7 @@
 ```json
 {
   "api_key": "1234567890abcdef",
-  "movie_id": 550,
+  "movie_id": "550",
   "query": "Marvel",
   "language": "en-US"
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key from tmdb account|
-|movie_id|string||null|Target movie ID, Mandate for movie streams (Example is 550)|
-|query|string||null|Target movie ID, Mandate for search streams|
-|language|string||null|Language expressed in ISO 639-1 scheme, Mandate for required streams (Example en-US)|
+|api_key |string||null|API Key from tmdb account|
+|movie_id |string||null|Target movie ID, Mandate for movie streams (Example is 550)|
+|query |string||null|Target movie ID, Mandate for search streams|
+|language |string||null|Language expressed in ISO 639-1 scheme, Mandate for required streams (Example en-US)|
 
 # Tmdb Source
 

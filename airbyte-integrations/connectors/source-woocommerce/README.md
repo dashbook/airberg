@@ -3,9 +3,9 @@
 ## Example
 ```json
 {
-  "api_key": "customer_key",
-  "api_secret": "customer_secret",
-  "shop": "example_shop",
+  "api_key": "customer_key_example",
+  "api_secret": "customer_secret_example",
+  "shop": "example.com",
   "start_date": "2021-01-01"
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Customer Key for API in WooCommerce shop|
-|api_secret|string||null|Customer Secret for API in WooCommerce shop|
-|shop|string||null|The name of the store. For https://EXAMPLE.com, the shop name is 'EXAMPLE.com'.|
-|start_date|string||null|The date you would like to replicate data from. Format: YYYY-MM-DD|
+|api_key |string||null|Customer Key for API in WooCommerce shop|
+|api_secret |string||null|Customer Secret for API in WooCommerce shop|
+|shop |string||null|The name of the store. For https://EXAMPLE.com, the shop name is 'EXAMPLE.com'.|
+|start_date |string||null|The date you would like to replicate data from. Format: YYYY-MM-DD|
 
 # Woocommerce Source
 

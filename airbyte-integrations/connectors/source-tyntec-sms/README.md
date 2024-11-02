@@ -1,22 +1,22 @@
 # Source tyntec-sms
 
 ## Example
-```
+```json
 {
-  "api_key": "abc123",
+  "api_key": "your-tyntec-api-key",
   "to": "+1234567890",
   "from": "+9876543210",
-  "message": "Hello, world!"
+  "message": "Hello, World!"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your Tyntec API Key. See <a href="https://www.tyntec.com/docs/docs-center-sms-api-quick-start">here</a>|
-|to|string||null|The phone number of the SMS message recipient (international).|
-|from|string||null|The phone number of the SMS message sender (international).|
-|message|string||null|The content of the SMS message to be sent.|
+|api_key |string||null|Your Tyntec API Key. See <a href="https://www.tyntec.com/docs/docs-center-sms-api-quick-start">here</a>|
+|to |string||null|The phone number of the SMS message recipient (international).|
+|from |string||null|The phone number of the SMS message sender (international).|
+|message |string||null|The content of the SMS message to be sent.|
 
 # Tyntec Sms Source
 

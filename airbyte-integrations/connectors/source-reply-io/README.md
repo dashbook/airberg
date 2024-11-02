@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "your-api-token-here"
+  "api_key": "your_api_token_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|The API Token for Reply|
+|api_key |string||null|The API Token for Reply|
 
 # Reply Io Source
 

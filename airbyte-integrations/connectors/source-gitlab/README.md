@@ -1,14 +1,14 @@
 # Source gitlab
 
 ## Example
-```
+```json
 {
   "credentials": {
     "auth_type": "access_token",
-    "access_token": "private_token_123"
+    "access_token": "my_secret_token"
   },
   "start_date": "2021-03-01T00:00:00Z",
-  "api_url": "gitlab.com",
+  "api_url": "https://gitlab.com",
   "groups": "airbyte.io",
   "projects": "airbyte.io/documentation meltano/tap-gitlab"
 }
@@ -17,19 +17,18 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|start_date|string||null|The date from which you'd like to replicate data for GitLab API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
-|api_url|string||gitlab.com|Please enter your basic URL from GitLab instance.|
-|groups|string||null|Space-delimited list of groups. e.g. airbyte.io.|
-|projects|string||null|Space-delimited list of projects. e.g. airbyte.io/documentation meltano/tap-gitlab.|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The API ID of the Gitlab developer application.|
-|credentials.0.client_secret|string||null|The API Secret the Gitlab developer application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.token_expiry_date|string||null|The date-time when the access token should be refreshed.|
-|credentials.0.refresh_token|string||null|The key to refresh the expired access_token.|
-|credentials.1.auth_type|string|access_token|null||
-|credentials.1.access_token|string||null|Log into your Gitlab account and then generate a personal Access Token.|
+|start_date |string||null|The date from which you'd like to replicate data for GitLab API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|api_url |string||gitlab.com|Please enter your basic URL from GitLab instance.|
+|groups |string||null|Space-delimited list of groups. e.g. airbyte.io.|
+|projects |string||null|Space-delimited list of projects. e.g. airbyte.io/documentation meltano/tap-gitlab.|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The API ID of the Gitlab developer application.|
+|credentials.client_secret 0|string||null|The API Secret the Gitlab developer application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.token_expiry_date 0|string||null|The date-time when the access token should be refreshed.|
+|credentials.refresh_token 0|string||null|The key to refresh the expired access_token.|
+|credentials.auth_type 1|string|access_token|null||
+|credentials.access_token 1|string||null|Log into your Gitlab account and then generate a personal Access Token.|
 
 # Gitlab Source
 

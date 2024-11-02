@@ -3,17 +3,20 @@
 ## Example
 ```json
 {
-  "site_urls": ["https://example1.com/", "sc-domain:example2.com"],
+  "site_urls": [
+    "https://example1.com/",
+    "sc-domain:example2.com"
+  ],
   "start_date": "2021-01-01",
   "end_date": "2021-12-12",
   "authorization": {
     "auth_type": "Client",
-    "client_id": "CLIENT_ID",
-    "client_secret": "CLIENT_SECRET",
-    "access_token": "ACCESS_TOKEN",
-    "refresh_token": "REFRESH_TOKEN"
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "access_token": "YOUR_ACCESS_TOKEN",
+    "refresh_token": "YOUR_REFRESH_TOKEN"
   },
-  "custom_reports": "{\"report\": \"report_name\"}",
+  "custom_reports": "{\"reportType\":\"Impressions\",\"metric\":\"impressions\",\"dimension\":\"searchTerm\",\"filter\":{\"dimension\":\"searchTerm\",\"operator\":\"CONTAIN\",\"value\":\"some-search-term\"}}",
   "data_state": "final"
 }
 ```
@@ -21,20 +24,19 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|site_urls|array||null|The URLs of the website property attached to your GSC account. Read more <a href="https://support.google.com/webmasters/answer/34592?hl=en">here</a>.|
-|start_date|string||null|UTC date in the format 2017-01-25. Any data before this date will not be replicated.|
-|end_date|string||null|UTC date in the format 2017-01-25. Any data after this date will not be replicated. Must be greater or equal to the start date field.|
-|authorization|object||null||
-|custom_reports|string||null|A JSON array describing the custom reports you want to sync from Google Search Console. See <a href="https://docs.airbyte.com/integrations/sources/google-search-console#step-2-set-up-the-google-search-console-connector-in-airbyte">the docs</a> for more information about the exact format you can use to fill out this field.|
-|data_state|string||final|If "final" or if this parameter is omitted, the returned data will include only finalized data. Setting this parameter to "all" should not be used with Incremental Sync mode as it may cause data loss. If "all", data will include fresh data.|
-|authorization.0.auth_type|string|Client|null||
-|authorization.0.client_id|string||null|The client ID of your Google Search Console developer application. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
-|authorization.0.client_secret|string||null|The client secret of your Google Search Console developer application. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
-|authorization.0.access_token|string||null|Access token for making authenticated requests. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
-|authorization.0.refresh_token|string||null|The token for obtaining a new access token. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
-|authorization.1.auth_type|string|Service|null||
-|authorization.1.service_account_info|string||null|The JSON key of the service account to use for authorization. Read more <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">here</a>.|
-|authorization.1.email|string||null|The email of the user which has permissions to access the Google Workspace Admin APIs.|
+|site_urls |array||null|The URLs of the website property attached to your GSC account. Read more <a href="https://support.google.com/webmasters/answer/34592?hl=en">here</a>.|
+|start_date |string||null|UTC date in the format 2017-01-25. Any data before this date will not be replicated.|
+|end_date |string||null|UTC date in the format 2017-01-25. Any data after this date will not be replicated. Must be greater or equal to the start date field.|
+|custom_reports |string||null|A JSON array describing the custom reports you want to sync from Google Search Console. See <a href="https://docs.airbyte.com/integrations/sources/google-search-console#step-2-set-up-the-google-search-console-connector-in-airbyte">the docs</a> for more information about the exact format you can use to fill out this field.|
+|data_state |string||final|If "final" or if this parameter is omitted, the returned data will include only finalized data. Setting this parameter to "all" should not be used with Incremental Sync mode as it may cause data loss. If "all", data will include fresh data.|
+|authorization.auth_type 0|string|Client|null||
+|authorization.client_id 0|string||null|The client ID of your Google Search Console developer application. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
+|authorization.client_secret 0|string||null|The client secret of your Google Search Console developer application. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
+|authorization.access_token 0|string||null|Access token for making authenticated requests. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
+|authorization.refresh_token 0|string||null|The token for obtaining a new access token. Read more <a href="https://developers.google.com/webmaster-tools/v1/how-tos/authorizing">here</a>.|
+|authorization.auth_type 1|string|Service|null||
+|authorization.service_account_info 1|string||null|The JSON key of the service account to use for authorization. Read more <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">here</a>.|
+|authorization.email 1|string||null|The email of the user which has permissions to access the Google Workspace Admin APIs.|
 
 # Google Search Console Source
 

@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "api_token": "secret_api_token",
+  "api_token": "my_secret_token",
   "endpoint": "api.opsgenie.com",
   "start_date": "2022-07-01T00:00:00Z"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|API token used to access the Opsgenie platform|
-|endpoint|string||api.opsgenie.com|Service endpoint to use for API calls.|
-|start_date|string||null|The date from which you'd like to replicate data from Opsgenie in the format of YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated. Note that it will be used only in the following incremental streams: issues.|
+|api_token |string||null|API token used to access the Opsgenie platform|
+|endpoint |string||api.opsgenie.com|Service endpoint to use for API calls.|
+|start_date |string||null|The date from which you'd like to replicate data from Opsgenie in the format of YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated. Note that it will be used only in the following incremental streams: issues.|
 
 # Opsgenie Source
 

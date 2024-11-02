@@ -1,11 +1,11 @@
 # Source toggl
 
 ## Example
-```json
+```
 {
-  "api_token": "abc123",
-  "organization_id": 123,
-  "workspace_id": 456,
+  "api_token": "my_secret_api_token",
+  "organization_id": 12345,
+  "workspace_id": 67890,
   "start_date": "2022-01-01",
   "end_date": "2022-12-31"
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Your API Token. See <a href="https://developers.track.toggl.com/docs/authentication">here</a>. The token is case sensitive.|
-|organization_id|integer||null|Your organization id. See <a href="https://developers.track.toggl.com/docs/organization">here</a>.|
-|workspace_id|integer||null|Your workspace id. See <a href="https://developers.track.toggl.com/docs/workspaces">here</a>.|
-|start_date|string||null|To retrieve time entries created after the given date (inclusive).|
-|end_date|string||null|To retrieve time entries created before the given date (inclusive).|
+|api_token |string||null|Your API Token. See <a href="https://developers.track.toggl.com/docs/authentication">here</a>. The token is case sensitive.|
+|organization_id |integer||null|Your organization id. See <a href="https://developers.track.toggl.com/docs/organization">here</a>.|
+|workspace_id |integer||null|Your workspace id. See <a href="https://developers.track.toggl.com/docs/workspaces">here</a>.|
+|start_date |string||null|To retrieve time entries created after the given date (inclusive).|
+|end_date |string||null|To retrieve time entries created before the given date (inclusive).|
 
 # Toggl Source
 

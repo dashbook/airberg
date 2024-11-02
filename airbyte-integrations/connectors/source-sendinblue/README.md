@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://developers.sendinblue.com/docs/getting-started">here</a>.|
+|api_key |string||null|Your API Key. See <a href="https://developers.sendinblue.com/docs/getting-started">here</a>.|
 
 # Sendinblue Source
 

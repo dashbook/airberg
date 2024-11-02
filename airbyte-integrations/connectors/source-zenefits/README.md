@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "token": "my_secret_token"
+  "token": "your_api_token_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|token|string||null|Use Sync with Zenefits button on the link given on the readme file, and get the token to access the api|
+|token |string||null|Use Sync with Zenefits button on the link given on the readme file, and get the token to access the api|
 
 # *How to access the token from Zenefits*
 

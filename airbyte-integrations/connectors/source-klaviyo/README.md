@@ -3,7 +3,7 @@
 ## Example
 ```
 {
-  "api_key": "your_api_key_here",
+  "api_key": "klaviyo_secret_api_key",
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Klaviyo API Key. See our <a href="https://docs.airbyte.com/integrations/sources/klaviyo">docs</a> if you need help finding this key.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|api_key |string||null|Klaviyo API Key. See our <a href="https://docs.airbyte.com/integrations/sources/klaviyo">docs</a> if you need help finding this key.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Klaviyo Source
 

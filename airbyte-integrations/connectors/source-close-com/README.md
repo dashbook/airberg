@@ -1,9 +1,9 @@
 # Source close-com
 
 ## Example
-```
+```json
 {
-  "api_key": "api_key_value",
+  "api_key": "your_api_key_here",
   "start_date": "2021-01-01"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Close.com API key (usually starts with 'api_'; find yours <a href="https://app.close.com/settings/api/">here</a>).|
-|start_date|string||2021-01-01|The start date to sync data. Leave blank for full sync. Format: YYYY-MM-DD.|
+|api_key |string||null|Close.com API key (usually starts with 'api_'; find yours <a href="https://app.close.com/settings/api/">here</a>).|
+|start_date |string||2021-01-01|The start date to sync data. Leave blank for full sync. Format: YYYY-MM-DD.|
 
 # Close.com Source
 

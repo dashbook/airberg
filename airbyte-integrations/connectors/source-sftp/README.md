@@ -19,17 +19,18 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|user|string||null|The server user|
-|host|string||null|The server host address|
-|port|integer||22|The server port|
-|credentials|object||null|The server authentication method|
-|file_types|string||csv,json|Coma separated file types. Currently only 'csv' and 'json' types are supported.|
-|folder_path|string|||The directory to search files for sync|
-|file_pattern|string|||The regular expression to specify files for sync in a chosen Folder Path|
-|credentials.0.auth_method|string|SSH_PASSWORD_AUTH|null|Connect through password authentication|
-|credentials.0.auth_user_password|string||null|OS-level password for logging into the jump server host|
-|credentials.1.auth_method|string|SSH_KEY_AUTH|null|Connect through ssh key|
-|credentials.1.auth_ssh_key|string||null|OS-level user account ssh key credentials in RSA PEM format ( created with ssh-keygen -t rsa -m PEM -f myuser_rsa )|
+|user |string||null|The server user|
+|host |string||null|The server host address|
+|port |integer||22|The server port|
+|file_types |string||csv,json|Coma separated file types. Currently only 'csv' and 'json' types are supported.|
+|folder_path |string|||The directory to search files for sync|
+|file_pattern |string|||The regular expression to specify files for sync in a chosen Folder Path|
+|credentials |||null||
+|credentials |||null||
+|credentials.auth_method 0|string|SSH_PASSWORD_AUTH|null|Connect through password authentication|
+|credentials.auth_user_password 0|string||null|OS-level password for logging into the jump server host|
+|credentials.auth_method 1|string|SSH_KEY_AUTH|null|Connect through ssh key|
+|credentials.auth_ssh_key 1|string||null|OS-level user account ssh key credentials in RSA PEM format ( created with ssh-keygen -t rsa -m PEM -f myuser_rsa )|
 
 # Source Sftp
 

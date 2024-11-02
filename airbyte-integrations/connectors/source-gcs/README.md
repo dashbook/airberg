@@ -3,18 +3,18 @@
 ## Example
 ```json
 {
-  "gcs_bucket": "example-bucket",
-  "gcs_path": "path/to/data",
-  "service_account": "{\"type\": \"service_account\", \"project_id\": \"YOUR_PROJECT_ID\", \"private_key_id\": \"YOUR_PRIVATE_KEY\", \"private_key\": \"YOUR_PRIVATE_KEY\", \"client_email\": \"client_email\", \"client_id\": \"client_id\", \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\", \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/your_service_account_email\"}"
+  "gcs_bucket": "my-bucket",
+  "gcs_path": "my-path",
+  "service_account": "{\"type\":\"service_account\",\"project_id\":\"YOUR_PROJECT_ID\",\"private_key_id\":\"YOUR_PRIVATE_KEY\",\"private_key\":\"YOUR_PRIVATE_KEY\",\"client_email\":\"YOUR_CLIENT_EMAIL\",\"client_id\":\"YOUR_CLIENT_ID\",\"auth_uri\":\"https://accounts.google.com/o/oauth2/auth\",\"token_uri\":\"https://oauth2.googleapis.com/token\",\"auth_provider_x509_cert_url\":\"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\":\"https://www.googleapis.com/robot/v1/metadata/x509/YOUR_SERVICE_ACCOUNT_EMAIL\"}"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|gcs_bucket|string||null|GCS bucket name|
-|gcs_path|string||null|GCS path to data|
-|service_account|string||null|Enter your Google Cloud <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys">service account key</a> in JSON format|
+|gcs_bucket |string||null|GCS bucket name|
+|gcs_path |string||null|GCS path to data|
+|service_account |string||null|Enter your Google Cloud <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys">service account key</a> in JSON format|
 
 # Gcs Source
 

@@ -1,9 +1,15 @@
 # Source xkcd
 
 ## Example
-```json
-{}
-```
+{
+  "documentationUrl": "https://docs.airbyte.io/integrations/sources/xkcd",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Xkcd Spec",
+    "type": "object",
+    "properties": {}
+  }
+}
 
 ## Configuration
 | Name | Type | Constant | Default | Description |

@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here",
-  "grid_id": "your_grid_id_here"
+  "api_key": "abcdefghijklmnopqrstuvwxyz",
+  "grid_id": "1234567890"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null||
-|grid_id|string||null|ID of a grid, or can be ID of a branch|
+|api_key |string||null||
+|grid_id |string||null|ID of a grid, or can be ID of a branch|
 
 # Gridly Source
 

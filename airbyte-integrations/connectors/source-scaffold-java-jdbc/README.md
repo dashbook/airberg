@@ -16,13 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the database.|
-|port|integer||3306|Port of the database.|
-|database|string||null|Name of the database.|
-|username|string||null|Username to use to access the database.|
-|password|string||null|Password associated with the username.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
-|replication_method|string||STANDARD|Replication method to use for extracting data from the database. STANDARD replication requires no setup on the DB side but will not be able to represent deletions incrementally. CDC uses the Binlog to detect inserts, updates, and deletes. This needs to be configured on the source database itself.|
+|host |string||null|Hostname of the database.|
+|port |integer||3306|Port of the database.|
+|database |string||null|Name of the database.|
+|username |string||null|Username to use to access the database.|
+|password |string||null|Password associated with the username.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
+|replication_method |string||STANDARD|Replication method to use for extracting data from the database. STANDARD replication requires no setup on the DB side but will not be able to represent deletions incrementally. CDC uses the Binlog to detect inserts, updates, and deletes. This needs to be configured on the source database itself.|
 
 # Source Scaffold Java Jdbc
 

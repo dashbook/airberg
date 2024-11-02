@@ -1,18 +1,18 @@
 # Source postmarkapp
 
 ## Example
-```
+```json
 {
-  "X-Postmark-Server-Token": "your_api_key_for_server",
-  "X-Postmark-Account-Token": "your_api_key_for_account"
+  "X-Postmark-Server-Token": "example_api_key_server",
+  "X-Postmark-Account-Token": "example_api_key_account"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|X-Postmark-Server-Token|string||null|API Key for server|
-|X-Postmark-Account-Token|string||null|API Key for account|
+|X-Postmark-Server-Token |string||null|API Key for server|
+|X-Postmark-Account-Token |string||null|API Key for account|
 
 # Postmarkapp Source
 

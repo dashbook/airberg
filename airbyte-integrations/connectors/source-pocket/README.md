@@ -1,18 +1,18 @@
 # Source pocket
 
 ## Example
-```
+```json
 {
-  "consumer_key": "my_consumer_key",
-  "access_token": "my_access_token",
+  "consumer_key": "your_consumer_key",
+  "access_token": "your_access_token",
   "state": "unread",
   "favorite": true,
-  "tag": "my_tag",
+  "tag": "_untagged_",
   "content_type": "article",
   "sort": "newest",
   "detail_type": "simple",
-  "search": "my_search_query",
-  "domain": "my_domain",
+  "search": "your_search_query",
+  "domain": "your_domain",
   "since": "2022-10-20 14:14:14"
 }
 ```
@@ -20,17 +20,17 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|consumer_key|string||null|Your application's Consumer Key.|
-|access_token|string||null|The user's Pocket access token.|
-|state|string||null|Select the state of the items to retrieve.|
-|favorite|boolean||false|Retrieve only favorited items.|
-|tag|string||null|Return only items tagged with this tag name. Use _untagged_ for retrieving only untagged items.|
-|content_type|string||null|Select the content type of the items to retrieve.|
-|sort|string||null|Sort retrieved items by the given criteria.|
-|detail_type|string||null|Select the granularity of the information about each item.|
-|search|string||null|Only return items whose title or url contain the `search` string.|
-|domain|string||null|Only return items from a particular `domain`.|
-|since|string||null|Only return items modified since the given timestamp.|
+|consumer_key |string||null|Your application's Consumer Key.|
+|access_token |string||null|The user's Pocket access token.|
+|state |string||null|Select the state of the items to retrieve.|
+|favorite |boolean||false|Retrieve only favorited items.|
+|tag |string||null|Return only items tagged with this tag name. Use _untagged_ for retrieving only untagged items.|
+|content_type |string||null|Select the content type of the items to retrieve.|
+|sort |string||null|Sort retrieved items by the given criteria.|
+|detail_type |string||null|Select the granularity of the information about each item.|
+|search |string||null|Only return items whose title or url contain the `search` string.|
+|domain |string||null|Only return items from a particular `domain`.|
+|since |string||null|Only return items modified since the given timestamp.|
 
 # Pocket Source
 

@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here"
+  "api_key": "secret_api_key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Everhour API Key. See the <a href="https://everhour.docs.apiary.io/#introduction/authentication">docs</a> for information on how to generate this key.|
+|api_key |string||null|Everhour API Key. See the <a href="https://everhour.docs.apiary.io/#introduction/authentication">docs</a> for information on how to generate this key.|
 
 # Everhour Source
 

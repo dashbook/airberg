@@ -1,9 +1,9 @@
 # Source vitally
 
 ## Example
-```
+```json
 {
-  "api_key": "your_api_token_here",
+  "api_key": "1234567890",
   "status": "active"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|The API Token for a Vitally account.|
-|status|string||null|Status of the Vitally accounts. One of the following values; active, churned, activeOrChurned.|
+|api_key |string||null|The API Token for a Vitally account.|
+|status |string||null|Status of the Vitally accounts. One of the following values; active, churned, activeOrChurned.|
 
 # Vitally Source
 

@@ -2,41 +2,40 @@
 
 ## Example
 {
-    "aws_environment": "SANDBOX",
-    "region": "AU",
-    "auth_type": "oauth2.0",
-    "aws_access_key": "ABC123",
-    "aws_secret_key": "XYZ456",
-    "role_arn": "arn:aws:iam::123456789012:role/MyRole",
-    "lwa_app_id": "LWA_CLIENT_ID",
-    "lwa_client_secret": "LWA_CLIENT_SECRET",
-    "refresh_token": "REFRESH_TOKEN",
-    "replication_start_date": "2022-01-01T00:00:00Z",
-    "replication_end_date": "2022-01-31T00:00:00Z",
-    "period_in_days": 30,
-    "report_options": "{\"GET_BRAND_ANALYTICS_SEARCH_TERMS_REPORT\": {\"reportPeriod\": \"WEEK\"}}",
-    "max_wait_seconds": 200,
-    "advanced_stream_options": "{\"GET_SALES_AND_TRAFFIC_REPORT\": {\"availability_sla_days\": 3}}"
+  "aws_environment": "PRODUCTION",
+  "region": "US",
+  "aws_access_key": "YOUR_AWS_ACCESS_KEY",
+  "aws_secret_key": "YOUR_AWS_SECRET_KEY",
+  "role_arn": "YOUR_ROLE_ARN",
+  "lwa_app_id": "YOUR_LWA_APP_ID",
+  "lwa_client_secret": "YOUR_LWA_CLIENT_SECRET",
+  "refresh_token": "YOUR_REFRESH_TOKEN",
+  "replication_start_date": "2017-01-25T00:00:00Z",
+  "replication_end_date": "2017-01-25T00:00:00Z",
+  "period_in_days": 90,
+  "report_options": "{\"GET_BRAND_ANALYTICS_SEARCH_TERMS_REPORT\": {\"reportPeriod\": \"WEEK\"}}",
+  "max_wait_seconds": 500,
+  "advanced_stream_options": "{\"GET_SALES_AND_TRAFFIC_REPORT\": {\"availability_sla_days\": 3}}"
 }
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_type|string|oauth2.0|null||
-|aws_environment|string||PRODUCTION|Select the AWS Environment.|
-|region|string||US|Select the AWS Region.|
-|aws_access_key|string||null|Specifies the AWS access key used as part of the credentials to authenticate the user.|
-|aws_secret_key|string||null|Specifies the AWS secret key used as part of the credentials to authenticate the user.|
-|role_arn|string||null|Specifies the Amazon Resource Name (ARN) of an IAM role that you want to use to perform operations requested using this profile. (Needs permission to 'Assume Role' STS).|
-|lwa_app_id|string||null|Your Login with Amazon Client ID.|
-|lwa_client_secret|string||null|Your Login with Amazon Client Secret.|
-|refresh_token|string||null|The Refresh Token obtained via OAuth flow authorization.|
-|replication_start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|replication_end_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data after this date will not be replicated.|
-|period_in_days|integer||90|Will be used for stream slicing for initial full_refresh sync when no updated state is present for reports that support sliced incremental sync.|
-|report_options|string||null|Additional information passed to reports. This varies by report type. Must be a valid json string.|
-|max_wait_seconds|integer||500|Sometimes report can take up to 30 minutes to generate. This will set the limit for how long to wait for a successful report.|
-|advanced_stream_options|string||null|Additional information to configure report options. This varies by report type, not every report implement this kind of feature. Must be a valid json string.|
+|auth_type |string|oauth2.0|null||
+|aws_environment |string||PRODUCTION|Select the AWS Environment.|
+|region |string||US|Select the AWS Region.|
+|aws_access_key |string||null|Specifies the AWS access key used as part of the credentials to authenticate the user.|
+|aws_secret_key |string||null|Specifies the AWS secret key used as part of the credentials to authenticate the user.|
+|role_arn |string||null|Specifies the Amazon Resource Name (ARN) of an IAM role that you want to use to perform operations requested using this profile. (Needs permission to 'Assume Role' STS).|
+|lwa_app_id |string||null|Your Login with Amazon Client ID.|
+|lwa_client_secret |string||null|Your Login with Amazon Client Secret.|
+|refresh_token |string||null|The Refresh Token obtained via OAuth flow authorization.|
+|replication_start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|replication_end_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data after this date will not be replicated.|
+|period_in_days |integer||90|Will be used for stream slicing for initial full_refresh sync when no updated state is present for reports that support sliced incremental sync.|
+|report_options |string||null|Additional information passed to reports. This varies by report type. Must be a valid json string.|
+|max_wait_seconds |integer||500|Sometimes report can take up to 30 minutes to generate. This will set the limit for how long to wait for a successful report.|
+|advanced_stream_options |string||null|Additional information to configure report options. This varies by report type, not every report implement this kind of feature. Must be a valid json string.|
 
 # Amazon Seller-Partner Source
 

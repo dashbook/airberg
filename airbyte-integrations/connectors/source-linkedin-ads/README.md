@@ -6,26 +6,25 @@
   "credentials": {
     "auth_method": "oAuth2.0",
     "client_id": "1234567890",
-    "client_secret": "abc123def456",
-    "refresh_token": "refresh_token_value"
+    "client_secret": "1234567890",
+    "refresh_token": "1234567890"
   },
   "start_date": "2021-05-17",
-  "account_ids": [123, 456]
+  "account_ids": [123456789]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|start_date|string||null|UTC date in the format 2020-09-17. Any data before this date will not be replicated.|
-|account_ids|array||[]|Specify the account IDs separated by a space, to pull the data from. Leave empty, if you want to pull the data from all associated accounts. See the <a href="https://www.linkedin.com/help/linkedin/answer/a424270/find-linkedin-ads-account-details?lang=en">LinkedIn Ads docs</a> for more info.|
-|credentials.0.auth_method|string|oAuth2.0|null||
-|credentials.0.client_id|string||null|The client ID of the LinkedIn Ads developer application.|
-|credentials.0.client_secret|string||null|The client secret the LinkedIn Ads developer application.|
-|credentials.0.refresh_token|string||null|The key to refresh the expired access token.|
-|credentials.1.auth_method|string|access_token|null||
-|credentials.1.access_token|string||null|The token value generated using the authentication code. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-ads#authentication">docs</a> to obtain yours.|
+|start_date |string||null|UTC date in the format 2020-09-17. Any data before this date will not be replicated.|
+|account_ids |array||[]|Specify the account IDs separated by a space, to pull the data from. Leave empty, if you want to pull the data from all associated accounts. See the <a href="https://www.linkedin.com/help/linkedin/answer/a424270/find-linkedin-ads-account-details?lang=en">LinkedIn Ads docs</a> for more info.|
+|credentials.auth_method 0|string|oAuth2.0|null||
+|credentials.client_id 0|string||null|The client ID of the LinkedIn Ads developer application.|
+|credentials.client_secret 0|string||null|The client secret the LinkedIn Ads developer application.|
+|credentials.refresh_token 0|string||null|The key to refresh the expired access token.|
+|credentials.auth_method 1|string|access_token|null||
+|credentials.access_token 1|string||null|The token value generated using the authentication code. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-ads#authentication">docs</a> to obtain yours.|
 
 # Linkedin Ads Source Connector
 

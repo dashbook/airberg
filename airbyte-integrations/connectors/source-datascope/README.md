@@ -1,9 +1,9 @@
 # Source datascope
 
 ## Example
-```
+```json
 {
-  "api_key": "secret_api_key",
+  "api_key": "your_api_key_here",
   "start_date": "01/01/2022 00:00"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|Start date for the data to be replicated|
-|api_key|string||null|API Key|
+|start_date |string||null|Start date for the data to be replicated|
+|api_key |string||null|API Key|
 
 # Datascope Source
 

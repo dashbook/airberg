@@ -1,7 +1,7 @@
 # Source whisky-hunter
 
 ## Example
-```
+```json
 {
   "documentationUrl": "https://docs.airbyte.io/integrations/sources/whisky-hunter",
   "connectionSpecification": {
@@ -10,6 +10,23 @@
     "type": "object",
     "additionalProperties": true,
     "properties": {}
+  },
+  "data": {
+    "profile_id": "WST123456",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "whisky_grades": [
+      {
+        "whisky_id": "WH123456",
+        "grade": "A-",
+        "notes": "Smooth, rich, and complex"
+      },
+      {
+        "whisky_id": "WH789012",
+        "grade": "B+",
+        "notes": "Smokey, earthy, and slightly bitter"
+      }
+    ]
   }
 }
 ```

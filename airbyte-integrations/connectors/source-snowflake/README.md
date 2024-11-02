@@ -1,14 +1,14 @@
 # Source snowflake
 
 ## Example
-```json
+```
 {
   "credentials": {
     "auth_type": "OAuth",
-    "client_id": "client_id_value",
-    "client_secret": "client_secret_value",
-    "access_token": "access_token_value",
-    "refresh_token": "refresh_token_value"
+    "client_id": "CLIENT_ID",
+    "client_secret": "CLIENT_SECRET",
+    "access_token": "ACCESS_TOKEN",
+    "refresh_token": "REFRESH_TOKEN"
   },
   "host": "accountname.us-east-2.aws.snowflakecomputing.com",
   "role": "AIRBYTE_ROLE",
@@ -22,21 +22,20 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|host|string||null|The host domain of the snowflake instance (must include the account, region, cloud environment, and end with snowflakecomputing.com).|
-|role|string||null|The role you created for Airbyte to access Snowflake.|
-|warehouse|string||null|The warehouse you created for Airbyte to access data.|
-|database|string||null|The database you created for Airbyte to access data.|
-|schema|string||null|The source Snowflake schema tables. Leave empty to access tables from multiple schemas.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3).|
-|credentials.0.auth_type|string|OAuth|null||
-|credentials.0.client_id|string||null|The Client ID of your Snowflake developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Snowflake developer application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.refresh_token|string||null|Refresh Token for making authenticated requests.|
-|credentials.1.auth_type|string|username/password|null||
-|credentials.1.username|string||null|The username you created to allow Airbyte to access the database.|
-|credentials.1.password|string||null|The password associated with the username.|
+|host |string||null|The host domain of the snowflake instance (must include the account, region, cloud environment, and end with snowflakecomputing.com).|
+|role |string||null|The role you created for Airbyte to access Snowflake.|
+|warehouse |string||null|The warehouse you created for Airbyte to access data.|
+|database |string||null|The database you created for Airbyte to access data.|
+|schema |string||null|The source Snowflake schema tables. Leave empty to access tables from multiple schemas.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3).|
+|credentials.auth_type 0|string|OAuth|null||
+|credentials.client_id 0|string||null|The Client ID of your Snowflake developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Snowflake developer application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.refresh_token 0|string||null|Refresh Token for making authenticated requests.|
+|credentials.auth_type 1|string|username/password|null||
+|credentials.username 1|string||null|The username you created to allow Airbyte to access the database.|
+|credentials.password 1|string||null|The password associated with the username.|
 
 # Snowflake Source
 

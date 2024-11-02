@@ -3,29 +3,18 @@
 ## Example
 ```json
 {
-  "project_id": "my-project",
-  "dataset_id": "my-dataset",
-  "credentials_json": "{
-    \"type\": \"service_account\",
-    \"project_id\": \"my-project\",
-    \"private_key_id\": \"...\",
-    \"private_key\": \"...\",
-    \"client_email\": \"...\",
-    \"client_id\": \"...\",
-    \"auth_uri\": \"...\",
-    \"token_uri\": \"...\",
-    \"auth_provider_x509_cert_url\": \"...\",
-    \"client_x509_cert_url\": \"...\"
-  }"
+  "project_id": "my-project-id",
+  "dataset_id": "my-dataset-id",
+  "credentials_json": "my-credentials-json"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|project_id|string||null|The GCP project ID for the project containing the target BigQuery dataset.|
-|dataset_id|string||null|The dataset ID to search for tables and views. If you are only loading data from one dataset, setting this option could result in much faster schema discovery.|
-|credentials_json|string||null|The contents of your Service Account Key JSON file. See the <a href="https://docs.airbyte.com/integrations/sources/bigquery#setup-the-bigquery-source-in-airbyte">docs</a> for more information on how to obtain this key.|
+|project_id |string||null|The GCP project ID for the project containing the target BigQuery dataset.|
+|dataset_id |string||null|The dataset ID to search for tables and views. If you are only loading data from one dataset, setting this option could result in much faster schema discovery.|
+|credentials_json |string||null|The contents of your Service Account Key JSON file. See the <a href="https://docs.airbyte.com/integrations/sources/bigquery#setup-the-bigquery-source-in-airbyte">docs</a> for more information on how to obtain this key.|
 
 # BigQuery Test Configuration
 

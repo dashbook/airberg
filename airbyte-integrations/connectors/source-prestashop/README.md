@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "access_key": "your_secret_access_key",
+  "access_key": "my_secret_key",
   "url": "https://example.com",
   "start_date": "2022-01-01"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_key|string||null|Your PrestaShop access key. See <a href="https://devdocs.prestashop.com/1.7/webservice/tutorials/creating-access/#create-an-access-key"> the docs </a> for info on how to obtain this.|
-|url|string||null|Shop URL without trailing slash.|
-|start_date|string||null|The Start date in the format YYYY-MM-DD.|
+|access_key |string||null|Your PrestaShop access key. See <a href="https://devdocs.prestashop.com/1.7/webservice/tutorials/creating-access/#create-an-access-key"> the docs </a> for info on how to obtain this.|
+|url |string||null|Shop URL without trailing slash.|
+|start_date |string||null|The Start date in the format YYYY-MM-DD.|
 
 # PrestaShop Source
 

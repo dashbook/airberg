@@ -3,32 +3,32 @@
 ## Example
 ```json
 {
-  "api_key": "example_api_key",
+  "api_key": "your_api_key",
   "environment": "production",
-  "symbol_id": "USD",
-  "period": "2MTH",
+  "symbol_id": "your_symbol_id",
+  "period": "5SEC",
   "start_date": "2022-01-01T00:00:00",
-  "end_date": "2022-01-31T00:00:00",
-  "limit": 500
+  "end_date": "2022-01-01T00:00:00",
+  "limit": 100
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|environment|string||sandbox|The environment to use. Either sandbox or production.
+|api_key |string||null|API Key|
+|environment |string||sandbox|The environment to use. Either sandbox or production.
 |
-|symbol_id|string||null|The symbol ID to use. See the documentation for a list.
+|symbol_id |string||null|The symbol ID to use. See the documentation for a list.
 https://docs.coinapi.io/#list-all-symbols-get
 |
-|period|string||null|The period to use. See the documentation for a list. https://docs.coinapi.io/#list-all-periods-get|
-|start_date|string||null|The start date in ISO 8601 format.|
-|end_date|string||null|The end date in ISO 8601 format. If not supplied, data will be returned
+|period |string||null|The period to use. See the documentation for a list. https://docs.coinapi.io/#list-all-periods-get|
+|start_date |string||null|The start date in ISO 8601 format.|
+|end_date |string||null|The end date in ISO 8601 format. If not supplied, data will be returned
 from the start date to the current time, or when the count of result
 elements reaches its limit.
 |
-|limit|integer||100|The maximum number of elements to return. If not supplied, the default
+|limit |integer||100|The maximum number of elements to return. If not supplied, the default
 is 100. For numbers larger than 100, each 100 items is counted as one
 request for pricing purposes. Maximum value is 100000.
 |

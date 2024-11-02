@@ -6,9 +6,9 @@
   "org_id": "123456789",
   "credentials": {
     "auth_method": "oAuth2.0",
-    "client_id": "ABCDE12345",
-    "client_secret": "45678901234",
-    "refresh_token": "abcdefg123456"
+    "client_id": "client_id_value",
+    "client_secret": "client_secret_value",
+    "refresh_token": "refresh_token_value"
   }
 }
 ```
@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|org_id|string||null|Specify the Organization ID|
-|credentials|object||null||
-|credentials.0.auth_method|string|oAuth2.0|null||
-|credentials.0.client_id|string||null|The client ID of the LinkedIn developer application.|
-|credentials.0.client_secret|string||null|The client secret of the LinkedIn developer application.|
-|credentials.0.refresh_token|string||null|The token value generated using the LinkedIn Developers OAuth Token Tools. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-pages/">docs</a> to obtain yours.|
-|credentials.1.auth_method|string|access_token|null||
-|credentials.1.access_token|string||null|The token value generated using the LinkedIn Developers OAuth Token Tools. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-pages/">docs</a> to obtain yours.|
+|org_id |string||null|Specify the Organization ID|
+|credentials.auth_method 0|string|oAuth2.0|null||
+|credentials.client_id 0|string||null|The client ID of the LinkedIn developer application.|
+|credentials.client_secret 0|string||null|The client secret of the LinkedIn developer application.|
+|credentials.refresh_token 0|string||null|The token value generated using the LinkedIn Developers OAuth Token Tools. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-pages/">docs</a> to obtain yours.|
+|credentials.auth_method 1|string|access_token|null||
+|credentials.access_token 1|string||null|The token value generated using the LinkedIn Developers OAuth Token Tools. See the <a href="https://docs.airbyte.com/integrations/sources/linkedin-pages/">docs</a> to obtain yours.|
 
 # Linkedin Pages Source
 

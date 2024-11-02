@@ -1,16 +1,16 @@
 # Source xero
 
 ## Example
-```json
+```
 {
   "authentication": {
-    "client_id": "1234567890",
-    "client_secret": "abcde12345",
-    "refresh_token": "refresh_token_value",
-    "access_token": "access_token_value",
+    "client_id": "client-id-123",
+    "client_secret": "client-secret-123",
+    "refresh_token": "refresh-token-123",
+    "access_token": "access-token-123",
     "token_expiry_date": "2022-03-01T00:00:00Z"
   },
-  "tenant_id": "tenant_id_value",
+  "tenant_id": "tenant-id-123",
   "start_date": "2022-03-01T00:00:00Z"
 }
 ```
@@ -18,13 +18,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|tenant_id|string||null|Enter your Xero organization's Tenant ID|
-|start_date|string||null|UTC date and time in the format YYYY-MM-DDTHH:mm:ssZ. Any data with created_at before this data will not be synced.|
-|authentication.client_id|string||null|Enter your Xero application's Client ID|
-|authentication.client_secret|string||null|Enter your Xero application's Client Secret|
-|authentication.refresh_token|string||null|Enter your Xero application's refresh token|
-|authentication.access_token|string||null|Enter your Xero application's access token|
-|authentication.token_expiry_date|string||null|The date-time when the access token should be refreshed|
+|tenant_id |string||null|Enter your Xero organization's Tenant ID|
+|start_date |string||null|UTC date and time in the format YYYY-MM-DDTHH:mm:ssZ. Any data with created_at before this data will not be synced.|
+|authentication.client_id |string||null|Enter your Xero application's Client ID|
+|authentication.client_secret |string||null|Enter your Xero application's Client Secret|
+|authentication.refresh_token |string||null|Enter your Xero application's refresh token|
+|authentication.access_token |string||null|Enter your Xero application's access token|
+|authentication.token_expiry_date |string||null|The date-time when the access token should be refreshed|
 
 # Xero Source
 

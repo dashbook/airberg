@@ -3,20 +3,20 @@
 ## Example
 ```json
 {
-  "token": "YOUR_API_TOKEN",
-  "key": "YOUR_API_KEY",
+  "token": "abcdefg",
+  "key": "hijklmnop",
   "start_date": "2021-03-01T00:00:00.000Z",
-  "survey_ids": ["12345678", "87654321"]
+  "survey_ids": ["12345678"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|token|string||null|A Qualaroo token. See the <a href="https://help.qualaroo.com/hc/en-us/articles/201969438-The-REST-Reporting-API">docs</a> for instructions on how to generate it.|
-|key|string||null|A Qualaroo token. See the <a href="https://help.qualaroo.com/hc/en-us/articles/201969438-The-REST-Reporting-API">docs</a> for instructions on how to generate it.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|survey_ids|array||null|IDs of the surveys from which you'd like to replicate data. If left empty, data from all surveys to which you have access will be replicated.|
+|token |string||null|A Qualaroo token. See the <a href="https://help.qualaroo.com/hc/en-us/articles/201969438-The-REST-Reporting-API">docs</a> for instructions on how to generate it.|
+|key |string||null|A Qualaroo token. See the <a href="https://help.qualaroo.com/hc/en-us/articles/201969438-The-REST-Reporting-API">docs</a> for instructions on how to generate it.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|survey_ids |array||null|IDs of the surveys from which you'd like to replicate data. If left empty, data from all surveys to which you have access will be replicated.|
 
 # Qualaroo Source
 

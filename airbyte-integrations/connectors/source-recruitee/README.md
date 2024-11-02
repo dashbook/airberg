@@ -1,18 +1,18 @@
 # Source recruitee
 
 ## Example
-```
+```json
 {
-  "api_key": "my_api_key",
-  "company_id": 12345
+  "api_key": "your_api_key_here",
+  "company_id": 123
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Recruitee API Key. See <a href="https://docs.recruitee.com/reference/getting-started#generate-api-token">here</a>.|
-|company_id|integer||null|Recruitee Company ID. You can also find this ID on the <a href="https://app.recruitee.com/#/settings/api_tokens">Recruitee API tokens page</a>.|
+|api_key |string||null|Recruitee API Key. See <a href="https://docs.recruitee.com/reference/getting-started#generate-api-token">here</a>.|
+|company_id |integer||null|Recruitee Company ID. You can also find this ID on the <a href="https://app.recruitee.com/#/settings/api_tokens">Recruitee API tokens page</a>.|
 
 # Recruitee Source
 

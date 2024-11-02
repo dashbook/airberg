@@ -4,19 +4,19 @@
 ```json
 {
   "credentials": {
-    "developer_token": "your_developer_token",
-    "client_id": "your_client_id",
-    "client_secret": "your_client_secret",
-    "refresh_token": "your_refresh_token",
-    "access_token": "your_access_token"
+    "developer_token": "developer_token_granted_by_google",
+    "client_id": "client_id_of_your_google_ads_developer_application",
+    "client_secret": "client_secret_of_your_google_ads_developer_application",
+    "refresh_token": "token_for_obtaining_a_new_access_token",
+    "access_token": "access_token_for_making_authenticated_requests"
   },
-  "customer_id": "6783948572",
-  "start_date": "2022-01-01",
-  "end_date": "2022-01-31",
+  "customer_id": "6783948572,5839201945",
+  "start_date": "2017-01-25",
+  "end_date": "2017-01-30",
   "custom_queries": [
     {
       "query": "SELECT segments.ad_destination_type, campaign.advertising_channel_sub_type FROM campaign WHERE campaign.status = 'PAUSED'",
-      "table_name": "your_table_name"
+      "table_name": "destination_table_name"
     }
   ],
   "login_customer_id": "7349206847",
@@ -27,19 +27,19 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|customer_id|string||null|Comma separated list of (client) customer IDs. Each customer ID must be specified as a 10-digit number without dashes. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>. Metrics streams like AdGroupAdReport cannot be requested for a manager account.|
-|start_date|string||null|UTC date and time in the format 2017-01-25. Any data before this date will not be replicated.|
-|end_date|string||null|UTC date and time in the format 2017-01-25. Any data after this date will not be replicated.|
-|custom_queries|array||null||
-|login_customer_id|string||null|If your access to the customer account is through a manager account, this field is required and must be set to the customer ID of the manager account (10-digit number without dashes). More information about this field you can see <a href="https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid">here</a>|
-|conversion_window_days|integer||14|A conversion window is the period of time after an ad interaction (such as an ad click or video view) during which a conversion, such as a purchase, is recorded in Google Ads. For more information, see Google's <a href="https://support.google.com/google-ads/answer/3123169?hl=en">documentation</a>.|
-|credentials.developer_token|string||null|Developer token granted by Google to use their APIs. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
-|credentials.client_id|string||null|The Client ID of your Google Ads developer application. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
-|credentials.client_secret|string||null|The Client Secret of your Google Ads developer application. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
-|credentials.refresh_token|string||null|The token for obtaining a new access token. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
-|credentials.access_token|string||null|Access Token for making authenticated requests. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
-|custom_queries.items.query|string||null|A custom defined GAQL query for building the report. Should not contain segments.date expression because it is used by incremental streams. See Google's <a href="https://developers.google.com/google-ads/api/fields/v11/overview_query_builder">query builder</a> for more information.|
-|custom_queries.items.table_name|string||null|The table name in your destination database for choosen query.|
+|customer_id |string||null|Comma separated list of (client) customer IDs. Each customer ID must be specified as a 10-digit number without dashes. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>. Metrics streams like AdGroupAdReport cannot be requested for a manager account.|
+|start_date |string||null|UTC date and time in the format 2017-01-25. Any data before this date will not be replicated.|
+|end_date |string||null|UTC date and time in the format 2017-01-25. Any data after this date will not be replicated.|
+|custom_queries |array||null||
+|login_customer_id |string||null|If your access to the customer account is through a manager account, this field is required and must be set to the customer ID of the manager account (10-digit number without dashes). More information about this field you can see <a href="https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid">here</a>|
+|conversion_window_days |integer||14|A conversion window is the period of time after an ad interaction (such as an ad click or video view) during which a conversion, such as a purchase, is recorded in Google Ads. For more information, see Google's <a href="https://support.google.com/google-ads/answer/3123169?hl=en">documentation</a>.|
+|credentials.developer_token |string||null|Developer token granted by Google to use their APIs. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
+|credentials.client_id |string||null|The Client ID of your Google Ads developer application. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
+|credentials.client_secret |string||null|The Client Secret of your Google Ads developer application. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
+|credentials.refresh_token |string||null|The token for obtaining a new access token. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
+|credentials.access_token |string||null|Access Token for making authenticated requests. More instruction on how to find this value in our <a href="https://docs.airbyte.com/integrations/sources/google-ads#setup-guide">docs</a>|
+|custom_queries.items.query |string||null|A custom defined GAQL query for building the report. Should not contain segments.date expression because it is used by incremental streams. See Google's <a href="https://developers.google.com/google-ads/api/fields/v11/overview_query_builder">query builder</a> for more information.|
+|custom_queries.items.table_name |string||null|The table name in your destination database for choosen query.|
 
 # Google Ads Source
 

@@ -1,24 +1,24 @@
 # Source stripe
 
 ## Example
-```
+```json
 {
-  "client_secret": "sk_live_123456789",
-  "account_id": "acct_123456789",
-  "start_date": "2017-01-25T00:00:00Z",
-  "lookback_window_days": 0,
-  "slice_range": 30
+  "account_id": "acct_xxx",
+  "client_secret": "sk_live_1234567890",
+  "start_date": "2022-01-01T00:00:00Z",
+  "lookback_window_days": 7,
+  "slice_range": 3
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_id|string||null|Your Stripe account ID (starts with 'acct_', find yours <a href="https://dashboard.stripe.com/settings/account">here</a>).|
-|client_secret|string||null|Stripe API key (usually starts with 'sk_live_'; find yours <a href="https://dashboard.stripe.com/apikeys">here</a>).|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Only data generated after this date will be replicated.|
-|lookback_window_days|integer||0|When set, the connector will always re-export data from the past N days, where N is the value set here. This is useful if your data is frequently updated after creation. More info <a href="https://docs.airbyte.com/integrations/sources/stripe#requirements">here</a>|
-|slice_range|integer||365|The time increment used by the connector when requesting data from the Stripe API. The bigger the value is, the less requests will be made and faster the sync will be. On the other hand, the more seldom the state is persisted.|
+|account_id |string||null|Your Stripe account ID (starts with 'acct_', find yours <a href="https://dashboard.stripe.com/settings/account">here</a>).|
+|client_secret |string||null|Stripe API key (usually starts with 'sk_live_'; find yours <a href="https://dashboard.stripe.com/apikeys">here</a>).|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Only data generated after this date will be replicated.|
+|lookback_window_days |integer||0|When set, the connector will always re-export data from the past N days, where N is the value set here. This is useful if your data is frequently updated after creation. More info <a href="https://docs.airbyte.com/integrations/sources/stripe#requirements">here</a>|
+|slice_range |integer||365|The time increment used by the connector when requesting data from the Stripe API. The bigger the value is, the less requests will be made and faster the sync will be. On the other hand, the more seldom the state is persisted.|
 
 # Stripe Source
 

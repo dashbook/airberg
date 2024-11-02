@@ -1,16 +1,16 @@
 # Source persistiq
 
 ## Example
-```json
+```
 {
-  "api_key": "my_secret_api_key"
+  "api_key": "your_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|PersistIq API Key. See the <a href="https://apidocs.persistiq.com/#authentication">docs</a> for more information on where to find that key.|
+|api_key |string||null|PersistIq API Key. See the <a href="https://apidocs.persistiq.com/#authentication">docs</a> for more information on where to find that key.|
 
 # Persistiq Source
 

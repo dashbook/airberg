@@ -4,7 +4,7 @@
 ```json
 {
   "api_key": "your_api_key_here",
-  "data_type": "latest",
+  "data_type": "historical",
   "symbols": ["AVAX", "BTC"]
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://coinmarketcap.com/api/documentation/v1/#section/Authentication">here</a>. The token is case sensitive.|
-|data_type|string||null|/latest: Latest market ticker quotes and averages for cryptocurrencies and exchanges. /historical: Intervals of historic market data like OHLCV data or data for use in charting libraries. See <a href="https://coinmarketcap.com/api/documentation/v1/#section/Endpoint-Overview">here</a>.|
-|symbols|array||null|Cryptocurrency symbols. (only used for quotes stream)|
+|api_key |string||null|Your API Key. See <a href="https://coinmarketcap.com/api/documentation/v1/#section/Authentication">here</a>. The token is case sensitive.|
+|data_type |string||null|/latest: Latest market ticker quotes and averages for cryptocurrencies and exchanges. /historical: Intervals of historic market data like OHLCV data or data for use in charting libraries. See <a href="https://coinmarketcap.com/api/documentation/v1/#section/Endpoint-Overview">here</a>.|
+|symbols |array||null|Cryptocurrency symbols. (only used for quotes stream)|
 
 # Coinmarketcap Source
 

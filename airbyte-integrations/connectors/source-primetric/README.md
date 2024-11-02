@@ -1,18 +1,18 @@
 # Source primetric
 
 ## Example
-```json
+```
 {
   "client_id": "1234aBcD5678EFGh9045Neq79sdDlA15082VMYcj",
-  "client_secret": "9876aBcD5678EFGh9045Neq79sdDlA15082VMYcj"
+  "client_secret": "6789vBuT0543PvKk9897MqIj1Pp8o7PnMc9eFgJhI78G67"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|The Client ID of your Primetric developer application. The Client ID is visible <a href=\"https://app.primetric.com/administrator/integrations">here</a>.|
-|client_secret|string||null|The Client Secret of your Primetric developer application. You can manage your client's credentials <a href=\"https://app.primetric.com/administrator/integrations">here</a>.|
+|client_id |string||null|The Client ID of your Primetric developer application. The Client ID is visible <a href=\"https://app.primetric.com/administrator/integrations">here</a>.|
+|client_secret |string||null|The Client Secret of your Primetric developer application. You can manage your client's credentials <a href=\"https://app.primetric.com/administrator/integrations">here</a>.|
 
 # Primetric Source
 

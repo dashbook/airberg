@@ -1,18 +1,18 @@
 # Source workramp
 
 ## Example
-```
+```json
 {
-  "api_key": "1234567890",
-  "academy_id": "9876543210"
+  "api_key": "secret_api_token",
+  "academy_id": "1234567890"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|The API Token for Workramp|
-|academy_id|string||null|The id of the Academy|
+|api_key |string||null|The API Token for Workramp|
+|academy_id |string||null|The id of the Academy|
 
 # Workramp Source
 

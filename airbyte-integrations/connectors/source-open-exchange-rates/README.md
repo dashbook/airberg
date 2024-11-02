@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "app_id": "my_open_exchange_rates_app_id",
+  "app_id": "my_secret_app_id",
   "start_date": "2022-01-01",
   "base": "EUR"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|app_id|string||null|App ID provided by Open Exchange Rates|
-|start_date|string||null|Start getting data from that date.|
-|base|string||USD|Change base currency (3-letter code, default is USD - only modifiable in paid plans)|
+|app_id |string||null|App ID provided by Open Exchange Rates|
+|start_date |string||null|Start getting data from that date.|
+|base |string||USD|Change base currency (3-letter code, default is USD - only modifiable in paid plans)|
 
 # Open Exchange Rates Source
 

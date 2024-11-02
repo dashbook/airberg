@@ -3,9 +3,9 @@
 ## Example
 ```json
 {
-  "app_id": "123456",
-  "api_token": "abc123",
-  "start_date": "2021-11-16",
+  "app_id": "test_app_id",
+  "api_token": "1234567890",
+  "start_date": "2022-01-01",
   "timezone": "UTC"
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|app_id|string||null|App identifier as found in AppsFlyer.|
-|api_token|string||null|Pull API token for authentication. If you change the account admin, the token changes, and you must update scripts with the new token. <a href="https://support.appsflyer.com/hc/en-us/articles/360004562377">Get the API token in the Dashboard</a>.|
-|start_date|string||null|The default value to use if no bookmark exists for an endpoint. Raw Reports historical lookback is limited to 90 days.|
-|timezone|string||UTC|Time zone in which date times are stored. The project timezone may be found in the App settings in the AppsFlyer console.|
+|app_id |string||null|App identifier as found in AppsFlyer.|
+|api_token |string||null|Pull API token for authentication. If you change the account admin, the token changes, and you must update scripts with the new token. <a href="https://support.appsflyer.com/hc/en-us/articles/360004562377">Get the API token in the Dashboard</a>.|
+|start_date |string||null|The default value to use if no bookmark exists for an endpoint. Raw Reports historical lookback is limited to 90 days.|
+|timezone |string||UTC|Time zone in which date times are stored. The project timezone may be found in the App settings in the AppsFlyer console.|
 
 # Appsflyer Source
 

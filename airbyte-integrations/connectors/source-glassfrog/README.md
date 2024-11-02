@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "my_secret_api_key"
+  "api_key": "your_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API key provided by Glassfrog|
+|api_key |string||null|API key provided by Glassfrog|
 
 # Glassfrog Source
 

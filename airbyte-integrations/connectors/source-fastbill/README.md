@@ -3,16 +3,16 @@
 ## Example
 ```
 {
-  "username": "example_username",
-  "api_key": "example_api_key"
+  "username": "fastbill_username",
+  "api_key": "fastbill_api_key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|username|string||null|Username for Fastbill account|
-|api_key|string||null|Fastbill API key|
+|username |string||null|Username for Fastbill account|
+|api_key |string||null|Fastbill API key|
 
 # Fastbill Source
 

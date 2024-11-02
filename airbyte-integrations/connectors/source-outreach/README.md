@@ -3,10 +3,10 @@
 ## Example
 ```json
 {
-  "client_id": "abc123",
-  "client_secret": "secret123",
-  "refresh_token": "refresh_secret123",
-  "redirect_uri": "http://example.com/callback",
+  "client_id": "client_id_value",
+  "client_secret": "client_secret_value",
+  "refresh_token": "refresh_token_value",
+  "redirect_uri": "redirect_uri_value",
   "start_date": "2020-11-16T00:00:00Z"
 }
 ```
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|The Client ID of your Outreach developer application.|
-|client_secret|string||null|The Client Secret of your Outreach developer application.|
-|refresh_token|string||null|The token for obtaining the new access token.|
-|redirect_uri|string||null|A Redirect URI is the location where the authorization server sends the user once the app has been successfully authorized and granted an authorization code or access token.|
-|start_date|string||null|The date from which you'd like to replicate data for Outreach API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|client_id |string||null|The Client ID of your Outreach developer application.|
+|client_secret |string||null|The Client Secret of your Outreach developer application.|
+|refresh_token |string||null|The token for obtaining the new access token.|
+|redirect_uri |string||null|A Redirect URI is the location where the authorization server sends the user once the app has been successfully authorized and granted an authorization code or access token.|
+|start_date |string||null|The date from which you'd like to replicate data for Outreach API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
 
 # Outreach Source
 

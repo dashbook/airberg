@@ -1,18 +1,18 @@
 # Source sendgrid
 
 ## Example
-```json
+```
 {
-  "apikey": "SG.api-key-1234567890",
-  "start_time": "2022-07-25T14:30:00Z"
+  "apikey": "abcdefghijklmnopqrstuvwxyz",
+  "start_time": "2020-01-01T01:01:01Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|apikey|string||null|API Key, use <a href="https://app.sendgrid.com/settings/api_keys/">admin</a> to generate this key.|
-|start_time|string||null|Start time in ISO8601 format. Any data before this time point will not be replicated.|
+|apikey |string||null|API Key, use <a href="https://app.sendgrid.com/settings/api_keys/">admin</a> to generate this key.|
+|start_time |string||null|Start time in ISO8601 format. Any data before this time point will not be replicated.|
 
 # Sendgrid Source 
 

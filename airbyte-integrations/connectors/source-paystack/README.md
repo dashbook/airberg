@@ -5,16 +5,16 @@
 {
   "secret_key": "sk_live_1234567890",
   "start_date": "2022-01-01T00:00:00Z",
-  "lookback_window_days": 14
+  "lookback_window_days": 30
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|secret_key|string||null|The Paystack API key (usually starts with 'sk_live_'; find yours <a href="https://dashboard.paystack.com/#/settings/developer">here</a>).|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|lookback_window_days|integer||0|When set, the connector will always reload data from the past N days, where N is the value set here. This is useful if your data is updated after creation.|
+|secret_key |string||null|The Paystack API key (usually starts with 'sk_live_'; find yours <a href="https://dashboard.paystack.com/#/settings/developer">here</a>).|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|lookback_window_days |integer||0|When set, the connector will always reload data from the past N days, where N is the value set here. This is useful if your data is updated after creation.|
 
 # Paystack Source
 

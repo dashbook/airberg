@@ -3,13 +3,13 @@
 ## Example
 ```json
 {
+  "database": "my_database",
+  "user": "my_user",
+  "password": "my_password",
+  "auth_source": "my_auth_source",
   "instance_type": {
     "instance": "atlas",
-    "cluster_url": "mongodb+srv://localhost:27017",
-    "database": "my_database",
-    "user": "my_user",
-    "password": "my_password",
-    "auth_source": "my_source"
+    "cluster_url": "https://cluster-url.mongodb.net"
   }
 }
 ```
@@ -17,20 +17,22 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|instance_type|object||null|The MongoDb instance to connect to. For MongoDB Atlas and Replica Set TLS connection is used by default.|
-|database|string||null|The database you want to replicate.|
-|user|string||null|The username which is used to access the database.|
-|password|string||null|The password associated with this username.|
-|auth_source|string||admin|The authentication source where the user information is stored.|
-|instance_type.0.instance|string|standalone|null||
-|instance_type.0.host|string||null|The host name of the Mongo database.|
-|instance_type.0.port|integer||27017|The port of the Mongo database.|
-|instance_type.0.tls|boolean||false|Indicates whether TLS encryption protocol will be used to connect to MongoDB. It is recommended to use TLS connection if possible. For more information see <a href="https://docs.airbyte.com/integrations/sources/mongodb-v2">documentation</a>.|
-|instance_type.1.instance|string|replica|null||
-|instance_type.1.server_addresses|string||null|The members of a replica set. Please specify `host`:`port` of each member separated by comma.|
-|instance_type.1.replica_set|string||null|A replica set in MongoDB is a group of mongod processes that maintain the same data set.|
-|instance_type.2.instance|string|atlas|null||
-|instance_type.2.cluster_url|string||null|The URL of a cluster to connect to.|
+|database |string||null|The database you want to replicate.|
+|user |string||null|The username which is used to access the database.|
+|password |string||null|The password associated with this username.|
+|auth_source |string||admin|The authentication source where the user information is stored.|
+|instance_type |||null||
+|instance_type |||null||
+|instance_type |||null||
+|instance_type.instance 0|string|standalone|null||
+|instance_type.host 0|string||null|The host name of the Mongo database.|
+|instance_type.port 0|integer||27017|The port of the Mongo database.|
+|instance_type.tls 0|boolean||false|Indicates whether TLS encryption protocol will be used to connect to MongoDB. It is recommended to use TLS connection if possible. For more information see <a href="https://docs.airbyte.com/integrations/sources/mongodb-v2">documentation</a>.|
+|instance_type.instance 1|string|replica|null||
+|instance_type.server_addresses 1|string||null|The members of a replica set. Please specify `host`:`port` of each member separated by comma.|
+|instance_type.replica_set 1|string||null|A replica set in MongoDB is a group of mongod processes that maintain the same data set.|
+|instance_type.instance 2|string|atlas|null||
+|instance_type.cluster_url 2|string||null|The URL of a cluster to connect to.|
 
 # MongoDb Source
 

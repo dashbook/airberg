@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_secret": "example_api_secret"
+  "api_secret": "mysecretpassword"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_secret|string||null|API Secret|
+|api_secret |string||null|API Secret|
 
 # Convertkit Source
 

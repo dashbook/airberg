@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "api_key": "my_api_key_123",
-  "uid": "my_user_id_123"
+  "api_key": "abc123",
+  "uid": "user123"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key for the fullstory.com API.|
-|uid|string||null|User ID for the fullstory.com API.|
+|api_key |string||null|API Key for the fullstory.com API.|
+|uid |string||null|User ID for the fullstory.com API.|
 
 # Fullstory Source
 

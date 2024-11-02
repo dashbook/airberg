@@ -1,7 +1,7 @@
 # Source zendesk-chat
 
 ## Example
-```
+```json
 {
   "start_date": "2021-02-01T00:00:00Z",
   "subdomain": "example",
@@ -18,16 +18,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date from which you'd like to replicate data for Zendesk Chat API, in the format YYYY-MM-DDT00:00:00Z.|
-|subdomain|string|||Required if you access Zendesk Chat from a Zendesk Support subdomain.|
-|credentials|object||null||
-|credentials.0.credentials|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your OAuth application|
-|credentials.0.client_secret|string||null|The Client Secret of your OAuth application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.refresh_token|string||null|Refresh Token to obtain new Access Token, when it's expired.|
-|credentials.1.credentials|string|access_token|null||
-|credentials.1.access_token|string||null|The Access Token to make authenticated requests.|
+|start_date |string||null|The date from which you'd like to replicate data for Zendesk Chat API, in the format YYYY-MM-DDT00:00:00Z.|
+|subdomain |string|||Required if you access Zendesk Chat from a Zendesk Support subdomain.|
+|credentials.credentials 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your OAuth application|
+|credentials.client_secret 0|string||null|The Client Secret of your OAuth application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.refresh_token 0|string||null|Refresh Token to obtain new Access Token, when it's expired.|
+|credentials.credentials 1|string|access_token|null||
+|credentials.access_token 1|string||null|The Access Token to make authenticated requests.|
 
 # Zendesk Chat Source 
 

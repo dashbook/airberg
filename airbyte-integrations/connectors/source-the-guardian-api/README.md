@@ -3,24 +3,24 @@
 ## Example
 ```json
 {
-  "api_key": "my_secret_key",
+  "api_key": "your_api_key",
   "start_date": "2022-01-01",
-  "query": "environment AND political",
+  "query": "environment AND NOT water",
   "tag": "environment/recycling",
   "section": "media",
-  "end_date": "2022-12-31"
+  "end_date": "2022-01-31"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://open-platform.theguardian.com/access/">here</a>. The key is case sensitive.|
-|start_date|string||null|Use this to set the minimum date (YYYY-MM-DD) of the results. Results older than the start_date will not be shown.|
-|query|string||null|(Optional) The query (q) parameter filters the results to only those that include that search term. The q parameter supports AND, OR and NOT operators.|
-|tag|string||null|(Optional) A tag is a piece of data that is used by The Guardian to categorise content. Use this parameter to filter results by showing only the ones matching the entered tag. See <a href="https://content.guardianapis.com/tags?api-key=test">here</a> for a list of all tags, and <a href="https://open-platform.theguardian.com/documentation/tag">here</a> for the tags endpoint documentation.|
-|section|string||null|(Optional) Use this to filter the results by a particular section. See <a href="https://content.guardianapis.com/sections?api-key=test">here</a> for a list of all sections, and <a href="https://open-platform.theguardian.com/documentation/section">here</a> for the sections endpoint documentation.|
-|end_date|string||null|(Optional) Use this to set the maximum date (YYYY-MM-DD) of the results. Results newer than the end_date will not be shown. Default is set to the current date (today) for incremental syncs.|
+|api_key |string||null|Your API Key. See <a href="https://open-platform.theguardian.com/access/">here</a>. The key is case sensitive.|
+|start_date |string||null|Use this to set the minimum date (YYYY-MM-DD) of the results. Results older than the start_date will not be shown.|
+|query |string||null|(Optional) The query (q) parameter filters the results to only those that include that search term. The q parameter supports AND, OR and NOT operators.|
+|tag |string||null|(Optional) A tag is a piece of data that is used by The Guardian to categorise content. Use this parameter to filter results by showing only the ones matching the entered tag. See <a href="https://content.guardianapis.com/tags?api-key=test">here</a> for a list of all tags, and <a href="https://open-platform.theguardian.com/documentation/tag">here</a> for the tags endpoint documentation.|
+|section |string||null|(Optional) Use this to filter the results by a particular section. See <a href="https://content.guardianapis.com/sections?api-key=test">here</a> for a list of all sections, and <a href="https://open-platform.theguardian.com/documentation/section">here</a> for the sections endpoint documentation.|
+|end_date |string||null|(Optional) Use this to set the maximum date (YYYY-MM-DD) of the results. Results newer than the end_date will not be shown. Default is set to the current date (today) for incremental syncs.|
 
 # The Guardian Api Source
 

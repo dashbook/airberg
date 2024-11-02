@@ -5,16 +5,16 @@
 {
   "account_id": "12345",
   "start_date": "2022-05-06",
-  "bearer_token": "my-bearer-token"
+  "bearer_token": "my_secret_token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_id|string||null|Timely account id|
-|start_date|string||null|start date|
-|bearer_token|string||null|Timely bearer token|
+|account_id |string||null|Timely account id|
+|start_date |string||null|start date|
+|bearer_token |string||null|Timely bearer token|
 
 # Timely Source
 

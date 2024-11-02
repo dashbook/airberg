@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here"
+  "api_key": "secret-api-key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
+|api_key |string||null|API Key|
 
 # Sap Fieldglass Source
 

@@ -6,25 +6,25 @@
   "origin": "USA",
   "credentials": {
     "auth_method": "oauth2.0",
-    "client_id": "1234567890",
-    "client_secret": "abcdefghij",
-    "access_token": "klmnopqrstuvwxyz"
+    "client_id": "client123",
+    "client_secret": "secret123",
+    "access_token": "token123"
   },
   "start_date": "2021-01-01T00:00:00Z",
-  "survey_ids": ["12345678", "12345679"]
+  "survey_ids": ["12345678", "23456789"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|origin|string||USA|Depending on the originating datacenter of the SurveyMonkey account, the API access URL may be different.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|survey_ids|array||null|IDs of the surveys from which you'd like to replicate data. If left empty, data from all boards to which you have access will be replicated.|
-|credentials.auth_method|string|oauth2.0|null||
-|credentials.client_id|string||null|The Client ID of the SurveyMonkey developer application.|
-|credentials.client_secret|string||null|The Client Secret of the SurveyMonkey developer application.|
-|credentials.access_token|string||null|Access Token for making authenticated requests. See the <a href="https://docs.airbyte.io/integrations/sources/surveymonkey">docs</a> for information on how to generate this key.|
+|origin |string||USA|Depending on the originating datacenter of the SurveyMonkey account, the API access URL may be different.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|survey_ids |array||null|IDs of the surveys from which you'd like to replicate data. If left empty, data from all boards to which you have access will be replicated.|
+|credentials.auth_method |string|oauth2.0|null||
+|credentials.client_id |string||null|The Client ID of the SurveyMonkey developer application.|
+|credentials.client_secret |string||null|The Client Secret of the SurveyMonkey developer application.|
+|credentials.access_token |string||null|Access Token for making authenticated requests. See the <a href="https://docs.airbyte.io/integrations/sources/surveymonkey">docs</a> for information on how to generate this key.|
 
 # Surveymonkey Source
 

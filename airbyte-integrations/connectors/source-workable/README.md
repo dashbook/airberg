@@ -1,20 +1,20 @@
 # Source workable
 
 ## Example
-```json
+```
 {
   "api_key": "your_api_key",
   "account_subdomain": "your_account_subdomain",
-  "start_date": "20220524T093529Z"
+  "start_date": "20220715T115616Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your Workable API Key. See <a href="https://workable.readme.io/reference/generate-an-access-token">here</a>.|
-|account_subdomain|string||null|Your Workable account subdomain, e.g. https://your_account_subdomain.workable.com.|
-|start_date|string||null|Get data that was created since this date (format: YYYYMMDDTHHMMSSZ).|
+|api_key |string||null|Your Workable API Key. See <a href="https://workable.readme.io/reference/generate-an-access-token">here</a>.|
+|account_subdomain |string||null|Your Workable account subdomain, e.g. https://your_account_subdomain.workable.com.|
+|start_date |string||null|Get data that was created since this date (format: YYYYMMDDTHHMMSSZ).|
 
 # Workable Source
 

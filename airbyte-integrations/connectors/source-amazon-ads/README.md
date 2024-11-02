@@ -4,31 +4,31 @@
 ```
 {
   "auth_type": "oauth2.0",
-  "client_id": "1234567890",
-  "client_secret": "thisisasecret",
-  "refresh_token": "4567890abcdef",
+  "client_id": "client-id-123",
+  "client_secret": "secret-key-123",
+  "refresh_token": "refresh-token-123",
   "region": "NA",
   "start_date": "2022-10-10",
   "profiles": [123, 456],
-  "state_filter": ["enabled", "paused"],
+  "state_filter": ["enabled"],
   "look_back_window": 3,
-  "report_record_types": ["adGroups", "asins"]
+  "report_record_types": ["adGroups"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_type|string|oauth2.0|null||
-|client_id|string||null|The client ID of your Amazon Ads developer application. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens#retrieve-your-client-id-and-client-secret">docs</a> for more information.|
-|client_secret|string||null|The client secret of your Amazon Ads developer application. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens#retrieve-your-client-id-and-client-secret">docs</a> for more information.|
-|refresh_token|string||null|Amazon Ads refresh token. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens">docs</a> for more information on how to obtain this token.|
-|region|string||NA|Region to pull data from (EU/NA/FE). See <a href="https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints">docs</a> for more details.|
-|start_date|string||null|The Start date for collecting reports, should not be more than 60 days in the past. In YYYY-MM-DD format|
-|profiles|array||null|Profile IDs you want to fetch data for. See <a href="https://advertising.amazon.com/API/docs/en-us/concepts/authorization/profiles">docs</a> for more details.|
-|state_filter|array||null|Reflects the state of the Display, Product, and Brand Campaign streams as enabled, paused, or archived. If you do not populate this field, it will be ignored completely.|
-|look_back_window|integer||3|The amount of days to go back in time to get the updated data from Amazon Ads|
-|report_record_types|array||null|Optional configuration which accepts an array of string of record types. Leave blank for default behaviour to pull all report types. Use this config option only if you want to pull specific report type(s). See <a href="https://advertising.amazon.com/API/docs/en-us/reporting/v2/report-types">docs</a> for more details|
+|auth_type |string|oauth2.0|null||
+|client_id |string||null|The client ID of your Amazon Ads developer application. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens#retrieve-your-client-id-and-client-secret">docs</a> for more information.|
+|client_secret |string||null|The client secret of your Amazon Ads developer application. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens#retrieve-your-client-id-and-client-secret">docs</a> for more information.|
+|refresh_token |string||null|Amazon Ads refresh token. See the <a href="https://advertising.amazon.com/API/docs/en-us/get-started/generate-api-tokens">docs</a> for more information on how to obtain this token.|
+|region |string||NA|Region to pull data from (EU/NA/FE). See <a href="https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints">docs</a> for more details.|
+|start_date |string||null|The Start date for collecting reports, should not be more than 60 days in the past. In YYYY-MM-DD format|
+|profiles |array||null|Profile IDs you want to fetch data for. See <a href="https://advertising.amazon.com/API/docs/en-us/concepts/authorization/profiles">docs</a> for more details.|
+|state_filter |array||null|Reflects the state of the Display, Product, and Brand Campaign streams as enabled, paused, or archived. If you do not populate this field, it will be ignored completely.|
+|look_back_window |integer||3|The amount of days to go back in time to get the updated data from Amazon Ads|
+|report_record_types |array||null|Optional configuration which accepts an array of string of record types. Leave blank for default behaviour to pull all report types. Use this config option only if you want to pull specific report type(s). See <a href="https://advertising.amazon.com/API/docs/en-us/reporting/v2/report-types">docs</a> for more details|
 
 # Amazon Ads Source
 

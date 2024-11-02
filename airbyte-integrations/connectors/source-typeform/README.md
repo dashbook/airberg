@@ -3,18 +3,18 @@
 ## Example
 ```json
 {
-  "token": "my_secret_token",
-  "start_date": "2022-01-01T00:00:00Z",
-  "form_ids": ["u6nXL7", "abc123"]
+  "token": "your-api-token",
+  "start_date": "2020-01-01T00:00:00Z",
+  "form_ids": ["u6nXL7"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|token|string||null|The API Token for a Typeform account.|
-|start_date|string||null|UTC date and time in the format: YYYY-MM-DDTHH:mm:ss[Z]. Any data before this date will not be replicated.|
-|form_ids|array||null|When this parameter is set, the connector will replicate data only from the input forms. Otherwise, all forms in your Typeform account will be replicated. You can find form IDs in your form URLs. For example, in the URL "https://mysite.typeform.com/to/u6nXL7" the form_id is u6nXL7. You can find form URLs on Share panel|
+|token |string||null|The API Token for a Typeform account.|
+|start_date |string||null|UTC date and time in the format: YYYY-MM-DDTHH:mm:ss[Z]. Any data before this date will not be replicated.|
+|form_ids |array||null|When this parameter is set, the connector will replicate data only from the input forms. Otherwise, all forms in your Typeform account will be replicated. You can find form IDs in your form URLs. For example, in the URL "https://mysite.typeform.com/to/u6nXL7" the form_id is u6nXL7. You can find form URLs on Share panel|
 
 # Typeform Source
 

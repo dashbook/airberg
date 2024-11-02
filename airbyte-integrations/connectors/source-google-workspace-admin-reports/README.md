@@ -1,20 +1,20 @@
 # Source google-workspace-admin-reports
 
 ## Example
-```json
+```
 {
-  "credentials_json": "ewogICJleHBpcmVzdF9pZCI6ICJJTkFCR0hFMzY5SUN3Wk41TlBaMVlOa3h6TVROdE9Na3pYU0k2MTRlSkI2T2E2TGl6eFljQkNxaHNYbjNNZ3RBUV94d2dwQ0ZQVnhPSE1mWlJJbGRpQ1lwbWw0Wm00ZjBpVVJuZVQxQ1cyOXZ3VFBQMjhsMFNqVUtXOWw4ZUtBcmQwM1pCR2lBbllrQ2c1UGJXNlZLRnVJNklDdXZBdHpRT2NRTWZ2TUtEbE5IQU0iLAogICAgICAidGVzdF9zdGF0aXMiOiAiMjAyMjAxMzEwMDAwMDBwMDBaMCIKICB9",
-  "email": "admin@example.com",
-  "lookback": 180
+  "credentials_json": "your_credentials_here",
+  "email": "user@example.com",
+  "lookback": 30
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials_json|string||null|The contents of the JSON service account key. See the <a href="https://developers.google.com/admin-sdk/reports/v1/guides/delegation">docs</a> for more information on how to generate this key.|
-|email|string||null|The email of the user, who has permissions to access the Google Workspace Admin APIs.|
-|lookback|integer||null|Sets the range of time shown in the report. The maximum value allowed by the Google API is 180 days.|
+|credentials_json |string||null|The contents of the JSON service account key. See the <a href="https://developers.google.com/admin-sdk/reports/v1/guides/delegation">docs</a> for more information on how to generate this key.|
+|email |string||null|The email of the user, who has permissions to access the Google Workspace Admin APIs.|
+|lookback |integer||null|Sets the range of time shown in the report. The maximum value allowed by the Google API is 180 days.|
 
 # Google Workspace Admin Reports Source 
 

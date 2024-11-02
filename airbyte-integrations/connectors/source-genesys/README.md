@@ -3,8 +3,8 @@
 ## Example
 ```
 {
-  "client_id": "some_client_id",
-  "client_secret": "some_client_secret",
+  "client_id": "example_client_id",
+  "client_secret": "example_client_secret",
   "tenant_endpoint": "Americas (US East)",
   "start_date": "2022-01-01"
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|Your OAuth user Client ID|
-|client_secret|string||null|Your OAuth user Client Secret|
-|tenant_endpoint|string||null|Please choose the right endpoint where your Tenant is located. More info by this <a href="https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/">Link</a>|
-|start_date|string||null|Start Date in format: YYYY-MM-DD|
+|client_id |string||null|Your OAuth user Client ID|
+|client_secret |string||null|Your OAuth user Client Secret|
+|tenant_endpoint |string||null|Please choose the right endpoint where your Tenant is located. More info by this <a href="https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/">Link</a>|
+|start_date |string||null|Start Date in format: YYYY-MM-DD|
 
 # Genesys Source
 

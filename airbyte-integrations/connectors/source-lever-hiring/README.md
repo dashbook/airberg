@@ -5,27 +5,26 @@
 {
   "credentials": {
     "auth_type": "Client",
-    "client_id": "abc123",
-    "client_secret": "secret",
-    "refresh_token": "refresh_token_value"
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "refresh_token": "your_refresh_token"
   },
-  "environment": "Sandbox",
-  "start_date": "2021-03-01T00:00:00Z"
+  "start_date": "2021-03-01T00:00:00Z",
+  "environment": "Sandbox"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to Lever Hiring.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. Note that it will be used only in the following incremental streams: comments, commits, and issues.|
-|environment|string||Sandbox|The environment in which you'd like to replicate data for Lever. This is used to determine which Lever API endpoint to use.|
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|The Client ID of your Lever Hiring developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Lever Hiring developer application.|
-|credentials.0.refresh_token|string||null|The token for obtaining new access token.|
-|credentials.1.auth_type|string|Api Key|null||
-|credentials.1.api_key|string||null|The Api Key of your Lever Hiring account.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. Note that it will be used only in the following incremental streams: comments, commits, and issues.|
+|environment |string||Sandbox|The environment in which you'd like to replicate data for Lever. This is used to determine which Lever API endpoint to use.|
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|The Client ID of your Lever Hiring developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Lever Hiring developer application.|
+|credentials.refresh_token 0|string||null|The token for obtaining new access token.|
+|credentials.auth_type 1|string|Api Key|null||
+|credentials.api_key 1|string||null|The Api Key of your Lever Hiring account.|
 
 # Lever Hiring Source
 

@@ -1,9 +1,9 @@
 # Source apify-dataset
 
 ## Example
-```json
+```
 {
-  "datasetId": "example-dataset-id",
+  "datasetId": "my-dataset-id",
   "clean": false
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|datasetId|string||null|ID of the dataset you would like to load to Airbyte.|
-|clean|boolean||null|If set to true, only clean items will be downloaded from the dataset. See description of what clean means in <a href="https://docs.apify.com/api/v2#/reference/datasets/item-collection/get-items">Apify API docs</a>. If not sure, set clean to false.|
+|datasetId |string||null|ID of the dataset you would like to load to Airbyte.|
+|clean |boolean||null|If set to true, only clean items will be downloaded from the dataset. See description of what clean means in <a href="https://docs.apify.com/api/v2#/reference/datasets/item-collection/get-items">Apify API docs</a>. If not sure, set clean to false.|
 
 # Apify Dataset Source
 

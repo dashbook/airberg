@@ -6,17 +6,17 @@
   "api_key": "my_api_key",
   "client_secret": "my_client_secret",
   "country_code": "US",
-  "start_date": "20210101T00:00:00Z"
+  "start_date": "20201231T00:00:00Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null||
-|client_secret|string||null||
-|country_code|string|||The region of the S3 staging bucket to use if utilising a copy strategy.|
-|start_date|string||null|Data generated in SearchMetrics after this date will be replicated. This date must be specified in the format YYYY-MM-DDT00:00:00Z.|
+|api_key |string||null||
+|client_secret |string||null||
+|country_code |string|||The region of the S3 staging bucket to use if utilising a copy strategy.|
+|start_date |string||null|Data generated in SearchMetrics after this date will be replicated. This date must be specified in the format YYYY-MM-DDT00:00:00Z.|
 
 # Search Metrics Source
 

@@ -1,10 +1,10 @@
 # Source aircall
 
 ## Example
-```
+```json
 {
-  "api_id": "your-api-id",
-  "api_token": "your-api-token",
+  "api_id": "1234567890",
+  "api_token": "abcdefghij",
   "start_date": "2022-03-01T00:00:00.000Z"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_id|string||null|App ID found at settings https://dashboard.aircall.io/integrations/api-keys|
-|api_token|string||null|App token found at settings (Ref- https://dashboard.aircall.io/integrations/api-keys)|
-|start_date|string||null|Date time filter for incremental filter, Specify which date to extract from.|
+|api_id |string||null|App ID found at settings https://dashboard.aircall.io/integrations/api-keys|
+|api_token |string||null|App token found at settings (Ref- https://dashboard.aircall.io/integrations/api-keys)|
+|start_date |string||null|Date time filter for incremental filter, Specify which date to extract from.|
 
 # Aircall Source
 

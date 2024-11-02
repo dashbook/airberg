@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Your API Token (Server-Side SDK [Client]). See <a href="https://docs.getunleash.io/how-to/how-to-create-api-tokens/">here</a>. The token is case sensitive.|
-|api_url|string||null|Your API URL. No trailing slash. ex: http://unleash.host.com/api|
-|project_name|string||null|Use this if you want to filter the API call for only one given project (can be used in addition to the "Feature Name Prefix" field). See <a href="https://docs.getunleash.io/reference/api/legacy/unleash/client/features#filter-feature-toggles">here</a>|
-|nameprefix|string||null|Use this if you want to filter the API call for only one given project (can be used in addition to the "Feature Name Prefix" field). See <a href="https://docs.getunleash.io/reference/api/legacy/unleash/client/features#filter-feature-toggles">here</a>|
+|api_token |string||null|Your API Token (Server-Side SDK [Client]). See <a href="https://docs.getunleash.io/how-to/how-to-create-api-tokens/">here</a>. The token is case sensitive.|
+|api_url |string||null|Your API URL. No trailing slash. ex: http://unleash.host.com/api|
+|project_name |string||null|Use this if you want to filter the API call for only one given project (can be used in addition to the "Feature Name Prefix" field). See <a href="https://docs.getunleash.io/reference/api/legacy/unleash/client/features#filter-feature-toggles">here</a>|
+|nameprefix |string||null|Use this if you want to filter the API call for only one given project (can be used in addition to the "Feature Name Prefix" field). See <a href="https://docs.getunleash.io/reference/api/legacy/unleash/client/features#filter-feature-toggles">here</a>|
 
 # Unleash Source
 

@@ -3,12 +3,15 @@
 ## Example
 ```json
 {
-  "realm": "2344535",
-  "consumer_key": "consumer_key_value",
-  "consumer_secret": "consumer_secret_value",
-  "token_key": "token_key_value",
-  "token_secret": "token_secret_value",
-  "object_types": ["customer", "salesorder"],
+  "realm": "2344535_SB1",
+  "consumer_key": "MkxSR09QY2thMlFMcFZSbnU4V05rYzRITlN0Q2c5",
+  "consumer_secret": "H2FiTUEyQmxaVW92MjZTOG9HUnU5Tk5ac1RCZ1g5",
+  "token_key": "511c2ed0-3a40-4e87-b2a6-366486e9b5af",
+  "token_secret": "vseNgEuP9M8LZBl2qymJ12UxPUr9ut37WywsAqM6C7gj9b9pRz",
+  "object_types": [
+    "customer",
+    "salesorder"
+  ],
   "start_datetime": "2022-01-01T00:00:00Z",
   "window_in_days": 10
 }
@@ -17,14 +20,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|realm|string||null|Netsuite realm e.g. 2344535, as for `production` or 2344535_SB1, as for the `sandbox`|
-|consumer_key|string||null|Consumer key associated with your integration|
-|consumer_secret|string||null|Consumer secret associated with your integration|
-|token_key|string||null|Access token key|
-|token_secret|string||null|Access token secret|
-|object_types|array||[]|The API names of the Netsuite objects you want to sync. Setting this speeds up the connection setup process by limiting the number of schemas that need to be retrieved from Netsuite.|
-|start_datetime|string||null|Starting point for your data replication, in format of "YYYY-MM-DDTHH:mm:ssZ"|
-|window_in_days|integer||30|The amount of days used to query the data with date chunks. Set smaller value, if you have lots of data.|
+|realm |string||null|Netsuite realm e.g. 2344535, as for `production` or 2344535_SB1, as for the `sandbox`|
+|consumer_key |string||null|Consumer key associated with your integration|
+|consumer_secret |string||null|Consumer secret associated with your integration|
+|token_key |string||null|Access token key|
+|token_secret |string||null|Access token secret|
+|object_types |array||[]|The API names of the Netsuite objects you want to sync. Setting this speeds up the connection setup process by limiting the number of schemas that need to be retrieved from Netsuite.|
+|start_datetime |string||null|Starting point for your data replication, in format of "YYYY-MM-DDTHH:mm:ssZ"|
+|window_in_days |integer||30|The amount of days used to query the data with date chunks. Set smaller value, if you have lots of data.|
 
 # Netsuite Soap Source
 

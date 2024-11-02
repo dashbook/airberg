@@ -1,22 +1,22 @@
 # Source zenloop
 
 ## Example
-```json
+```
 {
-  "api_token": "your_api_token",
-  "date_from": "2021-10-24T03:30:30Z",
-  "survey_id": "your_survey_id",
-  "survey_group_id": "your_survey_group_id"
+  "api_token": "my_api_token",
+  "date_from": "2021-10-24",
+  "survey_id": "my_survey_id",
+  "survey_group_id": "my_survey_group_id"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Zenloop API Token. You can get the API token in settings page <a href="https://app.zenloop.com/settings/api">here</a> |
-|date_from|string||null|Zenloop date_from. Format: 2021-10-24T03:30:30Z or 2021-10-24. Leave empty if only data from current data should be synced|
-|survey_id|string||null|Zenloop Survey ID. Can be found <a href="https://app.zenloop.com/settings/api">here</a>. Leave empty to pull answers from all surveys|
-|survey_group_id|string||null|Zenloop Survey Group ID. Can be found by pulling All Survey Groups via SurveyGroups stream. Leave empty to pull answers from all survey groups|
+|api_token |string||null|Zenloop API Token. You can get the API token in settings page <a href="https://app.zenloop.com/settings/api">here</a> |
+|date_from |string||null|Zenloop date_from. Format: 2021-10-24T03:30:30Z or 2021-10-24. Leave empty if only data from current data should be synced|
+|survey_id |string||null|Zenloop Survey ID. Can be found <a href="https://app.zenloop.com/settings/api">here</a>. Leave empty to pull answers from all surveys|
+|survey_group_id |string||null|Zenloop Survey Group ID. Can be found by pulling All Survey Groups via SurveyGroups stream. Leave empty to pull answers from all survey groups|
 
 # Zenloop Source
 

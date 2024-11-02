@@ -1,16 +1,16 @@
 # Source hubplanner
 
 ## Example
-```json
+```
 {
-  "api_key": "your_api_key_here"
+  "api_key": "your-hubplanner-api-key"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Hubplanner API key. See https://github.com/hubplanner/API#authentication for more details.|
+|api_key |string||null|Hubplanner API key. See https://github.com/hubplanner/API#authentication for more details.|
 
 # Hubplanner Source
 

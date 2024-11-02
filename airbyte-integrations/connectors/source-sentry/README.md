@@ -3,22 +3,22 @@
 ## Example
 ```json
 {
-  "auth_token": "your_auth_token",
-  "hostname": "your_hostname",
-  "organization": "your_organization",
-  "project": "your_project",
-  "discover_fields": ["field1", "field2", "field3"]
+  "auth_token": "your-auth-token",
+  "organization": "your-organization",
+  "project": "your-project",
+  "hostname": "your-hostname",
+  "discover_fields": ["field1", "field2"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_token|string||null|Log into Sentry and then <a href="https://sentry.io/settings/account/api/auth-tokens/">create authentication tokens</a>.For self-hosted, you can find or create authentication tokens by visiting "{instance_url_prefix}/settings/account/api/auth-tokens/"|
-|hostname|string||sentry.io|Host name of Sentry API server.For self-hosted, specify your host name here. Otherwise, leave it empty.|
-|organization|string||null|The slug of the organization the groups belong to.|
-|project|string||null|The name (slug) of the Project you want to sync.|
-|discover_fields|array||null|Fields to retrieve when fetching discover events|
+|auth_token |string||null|Log into Sentry and then <a href="https://sentry.io/settings/account/api/auth-tokens/">create authentication tokens</a>.For self-hosted, you can find or create authentication tokens by visiting "{instance_url_prefix}/settings/account/api/auth-tokens/"|
+|hostname |string||sentry.io|Host name of Sentry API server.For self-hosted, specify your host name here. Otherwise, leave it empty.|
+|organization |string||null|The slug of the organization the groups belong to.|
+|project |string||null|The name (slug) of the Project you want to sync.|
+|discover_fields |array||null|Fields to retrieve when fetching discover events|
 
 # Sentry Source
 

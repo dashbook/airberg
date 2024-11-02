@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here",
+  "api_key": "1234567890",
   "start_datetime": "2022-01-01T00:00:00Z",
   "end_datetime": "2022-01-31T23:59:59Z"
 }
@@ -12,11 +12,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|start_datetime|string||null|Start datetime to sync from. Default is current UTC datetime minus 1
+|api_key |string||null|API Key|
+|start_datetime |string||null|Start datetime to sync from. Default is current UTC datetime minus 1
 day.
 |
-|end_datetime|string||null|End datetime to sync until. Default is current UTC datetime.|
+|end_datetime |string||null|End datetime to sync until. Default is current UTC datetime.|
 
 # Oura Source
 

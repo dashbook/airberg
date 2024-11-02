@@ -4,7 +4,7 @@
 ```
 {
   "domain": "snaptravel",
-  "api_key": "abc123",
+  "api_key": "YOUR_API_KEY",
   "requests_per_minute": 50,
   "start_date": "2022-01-01T12:00:00Z",
   "sync_lag_minutes": 30
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||null|Used to construct Base URL for the Freshcaller APIs|
-|api_key|string||null|Freshcaller API Key. See the <a href="https://docs.airbyte.com/integrations/sources/freshcaller">docs</a> for more information on how to obtain this key.|
-|requests_per_minute|integer||null|The number of requests per minute that this source allowed to use. There is a rate limit of 50 requests per minute per app per account.|
-|start_date|string||null|UTC date and time. Any data created after this date will be replicated.|
-|sync_lag_minutes|integer||null|Lag in minutes for each sync, i.e., at time T, data for the time range [prev_sync_time, T-30] will be fetched|
+|domain |string||null|Used to construct Base URL for the Freshcaller APIs|
+|api_key |string||null|Freshcaller API Key. See the <a href="https://docs.airbyte.com/integrations/sources/freshcaller">docs</a> for more information on how to obtain this key.|
+|requests_per_minute |integer||null|The number of requests per minute that this source allowed to use. There is a rate limit of 50 requests per minute per app per account.|
+|start_date |string||null|UTC date and time. Any data created after this date will be replicated.|
+|sync_lag_minutes |integer||null|Lag in minutes for each sync, i.e., at time T, data for the time range [prev_sync_time, T-30] will be fetched|
 
 # Freshcaller Source
 

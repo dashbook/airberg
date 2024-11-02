@@ -4,19 +4,19 @@
 ```
 {
   "site": "airbyte-test",
-  "site_api_key": "your-api-key",
+  "site_api_key": "my_secret_key",
   "start_date": "2021-01-25T00:00:00Z",
-  "product_catalog": "2.0"
+  "product_catalog": "1.0"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|site_api_key|string||null|Chargebee API Key. See the <a href="https://docs.airbyte.com/integrations/sources/chargebee">docs</a> for more information on how to obtain this key.|
-|site|string||null|The site prefix for your Chargebee instance.|
-|start_date|string||null|UTC date and time in the format 2021-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|product_catalog|string||null|Product Catalog version of your Chargebee site. Instructions on how to find your version you may find <a href="https://apidocs.chargebee.com/docs/api?prod_cat_ver=2">here</a> under `API Version` section.|
+|site_api_key |string||null|Chargebee API Key. See the <a href="https://docs.airbyte.com/integrations/sources/chargebee">docs</a> for more information on how to obtain this key.|
+|site |string||null|The site prefix for your Chargebee instance.|
+|start_date |string||null|UTC date and time in the format 2021-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|product_catalog |string||null|Product Catalog version of your Chargebee site. Instructions on how to find your version you may find <a href="https://apidocs.chargebee.com/docs/api?prod_cat_ver=2">here</a> under `API Version` section.|
 
 # Chargebee Source
 

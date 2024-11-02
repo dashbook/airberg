@@ -3,27 +3,26 @@
 ## Example
 ```json
 {
+  "start_date": "2020-11-16T00:00:00.000Z",
   "credentials": {
     "auth_type": "OAuth2.0",
-    "client_id": "notion_client_id",
-    "client_secret": "notion_client_secret",
-    "access_token": "notion_access_token"
-  },
-  "start_date": "2020-11-16T00:00:00.000Z"
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "access_token": "your_access_token"
+  }
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00.000Z. Any data before this date will not be replicated.|
-|credentials|object||null|Pick an authentication method.|
-|credentials.0.auth_type|string|OAuth2.0|null||
-|credentials.0.client_id|string||null|The ClientID of your Notion integration.|
-|credentials.0.client_secret|string||null|The ClientSecret of your Notion integration.|
-|credentials.0.access_token|string||null|Access Token is a token you received by complete the OauthWebFlow of Notion.|
-|credentials.1.auth_type|string|token|null||
-|credentials.1.token|string||null|Notion API access token, see the <a href="https://developers.notion.com/docs/authorization">docs</a> for more information on how to obtain this token.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00.000Z. Any data before this date will not be replicated.|
+|credentials.auth_type 0|string|OAuth2.0|null||
+|credentials.client_id 0|string||null|The ClientID of your Notion integration.|
+|credentials.client_secret 0|string||null|The ClientSecret of your Notion integration.|
+|credentials.access_token 0|string||null|Access Token is a token you received by complete the OauthWebFlow of Notion.|
+|credentials.auth_type 1|string|token|null||
+|credentials.token 1|string||null|Notion API access token, see the <a href="https://developers.notion.com/docs/authorization">docs</a> for more information on how to obtain this token.|
 
 # Notion Source
 

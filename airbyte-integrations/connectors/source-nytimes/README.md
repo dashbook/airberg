@@ -3,10 +3,10 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key",
+  "api_key": "my_api_key",
   "start_date": "2022-08",
-  "end_date": "2022-08",
-  "period": 1,
+  "end_date": "2022-09",
+  "period": 7,
   "share_type": "facebook"
 }
 ```
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|start_date|string||null|Start date to begin the article retrieval (format YYYY-MM)|
-|end_date|string||null|End date to stop the article retrieval (format YYYY-MM)|
-|period|integer||null|Period of time (in days)|
-|share_type|string||null|Share Type|
+|api_key |string||null|API Key|
+|start_date |string||null|Start date to begin the article retrieval (format YYYY-MM)|
+|end_date |string||null|End date to stop the article retrieval (format YYYY-MM)|
+|period |integer||null|Period of time (in days)|
+|share_type |string||null|Share Type|
 
 # Nytimes Source
 

@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "api_key": "secret_api_key",
-  "domain": "examplecompany.chargify.com"
+  "api_key": "my_secret_api_key",
+  "domain": "mycompany.chargify.com"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Chargify API Key.|
-|domain|string||null|Chargify domain. Normally this domain follows the following format companyname.chargify.com|
+|api_key |string||null|Chargify API Key.|
+|domain |string||null|Chargify domain. Normally this domain follows the following format companyname.chargify.com|
 
 # Chargify Source
 

@@ -8,7 +8,7 @@
   "agent": "all-agents",
   "article": "Are_You_the_One%3F",
   "start": "20220101",
-  "end": "20220102",
+  "end": "20220131",
   "country": "FR"
 }
 ```
@@ -16,13 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|project|string||null|If you want to filter by project, use the domain of any Wikimedia project.|
-|access|string||null|If you want to filter by access method, use one of desktop, mobile-app or mobile-web. If you are interested in pageviews regardless of access method, use all-access.|
-|agent|string||null|If you want to filter by agent type, use one of user, automated or spider. If you are interested in pageviews regardless of agent type, use all-agents.|
-|article|string||null|The title of any article in the specified project. Any spaces should be replaced with underscores. It also should be URI-encoded, so that non-URI-safe characters like %, / or ? are accepted.|
-|start|string||null|The date of the first day to include, in YYYYMMDD or YYYYMMDDHH format.|
-|end|string||null|The date of the last day to include, in YYYYMMDD or YYYYMMDDHH format.|
-|country|string||null|The ISO 3166-1 alpha-2 code of a country for which to retrieve top articles.|
+|project |string||null|If you want to filter by project, use the domain of any Wikimedia project.|
+|access |string||null|If you want to filter by access method, use one of desktop, mobile-app or mobile-web. If you are interested in pageviews regardless of access method, use all-access.|
+|agent |string||null|If you want to filter by agent type, use one of user, automated or spider. If you are interested in pageviews regardless of agent type, use all-agents.|
+|article |string||null|The title of any article in the specified project. Any spaces should be replaced with underscores. It also should be URI-encoded, so that non-URI-safe characters like %, / or ? are accepted.|
+|start |string||null|The date of the first day to include, in YYYYMMDD or YYYYMMDDHH format.|
+|end |string||null|The date of the last day to include, in YYYYMMDD or YYYYMMDDHH format.|
+|country |string||null|The ISO 3166-1 alpha-2 code of a country for which to retrieve top articles.|
 
 # Wikipedia Pageviews Source
 

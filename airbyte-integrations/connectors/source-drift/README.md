@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|credentials.0.credentials|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your Drift developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Drift developer application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.refresh_token|string|||Refresh Token to renew the expired Access Token.|
-|credentials.1.credentials|string|access_token|null||
-|credentials.1.access_token|string||null|Drift Access Token. See the <a href="https://docs.airbyte.com/integrations/sources/drift">docs</a> for more information on how to generate this key.|
+|credentials.credentials 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your Drift developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Drift developer application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.refresh_token 0|string|||Refresh Token to renew the expired Access Token.|
+|credentials.credentials 1|string|access_token|null||
+|credentials.access_token 1|string||null|Drift Access Token. See the <a href="https://docs.airbyte.com/integrations/sources/drift">docs</a> for more information on how to generate this key.|
 
 # Drift Source 
 

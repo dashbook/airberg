@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "TODO": "This is a placeholder"
+  "TODO": "this is a string"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|TODO|string||null|describe me|
+|TODO |string||null|describe me|
 
 # Scaffold Source Http Source
 

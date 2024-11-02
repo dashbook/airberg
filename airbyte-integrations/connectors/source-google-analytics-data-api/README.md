@@ -6,13 +6,13 @@
   "credentials": {
     "auth_type": "Client",
     "client_id": "1234567890",
-    "client_secret": "abcdefg",
-    "refresh_token": "refresh_token_value",
-    "access_token": "access_token_value"
+    "client_secret": "GdRhMyEIZTSC9Gr7gVNOd1Y7pPq6V9z",
+    "refresh_token": "1/ABC123",
+    "access_token": "ya29.a0A80YoC8rLpKb7ZSmoG"
   },
   "property_id": "1234567890",
   "date_ranges_start_date": "2021-01-01",
-  "custom_reports": "{\"report_id\":\"report_id_value\",\"date_ranges_start_date\":\"2021-01-01\",\"dimensions\":[{\"name\":\"dimension_name\",\"field_name\":\"dimension_field_name\"}]}",
+  "custom_reports": "[]",
   "window_in_days": 30
 }
 ```
@@ -20,18 +20,17 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Credentials for the service|
-|property_id|string||null|A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and not the body such as "123...". See <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/property-id#what_is_my_property_id">the docs</a> for more details.|
-|date_ranges_start_date|string||null|The start date from which to replicate report data in the format YYYY-MM-DD. Data generated before this date will not be included in the report. Not applied to custom Cohort reports.|
-|custom_reports|string||null|A JSON array describing the custom reports you want to sync from Google Analytics. See <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#custom-reports">the docs</a> for more information about the exact format you can use to fill out this field.|
-|window_in_days|integer||1|The time increment used by the connector when requesting data from the Google Analytics API. More information is available in the <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#sampling-in-reports">the docs</a>. The bigger this value is, the faster the sync will be, but the more likely that sampling will be applied to your data, potentially causing inaccuracies in the returned results. We recommend setting this to 1 unless you have a hard requirement to make the sync faster at the expense of accuracy. The minimum allowed value for this field is 1, and the maximum is 364. Not applied to custom Cohort reports.|
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|The Client ID of your Google Analytics developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Google Analytics developer application.|
-|credentials.0.refresh_token|string||null|The token for obtaining a new access token.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.1.auth_type|string|Service|null||
-|credentials.1.credentials_json|string||null|The JSON key of the service account to use for authorization|
+|property_id |string||null|A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and not the body such as "123...". See <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/property-id#what_is_my_property_id">the docs</a> for more details.|
+|date_ranges_start_date |string||null|The start date from which to replicate report data in the format YYYY-MM-DD. Data generated before this date will not be included in the report. Not applied to custom Cohort reports.|
+|custom_reports |string||null|A JSON array describing the custom reports you want to sync from Google Analytics. See <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#custom-reports">the docs</a> for more information about the exact format you can use to fill out this field.|
+|window_in_days |integer||1|The time increment used by the connector when requesting data from the Google Analytics API. More information is available in the <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#sampling-in-reports">the docs</a>. The bigger this value is, the faster the sync will be, but the more likely that sampling will be applied to your data, potentially causing inaccuracies in the returned results. We recommend setting this to 1 unless you have a hard requirement to make the sync faster at the expense of accuracy. The minimum allowed value for this field is 1, and the maximum is 364. Not applied to custom Cohort reports.|
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|The Client ID of your Google Analytics developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Google Analytics developer application.|
+|credentials.refresh_token 0|string||null|The token for obtaining a new access token.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.auth_type 1|string|Service|null||
+|credentials.credentials_json 1|string||null|The JSON key of the service account to use for authorization|
 
 # Google Analytics Data Api Source
 

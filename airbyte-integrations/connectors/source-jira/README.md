@@ -1,30 +1,30 @@
 # Source jira
 
 ## Example
-```
+```json
 {
-  "api_token": "your-api-token",
-  "domain": "your-domain.atlassian.net",
-  "email": "your-email@example.com",
+  "api_token": "your_api_token",
+  "domain": "your_domain.atlassian.net",
+  "email": "your_email@example.com",
   "projects": ["PROJ1", "PROJ2"],
   "start_date": "2021-03-01T00:00:00Z",
   "expand_issue_changelog": true,
   "render_fields": true,
-  "enable_experimental_streams": false
+  "enable_experimental_streams": true
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Jira API Token. See the <a href="https://docs.airbyte.com/integrations/sources/jira">docs</a> for more information on how to generate this key. API Token is used for Authorization to your account by BasicAuth.|
-|domain|string||null|The Domain for your Jira account, e.g. airbyteio.atlassian.net, airbyteio.jira.com, jira.your-domain.com|
-|email|string||null|The user email for your Jira account which you used to generate the API token. This field is used for Authorization to your account by BasicAuth.|
-|projects|array||null|List of Jira project keys to replicate data for, or leave it empty if you want to replicate data for all projects.|
-|start_date|string||null|The date from which you want to replicate data from Jira, use the format YYYY-MM-DDT00:00:00Z. Note that this field only applies to certain streams, and only data generated on or after the start date will be replicated. Or leave it empty if you want to replicate all data. For more information, refer to the <a href="https://docs.airbyte.com/integrations/sources/jira/">documentation</a>.|
-|expand_issue_changelog|boolean||false|Expand the changelog when replicating issues.|
-|render_fields|boolean||false|Render issue fields in HTML format in addition to Jira JSON-like format.|
-|enable_experimental_streams|boolean||false|Allow the use of experimental streams which rely on undocumented Jira API endpoints. See https://docs.airbyte.com/integrations/sources/jira#experimental-tables for more info.|
+|api_token |string||null|Jira API Token. See the <a href="https://docs.airbyte.com/integrations/sources/jira">docs</a> for more information on how to generate this key. API Token is used for Authorization to your account by BasicAuth.|
+|domain |string||null|The Domain for your Jira account, e.g. airbyteio.atlassian.net, airbyteio.jira.com, jira.your-domain.com|
+|email |string||null|The user email for your Jira account which you used to generate the API token. This field is used for Authorization to your account by BasicAuth.|
+|projects |array||null|List of Jira project keys to replicate data for, or leave it empty if you want to replicate data for all projects.|
+|start_date |string||null|The date from which you want to replicate data from Jira, use the format YYYY-MM-DDT00:00:00Z. Note that this field only applies to certain streams, and only data generated on or after the start date will be replicated. Or leave it empty if you want to replicate all data. For more information, refer to the <a href="https://docs.airbyte.com/integrations/sources/jira/">documentation</a>.|
+|expand_issue_changelog |boolean||false|Expand the changelog when replicating issues.|
+|render_fields |boolean||false|Render issue fields in HTML format in addition to Jira JSON-like format.|
+|enable_experimental_streams |boolean||false|Allow the use of experimental streams which rely on undocumented Jira API endpoints. See https://docs.airbyte.com/integrations/sources/jira#experimental-tables for more info.|
 
 # Jira Source 
 

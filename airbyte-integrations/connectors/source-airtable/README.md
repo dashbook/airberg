@@ -4,10 +4,8 @@
 ```json
 {
   "credentials": {
-    "auth_method": "oauth2.0",
-    "client_id": "1234567890",
-    "client_secret": "abcdefghij",
-    "refresh_token": "klmnopqrst"
+    "auth_method": "api_key",
+    "api_key": "key1234567890"
   }
 }
 ```
@@ -15,15 +13,14 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|credentials.0.auth_method|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The client ID of the Airtable developer application.|
-|credentials.0.client_secret|string||null|The client secret the Airtable developer application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.0.token_expiry_date|string||null|The date-time when the access token should be refreshed.|
-|credentials.0.refresh_token|string||null|The key to refresh the expired access token.|
-|credentials.1.auth_method|string|api_key|null||
-|credentials.1.api_key|string||null|The Personal Access Token for the Airtable account. See the <a href="https://airtable.com/developers/web/guides/personal-access-tokens">Support Guide</a> for more information on how to obtain this token.|
+|credentials.auth_method 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The client ID of the Airtable developer application.|
+|credentials.client_secret 0|string||null|The client secret the Airtable developer application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.token_expiry_date 0|string||null|The date-time when the access token should be refreshed.|
+|credentials.refresh_token 0|string||null|The key to refresh the expired access token.|
+|credentials.auth_method 1|string|api_key|null||
+|credentials.api_key 1|string||null|The Personal Access Token for the Airtable account. See the <a href="https://airtable.com/developers/web/guides/personal-access-tokens">Support Guide</a> for more information on how to obtain this token.|
 
 # Airtable Source
 

@@ -4,8 +4,8 @@
 ```json
 {
   "region": "services",
-  "access_key_id": "1234567890",
-  "access_token": "my_secret_token",
+  "access_key_id": "your_access_key_id",
+  "access_token": "your_access_token",
   "date_created_from": 1651363200,
   "date_created_to": 1651363200
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|region|string||services|Babelforce region|
-|access_key_id|string||null|The Babelforce access key ID|
-|access_token|string||null|The Babelforce access token|
-|date_created_from|integer||null|Timestamp in Unix the replication from Babelforce API will start from. For example 1651363200 which corresponds to 2022-05-01 00:00:00.|
-|date_created_to|integer||null|Timestamp in Unix the replication from Babelforce will be up to. For example 1651363200 which corresponds to 2022-05-01 00:00:00.|
+|region |string||services|Babelforce region|
+|access_key_id |string||null|The Babelforce access key ID|
+|access_token |string||null|The Babelforce access token|
+|date_created_from |integer||null|Timestamp in Unix the replication from Babelforce API will start from. For example 1651363200 which corresponds to 2022-05-01 00:00:00.|
+|date_created_to |integer||null|Timestamp in Unix the replication from Babelforce will be up to. For example 1651363200 which corresponds to 2022-05-01 00:00:00.|
 
 # Babelforce Source
 

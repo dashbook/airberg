@@ -1,18 +1,18 @@
 # Source visma-economic
 
 ## Example
-```json
+```
 {
-  "app_secret_token": "some_secret_token",
-  "agreement_grant_token": "some_agreement_grant_token"
+  "app_secret_token": "my_secret_token",
+  "agreement_grant_token": "my_agreement_token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|app_secret_token|string||null|Identification token for app accessing data|
-|agreement_grant_token|string||null|Identifier for the grant issued by an agreement|
+|app_secret_token |string||null|Identification token for app accessing data|
+|agreement_grant_token |string||null|Identifier for the grant issued by an agreement|
 
 # Visma Economic Source
 

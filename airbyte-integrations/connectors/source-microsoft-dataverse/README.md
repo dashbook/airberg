@@ -3,10 +3,10 @@
 ## Example
 ```json
 {
-  "url": "https://myorg.crm.dynamics.com",
-  "tenant_id": "my_tenant_id",
-  "client_id": "my_client_id",
-  "client_secret_value": "my_client_secret",
+  "url": "https://example.crm.dynamics.com",
+  "tenant_id": "example_tenant_id",
+  "client_id": "example_client_id",
+  "client_secret_value": "example_client_secret",
   "odata_maxpagesize": 10000
 }
 ```
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|url|string||null|URL to Microsoft Dataverse API|
-|tenant_id|string||null|Tenant Id of your Microsoft Dataverse Instance|
-|client_id|string||null|App Registration Client Id|
-|client_secret_value|string||null|App Registration Client Secret|
-|odata_maxpagesize|integer||5000|Max number of results per page. Default=5000|
+|url |string||null|URL to Microsoft Dataverse API|
+|tenant_id |string||null|Tenant Id of your Microsoft Dataverse Instance|
+|client_id |string||null|App Registration Client Id|
+|client_secret_value |string||null|App Registration Client Secret|
+|odata_maxpagesize |integer||5000|Max number of results per page. Default=5000|
 
 # Microsoft Dataverse Source
 

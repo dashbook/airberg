@@ -1,10 +1,10 @@
 # Source posthog
 
 ## Example
-```
+```json
 {
-  "api_key": "secret_api_key",
   "start_date": "2021-01-01T00:00:00Z",
+  "api_key": "your_secret_api_key_here",
   "base_url": "https://posthog.example.com"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date from which you'd like to replicate the data. Any data before this date will not be replicated.|
-|api_key|string||null|API Key. See the <a href="https://docs.airbyte.com/integrations/sources/posthog">docs</a> for information on how to generate this key.|
-|base_url|string||https://app.posthog.com|Base PostHog url. Defaults to PostHog Cloud (https://app.posthog.com).|
+|start_date |string||null|The date from which you'd like to replicate the data. Any data before this date will not be replicated.|
+|api_key |string||null|API Key. See the <a href="https://docs.airbyte.com/integrations/sources/posthog">docs</a> for information on how to generate this key.|
+|base_url |string||https://app.posthog.com|Base PostHog url. Defaults to PostHog Cloud (https://app.posthog.com).|
 
 # PostHog Source
 

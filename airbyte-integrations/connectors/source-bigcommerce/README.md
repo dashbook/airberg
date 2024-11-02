@@ -4,17 +4,17 @@
 ```json
 {
   "start_date": "2021-01-01",
-  "store_hash": "abc123",
-  "access_token": "xyz789"
+  "store_hash": "abcdefg",
+  "access_token": "ilovebigcommerce"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|The date you would like to replicate data. Format: YYYY-MM-DD.|
-|store_hash|string||null|The hash code of the store. For https://api.bigcommerce.com/stores/HASH_CODE/v3/, The store's hash code is 'HASH_CODE'.|
-|access_token|string||null|Access Token for making authenticated requests.|
+|start_date |string||null|The date you would like to replicate data. Format: YYYY-MM-DD.|
+|store_hash |string||null|The hash code of the store. For https://api.bigcommerce.com/stores/HASH_CODE/v3/, The store's hash code is 'HASH_CODE'.|
+|access_token |string||null|Access Token for making authenticated requests.|
 
 # Bigcommerce Source
 

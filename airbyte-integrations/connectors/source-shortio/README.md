@@ -1,9 +1,9 @@
 # Source shortio
 
 ## Example
-```json
+```
 {
-  "domain_id": "example-domain-id",
+  "domain_id": "example-domain",
   "secret_key": "example-secret-key",
   "start_date": "2022-01-01T00:00:00Z"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain_id|string||null||
-|secret_key|string||null|Short.io Secret Key|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|domain_id |string||null||
+|secret_key |string||null|Short.io Secret Key|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Shortio Source
 

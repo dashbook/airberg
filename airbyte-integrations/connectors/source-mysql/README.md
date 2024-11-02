@@ -5,16 +5,22 @@
 {
   "host": "localhost",
   "port": 3306,
-  "database": "mydb",
-  "username": "myuser",
-  "password": "mypass",
+  "database": "my_database",
+  "username": "my_username",
+  "password": "my_password",
   "jdbc_url_params": "",
   "ssl": true,
   "ssl_mode": {
-    "mode": "preferred"
+    "mode": "verify_ca",
+    "ca_certificate": "-----BEGIN CERTIFICATE-----...",
+    "client_certificate": "-----BEGIN CERTIFICATE-----...",
+    "client_key": "-----BEGIN RSA PRIVATE KEY-----...",
+    "client_key_password": "my_client_key_password"
   },
   "replication_method": {
-    "method": "STANDARD"
+    "method": "CDC",
+    "initial_waiting_seconds": 300,
+    "server_time_zone": "America/New_York"
   }
 }
 ```
@@ -22,31 +28,35 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|The host name of the database.|
-|port|integer||3306|The port to connect to.|
-|database|string||null|The database name.|
-|username|string||null|The username which is used to access the database.|
-|password|string||null|The password associated with the username.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3). For more information read about <a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-jdbc-url-format.html">JDBC URL parameters</a>.|
-|ssl|boolean||true|Encrypt data using SSL.|
-|ssl_mode|object||null|SSL connection modes. Read more <a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-using-ssl.html"> in the docs</a>.|
-|replication_method|object||null|Replication method to use for extracting data from the database.|
-|ssl_mode.0.mode|string|preferred|null||
-|ssl_mode.1.mode|string|required|null||
-|ssl_mode.2.mode|string|verify_ca|null||
-|ssl_mode.2.ca_certificate|string||null|CA certificate|
-|ssl_mode.2.client_certificate|string||null|Client certificate (this is not a required field, but if you want to use it, you will need to add the <b>Client key</b> as well)|
-|ssl_mode.2.client_key|string||null|Client key (this is not a required field, but if you want to use it, you will need to add the <b>Client certificate</b> as well)|
-|ssl_mode.2.client_key_password|string||null|Password for keystorage. This field is optional. If you do not add it - the password will be generated automatically.|
-|ssl_mode.3.mode|string|verify_identity|null||
-|ssl_mode.3.ca_certificate|string||null|CA certificate|
-|ssl_mode.3.client_certificate|string||null|Client certificate (this is not a required field, but if you want to use it, you will need to add the <b>Client key</b> as well)|
-|ssl_mode.3.client_key|string||null|Client key (this is not a required field, but if you want to use it, you will need to add the <b>Client certificate</b> as well)|
-|ssl_mode.3.client_key_password|string||null|Password for keystorage. This field is optional. If you do not add it - the password will be generated automatically.|
-|replication_method.0.method|string|STANDARD|null||
-|replication_method.1.method|string|CDC|null||
-|replication_method.1.initial_waiting_seconds|integer||300|The amount of time the connector will wait when it launches to determine if there is new data to sync or not. Defaults to 300 seconds. Valid range: 120 seconds to 1200 seconds. Read about <a href="https://docs.airbyte.com/integrations/sources/mysql/#change-data-capture-cdc">initial waiting time</a>.|
-|replication_method.1.server_time_zone|string||null|Enter the configured MySQL server timezone. This should only be done if the configured timezone in your MySQL instance does not conform to IANNA standard.|
+|host |string||null|The host name of the database.|
+|port |integer||3306|The port to connect to.|
+|database |string||null|The database name.|
+|username |string||null|The username which is used to access the database.|
+|password |string||null|The password associated with the username.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3). For more information read about <a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-jdbc-url-format.html">JDBC URL parameters</a>.|
+|ssl |boolean||true|Encrypt data using SSL.|
+|ssl_mode |||null|Automatically attempt SSL connection. If the MySQL server does not support SSL, continue with a regular connection.|
+|ssl_mode |||null|Always connect with SSL. If the MySQL server doesn’t support SSL, the connection will not be established. Certificate Authority (CA) and Hostname are not verified.|
+|ssl_mode |||null|Always connect with SSL. Verifies CA, but allows connection even if Hostname does not match.|
+|ssl_mode |||null|Always connect with SSL. Verify both CA and Hostname.|
+|ssl_mode.mode 0|string|preferred|null||
+|ssl_mode.mode 1|string|required|null||
+|ssl_mode.mode 2|string|verify_ca|null||
+|ssl_mode.ca_certificate 2|string||null|CA certificate|
+|ssl_mode.client_certificate 2|string||null|Client certificate (this is not a required field, but if you want to use it, you will need to add the <b>Client key</b> as well)|
+|ssl_mode.client_key 2|string||null|Client key (this is not a required field, but if you want to use it, you will need to add the <b>Client certificate</b> as well)|
+|ssl_mode.client_key_password 2|string||null|Password for keystorage. This field is optional. If you do not add it - the password will be generated automatically.|
+|ssl_mode.mode 3|string|verify_identity|null||
+|ssl_mode.ca_certificate 3|string||null|CA certificate|
+|ssl_mode.client_certificate 3|string||null|Client certificate (this is not a required field, but if you want to use it, you will need to add the <b>Client key</b> as well)|
+|ssl_mode.client_key 3|string||null|Client key (this is not a required field, but if you want to use it, you will need to add the <b>Client certificate</b> as well)|
+|ssl_mode.client_key_password 3|string||null|Password for keystorage. This field is optional. If you do not add it - the password will be generated automatically.|
+|replication_method |||null|Standard replication requires no setup on the DB side but will not be able to represent deletions incrementally.|
+|replication_method |||null|CDC uses the Binlog to detect inserts, updates, and deletes. This needs to be configured on the source database itself.|
+|replication_method.method 0|string|STANDARD|null||
+|replication_method.method 1|string|CDC|null||
+|replication_method.initial_waiting_seconds 1|integer||300|The amount of time the connector will wait when it launches to determine if there is new data to sync or not. Defaults to 300 seconds. Valid range: 120 seconds to 1200 seconds. Read about <a href="https://docs.airbyte.com/integrations/sources/mysql/#change-data-capture-cdc">initial waiting time</a>.|
+|replication_method.server_time_zone 1|string||null|Enter the configured MySQL server timezone. This should only be done if the configured timezone in your MySQL instance does not conform to IANNA standard.|
 
 # MySQL Source
 

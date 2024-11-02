@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your API Key. See <a href="https://www.ip2whois.com/developers-api">here</a>.|
-|domain|string||null|Domain name. See <a href="https://www.ip2whois.com/developers-api">here</a>.|
+|api_key |string||null|Your API Key. See <a href="https://www.ip2whois.com/developers-api">here</a>.|
+|domain |string||null|Domain name. See <a href="https://www.ip2whois.com/developers-api">here</a>.|
 
 # Ip2whois Source
 

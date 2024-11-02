@@ -3,13 +3,13 @@
 ## Example
 ```
 {
-  "client_id": "your_client_id",
-  "client_secret": "your_client_secret",
-  "refresh_token": "your_refresh_token",
-  "environment": "Production",
+  "client_id": "abcd1234",
+  "client_secret": "xyz9876",
+  "refresh_token": "efgh5678",
   "dc_region": "US",
-  "start_datetime": "2022-01-01",
-  "edition": "Enterprise"
+  "environment": "Production",
+  "start_datetime": "2022-01-01T00:00:00Z",
+  "edition": "Professional"
 }
 ```
 

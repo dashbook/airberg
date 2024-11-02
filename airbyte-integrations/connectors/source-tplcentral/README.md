@@ -3,14 +3,14 @@
 ## Example
 ```
 {
-  "url_base": "https://example.com",
-  "client_id": "1234567890",
-  "client_secret": "my_secret",
-  "user_login_id": 123,
-  "user_login": "my_user",
-  "tpl_key": "my_key",
-  "customer_id": 12345,
-  "facility_id": 67890,
+  "url_base": "https://secure-wms.com/",
+  "client_id": "client-id-123",
+  "client_secret": "secret-123",
+  "user_login_id": 12345,
+  "user_login": "john_doe",
+  "tpl_key": "tpl-key-123",
+  "customer_id": 67890,
+  "facility_id": 11111,
   "start_date": "2022-01-01T00:00:00+00:00"
 }
 ```
@@ -18,15 +18,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|url_base|string||https://secure-wms.com/||
-|client_id|string||null||
-|client_secret|string||null||
-|user_login_id|integer||null|User login ID and/or name is required|
-|user_login|string||null|User login ID and/or name is required|
-|tpl_key|string||null||
-|customer_id|integer||null||
-|facility_id|integer||null||
-|start_date|string||null|Date and time together in RFC 3339 format, for example, 2018-11-13T20:20:39+00:00.|
+|url_base |string||https://secure-wms.com/||
+|client_id |string||null||
+|client_secret |string||null||
+|user_login_id |integer||null|User login ID and/or name is required|
+|user_login |string||null|User login ID and/or name is required|
+|tpl_key |string||null||
+|customer_id |integer||null||
+|facility_id |integer||null||
+|start_date |string||null|Date and time together in RFC 3339 format, for example, 2018-11-13T20:20:39+00:00.|
 
 # 3PL Central Source
 

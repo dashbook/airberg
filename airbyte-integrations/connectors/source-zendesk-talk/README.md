@@ -1,13 +1,13 @@
 # Source zendesk-talk
 
 ## Example
-```
+```json
 {
   "subdomain": "example",
   "credentials": {
     "auth_type": "api_token",
     "email": "user@example.com",
-    "api_token": "abcd1234"
+    "api_token": "abc123"
   },
   "start_date": "2020-10-15T00:00:00Z"
 }
@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|subdomain|string||null|This is your Zendesk subdomain that can be found in your account URL. For example, in https://{MY_SUBDOMAIN}.zendesk.com/, where MY_SUBDOMAIN is the value of your subdomain.|
-|credentials|object||null|Zendesk service provides two authentication methods. Choose between: `OAuth2.0` or `API token`.|
-|start_date|string||null|The date from which you'd like to replicate data for Zendesk Talk API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
-|credentials.0.auth_type|string|api_token|null||
-|credentials.0.email|string||null|The user email for your Zendesk account.|
-|credentials.0.api_token|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-talk">docs</a> for more information.|
-|credentials.1.auth_type|string|oauth2.0|null||
-|credentials.1.access_token|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-talk">docs</a> for more information.|
+|subdomain |string||null|This is your Zendesk subdomain that can be found in your account URL. For example, in https://{MY_SUBDOMAIN}.zendesk.com/, where MY_SUBDOMAIN is the value of your subdomain.|
+|start_date |string||null|The date from which you'd like to replicate data for Zendesk Talk API, in the format YYYY-MM-DDT00:00:00Z. All data generated after this date will be replicated.|
+|credentials.auth_type 0|string|api_token|null||
+|credentials.email 0|string||null|The user email for your Zendesk account.|
+|credentials.api_token 0|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-talk">docs</a> for more information.|
+|credentials.auth_type 1|string|oauth2.0|null||
+|credentials.access_token 1|string||null|The value of the API token generated. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk-talk">docs</a> for more information.|
 
 # Zendesk Talk Source
 

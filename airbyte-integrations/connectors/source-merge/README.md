@@ -3,8 +3,8 @@
 ## Example
 ```
 {
-  "account_token": "super_secret_token",
-  "api_token": "api_token_is_secret",
+  "account_token": "your_account_token",
+  "api_token": "your_api_token",
   "start_date": "2022-03-01T00:00:00.000Z"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_token|string||null|Link your other integrations with account credentials on accounts section to get account token (ref - https://app.merge.dev/linked-accounts/accounts)|
-|api_token|string||null|API token can be seen at  https://app.merge.dev/keys|
-|start_date|string||null|Date time filter for incremental filter, Specify which date to extract from.|
+|account_token |string||null|Link your other integrations with account credentials on accounts section to get account token (ref - https://app.merge.dev/linked-accounts/accounts)|
+|api_token |string||null|API token can be seen at  https://app.merge.dev/keys|
+|start_date |string||null|Date time filter for incremental filter, Specify which date to extract from.|
 
 # Merge Source
 

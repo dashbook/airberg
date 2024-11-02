@@ -1,9 +1,9 @@
 # Source delighted
 
 ## Example
-```json
+```
 {
-  "api_key": "YOUR_API_KEY",
+  "api_key": "abc123",
   "since": "2022-05-30T04:50:23Z"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|A Delighted API key.|
-|since|string||null|The date from which you'd like to replicate the data|
+|api_key |string||null|A Delighted API key.|
+|since |string||null|The date from which you'd like to replicate the data|
 
 # Delighted Source
 

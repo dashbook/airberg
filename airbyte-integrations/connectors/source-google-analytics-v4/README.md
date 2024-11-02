@@ -1,7 +1,6 @@
 # Source google-analytics-v4
 
 ## Example
-```
 {
   "credentials": {
     "auth_type": "Client",
@@ -12,26 +11,24 @@
   },
   "start_date": "2020-06-01",
   "view_id": "YOUR_VIEW_ID",
-  "custom_reports": "[]",
+  "custom_reports": "{\"reports\":[{\"reportName\":\"Report Name\",\"reportId\":\"report_id\"}]}",
   "window_in_days": 30
 }
-```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Credentials for the service|
-|start_date|string||null|The date in the format YYYY-MM-DD. Any data before this date will not be replicated.|
-|view_id|string||null|The ID for the Google Analytics View you want to fetch data from. This can be found from the <a href="https://ga-dev-tools.appspot.com/account-explorer/">Google Analytics Account Explorer</a>.|
-|custom_reports|string||null|A JSON array describing the custom reports you want to sync from Google Analytics. See <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4#data-processing-latency">the docs</a> for more information about the exact format you can use to fill out this field.|
-|window_in_days|integer||1|The time increment used by the connector when requesting data from the Google Analytics API. More information is available in the <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#sampling-in-reports">the docs</a>. The bigger this value is, the faster the sync will be, but the more likely that sampling will be applied to your data, potentially causing inaccuracies in the returned results. We recommend setting this to 1 unless you have a hard requirement to make the sync faster at the expense of accuracy. The minimum allowed value for this field is 1, and the maximum is 364. |
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|The Client ID of your Google Analytics developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Google Analytics developer application.|
-|credentials.0.refresh_token|string||null|The token for obtaining a new access token.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.1.auth_type|string|Service|null||
-|credentials.1.credentials_json|string||null|The JSON key of the service account to use for authorization|
+|start_date |string||null|The date in the format YYYY-MM-DD. Any data before this date will not be replicated.|
+|view_id |string||null|The ID for the Google Analytics View you want to fetch data from. This can be found from the <a href="https://ga-dev-tools.appspot.com/account-explorer/">Google Analytics Account Explorer</a>.|
+|custom_reports |string||null|A JSON array describing the custom reports you want to sync from Google Analytics. See <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4#data-processing-latency">the docs</a> for more information about the exact format you can use to fill out this field.|
+|window_in_days |integer||1|The time increment used by the connector when requesting data from the Google Analytics API. More information is available in the <a href="https://docs.airbyte.com/integrations/sources/google-analytics-v4/#sampling-in-reports">the docs</a>. The bigger this value is, the faster the sync will be, but the more likely that sampling will be applied to your data, potentially causing inaccuracies in the returned results. We recommend setting this to 1 unless you have a hard requirement to make the sync faster at the expense of accuracy. The minimum allowed value for this field is 1, and the maximum is 364. |
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|The Client ID of your Google Analytics developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Google Analytics developer application.|
+|credentials.refresh_token 0|string||null|The token for obtaining a new access token.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.auth_type 1|string|Service|null||
+|credentials.credentials_json 1|string||null|The JSON key of the service account to use for authorization|
 
 # Google Analytics V4 Source
 

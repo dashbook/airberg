@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "site_id": "a relatively long hex sequence",
-  "api_key": "a very long hex sequence"
+  "site_id": "1234567890abcdef",
+  "api_key": "verylonghexsequence"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|site_id|string||null|The id of the Webflow site you are requesting data from. See https://developers.webflow.com/#sites|
-|api_key|string||null|The API token for authenticating to Webflow. See https://university.webflow.com/lesson/intro-to-the-webflow-api|
+|site_id |string||null|The id of the Webflow site you are requesting data from. See https://developers.webflow.com/#sites|
+|api_key |string||null|The API token for authenticating to Webflow. See https://university.webflow.com/lesson/intro-to-the-webflow-api|
 
 # Webflow Source
 

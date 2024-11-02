@@ -5,9 +5,9 @@
 {
   "credentials": {
     "option_title": "OAuth Credentials",
-    "client_id": "client-id",
-    "client_secret": "client-secret",
-    "refresh_token": "refresh-token"
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "refresh_token": "your_refresh_token"
   }
 }
 ```
@@ -15,13 +15,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to Github|
-|credentials.0.option_title|string|OAuth Credentials|null|OAuth Credentials|
-|credentials.0.client_id|string||null||
-|credentials.0.client_secret|string||null||
-|credentials.0.refresh_token|string||null||
-|credentials.1.option_title|string|PAT Credentials|null|PAT Credentials|
-|credentials.1.personal_access_token|string||null|Asana Personal Access Token (generate yours <a href="https://app.asana.com/0/developer-console">here</a>).|
+|credentials.option_title 0|string|OAuth Credentials|null|OAuth Credentials|
+|credentials.client_id 0|string||null||
+|credentials.client_secret 0|string||null||
+|credentials.refresh_token 0|string||null||
+|credentials.option_title 1|string|PAT Credentials|null|PAT Credentials|
+|credentials.personal_access_token 1|string||null|Asana Personal Access Token (generate yours <a href="https://app.asana.com/0/developer-console">here</a>).|
 
 # Asana Source
 

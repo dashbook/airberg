@@ -3,30 +3,19 @@
 ## Example
 ```
 {
-  "api_key": "abc123",
-  "urls": [
-    "https://example.com",
-    "https://www.example.com"
-  ],
-  "strategies": [
-    "desktop",
-    "mobile"
-  ],
-  "categories": [
-    "accessibility",
-    "best-practices",
-    "performance"
-  ]
+  "urls": ["https://example.com"],
+  "strategies": ["desktop"],
+  "categories": ["performance", "seo"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Google PageSpeed API Key. See <a href="https://developers.google.com/speed/docs/insights/v5/get-started#APIKey">here</a>. The key is optional - however the API is heavily rate limited when using without API Key. Creating and using the API key therefore is recommended. The key is case sensitive.|
-|urls|array||null|The URLs to retrieve pagespeed information from. The connector will attempt to sync PageSpeed reports for all the defined URLs. Format: https://(www.)url.domain|
-|strategies|array||null|The analyses strategy to use. Either "desktop" or "mobile".|
-|categories|array||null|Defines which Lighthouse category to run. One or many of: "accessibility", "best-practices", "performance", "pwa", "seo".|
+|api_key |string||null|Google PageSpeed API Key. See <a href="https://developers.google.com/speed/docs/insights/v5/get-started#APIKey">here</a>. The key is optional - however the API is heavily rate limited when using without API Key. Creating and using the API key therefore is recommended. The key is case sensitive.|
+|urls |array||null|The URLs to retrieve pagespeed information from. The connector will attempt to sync PageSpeed reports for all the defined URLs. Format: https://(www.)url.domain|
+|strategies |array||null|The analyses strategy to use. Either "desktop" or "mobile".|
+|categories |array||null|Defines which Lighthouse category to run. One or many of: "accessibility", "best-practices", "performance", "pwa", "seo".|
 
 # Google Pagespeed Insights Source
 

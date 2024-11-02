@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "api_token": "your_api_token",
+  "api_token": "my_api_token_secret",
   "domain_name": "example.atlassian.net",
   "email": "abc@example.com"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Please follow the Jira confluence for generating an API token: <a href="https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/">generating an API token</a>.|
-|domain_name|string||null|Your Confluence domain name|
-|email|string||null|Your Confluence login email|
+|api_token |string||null|Please follow the Jira confluence for generating an API token: <a href="https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/">generating an API token</a>.|
+|domain_name |string||null|Your Confluence domain name|
+|email |string||null|Your Confluence login email|
 
 # Confluence Source
 

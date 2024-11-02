@@ -3,18 +3,18 @@
 ## Example
 ```json
 {
-  "api_token": "example_api_token",
+  "api_token": "my_secret_api_token",
   "start_date": "2022-01-01",
-  "batch_size": 1
+  "batch_size": 10
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Dixa API token|
-|start_date|string||null|The connector pulls records updated from this date onwards.|
-|batch_size|integer||31|Number of days to batch into one request. Max 31.|
+|api_token |string||null|Dixa API token|
+|start_date |string||null|The connector pulls records updated from this date onwards.|
+|batch_size |integer||31|Number of days to batch into one request. Max 31.|
 
 # Dixa Source
 

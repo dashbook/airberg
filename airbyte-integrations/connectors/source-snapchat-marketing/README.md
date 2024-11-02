@@ -1,22 +1,24 @@
 # Source snapchat-marketing
 
 ## Example
+```json
 {
-  "client_id": "abc123",
-  "client_secret": "def456",
-  "refresh_token": "ghi789",
+  "client_id": "your_client_id",
+  "client_secret": "your_client_secret",
+  "refresh_token": "your_refresh_token",
   "start_date": "2022-01-01",
   "end_date": "2022-01-30"
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|The Client ID of your Snapchat developer application.|
-|client_secret|string||null|The Client Secret of your Snapchat developer application.|
-|refresh_token|string||null|Refresh Token to renew the expired Access Token.|
-|start_date|string||2022-01-01|Date in the format 2022-01-01. Any data before this date will not be replicated.|
-|end_date|string||null|Date in the format 2017-01-25. Any data after this date will not be replicated.|
+|client_id |string||null|The Client ID of your Snapchat developer application.|
+|client_secret |string||null|The Client Secret of your Snapchat developer application.|
+|refresh_token |string||null|Refresh Token to renew the expired Access Token.|
+|start_date |string||2022-01-01|Date in the format 2022-01-01. Any data before this date will not be replicated.|
+|end_date |string||null|Date in the format 2017-01-25. Any data after this date will not be replicated.|
 
 # Snapchat Marketing Source
 

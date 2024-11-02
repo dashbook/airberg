@@ -5,7 +5,7 @@
 {
   "pool_ids": "0,1",
   "start_ids": "0,0",
-  "url_base": "https://api.korellia.kyve.network/",
+  "url_base": "https://api.korellia.kyve.network",
   "max_pages": null,
   "page_size": 100
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|pool_ids|string||null|The IDs of the KYVE storage pool you want to archive. (Comma separated)|
-|start_ids|string||null|The start-id defines, from which bundle id the pipeline should start to extract the data (Comma separated)|
-|url_base|string||https://api.korellia.kyve.network|URL to the KYVE Chain API.|
-|max_pages|integer||null|The maximum amount of pages to go trough. Set to 'null' for all pages.|
-|page_size|integer||100|The pagesize for pagination, smaller numbers are used in integration tests.|
+|pool_ids |string||null|The IDs of the KYVE storage pool you want to archive. (Comma separated)|
+|start_ids |string||null|The start-id defines, from which bundle id the pipeline should start to extract the data (Comma separated)|
+|url_base |string||https://api.korellia.kyve.network|URL to the KYVE Chain API.|
+|max_pages |integer||null|The maximum amount of pages to go trough. Set to 'null' for all pages.|
+|page_size |integer||100|The pagesize for pagination, smaller numbers are used in integration tests.|
 
 # Kyve Source
 

@@ -1,12 +1,12 @@
 # Source youtube-analytics
 
 ## Example
-```
+```json
 {
   "credentials": {
-    "client_id": "some_client_id",
-    "client_secret": "some_client_secret",
-    "refresh_token": "some_refresh_token"
+    "client_id": "example_client_id",
+    "client_secret": "example_client_secret",
+    "refresh_token": "example_refresh_token"
   }
 }
 ```
@@ -14,9 +14,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials.client_id|string||null|The Client ID of your developer application|
-|credentials.client_secret|string||null|The client secret of your developer application|
-|credentials.refresh_token|string||null|A refresh token generated using the above client ID and secret|
+|credentials.client_id |string||null|The Client ID of your developer application|
+|credentials.client_secret |string||null|The client secret of your developer application|
+|credentials.refresh_token |string||null|A refresh token generated using the above client ID and secret|
 
 # Youtube Analytics Source
 

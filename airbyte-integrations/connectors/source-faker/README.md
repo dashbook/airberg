@@ -1,11 +1,11 @@
 # Source faker
 
 ## Example
-```json
+```
 {
   "count": 500,
   "seed": -1,
-  "records_per_slice": 500,
+  "records_per_slice": 2000,
   "always_updated": false,
   "parallelism": 2
 }
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|count|integer||1000|How many users should be generated in total.  This setting does not apply to the purchases or products stream.|
-|seed|integer||-1|Manually control the faker random seed to return the same values on subsequent runs (leave -1 for random)|
-|records_per_slice|integer||1000|How many fake records will be in each page (stream slice), before a state message is emitted?|
-|always_updated|boolean||true|Should the updated_at values for every record be new each sync?|
-|parallelism|integer||4|How many parallel workers should we use to generate fake data?  Choose a value equal to the number of CPUs you will allocate to this source.|
+|count |integer||1000|How many users should be generated in total.  This setting does not apply to the purchases or products stream.|
+|seed |integer||-1|Manually control the faker random seed to return the same values on subsequent runs (leave -1 for random)|
+|records_per_slice |integer||1000|How many fake records will be in each page (stream slice), before a state message is emitted?|
+|always_updated |boolean||true|Should the updated_at values for every record be new each sync?|
+|parallelism |integer||4|How many parallel workers should we use to generate fake data?  Choose a value equal to the number of CPUs you will allocate to this source.|
 
 # Faker Source
 

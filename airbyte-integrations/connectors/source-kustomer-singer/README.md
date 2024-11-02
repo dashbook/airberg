@@ -1,9 +1,9 @@
 # Source kustomer-singer
 
 ## Example
-```json
+```
 {
-  "api_token": "my_api_token",
+  "api_token": "my_api_token_secret",
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Kustomer API Token. See the <a href="https://developer.kustomer.com/kustomer-api-docs/reference/authentication">docs</a> on how to obtain this|
-|start_date|string||null|The date from which you'd like to replicate the data|
+|api_token |string||null|Kustomer API Token. See the <a href="https://developer.kustomer.com/kustomer-api-docs/reference/authentication">docs</a> on how to obtain this|
+|start_date |string||null|The date from which you'd like to replicate the data|
 
 # Source Kustomer Singer
 

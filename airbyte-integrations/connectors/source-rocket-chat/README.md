@@ -4,17 +4,17 @@
 ```json
 {
   "endpoint": "https://airbyte-connector-poc.rocket.chat",
-  "token": "your-secret-token",
-  "user_id": "123456789"
+  "token": "your_api_token",
+  "user_id": "your_user_id"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|endpoint|string||null|Your rocket.chat instance URL.|
-|token|string||null|Your API Token. See <a href="https://developer.rocket.chat/reference/api/rest-api/endpoints/other-important-endpoints/access-tokens-endpoints">here</a>. The token is case sensitive.|
-|user_id|string||null|Your User Id.|
+|endpoint |string||null|Your rocket.chat instance URL.|
+|token |string||null|Your API Token. See <a href="https://developer.rocket.chat/reference/api/rest-api/endpoints/other-important-endpoints/access-tokens-endpoints">here</a>. The token is case sensitive.|
+|user_id |string||null|Your User Id.|
 
 # Rocket Chat Source
 

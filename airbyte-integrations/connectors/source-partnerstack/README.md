@@ -1,20 +1,20 @@
 # Source partnerstack
 
 ## Example
-```json
+```
 {
-  "public_key": "1234567890",
-  "private_key": "abcdefg1234567890",
-  "start_date": "2017-01-25T00:00:00Z"
+  "public_key": "example-public-key",
+  "private_key": "example-private-key",
+  "start_date": "2022-01-01T00:00:00Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|public_key|string||null|The Live Public Key for a Partnerstack account.|
-|private_key|string||null|The Live Private Key for a Partnerstack account.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|public_key |string||null|The Live Public Key for a Partnerstack account.|
+|private_key |string||null|The Live Private Key for a Partnerstack account.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Partnerstack Source
 

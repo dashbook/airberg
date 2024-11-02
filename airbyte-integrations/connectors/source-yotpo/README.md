@@ -1,10 +1,10 @@
 # Source yotpo
 
 ## Example
-```
+```json
 {
-  "access_token": "your_access_token",
-  "app_key": "your_app_key",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "app_key": "abc123",
   "start_date": "2022-03-01T00:00:00.000Z",
   "email": "example@gmail.com"
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Access token recieved as a result of API call to https://api.yotpo.com/oauth/token (Ref- https://apidocs.yotpo.com/reference/yotpo-authentication)|
-|app_key|string||null|App key found at settings (Ref- https://settings.yotpo.com/#/general_settings)|
-|start_date|string||null|Date time filter for incremental filter, Specify which date to extract from.|
-|email|string||example@gmail.com|Email address registered with yotpo.|
+|access_token |string||null|Access token recieved as a result of API call to https://api.yotpo.com/oauth/token (Ref- https://apidocs.yotpo.com/reference/yotpo-authentication)|
+|app_key |string||null|App key found at settings (Ref- https://settings.yotpo.com/#/general_settings)|
+|start_date |string||null|Date time filter for incremental filter, Specify which date to extract from.|
+|email |string||example@gmail.com|Email address registered with yotpo.|
 
 # Yotpo Source
 

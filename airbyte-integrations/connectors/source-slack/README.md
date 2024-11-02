@@ -1,7 +1,7 @@
 # Source slack
 
 ## Example
-```
+```json
 {
   "start_date": "2022-01-01T00:00:00Z",
   "lookback_window": 30,
@@ -19,17 +19,16 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|lookback_window|integer||0|How far into the past to look for messages in threads, default is 0 days|
-|join_channels|boolean||true|Whether to join all channels or to sync data only from channels the bot is already in.  If false, you'll need to manually add the bot to all the channels from which you'd like to sync messages. |
-|channel_filter|array||[]|A channel name list (without leading '#' char) which limit the channels from which you'd like to sync. Empty list means no filter.|
-|credentials|object||null|Choose how to authenticate into Slack|
-|credentials.0.option_title|string|Default OAuth2.0 authorization|null||
-|credentials.0.client_id|string||null|Slack client_id. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help finding this id.|
-|credentials.0.client_secret|string||null|Slack client_secret. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help finding this secret.|
-|credentials.0.access_token|string||null|Slack access_token. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help generating the token.|
-|credentials.1.option_title|string|API Token Credentials|null||
-|credentials.1.api_token|string||null|A Slack bot token. See the <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> for instructions on how to generate it.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|lookback_window |integer||0|How far into the past to look for messages in threads, default is 0 days|
+|join_channels |boolean||true|Whether to join all channels or to sync data only from channels the bot is already in.  If false, you'll need to manually add the bot to all the channels from which you'd like to sync messages. |
+|channel_filter |array||[]|A channel name list (without leading '#' char) which limit the channels from which you'd like to sync. Empty list means no filter.|
+|credentials.option_title 0|string|Default OAuth2.0 authorization|null||
+|credentials.client_id 0|string||null|Slack client_id. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help finding this id.|
+|credentials.client_secret 0|string||null|Slack client_secret. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help finding this secret.|
+|credentials.access_token 0|string||null|Slack access_token. See our <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> if you need help generating the token.|
+|credentials.option_title 1|string|API Token Credentials|null||
+|credentials.api_token 1|string||null|A Slack bot token. See the <a href="https://docs.airbyte.com/integrations/sources/slack">docs</a> for instructions on how to generate it.|
 
 # Slack Source 
 

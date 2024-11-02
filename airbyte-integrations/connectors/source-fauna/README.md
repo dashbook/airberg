@@ -1,12 +1,12 @@
 # Source fauna
 
 ## Example
-```json
+```
 {
   "domain": "db.fauna.com",
   "port": 443,
   "scheme": "https",
-  "secret": "your_secret_key_here",
+  "secret": "my_fauna_secret",
   "collection": {
     "page_size": 64,
     "deletions": {
@@ -19,20 +19,16 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||db.fauna.com|Domain of Fauna to query. Defaults db.fauna.com. See <a href=https://docs.fauna.com/fauna/current/learn/understanding/region_groups#how-to-use-region-groups>the docs</a>.|
-|port|integer||443|Endpoint port.|
-|scheme|string||https|URL scheme.|
-|secret|string||null|Fauna secret, used when authenticating with the database.|
-|collection.page_size|integer||64|The page size used when reading documents from the database. The larger the page size, the faster the connector processes documents. However, if a page is too large, the connector may fail. <br>
+|domain |string||db.fauna.com|Domain of Fauna to query. Defaults db.fauna.com. See <a href=https://docs.fauna.com/fauna/current/learn/understanding/region_groups#how-to-use-region-groups>the docs</a>.|
+|port |integer||443|Endpoint port.|
+|scheme |string||https|URL scheme.|
+|secret |string||null|Fauna secret, used when authenticating with the database.|
+|collection.page_size |integer||64|The page size used when reading documents from the database. The larger the page size, the faster the connector processes documents. However, if a page is too large, the connector may fail. <br>
 Choose your page size based on how large the documents are. <br>
 See <a href="https://docs.fauna.com/fauna/current/learn/understanding/types#page">the docs</a>.|
-|collection.deletions|object||null|<b>This only applies to incremental syncs.</b> <br>
-Enabling deletion mode informs your destination of deleted documents.<br>
-Disabled - Leave this feature disabled, and ignore deleted documents.<br>
-Enabled - Enables this feature. When a document is deleted, the connector exports a record with a "deleted at" column containing the time that the document was deleted.|
-|collection.deletions.0.deletion_mode|string|ignore|null||
-|collection.deletions.1.deletion_mode|string|deleted_field|null||
-|collection.deletions.1.column|string||deleted_at|Name of the "deleted at" column.|
+|collection.deletions.deletion_mode 0|string|ignore|null||
+|collection.deletions.deletion_mode 1|string|deleted_field|null||
+|collection.deletions.column 1|string||deleted_at|Name of the "deleted at" column.|
 
 # New Readers
 

@@ -1,18 +1,18 @@
 # Source facebook-pages
 
 ## Example
-```json
+```
 {
-  "access_token": "Facebook_Page_Access_Token",
-  "page_id": "Page_ID"
+  "access_token": "my_access_token",
+  "page_id": "my_page_id"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Facebook Page Access Token|
-|page_id|string||null|Page ID|
+|access_token |string||null|Facebook Page Access Token|
+|page_id |string||null|Page ID|
 
 # Facebook Pages Source
 

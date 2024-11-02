@@ -1,12 +1,12 @@
 # Source gutendex
 
 ## Example
-```json
+```
 {
   "author_year_start": "2002",
   "author_year_end": "2020",
   "copyright": "true",
-  "languages": "en,fr,fi",
+  "languages": "en,fr",
   "search": "dickens great expect",
   "sort": "popular",
   "topic": "children"
@@ -16,13 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|author_year_start|string||null|(Optional) Defines the minimum birth year of the authors. Books by authors born prior to the start year will not be returned. Supports both positive (CE) or negative (BCE) integer values|
-|author_year_end|string||null|(Optional) Defines the maximum birth year of the authors. Books by authors born after the end year will not be returned. Supports both positive (CE) or negative (BCE) integer values|
-|copyright|string||null|(Optional) Use this to find books with a certain copyright status - true for books with existing copyrights, false for books in the public domain in the USA, or null for books with no available copyright information.|
-|languages|string||null|(Optional) Use this to find books in any of a list of languages. They must be comma-separated, two-character language codes.|
-|search|string||null|(Optional) Use this to search author names and book titles with given words. They must be separated by a space (i.e. %20 in URL-encoded format) and are case-insensitive.|
-|sort|string||null|(Optional) Use this to sort books - ascending for Project Gutenberg ID numbers from lowest to highest, descending for IDs highest to lowest, or popular (the default) for most popular to least popular by number of downloads.|
-|topic|string||null|(Optional) Use this to search for a case-insensitive key-phrase in books' bookshelves or subjects.|
+|author_year_start |string||null|(Optional) Defines the minimum birth year of the authors. Books by authors born prior to the start year will not be returned. Supports both positive (CE) or negative (BCE) integer values|
+|author_year_end |string||null|(Optional) Defines the maximum birth year of the authors. Books by authors born after the end year will not be returned. Supports both positive (CE) or negative (BCE) integer values|
+|copyright |string||null|(Optional) Use this to find books with a certain copyright status - true for books with existing copyrights, false for books in the public domain in the USA, or null for books with no available copyright information.|
+|languages |string||null|(Optional) Use this to find books in any of a list of languages. They must be comma-separated, two-character language codes.|
+|search |string||null|(Optional) Use this to search author names and book titles with given words. They must be separated by a space (i.e. %20 in URL-encoded format) and are case-insensitive.|
+|sort |string||null|(Optional) Use this to sort books - ascending for Project Gutenberg ID numbers from lowest to highest, descending for IDs highest to lowest, or popular (the default) for most popular to least popular by number of downloads.|
+|topic |string||null|(Optional) Use this to search for a case-insensitive key-phrase in books' bookshelves or subjects.|
 
 # Gutendex Source
 

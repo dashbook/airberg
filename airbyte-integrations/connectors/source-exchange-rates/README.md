@@ -1,22 +1,22 @@
 # Source exchange-rates
 
 ## Example
-```json
+```
 {
   "start_date": "2022-01-01",
-  "access_key": "1234567890abcdef",
-  "base": "USD",
-  "ignore_weekends": false
+  "access_key": "your-api-key-here",
+  "base": "EUR",
+  "ignore_weekends": true
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|Start getting data from that date.|
-|access_key|string||null|Your API Key. See <a href="https://apilayer.com/marketplace/exchangerates_data-api">here</a>. The key is case sensitive.|
-|base|string||null|ISO reference currency. See <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">here</a>. Free plan doesn't support Source Currency Switching, default base currency is EUR|
-|ignore_weekends|boolean||true|Ignore weekends? (Exchanges don't run on weekends)|
+|start_date |string||null|Start getting data from that date.|
+|access_key |string||null|Your API Key. See <a href="https://apilayer.com/marketplace/exchangerates_data-api">here</a>. The key is case sensitive.|
+|base |string||null|ISO reference currency. See <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">here</a>. Free plan doesn't support Source Currency Switching, default base currency is EUR|
+|ignore_weekends |boolean||true|Ignore weekends? (Exchanges don't run on weekends)|
 
 # Exchange Rates Source
 

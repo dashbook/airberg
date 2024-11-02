@@ -5,32 +5,31 @@
 {
   "credentials": {
     "auth_type": "oauth2.0",
-    "app_id": "my_app_id",
-    "secret": "my_secret",
-    "access_token": "my_access_token",
-    "advertiser_id": "my_advertiser_id"
+    "app_id": "1234567890",
+    "secret": "very_secret",
+    "access_token": "long_term_token",
+    "advertiser_id": ""
   },
   "start_date": "2022-01-01",
   "end_date": "2022-12-31",
-  "attribution_window": 30
+  "attribution_window": 7
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||{}|Authentication method|
-|start_date|string||2016-09-01|The Start Date in format: YYYY-MM-DD. Any data before this date will not be replicated. If this parameter is not set, all data will be replicated.|
-|end_date|string||null|The date until which you'd like to replicate data for all incremental streams, in the format YYYY-MM-DD. All data generated between start_date and this date will be replicated. Not setting this option will result in always syncing the data till the current date.|
-|attribution_window|integer||3|The attribution window in days.|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.app_id|string||null|The Developer Application App ID.|
-|credentials.0.secret|string||null|The Developer Application Secret.|
-|credentials.0.access_token|string||null|Long-term Authorized Access Token.|
-|credentials.0.advertiser_id|string||null|The Advertiser ID to filter reports and streams. Let this empty to retrieve all.|
-|credentials.1.auth_type|string|sandbox_access_token|null||
-|credentials.1.advertiser_id|string||null|The Advertiser ID which generated for the developer's Sandbox application.|
-|credentials.1.access_token|string||null|The long-term authorized access token.|
+|start_date |string||2016-09-01|The Start Date in format: YYYY-MM-DD. Any data before this date will not be replicated. If this parameter is not set, all data will be replicated.|
+|end_date |string||null|The date until which you'd like to replicate data for all incremental streams, in the format YYYY-MM-DD. All data generated between start_date and this date will be replicated. Not setting this option will result in always syncing the data till the current date.|
+|attribution_window |integer||3|The attribution window in days.|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.app_id 0|string||null|The Developer Application App ID.|
+|credentials.secret 0|string||null|The Developer Application Secret.|
+|credentials.access_token 0|string||null|Long-term Authorized Access Token.|
+|credentials.advertiser_id 0|string||null|The Advertiser ID to filter reports and streams. Let this empty to retrieve all.|
+|credentials.auth_type 1|string|sandbox_access_token|null||
+|credentials.advertiser_id 1|string||null|The Advertiser ID which generated for the developer's Sandbox application.|
+|credentials.access_token 1|string||null|The long-term authorized access token.|
 
 # Tiktok Marketing Source
 

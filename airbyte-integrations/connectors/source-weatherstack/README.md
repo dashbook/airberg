@@ -1,22 +1,22 @@
 # Source weatherstack
 
 ## Example
-```json
+```
 {
-  "access_key": "your_api_key",
-  "query": "New York",
-  "historical_date": "2015-01-21",
-  "is_paid_account": true
+  "is_paid_account": true,
+  "access_key": "your_access_key",
+  "query": "New York;London",
+  "historical_date": "2015-01-21"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|is_paid_account|boolean||false|Toggle if you're using a <a href="https://weatherstack.com/product">Paid subscription</a>|
-|access_key|string||null|API access key used to retrieve data from the Weatherstack API.(https://weatherstack.com/product)|
-|query|string||null|A location to query such as city, IP, latitudeLongitude, or zipcode. Multiple locations with semicolon seperated if using a professional plan or higher. For more info- (https://weatherstack.com/documentation#query_parameter)|
-|historical_date|string||null|This is required for enabling the Historical date API with format- (YYYY-MM-DD). * Note, only supported by paid accounts|
+|is_paid_account |boolean||false|Toggle if you're using a <a href="https://weatherstack.com/product">Paid subscription</a>|
+|access_key |string||null|API access key used to retrieve data from the Weatherstack API.(https://weatherstack.com/product)|
+|query |string||null|A location to query such as city, IP, latitudeLongitude, or zipcode. Multiple locations with semicolon seperated if using a professional plan or higher. For more info- (https://weatherstack.com/documentation#query_parameter)|
+|historical_date |string||null|This is required for enabling the Historical date API with format- (YYYY-MM-DD). * Note, only supported by paid accounts|
 
 # Weatherstack Source
 

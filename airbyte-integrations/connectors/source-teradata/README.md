@@ -3,17 +3,17 @@
 ## Example
 ```json
 {
-  "host": "localhost",
+  "host": "example-host",
   "port": 3306,
-  "database": "mydb",
-  "username": "myuser",
-  "password": "mypassword",
+  "database": "example-database",
+  "username": "example-username",
+  "password": "example-password",
   "jdbc_url_params": "key1=value1&key2=value2&key3=value3",
   "replication_method": "STANDARD",
   "ssl": true,
   "ssl_mode": {
-    "mode": "require",
-    "ssl_ca_certificate": "path/to/ca/certificate"
+    "mode": "verify-ca",
+    "ssl_ca_certificate": "example-ca-certificate"
   }
 }
 ```
@@ -21,31 +21,29 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the database.|
-|port|integer||3306|Port of the database.|
-|database|string||null|Name of the database.|
-|username|string||null|Username to use to access the database.|
-|password|string||null|Password associated with the username.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
-|replication_method|string||STANDARD|Replication method to use for extracting data from the database. STANDARD replication requires no setup on the DB side but will not be able to represent deletions incrementally. CDC uses the Binlog to detect inserts, updates, and deletes. This needs to be configured on the source database itself.|
-|ssl|boolean||false|Encrypt data using SSL. When activating SSL, please select one of the connection modes.|
-|ssl_mode|object||null|SSL connection modes. 
- <b>disable</b> - Chose this mode to disable encryption of communication between Airbyte and destination database
- <b>allow</b> - Chose this mode to enable encryption only when required by the destination database
- <b>prefer</b> - Chose this mode to allow unencrypted connection only if the destination database does not support encryption
- <b>require</b> - Chose this mode to always require encryption. If the destination database server does not support encryption, connection will fail
-  <b>verify-ca</b> - Chose this mode to always require encryption and to verify that the destination database server has a valid SSL certificate
-  <b>verify-full</b> - This is the most secure mode. Chose this mode to always require encryption and to verify the identity of the destination database server
- See more information - <a href="https://teradata-docs.s3.amazonaws.com/doc/connectivity/jdbc/reference/current/jdbcug_chapter_2.html#URL_SSLMODE"> in the docs</a>.|
-|ssl_mode.0.mode|string|disable|null||
-|ssl_mode.1.mode|string|allow|null||
-|ssl_mode.2.mode|string|prefer|null||
-|ssl_mode.3.mode|string|require|null||
-|ssl_mode.4.mode|string|verify-ca|null||
-|ssl_mode.4.ssl_ca_certificate|string||null|Specifies the file name of a PEM file that contains Certificate Authority (CA) certificates for use with SSLMODE=verify-ca.
+|host |string||null|Hostname of the database.|
+|port |integer||3306|Port of the database.|
+|database |string||null|Name of the database.|
+|username |string||null|Username to use to access the database.|
+|password |string||null|Password associated with the username.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3)|
+|replication_method |string||STANDARD|Replication method to use for extracting data from the database. STANDARD replication requires no setup on the DB side but will not be able to represent deletions incrementally. CDC uses the Binlog to detect inserts, updates, and deletes. This needs to be configured on the source database itself.|
+|ssl |boolean||false|Encrypt data using SSL. When activating SSL, please select one of the connection modes.|
+|ssl_mode |||null|Disable SSL.|
+|ssl_mode |||null|Allow SSL mode.|
+|ssl_mode |||null|Prefer SSL mode.|
+|ssl_mode |||null|Require SSL mode.|
+|ssl_mode |||null|Verify-ca SSL mode.|
+|ssl_mode |||null|Verify-full SSL mode.|
+|ssl_mode.mode 0|string|disable|null||
+|ssl_mode.mode 1|string|allow|null||
+|ssl_mode.mode 2|string|prefer|null||
+|ssl_mode.mode 3|string|require|null||
+|ssl_mode.mode 4|string|verify-ca|null||
+|ssl_mode.ssl_ca_certificate 4|string||null|Specifies the file name of a PEM file that contains Certificate Authority (CA) certificates for use with SSLMODE=verify-ca.
  See more information - <a href="https://teradata-docs.s3.amazonaws.com/doc/connectivity/jdbc/reference/current/jdbcug_chapter_2.html#URL_SSLCA"> in the docs</a>.|
-|ssl_mode.5.mode|string|verify-full|null||
-|ssl_mode.5.ssl_ca_certificate|string||null|Specifies the file name of a PEM file that contains Certificate Authority (CA) certificates for use with SSLMODE=verify-full.
+|ssl_mode.mode 5|string|verify-full|null||
+|ssl_mode.ssl_ca_certificate 5|string||null|Specifies the file name of a PEM file that contains Certificate Authority (CA) certificates for use with SSLMODE=verify-full.
  See more information - <a href="https://teradata-docs.s3.amazonaws.com/doc/connectivity/jdbc/reference/current/jdbcug_chapter_2.html#URL_SSLCA"> in the docs</a>.|
 
 # Source Teradata

@@ -3,11 +3,11 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here",
-  "query": "social pizza",
-  "domain": ["cnn.com", "foxnews.com"],
+  "api_key": "my_secret_api_key",
+  "query": "social and pizza",
+  "domain": ["abc.com", "def.com"],
   "country": ["us", "ca"],
-  "category": ["business", "entertainment"],
+  "category": ["business", "technology"],
   "language": ["en", "fr"]
 }
 ```
@@ -15,12 +15,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|OneOf|||null||
-|domain|array||null|Domains (maximum 5) to restrict the search to. Use the sources stream to find top sources id.|
-|country|array||null|2-letter ISO 3166-1 countries (maximum 5) to restrict the search to.|
-|category|array||null|Categories (maximum 5) to restrict the search to.|
-|language|array||null|Languages (maximum 5) to restrict the search to.|
+|api_key |string||null|API Key|
+|OneOf |||null||
+|domain |array||null|Domains (maximum 5) to restrict the search to. Use the sources stream to find top sources id.|
+|country |array||null|2-letter ISO 3166-1 countries (maximum 5) to restrict the search to.|
+|category |array||null|Categories (maximum 5) to restrict the search to.|
+|language |array||null|Languages (maximum 5) to restrict the search to.|
 
 # Newsdata Source
 

@@ -1,10 +1,10 @@
 # Source azure-table
 
 ## Example
-```json
+```
 {
-  "storage_account_name": "accountname",
-  "storage_access_key": "accesskey",
+  "storage_account_name": "my_storage_account",
+  "storage_access_key": "my_access_key",
   "storage_endpoint_suffix": "core.windows.net"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|storage_account_name|string||null|The name of your storage account.|
-|storage_access_key|string||null|Azure Table Storage Access Key. See the <a href="https://docs.airbyte.com/integrations/sources/azure-table">docs</a> for more information on how to obtain this key.|
-|storage_endpoint_suffix|string||core.windows.net|Azure Table Storage service account URL suffix. See the <a href="https://docs.airbyte.com/integrations/sources/azure-table">docs</a> for more information on how to obtain endpoint suffix|
+|storage_account_name |string||null|The name of your storage account.|
+|storage_access_key |string||null|Azure Table Storage Access Key. See the <a href="https://docs.airbyte.com/integrations/sources/azure-table">docs</a> for more information on how to obtain this key.|
+|storage_endpoint_suffix |string||core.windows.net|Azure Table Storage service account URL suffix. See the <a href="https://docs.airbyte.com/integrations/sources/azure-table">docs</a> for more information on how to obtain endpoint suffix|
 
 # Azure Table Source
 

@@ -1,26 +1,24 @@
 # Source zuora
 
 ## Example
-```json
 {
   "start_date": "2022-01-01",
-  "window_in_days": "90",
+  "window_in_days": "0.5",
   "tenant_endpoint": "US Production",
   "data_query": "Live",
-  "client_id": "my_client_id",
-  "client_secret": "my_client_secret"
+  "client_id": "your_client_id",
+  "client_secret": "your_client_secret"
 }
-```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|start_date|string||null|Start Date in format: YYYY-MM-DD|
-|window_in_days|string||90|The amount of days for each data-chunk begining from start_date. Bigger the value - faster the fetch. (0.1 - as for couple of hours, 1 - as for a Day; 364 - as for a Year).|
-|tenant_endpoint|string||null|Please choose the right endpoint where your Tenant is located. More info by this <a href="https://www.zuora.com/developer/api-reference/#section/Introduction/Access-to-the-API">Link</a>|
-|data_query|string||Live|Choose between `Live`, or `Unlimited` - the optimized, replicated database at 12 hours freshness for high volume extraction <a href="https://knowledgecenter.zuora.com/Central_Platform/Query/Data_Query/A_Overview_of_Data_Query#Query_Processing_Limitations">Link</a>|
-|client_id|string||null|Your OAuth user Client ID|
-|client_secret|string||null|Your OAuth user Client Secret|
+|start_date |string||null|Start Date in format: YYYY-MM-DD|
+|window_in_days |string||90|The amount of days for each data-chunk begining from start_date. Bigger the value - faster the fetch. (0.1 - as for couple of hours, 1 - as for a Day; 364 - as for a Year).|
+|tenant_endpoint |string||null|Please choose the right endpoint where your Tenant is located. More info by this <a href="https://www.zuora.com/developer/api-reference/#section/Introduction/Access-to-the-API">Link</a>|
+|data_query |string||Live|Choose between `Live`, or `Unlimited` - the optimized, replicated database at 12 hours freshness for high volume extraction <a href="https://knowledgecenter.zuora.com/Central_Platform/Query/Data_Query/A_Overview_of_Data_Query#Query_Processing_Limitations">Link</a>|
+|client_id |string||null|Your OAuth user Client ID|
+|client_secret |string||null|Your OAuth user Client Secret|
 
 # Zuora Source
 

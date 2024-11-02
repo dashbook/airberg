@@ -4,23 +4,23 @@
 ```json
 {
   "username": "username@email.com",
-  "password": "password123",
-  "account": "my_account",
+  "password": "your_firebolt_password",
+  "account": "your_firebolt_account",
   "host": "api.app.firebolt.io",
-  "database": "my_database",
-  "engine": "my_engine"
+  "database": "your_database",
+  "engine": "engine_name_or_url"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|username|string||null|Firebolt email address you use to login.|
-|password|string||null|Firebolt password.|
-|account|string||null|Firebolt account to login.|
-|host|string||null|The host name of your Firebolt database.|
-|database|string||null|The database to connect to.|
-|engine|string||null|Engine name or url to connect to.|
+|username |string||null|Firebolt email address you use to login.|
+|password |string||null|Firebolt password.|
+|account |string||null|Firebolt account to login.|
+|host |string||null|The host name of your Firebolt database.|
+|database |string||null|The database to connect to.|
+|engine |string||null|Engine name or url to connect to.|
 
 # Firebolt Source
 

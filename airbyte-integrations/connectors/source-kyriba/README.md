@@ -1,22 +1,24 @@
 # Source kyriba
 
 ## Example
+```json
 {
-  "domain": "demo.kyriba.com",
-  "username": "user1",
-  "password": "p@ssw0rd",
+  "domain": "example.kyriba.com",
+  "username": "exampleuser",
+  "password": "examplepassword",
   "start_date": "2021-01-10",
   "end_date": "2022-03-01"
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||null|Kyriba domain|
-|username|string||null|Username to be used in basic auth|
-|password|string||null|Password to be used in basic auth|
-|start_date|string||null|The date the sync should start from.|
-|end_date|string||null|The date the sync should end. If let empty the sync will run to the current date.|
+|domain |string||null|Kyriba domain|
+|username |string||null|Username to be used in basic auth|
+|password |string||null|Password to be used in basic auth|
+|start_date |string||null|The date the sync should start from.|
+|end_date |string||null|The date the sync should end. If let empty the sync will run to the current date.|
 
 # Kyriba Source
 

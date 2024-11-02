@@ -1,22 +1,20 @@
 # Source yandex-metrica
 
 ## Example
-```json
 {
-  "auth_token": "your_api_access_token",
-  "counter_id": "12345",
+  "auth_token": "your-secret-token",
+  "counter_id": "123456",
   "start_date": "2022-01-01",
   "end_date": "2022-01-31"
 }
-```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_token|string||null|Your Yandex Metrica API access token|
-|counter_id|string||null|Counter ID|
-|start_date|string||null|Starting point for your data replication, in format of "YYYY-MM-DD".|
-|end_date|string||null|Starting point for your data replication, in format of "YYYY-MM-DD". If not provided will sync till most recent date.|
+|auth_token |string||null|Your Yandex Metrica API access token|
+|counter_id |string||null|Counter ID|
+|start_date |string||null|Starting point for your data replication, in format of "YYYY-MM-DD".|
+|end_date |string||null|Starting point for your data replication, in format of "YYYY-MM-DD". If not provided will sync till most recent date.|
 
 # Yandex Metrica Source
 

@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Your Access token. See <a href="https://apidocs.launchdarkly.com/#section/Overview/Authentication">here</a>.|
+|access_token |string||null|Your Access token. See <a href="https://apidocs.launchdarkly.com/#section/Overview/Authentication">here</a>.|
 
 # Launchdarkly Source
 

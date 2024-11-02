@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Pivotal Tracker API token|
+|api_token |string||null|Pivotal Tracker API token|
 
 # Pivotal Tracker Source
 

@@ -1,7 +1,7 @@
 # Source recurly
 
 ## Example
-```json
+```
 {
   "api_key": "your_api_key",
   "begin_time": "2021-12-01T00:00:00",
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Recurly API Key. See the  <a href="https://docs.airbyte.com/integrations/sources/recurly">docs</a> for more information on how to generate this key.|
-|begin_time|string||null|ISO8601 timestamp from which the replication from Recurly API will start from.|
-|end_time|string||null|ISO8601 timestamp to which the replication from Recurly API will stop. Records after that date won't be imported.|
+|api_key |string||null|Recurly API Key. See the  <a href="https://docs.airbyte.com/integrations/sources/recurly">docs</a> for more information on how to generate this key.|
+|begin_time |string||null|ISO8601 timestamp from which the replication from Recurly API will start from.|
+|end_time |string||null|ISO8601 timestamp to which the replication from Recurly API will stop. Records after that date won't be imported.|
 
 # Recurly Source 
 

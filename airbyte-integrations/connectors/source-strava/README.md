@@ -6,7 +6,7 @@
   "client_id": "12345",
   "client_secret": "fc6243f283e51f6ca989aab298b17da125496f50",
   "refresh_token": "fc6243f283e51f6ca989aab298b17da125496f50",
-  "athlete_id": 17831421,
+  "athlete_id": "17831421",
   "start_date": "2021-03-01T00:00:00Z"
 }
 ```
@@ -14,12 +14,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_type|string|Client|Client||
-|client_id|string||null|The Client ID of your Strava developer application.|
-|client_secret|string||null|The Client Secret of your Strava developer application.|
-|refresh_token|string||null|The Refresh Token with the activity: read_all permissions.|
-|athlete_id|integer||null|The Athlete ID of your Strava developer application.|
-|start_date|string||null|UTC date and time. Any data before this date will not be replicated.|
+|auth_type |string|Client|Client||
+|client_id |string||null|The Client ID of your Strava developer application.|
+|client_secret |string||null|The Client Secret of your Strava developer application.|
+|refresh_token |string||null|The Refresh Token with the activity: read_all permissions.|
+|athlete_id |integer||null|The Athlete ID of your Strava developer application.|
+|start_date |string||null|UTC date and time. Any data before this date will not be replicated.|
 
 # Strava Source
 

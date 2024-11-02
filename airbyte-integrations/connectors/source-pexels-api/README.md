@@ -1,17 +1,26 @@
 # Source pexels-api
 
 ## Example
-
+```
+{
+  "api_key": "my_secret_api_key",
+  "query": "people",
+  "orientation": "landscape",
+  "size": "large",
+  "color": "blue",
+  "locale": "en-US"
+}
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API key is required to access pexels api, For getting your's goto https://www.pexels.com/api/documentation and create account for free.|
-|query|string||null|Optional, the search query, Example Ocean, Tigers, Pears, etc.|
-|orientation|string||null|Optional, Desired photo orientation. The current supported orientations are landscape, portrait or square|
-|size|string||null|Optional, Minimum photo size. The current supported sizes are large(24MP), medium(12MP) or small(4MP).|
-|color|string||null|Optional, Desired photo color. Supported colors red, orange, yellow, green, turquoise, blue, violet, pink, brown, black, gray, white or any hexidecimal color code.|
-|locale|string||null|Optional, The locale of the search you are performing. The current supported locales are 'en-US' 'pt-BR' 'es-ES' 'ca-ES' 'de-DE' 'it-IT' 'fr-FR' 'sv-SE' 'id-ID' 'pl-PL' 'ja-JP' 'zh-TW' 'zh-CN' 'ko-KR' 'th-TH' 'nl-NL' 'hu-HU' 'vi-VN' 'cs-CZ' 'da-DK' 'fi-FI' 'uk-UA' 'el-GR' 'ro-RO' 'nb-NO' 'sk-SK' 'tr-TR' 'ru-RU'.|
+|api_key |string||null|API key is required to access pexels api, For getting your's goto https://www.pexels.com/api/documentation and create account for free.|
+|query |string||null|Optional, the search query, Example Ocean, Tigers, Pears, etc.|
+|orientation |string||null|Optional, Desired photo orientation. The current supported orientations are landscape, portrait or square|
+|size |string||null|Optional, Minimum photo size. The current supported sizes are large(24MP), medium(12MP) or small(4MP).|
+|color |string||null|Optional, Desired photo color. Supported colors red, orange, yellow, green, turquoise, blue, violet, pink, brown, black, gray, white or any hexidecimal color code.|
+|locale |string||null|Optional, The locale of the search you are performing. The current supported locales are 'en-US' 'pt-BR' 'es-ES' 'ca-ES' 'de-DE' 'it-IT' 'fr-FR' 'sv-SE' 'id-ID' 'pl-PL' 'ja-JP' 'zh-TW' 'zh-CN' 'ko-KR' 'th-TH' 'nl-NL' 'hu-HU' 'vi-VN' 'cs-CZ' 'da-DK' 'fi-FI' 'uk-UA' 'el-GR' 'ro-RO' 'nb-NO' 'sk-SK' 'tr-TR' 'ru-RU'.|
 
 # Pexels Api Source
 

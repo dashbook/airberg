@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|base_url|string||null|The Authentication API is served over HTTPS. All URLs referenced in the documentation have the following base `https://YOUR_DOMAIN`|
-|credentials|object||null||
-|credentials.0.auth_type|string|oauth2_confidential_application|null||
-|credentials.0.client_id|string||null|Your application's Client ID. You can find this value on the <a href="https://manage.auth0.com/#/applications">application's settings tab</a> after you login the admin portal.|
-|credentials.0.client_secret|string||null|Your application's Client Secret. You can find this value on the <a href="https://manage.auth0.com/#/applications">application's settings tab</a> after you login the admin portal.|
-|credentials.0.audience|string||null|The audience for the token, which is your API. You can find this in the Identifier field on your  <a href="https://manage.auth0.com/#/apis">API's settings tab</a>|
-|credentials.1.auth_type|string|oauth2_access_token|null||
-|credentials.1.access_token|string||null|Also called <a href="https://auth0.com/docs/secure/tokens/access-tokens/get-management-api-access-tokens-for-testing">API Access Token </a> The access token used to call the Auth0 Management API Token. It's a JWT that contains specific grant permissions knowns as scopes.|
+|base_url |string||null|The Authentication API is served over HTTPS. All URLs referenced in the documentation have the following base `https://YOUR_DOMAIN`|
+|credentials.auth_type 0|string|oauth2_confidential_application|null||
+|credentials.client_id 0|string||null|Your application's Client ID. You can find this value on the <a href="https://manage.auth0.com/#/applications">application's settings tab</a> after you login the admin portal.|
+|credentials.client_secret 0|string||null|Your application's Client Secret. You can find this value on the <a href="https://manage.auth0.com/#/applications">application's settings tab</a> after you login the admin portal.|
+|credentials.audience 0|string||null|The audience for the token, which is your API. You can find this in the Identifier field on your  <a href="https://manage.auth0.com/#/apis">API's settings tab</a>|
+|credentials.auth_type 1|string|oauth2_access_token|null||
+|credentials.access_token 1|string||null|Also called <a href="https://auth0.com/docs/secure/tokens/access-tokens/get-management-api-access-tokens-for-testing">API Access Token </a> The access token used to call the Auth0 Management API Token. It's a JWT that contains specific grant permissions knowns as scopes.|
 
 # Auth0 Source
 

@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Courier API Key to retrieve your data.|
+|api_key |string||null|Courier API Key to retrieve your data.|
 
 # Courier Source
 

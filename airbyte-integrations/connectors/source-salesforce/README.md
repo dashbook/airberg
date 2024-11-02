@@ -1,35 +1,33 @@
 # Source salesforce
 
 ## Example
-```json
 {
   "is_sandbox": false,
   "auth_type": "Client",
-  "client_id": "your_client_id",
-  "client_secret": "your_client_secret",
-  "refresh_token": "your_refresh_token",
+  "client_id": "1234567890",
+  "client_secret": "password123",
+  "refresh_token": "abcde12345",
   "start_date": "2021-07-25",
   "streams_criteria": [
     {
       "criteria": "contains",
-      "value": "your_search_value"
+      "value": "test"
     }
   ]
 }
-```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|is_sandbox|boolean||false|Toggle if you're using a <a href="https://help.salesforce.com/s/articleView?id=sf.deploy_sandboxes_parent.htm&type=5">Salesforce Sandbox</a>|
-|auth_type|string|Client|null||
-|client_id|string||null|Enter your Salesforce developer application's <a href="https://developer.salesforce.com/forums/?id=9062I000000DLgbQAG">Client ID</a>|
-|client_secret|string||null|Enter your Salesforce developer application's <a href="https://developer.salesforce.com/forums/?id=9062I000000DLgbQAG">Client secret</a>|
-|refresh_token|string||null|Enter your application's <a href="https://developer.salesforce.com/docs/atlas.en-us.mobile_sdk.meta/mobile_sdk/oauth_refresh_token_flow.htm">Salesforce Refresh Token</a> used for Airbyte to access your Salesforce account.|
-|start_date|string||null|Enter the date in the YYYY-MM-DD format. Airbyte will replicate the data added on and after this date. If this field is blank, Airbyte will replicate the data for last two years.|
-|streams_criteria|array||null|Filter streams relevant to you|
-|streams_criteria.items.criteria|string||contains||
-|streams_criteria.items.value|string||null||
+|is_sandbox |boolean||false|Toggle if you're using a <a href="https://help.salesforce.com/s/articleView?id=sf.deploy_sandboxes_parent.htm&type=5">Salesforce Sandbox</a>|
+|auth_type |string|Client|null||
+|client_id |string||null|Enter your Salesforce developer application's <a href="https://developer.salesforce.com/forums/?id=9062I000000DLgbQAG">Client ID</a>|
+|client_secret |string||null|Enter your Salesforce developer application's <a href="https://developer.salesforce.com/forums/?id=9062I000000DLgbQAG">Client secret</a>|
+|refresh_token |string||null|Enter your application's <a href="https://developer.salesforce.com/docs/atlas.en-us.mobile_sdk.meta/mobile_sdk/oauth_refresh_token_flow.htm">Salesforce Refresh Token</a> used for Airbyte to access your Salesforce account.|
+|start_date |string||null|Enter the date in the YYYY-MM-DD format. Airbyte will replicate the data added on and after this date. If this field is blank, Airbyte will replicate the data for last two years.|
+|streams_criteria |array||null|Filter streams relevant to you|
+|streams_criteria.items.criteria |string||contains||
+|streams_criteria.items.value |string||null||
 
 # Salesforce Source
 

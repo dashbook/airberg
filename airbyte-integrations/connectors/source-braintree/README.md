@@ -3,22 +3,22 @@
 ## Example
 ```json
 {
-  "merchant_id": "abc123",
-  "public_key": "xyz456",
-  "private_key": "super_secret_key",
-  "start_date": "2020-12-30T00:00:00Z",
-  "environment": "sandbox"
+  "merchant_id": "merchant123",
+  "public_key": "publicKey123",
+  "private_key": "privateKey123",
+  "start_date": "2020-01-01T00:00:00Z",
+  "environment": "production"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|merchant_id|string||null|The unique identifier for your entire gateway account. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this ID.|
-|public_key|string||null|Braintree Public Key. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this key.|
-|private_key|string||null|Braintree Private Key. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this key.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|environment|string||null|Environment specifies where the data will come from.|
+|merchant_id |string||null|The unique identifier for your entire gateway account. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this ID.|
+|public_key |string||null|Braintree Public Key. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this key.|
+|private_key |string||null|Braintree Private Key. See the <a href="https://docs.airbyte.com/integrations/sources/braintree">docs</a> for more information on how to obtain this key.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|environment |string||null|Environment specifies where the data will come from.|
 
 # Braintree Source
 

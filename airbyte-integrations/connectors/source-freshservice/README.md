@@ -1,10 +1,10 @@
 # Source freshservice
 
 ## Example
-```json
+```
 {
   "domain_name": "mydomain.freshservice.com",
-  "api_key": "1234567890abcdef",
+  "api_key": "abcdefghijklmnopqrstuvwxyz",
   "start_date": "2020-10-01T00:00:00Z"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain_name|string||null|The name of your Freshservice domain|
-|api_key|string||null|Freshservice API Key. See <a href="https://api.freshservice.com/#authentication">here</a>. The key is case sensitive.|
-|start_date|string||null|UTC date and time in the format 2020-10-01T00:00:00Z. Any data before this date will not be replicated.|
+|domain_name |string||null|The name of your Freshservice domain|
+|api_key |string||null|Freshservice API Key. See <a href="https://api.freshservice.com/#authentication">here</a>. The key is case sensitive.|
+|start_date |string||null|UTC date and time in the format 2020-10-01T00:00:00Z. Any data before this date will not be replicated.|
 
 # Freshservice Source
 

@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|url|string||null|RSS Feed URL|
+|url |string||null|RSS Feed URL|
 
 # RSS Source
 

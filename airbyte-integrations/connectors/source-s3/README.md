@@ -3,66 +3,101 @@
 ## Example
 ```json
 {
-  "dataset": "test_dataset",
+  "dataset": "example_stream",
   "path_pattern": "**",
   "format": {
-    "filetype": "csv",
-    "delimiter": ",",
-    "infer_datatypes": true,
-    "quote_char": "\"",
-    "escape_char": "",
-    "encoding": "utf8",
-    "double_quote": true,
-    "newlines_in_values": false,
-    "additional_reader_options": "{\"timestamp_parsers\": [\"%m/%d/%Y %H:%M\", \"%Y/%m/%d %H:%M\"], \"strings_can_be_null\": true, \"null_values\": [\"NA\", \"NULL\"]}",
-    "advanced_options": "{\"column_names\": [\"column1\", \"column2\"]}",
-    "block_size": 10000
+    "type": "object",
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "filetype": {"const": "csv"},
+          "delimiter": { "default": ",", "type": "string" },
+          "infer_datatypes": { "default": true, "type": "boolean" },
+          "quote_char": { "default": "\"", "type": "string" },
+          "escape_char": { "type": "string" },
+          "encoding": { "default": "utf8", "type": "string" },
+          "double_quote": { "default": true, "type": "boolean" },
+          "newlines_in_values": { "default": false, "type": "boolean" },
+          "additional_reader_options": { "type": "string" },
+          "advanced_options": { "type": "string" },
+          "block_size": { "default": 10000, "type": "integer" }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "filetype": {"const": "parquet"},
+          "columns": { "type": "array", "items": { "type": "string" } },
+          "batch_size": { "default": 65536, "type": "integer" },
+          "buffer_size": { "default": 2, "type": "integer" }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "filetype": {"const": "avro"}
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "filetype": {"const": "jsonl"},
+          "newlines_in_values": { "default": false, "type": "boolean" },
+          "unexpected_field_behavior": { "default": "infer", "enum": ["ignore", "infer", "error"] },
+          "block_size": { "default": 0, "type": "integer" }
+        }
+      }
+    ]
   },
+  "schema": { "type": "string" },
   "provider": {
-    "bucket": "my_bucket",
-    "aws_access_key_id": "my_access_key_id",
-    "aws_secret_access_key": "my_secret_access_key",
-    "path_prefix": "my_folder",
-    "endpoint": "",
-    "start_date": "2021-01-01T00:00:00Z"
-  },
-  "schema": "{}"
+    "type": "object",
+    "properties": {
+      "bucket": { "type": "string" },
+      "aws_access_key_id": { "type": "string" },
+      "aws_secret_access_key": { "type": "string" },
+      "path_prefix": { "default": "", "type": "string" },
+      "endpoint": { "default": "", "type": "string" },
+      "start_date": { "format": "date-time", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$", "type": "string" }
+    },
+    "required": ["bucket"]
+  }
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|dataset|string||null|The name of the stream you would like this source to output. Can contain letters, numbers, or underscores.|
-|path_pattern|string||null|A regular expression which tells the connector which files to replicate. All files which match this pattern will be replicated. Use | to separate multiple patterns. See <a href="https://facelessuser.github.io/wcmatch/glob/" target="_blank">this page</a> to understand pattern syntax (GLOBSTAR and SPLIT flags are enabled). Use pattern <strong>**</strong> to pick up all files.|
-|format|object||csv|The format of the files you'd like to replicate|
-|schema|string||{}|Optionally provide a schema to enforce, as a valid JSON string. Ensure this is a mapping of <strong>{ "column" : "type" }</strong>, where types are valid <a href="https://json-schema.org/understanding-json-schema/reference/type.html" target="_blank">JSON Schema datatypes</a>. Leave as {} to auto-infer the schema.|
-|format.0.filetype|string|csv|null||
-|format.0.delimiter|string||,|The character delimiting individual cells in the CSV data. This may only be a 1-character string. For tab-delimited data enter '\t'.|
-|format.0.infer_datatypes|boolean||true|Configures whether a schema for the source should be inferred from the current data or not. If set to false and a custom schema is set, then the manually enforced schema is used. If a schema is not manually set, and this is set to false, then all fields will be read as strings|
-|format.0.quote_char|string||"|The character used for quoting CSV values. To disallow quoting, make this field blank.|
-|format.0.escape_char|string||null|The character used for escaping special characters. To disallow escaping, leave this field blank.|
-|format.0.encoding|string||utf8|The character encoding of the CSV data. Leave blank to default to <strong>UTF8</strong>. See <a href="https://docs.python.org/3/library/codecs.html#standard-encodings" target="_blank">list of python encodings</a> for allowable options.|
-|format.0.double_quote|boolean||true|Whether two quotes in a quoted CSV value denote a single quote in the data.|
-|format.0.newlines_in_values|boolean||false|Whether newline characters are allowed in CSV values. Turning this on may affect performance. Leave blank to default to False.|
-|format.0.additional_reader_options|string||null|Optionally add a valid JSON string here to provide additional options to the csv reader. Mappings must correspond to options <a href="https://arrow.apache.org/docs/python/generated/pyarrow.csv.ConvertOptions.html#pyarrow.csv.ConvertOptions" target="_blank">detailed here</a>. 'column_types' is used internally to handle schema so overriding that would likely cause problems.|
-|format.0.advanced_options|string||null|Optionally add a valid JSON string here to provide additional <a href="https://arrow.apache.org/docs/python/generated/pyarrow.csv.ReadOptions.html#pyarrow.csv.ReadOptions" target="_blank">Pyarrow ReadOptions</a>. Specify 'column_names' here if your CSV doesn't have header, or if you want to use custom column names. 'block_size' and 'encoding' are already used above, specify them again here will override the values above.|
-|format.0.block_size|integer||10000|The chunk size in bytes to process at a time in memory from each file. If your data is particularly wide and failing during schema detection, increasing this should solve it. Beware of raising this too high as you could hit OOM errors.|
-|format.1.filetype|string|parquet|null||
-|format.1.columns|array||null|If you only want to sync a subset of the columns from the file(s), add the columns you want here as a comma-delimited list. Leave it empty to sync all columns.|
-|format.1.batch_size|integer||65536|Maximum number of records per batch read from the input files. Batches may be smaller if there aren’t enough rows in the file. This option can help avoid out-of-memory errors if your data is particularly wide.|
-|format.1.buffer_size|integer||2|Perform read buffering when deserializing individual column chunks. By default every group column will be loaded fully to memory. This option can help avoid out-of-memory errors if your data is particularly wide.|
-|format.2.filetype|string|avro|null||
-|format.3.filetype|string|jsonl|null||
-|format.3.newlines_in_values|boolean||false|Whether newline characters are allowed in JSON values. Turning this on may affect performance. Leave blank to default to False.|
-|format.3.unexpected_field_behavior|||infer|How JSON fields outside of explicit_schema (if given) are treated. Check <a href="https://arrow.apache.org/docs/python/generated/pyarrow.json.ParseOptions.html" target="_blank">PyArrow documentation</a> for details|
-|format.3.block_size|integer||0|The chunk size in bytes to process at a time in memory from each file. If your data is particularly wide and failing during schema detection, increasing this should solve it. Beware of raising this too high as you could hit OOM errors.|
-|provider.bucket|string||null|Name of the S3 bucket where the file(s) exist.|
-|provider.aws_access_key_id|string||null|In order to access private Buckets stored on AWS S3, this connector requires credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
-|provider.aws_secret_access_key|string||null|In order to access private Buckets stored on AWS S3, this connector requires credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
-|provider.path_prefix|string|||By providing a path-like prefix (e.g. myFolder/thisTable/) under which all the relevant files sit, we can optimize finding these in S3. This is optional but recommended if your bucket contains many folders/files which you don't need to replicate.|
-|provider.endpoint|string|||Endpoint to an S3 compatible service. Leave empty to use AWS.|
-|provider.start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any file modified before this date will not be replicated.|
+|dataset |string||null|The name of the stream you would like this source to output. Can contain letters, numbers, or underscores.|
+|path_pattern |string||null|A regular expression which tells the connector which files to replicate. All files which match this pattern will be replicated. Use | to separate multiple patterns. See <a href="https://facelessuser.github.io/wcmatch/glob/" target="_blank">this page</a> to understand pattern syntax (GLOBSTAR and SPLIT flags are enabled). Use pattern <strong>**</strong> to pick up all files.|
+|schema |string||{}|Optionally provide a schema to enforce, as a valid JSON string. Ensure this is a mapping of <strong>{ "column" : "type" }</strong>, where types are valid <a href="https://json-schema.org/understanding-json-schema/reference/type.html" target="_blank">JSON Schema datatypes</a>. Leave as {} to auto-infer the schema.|
+|format.filetype 0|string|csv|null||
+|format.delimiter 0|string||,|The character delimiting individual cells in the CSV data. This may only be a 1-character string. For tab-delimited data enter '\t'.|
+|format.infer_datatypes 0|boolean||true|Configures whether a schema for the source should be inferred from the current data or not. If set to false and a custom schema is set, then the manually enforced schema is used. If a schema is not manually set, and this is set to false, then all fields will be read as strings|
+|format.quote_char 0|string||"|The character used for quoting CSV values. To disallow quoting, make this field blank.|
+|format.escape_char 0|string||null|The character used for escaping special characters. To disallow escaping, leave this field blank.|
+|format.encoding 0|string||utf8|The character encoding of the CSV data. Leave blank to default to <strong>UTF8</strong>. See <a href="https://docs.python.org/3/library/codecs.html#standard-encodings" target="_blank">list of python encodings</a> for allowable options.|
+|format.double_quote 0|boolean||true|Whether two quotes in a quoted CSV value denote a single quote in the data.|
+|format.newlines_in_values 0|boolean||false|Whether newline characters are allowed in CSV values. Turning this on may affect performance. Leave blank to default to False.|
+|format.additional_reader_options 0|string||null|Optionally add a valid JSON string here to provide additional options to the csv reader. Mappings must correspond to options <a href="https://arrow.apache.org/docs/python/generated/pyarrow.csv.ConvertOptions.html#pyarrow.csv.ConvertOptions" target="_blank">detailed here</a>. 'column_types' is used internally to handle schema so overriding that would likely cause problems.|
+|format.advanced_options 0|string||null|Optionally add a valid JSON string here to provide additional <a href="https://arrow.apache.org/docs/python/generated/pyarrow.csv.ReadOptions.html#pyarrow.csv.ReadOptions" target="_blank">Pyarrow ReadOptions</a>. Specify 'column_names' here if your CSV doesn't have header, or if you want to use custom column names. 'block_size' and 'encoding' are already used above, specify them again here will override the values above.|
+|format.block_size 0|integer||10000|The chunk size in bytes to process at a time in memory from each file. If your data is particularly wide and failing during schema detection, increasing this should solve it. Beware of raising this too high as you could hit OOM errors.|
+|format.filetype 1|string|parquet|null||
+|format.columns 1|array||null|If you only want to sync a subset of the columns from the file(s), add the columns you want here as a comma-delimited list. Leave it empty to sync all columns.|
+|format.batch_size 1|integer||65536|Maximum number of records per batch read from the input files. Batches may be smaller if there aren’t enough rows in the file. This option can help avoid out-of-memory errors if your data is particularly wide.|
+|format.buffer_size 1|integer||2|Perform read buffering when deserializing individual column chunks. By default every group column will be loaded fully to memory. This option can help avoid out-of-memory errors if your data is particularly wide.|
+|format.filetype 2|string|avro|null||
+|format.filetype 3|string|jsonl|null||
+|format.newlines_in_values 3|boolean||false|Whether newline characters are allowed in JSON values. Turning this on may affect performance. Leave blank to default to False.|
+|format.unexpected_field_behavior 3|||infer|How JSON fields outside of explicit_schema (if given) are treated. Check <a href="https://arrow.apache.org/docs/python/generated/pyarrow.json.ParseOptions.html" target="_blank">PyArrow documentation</a> for details|
+|format.block_size 3|integer||0|The chunk size in bytes to process at a time in memory from each file. If your data is particularly wide and failing during schema detection, increasing this should solve it. Beware of raising this too high as you could hit OOM errors.|
+|provider.bucket |string||null|Name of the S3 bucket where the file(s) exist.|
+|provider.aws_access_key_id |string||null|In order to access private Buckets stored on AWS S3, this connector requires credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
+|provider.aws_secret_access_key |string||null|In order to access private Buckets stored on AWS S3, this connector requires credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
+|provider.path_prefix |string|||By providing a path-like prefix (e.g. myFolder/thisTable/) under which all the relevant files sit, we can optimize finding these in S3. This is optional but recommended if your bucket contains many folders/files which you don't need to replicate.|
+|provider.endpoint |string|||Endpoint to an S3 compatible service. Leave empty to use AWS.|
+|provider.start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any file modified before this date will not be replicated.|
 
 # S3 Source
 

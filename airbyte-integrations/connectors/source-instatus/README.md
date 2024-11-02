@@ -1,16 +1,16 @@
 # Source instatus
 
 ## Example
-```
+```json
 {
-  "api_key": "your_instatus_api_key_here"
+  "api_key": "your_api_key_here"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Instatus REST API key|
+|api_key |string||null|Instatus REST API key|
 
 # Instatus Source
 

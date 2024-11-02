@@ -1,10 +1,10 @@
 # Source railz
 
 ## Example
-```
+```json
 {
-  "client_id": "client123",
-  "secret_key": "secret456",
+  "client_id": "my_client_id",
+  "secret_key": "my_secret_key",
   "start_date": "2022-01-01"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|client_id|string||null|Client ID (client_id)|
-|secret_key|string||null|Secret key (secret_key)|
-|start_date|string||null|Start date|
+|client_id |string||null|Client ID (client_id)|
+|secret_key |string||null|Secret key (secret_key)|
+|start_date |string||null|Start date|
 
 # Railz Source
 

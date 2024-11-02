@@ -3,10 +3,11 @@
 ## Example
 ```
 {
-  "api_key": "my_secret_key",
+  "api_key": "your_api_key_here",
   "concept_tags": true,
-  "count": 50,
-  "start_date": "2022-10-20",
+  "count": 5,
+  "start_date": "2022-01-01",
+  "end_date": "2022-01-31",
   "thumbs": true
 }
 ```
@@ -14,12 +15,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API access key used to retrieve data from the NASA APOD API.|
-|concept_tags|boolean||false|Indicates whether concept tags should be returned with the rest of the response.  The concept tags are not necessarily included in the explanation, but rather derived from common search tags that are associated with the description text. (Better than just pure text search.) Defaults to False.|
-|count|integer||null|A positive integer, no greater than 100. If this is specified then `count` randomly  chosen images will be returned in a JSON array. Cannot be used in conjunction with  `date` or `start_date` and `end_date`.|
-|start_date|string||null|Indicates the start of a date range. All images in the range from `start_date` to  `end_date` will be returned in a JSON array. Must be after 1995-06-16, the first day an APOD picture was posted. There are no images for tomorrow available through this API.|
-|end_date|string||null|Indicates that end of a date range. If `start_date` is specified without an `end_date` then `end_date` defaults to the current date.|
-|thumbs|boolean||false|Indicates whether the API should return a thumbnail image URL for video files. If set to True, the API returns URL of video thumbnail. If an APOD is not a video, this parameter is ignored.|
+|api_key |string||null|API access key used to retrieve data from the NASA APOD API.|
+|concept_tags |boolean||false|Indicates whether concept tags should be returned with the rest of the response.  The concept tags are not necessarily included in the explanation, but rather derived from common search tags that are associated with the description text. (Better than just pure text search.) Defaults to False.|
+|count |integer||null|A positive integer, no greater than 100. If this is specified then `count` randomly  chosen images will be returned in a JSON array. Cannot be used in conjunction with  `date` or `start_date` and `end_date`.|
+|start_date |string||null|Indicates the start of a date range. All images in the range from `start_date` to  `end_date` will be returned in a JSON array. Must be after 1995-06-16, the first day an APOD picture was posted. There are no images for tomorrow available through this API.|
+|end_date |string||null|Indicates that end of a date range. If `start_date` is specified without an `end_date` then `end_date` defaults to the current date.|
+|thumbs |boolean||false|Indicates whether the API should return a thumbnail image URL for video files. If set to True, the API returns URL of video thumbnail. If an APOD is not a video, this parameter is ignored.|
 
 # Nasa Source
 

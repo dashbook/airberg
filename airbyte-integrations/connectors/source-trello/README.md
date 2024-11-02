@@ -3,20 +3,20 @@
 ## Example
 ```
 {
-  "key": "your_api_key",
-  "token": "your_api_token",
+  "key": "1234567890abcdef",
+  "token": "my_trello_token",
   "start_date": "2021-03-01T00:00:00Z",
-  "board_ids": ["board_id_1", "board_id_2"]
+  "board_ids": ["1234567890abcdef", "fedcba0987654321"]
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|key|string||null|Trello API key. See the <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/#using-basic-oauth">docs</a> for instructions on how to generate it.|
-|token|string||null|Trello API token. See the <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/#using-basic-oauth">docs</a> for instructions on how to generate it.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|board_ids|array||null|IDs of the boards to replicate data from. If left empty, data from all boards to which you have access will be replicated.|
+|key |string||null|Trello API key. See the <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/#using-basic-oauth">docs</a> for instructions on how to generate it.|
+|token |string||null|Trello API token. See the <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/#using-basic-oauth">docs</a> for instructions on how to generate it.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|board_ids |array||null|IDs of the boards to replicate data from. If left empty, data from all boards to which you have access will be replicated.|
 
 # Trello Source
 

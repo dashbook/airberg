@@ -1,13 +1,13 @@
 # Source rd-station-marketing
 
 ## Example
-```
+```json
 {
   "authorization": {
     "auth_type": "Client",
-    "client_id": "client_id_value",
-    "client_secret": "client_secret_value",
-    "refresh_token": "refresh_token_value"
+    "client_id": "1234567890",
+    "client_secret": "abcdefghij",
+    "refresh_token": "abcdefghij"
   },
   "start_date": "2017-01-25T00:00:00Z"
 }
@@ -16,12 +16,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|authorization|object||null|Choose one of the possible authorization method|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. When specified and not None, then stream will behave as incremental|
-|authorization.0.auth_type|string|Client|null||
-|authorization.0.client_id|string||null|The Client ID of your RD Station developer application.|
-|authorization.0.client_secret|string||null|The Client Secret of your RD Station developer application|
-|authorization.0.refresh_token|string||null|The token for obtaining the new access token.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. When specified and not None, then stream will behave as incremental|
+|authorization.auth_type 0|string|Client|null||
+|authorization.client_id 0|string||null|The Client ID of your RD Station developer application.|
+|authorization.client_secret 0|string||null|The Client Secret of your RD Station developer application|
+|authorization.refresh_token 0|string||null|The token for obtaining the new access token.|
 
 # RD Station Marketing Source
 

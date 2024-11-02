@@ -1,22 +1,22 @@
 # Source younium
 
 ## Example
-```
+```json
 {
-  "username": "example_username",
+  "username": "example_user",
   "password": "example_password",
   "legal_entity": "example_legal_entity",
-  "playground": true
+  "playground": false
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|username|string||null|Username for Younium account|
-|password|string||null|Account password for younium account API key|
-|legal_entity|string||null|Legal Entity that data should be pulled from|
-|playground|boolean||false|Property defining if connector is used against playground or production environment|
+|username |string||null|Username for Younium account|
+|password |string||null|Account password for younium account API key|
+|legal_entity |string||null|Legal Entity that data should be pulled from|
+|playground |boolean||false|Property defining if connector is used against playground or production environment|
 
 # Younium Source
 

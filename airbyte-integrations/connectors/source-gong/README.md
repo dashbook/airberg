@@ -3,18 +3,18 @@
 ## Example
 ```json
 {
-  "access_key": "my_access_key",
-  "access_key_secret": "my_access_key_secret",
-  "start_date": "2022-01-01T00:00:00Z"
+  "access_key": "YOUR_ACCESS_KEY",
+  "access_key_secret": "YOUR_ACCESS_KEY_SECRET",
+  "start_date": "2018-02-18T08:00:00Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_key|string||null|Gong Access Key|
-|access_key_secret|string||null|Gong Access Key Secret|
-|start_date|string||null|The date from which to list calls, in the ISO-8601 format; if not specified, the calls start with the earliest recorded call. For web-conference calls recorded by Gong, the date denotes its scheduled time, otherwise, it denotes its actual start time.|
+|access_key |string||null|Gong Access Key|
+|access_key_secret |string||null|Gong Access Key Secret|
+|start_date |string||null|The date from which to list calls, in the ISO-8601 format; if not specified, the calls start with the earliest recorded call. For web-conference calls recorded by Gong, the date denotes its scheduled time, otherwise, it denotes its actual start time.|
 
 # Gong Source
 

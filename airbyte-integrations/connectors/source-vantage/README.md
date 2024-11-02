@@ -3,14 +3,14 @@
 ## Example
 ```json
 {
-  "access_token": "your_api_access_token"
+  "access_token": "your_secret_api_access_token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Your API Access token. See <a href="https://vantage.readme.io/reference/authentication">here</a>.|
+|access_token |string||null|Your API Access token. See <a href="https://vantage.readme.io/reference/authentication">here</a>.|
 
 # Vantage Source Test
 

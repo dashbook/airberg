@@ -9,13 +9,12 @@
     "connection_type": "service_name",
     "service_name": "my_service"
   },
-  "username": "my_user",
+  "username": "my_username",
   "password": "my_password",
   "schemas": ["my_schema"],
-  "jdbc_url_params": "param1=value1&param2=value2",
+  "jdbc_url_params": "key1=value1&key2=value2",
   "encryption": {
-    "encryption_method": "encrypted_verify_certificate",
-    "ssl_certificate": "-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----"
+    "encryption_method": "unencrypted"
   }
 }
 ```
@@ -23,26 +22,29 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the database.|
-|port|integer||1521|Port of the database.
+|host |string||null|Hostname of the database.|
+|port |integer||1521|Port of the database.
 Oracle Corporations recommends the following port numbers:
 1521 - Default listening port for client connections to the listener. 
 2484 - Recommended and officially registered listening port for client connections to the listener using TCP/IP with SSL|
-|connection_data|object||null|Connect data that will be used for DB connection|
-|username|string||null|The username which is used to access the database.|
-|password|string||null|The password associated with the username.|
-|schemas|array||null|The list of schemas to sync from. Defaults to user. Case sensitive.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3).|
-|encryption|object||null|The encryption method with is used when communicating with the database.|
-|connection_data.0.connection_type|string|service_name|null||
-|connection_data.0.service_name|string||null||
-|connection_data.1.connection_type|string|sid|null||
-|connection_data.1.sid|string||null||
-|encryption.0.encryption_method|string|unencrypted|null||
-|encryption.1.encryption_method|string|client_nne|null||
-|encryption.1.encryption_algorithm|string||AES256|This parameter defines what encryption algorithm is used.|
-|encryption.2.encryption_method|string|encrypted_verify_certificate|null||
-|encryption.2.ssl_certificate|string||null|Privacy Enhanced Mail (PEM) files are concatenated certificate containers frequently used in certificate installations.|
+|username |string||null|The username which is used to access the database.|
+|password |string||null|The password associated with the username.|
+|schemas |array||null|The list of schemas to sync from. Defaults to user. Case sensitive.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (example: key1=value1&key2=value2&key3=value3).|
+|connection_data |||null|Use service name|
+|connection_data |||null|Use SID (Oracle System Identifier)|
+|connection_data.connection_type 0|string|service_name|null||
+|connection_data.service_name 0|string||null||
+|connection_data.connection_type 1|string|sid|null||
+|connection_data.sid 1|string||null||
+|encryption |||null|Data transfer will not be encrypted.|
+|encryption |||null|The native network encryption gives you the ability to encrypt database connections, without the configuration overhead of TCP/IP and SSL/TLS and without the need to open and listen on different ports.|
+|encryption |||null|Verify and use the certificate provided by the server.|
+|encryption.encryption_method 0|string|unencrypted|null||
+|encryption.encryption_method 1|string|client_nne|null||
+|encryption.encryption_algorithm 1|string||AES256|This parameter defines what encryption algorithm is used.|
+|encryption.encryption_method 2|string|encrypted_verify_certificate|null||
+|encryption.ssl_certificate 2|string||null|Privacy Enhanced Mail (PEM) files are concatenated certificate containers frequently used in certificate installations.|
 
 # Oracle Source
 

@@ -1,54 +1,61 @@
 # Source file
 
 ## Example
-```
+```json
 {
   "dataset_name": "example_dataset",
   "format": "csv",
+  "reader_options": "{\"sep\": \"\t\"}",
   "url": "https://example.com/data.csv",
   "provider": {
     "storage": "HTTPS",
     "user_agent": true
-  },
-  "reader_options": "{\"sep\": \" \"}"
+  }
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|dataset_name|string||null|The Name of the final table to replicate this file into (should include letters, numbers dash and underscores only).|
-|format|string||csv|The Format of the file which should be replicated (Warning: some formats may be experimental, please refer to the docs).|
-|reader_options|string||null|This should be a string in JSON format. It depends on the chosen file format to provide additional options and tune its behavior.|
-|url|string||null|The URL path to access the file which should be replicated.|
-|provider|object||Public Web|The storage Provider or Location of the file(s) which should be replicated.|
-|provider.0.storage|string|HTTPS|null||
-|provider.0.user_agent|boolean||false|Add User-Agent to request|
-|provider.1.storage|string|GCS|null||
-|provider.1.service_account_json|string||null|In order to access private Buckets stored on Google Cloud, this connector would need a service account json credentials with the proper permissions as described <a href="https://cloud.google.com/iam/docs/service-accounts" target="_blank">here</a>. Please generate the credentials.json file and copy/paste its content to this field (expecting JSON formats). If accessing publicly available data, this field is not necessary.|
-|provider.2.storage|string|S3|null||
-|provider.2.aws_access_key_id|string||null|In order to access private Buckets stored on AWS S3, this connector would need credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
-|provider.2.aws_secret_access_key|string||null|In order to access private Buckets stored on AWS S3, this connector would need credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
-|provider.3.storage|string|AzBlob|null||
-|provider.3.storage_account|string||null|The globally unique name of the storage account that the desired blob sits within. See <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">here</a> for more details.|
-|provider.3.sas_token|string||null|To access Azure Blob Storage, this connector would need credentials with the proper permissions. One option is a SAS (Shared Access Signature) token. If accessing publicly available data, this field is not necessary.|
-|provider.3.shared_key|string||null|To access Azure Blob Storage, this connector would need credentials with the proper permissions. One option is a storage account shared key (aka account key or access key). If accessing publicly available data, this field is not necessary.|
-|provider.4.storage|string|SSH|null||
-|provider.4.user|string||null||
-|provider.4.password|string||null||
-|provider.4.host|string||null||
-|provider.4.port|string||22||
-|provider.5.storage|string|SCP|null||
-|provider.5.user|string||null||
-|provider.5.password|string||null||
-|provider.5.host|string||null||
-|provider.5.port|string||22||
-|provider.6.storage|string|SFTP|null||
-|provider.6.user|string||null||
-|provider.6.password|string||null||
-|provider.6.host|string||null||
-|provider.6.port|string||22||
-|provider.7.storage|string|local|null|WARNING: Note that the local storage URL available for reading must start with the local mount "/local/" at the moment until we implement more advanced docker mounting options.|
+|dataset_name |string||null|The Name of the final table to replicate this file into (should include letters, numbers dash and underscores only).|
+|format |string||csv|The Format of the file which should be replicated (Warning: some formats may be experimental, please refer to the docs).|
+|reader_options |string||null|This should be a string in JSON format. It depends on the chosen file format to provide additional options and tune its behavior.|
+|url |string||null|The URL path to access the file which should be replicated.|
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider |||null||
+|provider.storage 0|string|HTTPS|null||
+|provider.user_agent 0|boolean||false|Add User-Agent to request|
+|provider.storage 1|string|GCS|null||
+|provider.service_account_json 1|string||null|In order to access private Buckets stored on Google Cloud, this connector would need a service account json credentials with the proper permissions as described <a href="https://cloud.google.com/iam/docs/service-accounts" target="_blank">here</a>. Please generate the credentials.json file and copy/paste its content to this field (expecting JSON formats). If accessing publicly available data, this field is not necessary.|
+|provider.storage 2|string|S3|null||
+|provider.aws_access_key_id 2|string||null|In order to access private Buckets stored on AWS S3, this connector would need credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
+|provider.aws_secret_access_key 2|string||null|In order to access private Buckets stored on AWS S3, this connector would need credentials with the proper permissions. If accessing publicly available data, this field is not necessary.|
+|provider.storage 3|string|AzBlob|null||
+|provider.storage_account 3|string||null|The globally unique name of the storage account that the desired blob sits within. See <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">here</a> for more details.|
+|provider.sas_token 3|string||null|To access Azure Blob Storage, this connector would need credentials with the proper permissions. One option is a SAS (Shared Access Signature) token. If accessing publicly available data, this field is not necessary.|
+|provider.shared_key 3|string||null|To access Azure Blob Storage, this connector would need credentials with the proper permissions. One option is a storage account shared key (aka account key or access key). If accessing publicly available data, this field is not necessary.|
+|provider.storage 4|string|SSH|null||
+|provider.user 4|string||null||
+|provider.password 4|string||null||
+|provider.host 4|string||null||
+|provider.port 4|string||22||
+|provider.storage 5|string|SCP|null||
+|provider.user 5|string||null||
+|provider.password 5|string||null||
+|provider.host 5|string||null||
+|provider.port 5|string||22||
+|provider.storage 6|string|SFTP|null||
+|provider.user 6|string||null||
+|provider.password 6|string||null||
+|provider.host 6|string||null||
+|provider.port 6|string||22||
+|provider.storage 7|string|local|null|WARNING: Note that the local storage URL available for reading must start with the local mount "/local/" at the moment until we implement more advanced docker mounting options.|
 
 # File Source 
 

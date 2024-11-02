@@ -1,10 +1,10 @@
 # Source callrail
 
 ## Example
-```json
+```
 {
-  "api_key": "your_api_key_here",
-  "account_id": "your_account_id_here",
+  "api_key": "secret_api_key",
+  "account_id": "1234567890",
   "start_date": "2022-01-01"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API access key|
-|account_id|string||null|Account ID|
-|start_date|string||null|Start getting data from that date.|
+|api_key |string||null|API access key|
+|account_id |string||null|Account ID|
+|start_date |string||null|Start getting data from that date.|
 
 # Callrail Source
 

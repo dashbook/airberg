@@ -1,24 +1,24 @@
 # Source gocardless
 
 ## Example
-```
+```json
 {
   "access_token": "live_1234567890",
   "gocardless_environment": "live",
   "gocardless_version": "2022-01-01",
-  "start_date": "2020-01-01T00:00:00Z"
+  "start_date": "2022-01-01T00:00:00Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Gocardless API TOKEN|
-|gocardless_environment|string||sandbox|Environment you are trying to connect to.|
-|gocardless_version|string||null|GoCardless version. This is a date. You can find the latest here: 
+|access_token |string||null|Gocardless API TOKEN|
+|gocardless_environment |string||sandbox|Environment you are trying to connect to.|
+|gocardless_version |string||null|GoCardless version. This is a date. You can find the latest here: 
 https://developer.gocardless.com/api-reference/#api-usage-making-requests
 |
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data
 before this date will not be replicated.
 |
 

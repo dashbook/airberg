@@ -3,7 +3,7 @@
 ## Example
 ```
 {
-  "api_key": "your_api_key_here",
+  "api_key": "1234567890abcdef",
   "start_date": "2022-01-01T00:00:00Z",
   "interval": "month"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Your Chartmogul API key. See <a href="https://help.chartmogul.com/hc/en-us/articles/4407796325906-Creating-and-Managing-API-keys#creating-an-api-key"> the docs </a> for info on how to obtain this.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. When feasible, any data before this date will not be replicated.|
-|interval|string||month|Some APIs such as <a href="https://dev.chartmogul.com/reference/endpoint-overview-metrics-api">Metrics</a> require intervals to cluster data.|
+|api_key |string||null|Your Chartmogul API key. See <a href="https://help.chartmogul.com/hc/en-us/articles/4407796325906-Creating-and-Managing-API-keys#creating-an-api-key"> the docs </a> for info on how to obtain this.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. When feasible, any data before this date will not be replicated.|
+|interval |string||month|Some APIs such as <a href="https://dev.chartmogul.com/reference/endpoint-overview-metrics-api">Metrics</a> require intervals to cluster data.|
 
 # Chartmogul Source
 

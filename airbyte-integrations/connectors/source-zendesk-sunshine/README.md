@@ -3,13 +3,13 @@
 ## Example
 ```json
 {
-  "subdomain": "my-zendesk-subdomain",
+  "subdomain": "myzendesk",
   "start_date": "2021-01-01T00:00:00Z",
   "credentials": {
     "auth_method": "oauth2.0",
-    "client_id": "my-client-id",
-    "client_secret": "my-client-secret",
-    "access_token": "my-access-token"
+    "client_id": "1234567890",
+    "client_secret": "abcdefghij",
+    "access_token": "abcdefghijklmnopqrstuvwxyz"
   }
 }
 ```
@@ -17,16 +17,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|subdomain|string||null|The subdomain for your Zendesk Account.|
-|start_date|string||null|The date from which you'd like to replicate data for Zendesk Sunshine API, in the format YYYY-MM-DDT00:00:00Z.|
-|credentials|object||null||
-|credentials.0.auth_method|string|oauth2.0|oauth2.0||
-|credentials.0.client_id|string||null|The Client ID of your OAuth application.|
-|credentials.0.client_secret|string||null|The Client Secret of your OAuth application.|
-|credentials.0.access_token|string||null|Long-term access Token for making authenticated requests.|
-|credentials.1.auth_method|string|api_token|api_token||
-|credentials.1.api_token|string||null|API Token. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk_sunshine">docs</a> for information on how to generate this key.|
-|credentials.1.email|string||null|The user email for your Zendesk account|
+|subdomain |string||null|The subdomain for your Zendesk Account.|
+|start_date |string||null|The date from which you'd like to replicate data for Zendesk Sunshine API, in the format YYYY-MM-DDT00:00:00Z.|
+|credentials.auth_method 0|string|oauth2.0|oauth2.0||
+|credentials.client_id 0|string||null|The Client ID of your OAuth application.|
+|credentials.client_secret 0|string||null|The Client Secret of your OAuth application.|
+|credentials.access_token 0|string||null|Long-term access Token for making authenticated requests.|
+|credentials.auth_method 1|string|api_token|api_token||
+|credentials.api_token 1|string||null|API Token. See the <a href="https://docs.airbyte.com/integrations/sources/zendesk_sunshine">docs</a> for information on how to generate this key.|
+|credentials.email 1|string||null|The user email for your Zendesk account|
 
 # Zendesk Sunshine Source
 

@@ -1,13 +1,13 @@
 # Source adjust
 
 ## Example
-```json
+```
 {
-  "api_token": "your_adjust_api_token",
+  "api_token": "your_api_token_here",
   "ingest_start": "2022-01-01",
   "metrics": [
-    "network_cost",
-    "network_installs"
+    "network_installs",
+    "network_cost"
   ],
   "dimensions": [
     "os_name",
@@ -23,12 +23,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|additional_metrics|array||null|Metrics names that are not pre-defined, such as cohort metrics or app specific metrics.|
-|api_token|string||null|Adjust API key, see https://help.adjust.com/en/article/report-service-api-authentication|
-|dimensions|array||null|Dimensions allow a user to break down metrics into groups using one or several parameters. For example, the number of installs by date, country and network. See https://help.adjust.com/en/article/reports-endpoint#dimensions for more information about the dimensions.|
-|ingest_start|string||null|Data ingest start date.|
-|metrics|array||null|Select at least one metric to query.|
-|until_today|boolean||false|Syncs data up until today. Useful when running daily incremental syncs, and duplicates are not desired.|
+|additional_metrics |array||null|Metrics names that are not pre-defined, such as cohort metrics or app specific metrics.|
+|api_token |string||null|Adjust API key, see https://help.adjust.com/en/article/report-service-api-authentication|
+|dimensions |array||null|Dimensions allow a user to break down metrics into groups using one or several parameters. For example, the number of installs by date, country and network. See https://help.adjust.com/en/article/reports-endpoint#dimensions for more information about the dimensions.|
+|ingest_start |string||null|Data ingest start date.|
+|metrics |array||null|Select at least one metric to query.|
+|until_today |boolean||false|Syncs data up until today. Useful when running daily incremental syncs, and duplicates are not desired.|
 
 # Adjust Source
 

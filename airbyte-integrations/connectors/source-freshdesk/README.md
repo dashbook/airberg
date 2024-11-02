@@ -4,7 +4,7 @@
 ```json
 {
   "domain": "myaccount.freshdesk.com",
-  "api_key": "some_secret_api_key",
+  "api_key": "my_api_key",
   "requests_per_minute": 50,
   "start_date": "2020-12-01T00:00:00Z"
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|domain|string||null|Freshdesk domain|
-|api_key|string||null|Freshdesk API Key. See the <a href="https://docs.airbyte.com/integrations/sources/freshdesk">docs</a> for more information on how to obtain this key.|
-|requests_per_minute|integer||null|The number of requests per minute that this source allowed to use. There is a rate limit of 50 requests per minute per app per account.|
-|start_date|string||null|UTC date and time. Any data created after this date will be replicated. If this parameter is not set, all data will be replicated.|
+|domain |string||null|Freshdesk domain|
+|api_key |string||null|Freshdesk API Key. See the <a href="https://docs.airbyte.com/integrations/sources/freshdesk">docs</a> for more information on how to obtain this key.|
+|requests_per_minute |integer||null|The number of requests per minute that this source allowed to use. There is a rate limit of 50 requests per minute per app per account.|
+|start_date |string||null|UTC date and time. Any data created after this date will be replicated. If this parameter is not set, all data will be replicated.|
 
 # Freshdesk Source 
 

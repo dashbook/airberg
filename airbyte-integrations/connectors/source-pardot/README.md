@@ -1,26 +1,26 @@
 # Source pardot
 
 ## Example
-```
+```json
 {
-  "pardot_business_unit_id": "12345",
-  "client_id": "abcdefg",
-  "client_secret": "hijklmnop",
-  "refresh_token": "qrstuvwx",
-  "start_date": "2022-01-01T00:00:00Z",
-  "is_sandbox": true
+  "pardot_business_unit_id": "Business Unit ID",
+  "client_id": "Consumer Key",
+  "client_secret": "Consumer Secret",
+  "refresh_token": "Salesforce Refresh Token",
+  "start_date": "2021-07-25T00:00:00Z",
+  "is_sandbox": false
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|pardot_business_unit_id|string||null|Pardot Business ID, can be found at Setup > Pardot > Pardot Account Setup|
-|client_id|string||null|The Consumer Key that can be found when viewing your app in Salesforce|
-|client_secret|string||null|The Consumer Secret that can be found when viewing your app in Salesforce|
-|refresh_token|string||null|Salesforce Refresh Token used for Airbyte to access your Salesforce account. If you don't know what this is, follow this <a href="https://medium.com/@bpmmendis94/obtain-access-refresh-tokens-from-salesforce-rest-api-a324fe4ccd9b">guide</a> to retrieve it.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. Leave blank to skip this filter|
-|is_sandbox|boolean||false|Whether or not the the app is in a Salesforce sandbox. If you do not know what this, assume it is false.|
+|pardot_business_unit_id |string||null|Pardot Business ID, can be found at Setup > Pardot > Pardot Account Setup|
+|client_id |string||null|The Consumer Key that can be found when viewing your app in Salesforce|
+|client_secret |string||null|The Consumer Secret that can be found when viewing your app in Salesforce|
+|refresh_token |string||null|Salesforce Refresh Token used for Airbyte to access your Salesforce account. If you don't know what this is, follow this <a href="https://medium.com/@bpmmendis94/obtain-access-refresh-tokens-from-salesforce-rest-api-a324fe4ccd9b">guide</a> to retrieve it.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. Leave blank to skip this filter|
+|is_sandbox |boolean||false|Whether or not the the app is in a Salesforce sandbox. If you do not know what this, assume it is false.|
 
 # Pardot Source
 

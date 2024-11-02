@@ -1,10 +1,10 @@
 # Source twilio
 
 ## Example
-```
+```json
 {
-  "account_sid": "AC1234567890",
-  "auth_token": "hashed_auth_token",
+  "account_sid": "your_account_sid",
+  "auth_token": "your_auth_token",
   "start_date": "2020-10-01T00:00:00Z",
   "lookback_window": 60
 }
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_sid|string||null|Twilio account SID|
-|auth_token|string||null|Twilio Auth Token.|
-|start_date|string||null|UTC date and time in the format 2020-10-01T00:00:00Z. Any data before this date will not be replicated.|
-|lookback_window|integer||0|How far into the past to look for records. (in minutes)|
+|account_sid |string||null|Twilio account SID|
+|auth_token |string||null|Twilio Auth Token.|
+|start_date |string||null|UTC date and time in the format 2020-10-01T00:00:00Z. Any data before this date will not be replicated.|
+|lookback_window |integer||0|How far into the past to look for records. (in minutes)|
 
 # Twilio Source
 

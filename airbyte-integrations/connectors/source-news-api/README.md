@@ -3,56 +3,56 @@
 ## Example
 ```json
 {
-  "api_key": "YOUR_API_KEY",
+  "api_key": "my_secret_api_key",
+  "search_query": "+bitcoin OR +crypto",
+  "search_in": ["title", "description"],
+  "sources": ["my_source"],
+  "domains": ["bbc.co.uk"],
+  "exclude_domains": ["techcrunch.com"],
+  "start_date": "2021-01-01",
+  "end_date": "2021-01-01T12:00:00",
+  "language": "en",
   "country": "us",
   "category": "business",
-  "sort_by": "publishedAt",
-  "search_query": "sunak AND (truss OR johnson)",
-  "search_in": ["title", "description"],
-  "sources": ["source1", "source2"],
-  "domains": ["bbc.co.uk", "techcrunch.com"],
-  "exclude_domains": ["engadget.com"],
-  "start_date": "2021-01-01",
-  "end_date": "2021-01-31",
-  "language": "en"
+  "sort_by": "publishedAt"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|search_query|string||null|Search query. See https://newsapi.org/docs/endpoints/everything for 
+|api_key |string||null|API Key|
+|search_query |string||null|Search query. See https://newsapi.org/docs/endpoints/everything for 
 information.
 |
-|search_in|array||null|Where to apply search query. Possible values are: title, description,
+|search_in |array||null|Where to apply search query. Possible values are: title, description,
 content.
 |
-|sources|array||null|Identifiers (maximum 20) for the news sources or blogs you want
+|sources |array||null|Identifiers (maximum 20) for the news sources or blogs you want
 headlines from. Use the `/sources` endpoint to locate these
 programmatically or look at the sources index:
 https://newsapi.com/sources. Will override both country and category.
 |
-|domains|array||null|A comma-seperated string of domains (eg bbc.co.uk, techcrunch.com,
+|domains |array||null|A comma-seperated string of domains (eg bbc.co.uk, techcrunch.com,
 engadget.com) to restrict the search to.
 |
-|exclude_domains|array||null|A comma-seperated string of domains (eg bbc.co.uk, techcrunch.com,
+|exclude_domains |array||null|A comma-seperated string of domains (eg bbc.co.uk, techcrunch.com,
 engadget.com) to remove from the results.
 |
-|start_date|string||null|A date and optional time for the oldest article allowed. This should
+|start_date |string||null|A date and optional time for the oldest article allowed. This should
 be in ISO 8601 format (e.g. 2021-01-01 or 2021-01-01T12:00:00).
 |
-|end_date|string||null|A date and optional time for the newest article allowed. This should
+|end_date |string||null|A date and optional time for the newest article allowed. This should
 be in ISO 8601 format (e.g. 2021-01-01 or 2021-01-01T12:00:00).
 |
-|language|string||null|The 2-letter ISO-639-1 code of the language you want to get headlines
+|language |string||null|The 2-letter ISO-639-1 code of the language you want to get headlines
 for. Possible options: ar de en es fr he it nl no pt ru se ud zh.
 |
-|country|string||us|The 2-letter ISO 3166-1 code of the country you want to get headlines
+|country |string||us|The 2-letter ISO 3166-1 code of the country you want to get headlines
 for. You can't mix this with the sources parameter.
 |
-|category|string||business|The category you want to get top headlines for.|
-|sort_by|string||publishedAt|The order to sort the articles in. Possible options: relevancy,
+|category |string||business|The category you want to get top headlines for.|
+|sort_by |string||publishedAt|The order to sort the articles in. Possible options: relevancy,
 popularity, publishedAt.
 |
 

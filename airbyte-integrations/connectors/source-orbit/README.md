@@ -1,10 +1,10 @@
 # Source orbit
 
 ## Example
-```json
+```
 {
-  "api_token": "your_secret_api_token",
-  "workspace": "your_workspace",
+  "api_token": "1234567890abcdef",
+  "workspace": "my_workspace",
   "start_date": "2022-06-26"
 }
 ```
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Authorizes you to work with Orbit workspaces associated with the token.|
-|workspace|string||null|The unique name of the workspace that your API token is associated with.|
-|start_date|string||null|Date in the format 2022-06-26. Only load members whose last activities are after this date.|
+|api_token |string||null|Authorizes you to work with Orbit workspaces associated with the token.|
+|workspace |string||null|The unique name of the workspace that your API token is associated with.|
+|start_date |string||null|Date in the format 2022-06-26. Only load members whose last activities are after this date.|
 
 # Orbit Source
 

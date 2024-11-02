@@ -1,9 +1,9 @@
 # Source python-http-tutorial
 
 ## Example
-```json
+```
 {
-  "apikey": "my_secret_key",
+  "apikey": "1234567890",
   "start_date": "2022-01-01",
   "base": "USD"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|apikey|string||null|API access key used to retrieve data from the Exchange Rates API.|
-|start_date|string||null|Start getting data from that date.|
-|base|string||null|ISO reference currency. See <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">here</a>.|
+|apikey |string||null|API access key used to retrieve data from the Exchange Rates API.|
+|start_date |string||null|Start getting data from that date.|
+|base |string||null|ISO reference currency. See <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">here</a>.|
 
 # Python Http Tutorial Source
 

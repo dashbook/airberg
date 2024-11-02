@@ -1,9 +1,9 @@
 # Source mailersend
 
 ## Example
-```json
+```
 {
-  "api_token": "1234567890",
+  "api_token": "your_secret_token",
   "domain_id": "example.com",
   "start_date": 1643723400
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_token|string||null|Your API Token. See <a href="https://www.mailersend.com/help/managing-api-tokens">here</a>.|
-|domain_id|string||null|The domain entity in mailersend|
-|start_date|number||null|Timestamp is assumed to be UTC.|
+|api_token |string||null|Your API Token. See <a href="https://www.mailersend.com/help/managing-api-tokens">here</a>.|
+|domain_id |string||null|The domain entity in mailersend|
+|start_date |number||null|Timestamp is assumed to be UTC.|
 
 # Mailersend Source
 

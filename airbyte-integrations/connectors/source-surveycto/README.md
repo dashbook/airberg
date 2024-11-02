@@ -3,10 +3,12 @@
 ## Example
 ```
 {
-  "server_name": "example-server",
-  "username": "example-username",
-  "password": "example-password",
-  "form_id": ["example-form-id"],
+  "server_name": "example_server",
+  "username": "example_username",
+  "password": "example_password",
+  "form_id": [
+    "example_form_id"
+  ],
   "start_date": "Jan 09, 2022 00:00:00 AM"
 }
 ```
@@ -14,11 +16,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|server_name|string||null|The name of the SurveryCTO server|
-|username|string||null|Username to authenticate into the SurveyCTO server|
-|password|string||null|Password to authenticate into the SurveyCTO server|
-|form_id|array||null|Unique identifier for one of your forms|
-|start_date|string||Jan 09, 2022 00:00:00 AM|initial date for survey cto|
+|server_name |string||null|The name of the SurveryCTO server|
+|username |string||null|Username to authenticate into the SurveyCTO server|
+|password |string||null|Password to authenticate into the SurveyCTO server|
+|form_id |array||null|Unique identifier for one of your forms|
+|start_date |string||Jan 09, 2022 00:00:00 AM|initial date for survey cto|
 
 # Surveycto Source
 

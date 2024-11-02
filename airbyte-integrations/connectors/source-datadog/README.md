@@ -5,22 +5,22 @@
 {
   "api_key": "your_api_key",
   "application_key": "your_application_key",
-  "query": "your_query",
+  "query": "",
   "max_records_per_request": 5000,
-  "start_date": "2022-10-01T00:00:00Z",
-  "end_date": "2022-10-01T00:00:00Z"
+  "start_date": "2022-01-01T00:00:00Z",
+  "end_date": ""
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Datadog API key|
-|application_key|string||null|Datadog application key|
-|query|string||null|The search query. This just applies to Incremental syncs. If empty, it'll collect all logs.|
-|max_records_per_request|integer||5000|Maximum number of records to collect per request.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. This just applies to Incremental syncs.|
-|end_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Data after this date will  not be replicated. An empty value will represent the current datetime for each  execution. This just applies to Incremental syncs.|
+|api_key |string||null|Datadog API key|
+|application_key |string||null|Datadog application key|
+|query |string||null|The search query. This just applies to Incremental syncs. If empty, it'll collect all logs.|
+|max_records_per_request |integer||5000|Maximum number of records to collect per request.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated. This just applies to Incremental syncs.|
+|end_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Data after this date will  not be replicated. An empty value will represent the current datetime for each  execution. This just applies to Incremental syncs.|
 
 # Datadog Source 
 

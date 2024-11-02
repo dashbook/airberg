@@ -1,20 +1,20 @@
 # Source mailgun
 
 ## Example
-```json
+```
 {
-  "private_key": "private-api-key-12345",
+  "private_key": "1234567890abcdef",
   "domain_region": "EU",
-  "start_date": "2020-01-01 00:00:00"
+  "start_date": "2020-10-01 00:00:00"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|private_key|string||null|Primary account API key to access your Mailgun data.|
-|domain_region|string||null|Domain region code. 'EU' or 'US' are possible values. The default is 'US'.|
-|start_date|string||null|UTC date and time in the format 2020-10-01 00:00:00. Any data before this date will not be replicated. If omitted, defaults to 3 days ago.|
+|private_key |string||null|Primary account API key to access your Mailgun data.|
+|domain_region |string||null|Domain region code. 'EU' or 'US' are possible values. The default is 'US'.|
+|start_date |string||null|UTC date and time in the format 2020-10-01 00:00:00. Any data before this date will not be replicated. If omitted, defaults to 3 days ago.|
 
 # Mailgun Source
 

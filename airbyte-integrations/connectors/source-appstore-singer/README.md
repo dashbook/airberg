@@ -1,12 +1,12 @@
 # Source appstore-singer
 
 ## Example
-```
+```json
 {
-  "key_id": "test_key_id",
-  "private_key": "test_private_key",
-  "issuer_id": "test_issuer_id",
-  "vendor": "test_vendor_id",
+  "key_id": "example_key_id",
+  "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAn/bY8eXbsBeeavUXfepb/19eXgqHSf5MaAlNKNuV4ysj+LjU\nxP5dUaIN7JROaJzE+JUm/eKQZL9hl/NVPlBUXlbt3yKaGj58N7EbcR7\r\n-----END RSA PRIVATE KEY-----",
+  "issuer_id": "example_issuer_id",
+  "vendor": "example_vendor",
   "start_date": "2020-11-16T00:00:00Z"
 }
 ```
@@ -14,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|key_id|string||null|Appstore Key ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this key.|
-|private_key|string||null|Appstore Private Key. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this key.|
-|issuer_id|string||null|Appstore Issuer ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this ID.|
-|vendor|string||null|Appstore Vendor ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this ID.|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|key_id |string||null|Appstore Key ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this key.|
+|private_key |string||null|Appstore Private Key. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this key.|
+|issuer_id |string||null|Appstore Issuer ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this ID.|
+|vendor |string||null|Appstore Vendor ID. See the <a href="https://docs.airbyte.com/integrations/sources/appstore">docs</a> for more information on how to obtain this ID.|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Source Appstore Singer
 

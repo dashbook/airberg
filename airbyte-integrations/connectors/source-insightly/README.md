@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "token": "your_secret_api_token",
+  "token": "abc123",
   "start_date": "2021-03-01T00:00:00Z"
 }
 ```

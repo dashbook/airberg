@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "access_token": "my_access_token",
+  "access_token": "token_value",
   "wrike_instance": "app-us2.wrike.com",
   "start_date": "2022-01-01T00:00:00Z"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|access_token|string||null|Permanent access token. You can find documentation on how to acquire a permanent access token  <a href="https://developers.wrike.com/oauth-20-authorization/">here</a>|
-|wrike_instance|string||app-us2.wrike.com|Wrike's instance such as `app-us2.wrike.com`|
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Only comments after this date will be replicated.|
+|access_token |string||null|Permanent access token. You can find documentation on how to acquire a permanent access token  <a href="https://developers.wrike.com/oauth-20-authorization/">here</a>|
+|wrike_instance |string||app-us2.wrike.com|Wrike's instance such as `app-us2.wrike.com`|
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Only comments after this date will be replicated.|
 
 # Wrike Source
 

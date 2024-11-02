@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "api_key": "your_api_key_here",
-  "account_username": "your_account_username_here"
+  "api_key": "my_api_key",
+  "account_username": "my_account_username"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|API Key|
-|account_username|string||null|Account Username|
+|api_key |string||null|API Key|
+|account_username |string||null|Account Username|
 
 # Activecampaign Source
 

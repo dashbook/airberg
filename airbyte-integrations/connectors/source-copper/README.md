@@ -1,18 +1,18 @@
 # Source copper
 
 ## Example
-```
+```json
 {
-  "api_key": "abc123",
-  "user_email": "john.doe@example.com"
+  "api_key": "your_api_key",
+  "user_email": "your_email@example.com"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Copper API key|
-|user_email|string||null|user email used to login in to Copper|
+|api_key |string||null|Copper API key|
+|user_email |string||null|user email used to login in to Copper|
 
 # Copper Source
 

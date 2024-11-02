@@ -1,22 +1,22 @@
 # Source metabase
 
 ## Example
-```json
+```
 {
   "instance_api_url": "https://localhost:3000/api/",
   "username": "person@metabase.com",
-  "password": "123456",
-  "session_token": "1234567890"
+  "password": "fakepassword",
+  "session_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|instance_api_url|string||null|URL to your metabase instance API|
-|username|string||null||
-|password|string||null||
-|session_token|string||null|To generate your session token, you need to run the following command: ``` curl -X POST \
+|instance_api_url |string||null|URL to your metabase instance API|
+|username |string||null||
+|password |string||null||
+|session_token |string||null|To generate your session token, you need to run the following command: ``` curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"username": "person@metabase.com", "password": "fakepassword"}' \
   http://localhost:3000/api/session

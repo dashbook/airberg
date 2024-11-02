@@ -1,14 +1,16 @@
 # Source lemlist
 
 ## Example
+```json
 {
   "api_key": "your_api_key_here"
 }
+```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|Lemlist API key.|
+|api_key |string||null|Lemlist API key.|
 
 # Lemlist Source
 

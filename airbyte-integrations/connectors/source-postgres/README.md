@@ -1,27 +1,27 @@
 # Source postgres
 
 ## Example
-```
+```json
 {
   "host": "localhost",
   "port": 5432,
-  "database": "mydatabase",
-  "schemas": ["public", "myschema"],
-  "username": "myuser",
-  "password": "mypassword",
+  "database": "test",
+  "schemas": ["public", "my_schema"],
+  "username": "airbyte",
+  "password": "password123",
   "jdbc_url_params": "key1=value1&key2=value2",
   "ssl_mode": {
-    "mode": "require",
-    "ca_certificate": "path/to/ca/certificate",
-    "client_certificate": "path/to/client/certificate",
-    "client_key": "path/to/client/key",
-    "client_key_password": "mypassword"
+    "mode": "verify-ca",
+    "ca_certificate": "-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----",
+    "client_certificate": "-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----",
+    "client_key": "-----BEGIN RSA PRIVATE KEY-----...-----END RSA PRIVATE KEY-----",
+    "client_key_password": "password123"
   },
   "replication_method": {
     "method": "CDC",
     "plugin": "pgoutput",
-    "replication_slot": "myslot",
-    "publication": "mypublication",
+    "replication_slot": "replication_slot_name",
+    "publication": "publication_name",
     "initial_waiting_seconds": 300,
     "queue_size": 10000,
     "lsn_commit_behaviour": "After loading Data in the destination"
@@ -32,38 +32,43 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|host|string||null|Hostname of the database.|
-|port|integer||5432|Port of the database.|
-|database|string||null|Name of the database.|
-|schemas|array||["public"]|The list of schemas (case sensitive) to sync from. Defaults to public.|
-|username|string||null|Username to access the database.|
-|password|string||null|Password associated with the username.|
-|jdbc_url_params|string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (Eg. key1=value1&key2=value2&key3=value3). For more information read about <a href="https://jdbc.postgresql.org/documentation/head/connect.html">JDBC URL parameters</a>.|
-|ssl_mode|object||null|SSL connection modes. 
-  Read more <a href="https://jdbc.postgresql.org/documentation/head/ssl-client.html"> in the docs</a>.|
-|replication_method|object||null|Replication method for extracting data from the database.|
-|ssl_mode.0.mode|string|disable|null||
-|ssl_mode.1.mode|string|allow|null||
-|ssl_mode.2.mode|string|prefer|null||
-|ssl_mode.3.mode|string|require|null||
-|ssl_mode.4.mode|string|verify-ca|null||
-|ssl_mode.4.ca_certificate|string||null|CA certificate|
-|ssl_mode.4.client_certificate|string||null|Client certificate|
-|ssl_mode.4.client_key|string||null|Client key|
-|ssl_mode.4.client_key_password|string||null|Password for keystorage. If you do not add it - the password will be generated automatically.|
-|ssl_mode.5.mode|string|verify-full|null||
-|ssl_mode.5.ca_certificate|string||null|CA certificate|
-|ssl_mode.5.client_certificate|string||null|Client certificate|
-|ssl_mode.5.client_key|string||null|Client key|
-|ssl_mode.5.client_key_password|string||null|Password for keystorage. If you do not add it - the password will be generated automatically.|
-|replication_method.0.method|string|Standard|null||
-|replication_method.1.method|string|CDC|null||
-|replication_method.1.plugin|string||pgoutput|A logical decoding plugin installed on the PostgreSQL server.|
-|replication_method.1.replication_slot|string||null|A plugin logical replication slot. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-3-create-replication-slot">replication slots</a>.|
-|replication_method.1.publication|string||null|A Postgres publication used for consuming changes. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-4-create-publications-and-replication-identities-for-tables">publications and replication identities</a>.|
-|replication_method.1.initial_waiting_seconds|integer||300|The amount of time the connector will wait when it launches to determine if there is new data to sync or not. Defaults to 300 seconds. Valid range: 120 seconds to 1200 seconds. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-5-optional-set-up-initial-waiting-time">initial waiting time</a>.|
-|replication_method.1.queue_size|integer||10000|The size of the internal queue. This may interfere with memory consumption and efficiency of the connector, please be careful.|
-|replication_method.1.lsn_commit_behaviour|string||After loading Data in the destination|Determines when Airbtye should flush the LSN of processed WAL logs in the source database. `After loading Data in the destination` is default. If `While reading Data` is selected, in case of a downstream failure (while loading data into the destination), next sync would result in a full sync.|
+|host |string||null|Hostname of the database.|
+|port |integer||5432|Port of the database.|
+|database |string||null|Name of the database.|
+|schemas |array||["public"]|The list of schemas (case sensitive) to sync from. Defaults to public.|
+|username |string||null|Username to access the database.|
+|password |string||null|Password associated with the username.|
+|jdbc_url_params |string||null|Additional properties to pass to the JDBC URL string when connecting to the database formatted as 'key=value' pairs separated by the symbol '&'. (Eg. key1=value1&key2=value2&key3=value3). For more information read about <a href="https://jdbc.postgresql.org/documentation/head/connect.html">JDBC URL parameters</a>.|
+|ssl_mode |||null|Disables encryption of communication between Airbyte and source database.|
+|ssl_mode |||null|Enables encryption only when required by the source database.|
+|ssl_mode |||null|Allows unencrypted connection only if the source database does not support encryption.|
+|ssl_mode |||null|Always require encryption. If the source database server does not support encryption, connection will fail.|
+|ssl_mode |||null|Always require encryption and verifies that the source database server has a valid SSL certificate.|
+|ssl_mode |||null|This is the most secure mode. Always require encryption and verifies the identity of the source database server.|
+|ssl_mode.mode 0|string|disable|null||
+|ssl_mode.mode 1|string|allow|null||
+|ssl_mode.mode 2|string|prefer|null||
+|ssl_mode.mode 3|string|require|null||
+|ssl_mode.mode 4|string|verify-ca|null||
+|ssl_mode.ca_certificate 4|string||null|CA certificate|
+|ssl_mode.client_certificate 4|string||null|Client certificate|
+|ssl_mode.client_key 4|string||null|Client key|
+|ssl_mode.client_key_password 4|string||null|Password for keystorage. If you do not add it - the password will be generated automatically.|
+|ssl_mode.mode 5|string|verify-full|null||
+|ssl_mode.ca_certificate 5|string||null|CA certificate|
+|ssl_mode.client_certificate 5|string||null|Client certificate|
+|ssl_mode.client_key 5|string||null|Client key|
+|ssl_mode.client_key_password 5|string||null|Password for keystorage. If you do not add it - the password will be generated automatically.|
+|replication_method |||null|Standard replication requires no setup on the DB side but will not be able to represent deletions incrementally.|
+|replication_method |||null|Logical replication uses the Postgres write-ahead log (WAL) to detect inserts, updates, and deletes. This needs to be configured on the source database itself. Only available on Postgres 10 and above. Read the <a href="https://docs.airbyte.com/integrations/sources/postgres">docs</a>.|
+|replication_method.method 0|string|Standard|null||
+|replication_method.method 1|string|CDC|null||
+|replication_method.plugin 1|string||pgoutput|A logical decoding plugin installed on the PostgreSQL server.|
+|replication_method.replication_slot 1|string||null|A plugin logical replication slot. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-3-create-replication-slot">replication slots</a>.|
+|replication_method.publication 1|string||null|A Postgres publication used for consuming changes. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-4-create-publications-and-replication-identities-for-tables">publications and replication identities</a>.|
+|replication_method.initial_waiting_seconds 1|integer||300|The amount of time the connector will wait when it launches to determine if there is new data to sync or not. Defaults to 300 seconds. Valid range: 120 seconds to 1200 seconds. Read about <a href="https://docs.airbyte.com/integrations/sources/postgres#step-5-optional-set-up-initial-waiting-time">initial waiting time</a>.|
+|replication_method.queue_size 1|integer||10000|The size of the internal queue. This may interfere with memory consumption and efficiency of the connector, please be careful.|
+|replication_method.lsn_commit_behaviour 1|string||After loading Data in the destination|Determines when Airbtye should flush the LSN of processed WAL logs in the source database. `After loading Data in the destination` is default. If `While reading Data` is selected, in case of a downstream failure (while loading data into the destination), next sync would result in a full sync.|
 
 # Postgres Source
 

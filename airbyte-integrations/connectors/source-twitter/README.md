@@ -3,20 +3,20 @@
 ## Example
 ```json
 {
-  "api_key": "access_token_here",
-  "query": "search_query_here",
-  "start_date": "2022-01-01T00:00:00Z",
-  "end_date": "2022-01-01T00:00:10Z"
+  "api_key": "your_access_token",
+  "query": "your_search_query",
+  "start_date": "2022-01-01T00:00:00.000Z",
+  "end_date": "2022-01-01T00:00:10.000Z"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null|App only Bearer Token. See the <a href="https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens">docs</a> for more information on how to obtain this token.|
-|query|string||null|Query for matching Tweets. You can learn how to build this query by reading <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query"> build a query guide </a>.|
-|start_date|string||null|The start date for retrieving tweets cannot be more than 7 days in the past.|
-|end_date|string||null|The end date for retrieving tweets must be a minimum of 10 seconds prior to the request time.|
+|api_key |string||null|App only Bearer Token. See the <a href="https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens">docs</a> for more information on how to obtain this token.|
+|query |string||null|Query for matching Tweets. You can learn how to build this query by reading <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query"> build a query guide </a>.|
+|start_date |string||null|The start date for retrieving tweets cannot be more than 7 days in the past.|
+|end_date |string||null|The end date for retrieving tweets must be a minimum of 10 seconds prior to the request time.|
 
 # Twitter Source
 

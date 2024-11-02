@@ -1,14 +1,11 @@
 # Source sonar-cloud
 
 ## Example
-```
+```json
 {
-  "user_token": "my_secret_token",
-  "organization": "airbyte",
-  "component_keys": [
-    "airbyte-ws-order",
-    "airbyte-ws-checkout"
-  ],
+  "user_token": "myuser_token",
+  "organization": "myorganization",
+  "component_keys": ["component1", "component2"],
   "start_date": "2022-01-01",
   "end_date": "2022-12-31"
 }
@@ -17,11 +14,11 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|user_token|string||null|Your User Token. See <a href="https://docs.sonarcloud.io/advanced-setup/user-accounts/">here</a>. The token is case sensitive.|
-|organization|string||null|Organization key. See <a href="https://docs.sonarcloud.io/appendices/project-information/#project-and-organization-keys">here</a>.|
-|component_keys|array||null|Comma-separated list of component keys.|
-|start_date|string||null|To retrieve issues created after the given date (inclusive).|
-|end_date|string||null|To retrieve issues created before the given date (inclusive).|
+|user_token |string||null|Your User Token. See <a href="https://docs.sonarcloud.io/advanced-setup/user-accounts/">here</a>. The token is case sensitive.|
+|organization |string||null|Organization key. See <a href="https://docs.sonarcloud.io/appendices/project-information/#project-and-organization-keys">here</a>.|
+|component_keys |array||null|Comma-separated list of component keys.|
+|start_date |string||null|To retrieve issues created after the given date (inclusive).|
+|end_date |string||null|To retrieve issues created before the given date (inclusive).|
 
 # Sonar Cloud Source
 

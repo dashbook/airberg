@@ -1,21 +1,21 @@
 # Source ringcentral
 
 ## Example
-```json
+```
 {
-  "auth_token": "some_secret_token",
-  "account_id": "some_account_id",
-  "extension_id": "some_extension_id"
+  "auth_token": "abcdefghijklmnopqrstuvwxyz",
+  "account_id": "123456789",
+  "extension_id": "987654321"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|auth_token|string||null|Token could be recieved by following instructions at https://developers.ringcentral.com/api-reference/authentication|
-|account_id|string||null|Could be seen at response to basic api call to an endpoint with ~ operator.  Example- (https://platform.devtest.ringcentral.com/restapi/v1.0/account/~/extension/~/business-hours)
+|auth_token |string||null|Token could be recieved by following instructions at https://developers.ringcentral.com/api-reference/authentication|
+|account_id |string||null|Could be seen at response to basic api call to an endpoint with ~ operator.  Example- (https://platform.devtest.ringcentral.com/restapi/v1.0/account/~/extension/~/business-hours)
 |
-|extension_id|string||null|Could be seen at response to basic api call to an endpoint with ~ operator.  Example- (https://platform.devtest.ringcentral.com/restapi/v1.0/account/~/extension/~/business-hours)
+|extension_id |string||null|Could be seen at response to basic api call to an endpoint with ~ operator.  Example- (https://platform.devtest.ringcentral.com/restapi/v1.0/account/~/extension/~/business-hours)
 |
 
 # Ringcentral Source

@@ -1,11 +1,11 @@
 # Source linnworks
 
 ## Example
-```json
+```
 {
-  "application_id": "abc123",
-  "application_secret": "abc123secret",
-  "token": "abc123token",
+  "application_id": "example_id",
+  "application_secret": "example_secret",
+  "token": "example_token",
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -13,10 +13,10 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|application_id|string||null|Linnworks Application ID|
-|application_secret|string||null|Linnworks Application Secret|
-|token|string||null||
-|start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|application_id |string||null|Linnworks Application ID|
+|application_secret |string||null|Linnworks Application Secret|
+|token |string||null||
+|start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
 
 # Linnworks Source
 

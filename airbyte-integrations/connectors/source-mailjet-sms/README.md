@@ -1,9 +1,9 @@
 # Source mailjet-sms
 
 ## Example
-```
+```json
 {
-  "token": "YOUR_ACCESS_TOKEN",
+  "token": "your_access_token",
   "start_date": 1666261656,
   "end_date": 1666281656
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|token|string||null|Your access token. See <a href="https://dev.mailjet.com/sms/reference/overview/authentication">here</a>.|
-|start_date|integer||null|Retrieve SMS messages created after the specified timestamp. Required format - Unix timestamp.|
-|end_date|integer||null|Retrieve SMS messages created before the specified timestamp. Required format - Unix timestamp.|
+|token |string||null|Your access token. See <a href="https://dev.mailjet.com/sms/reference/overview/authentication">here</a>.|
+|start_date |integer||null|Retrieve SMS messages created after the specified timestamp. Required format - Unix timestamp.|
+|end_date |integer||null|Retrieve SMS messages created before the specified timestamp. Required format - Unix timestamp.|
 
 # Mailjet Sms Source
 

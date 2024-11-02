@@ -5,9 +5,9 @@
 {
   "credentials": {
     "auth_type": "Client",
-    "client_id": "client123",
-    "client_secret": "super_secret",
-    "refresh_token": "refresh_token123"
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "refresh_token": "your_refresh_token"
   }
 }
 ```
@@ -15,13 +15,12 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to Retently|
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|The Client ID of your Retently developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Retently developer application.|
-|credentials.0.refresh_token|string||null|Retently Refresh Token which can be used to fetch new Bearer Tokens when the current one expires.|
-|credentials.1.auth_type|string|Token|null||
-|credentials.1.api_key|string||null|Retently API Token. See the <a href="https://app.retently.com/settings/api/tokens">docs</a> for more information on how to obtain this key.|
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|The Client ID of your Retently developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Retently developer application.|
+|credentials.refresh_token 0|string||null|Retently Refresh Token which can be used to fetch new Bearer Tokens when the current one expires.|
+|credentials.auth_type 1|string|Token|null||
+|credentials.api_key 1|string||null|Retently API Token. See the <a href="https://app.retently.com/settings/api/tokens">docs</a> for more information on how to obtain this key.|
 
 # Retently Source
 

@@ -1,7 +1,7 @@
 # Source spacex-api
 
 ## Example
-```
+```json
 {
   "id": "example-id",
   "options": "launches-latest"
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|id|string||null||
-|options|string||null||
+|id |string||null||
+|options |string||null||
 
 # Spacex Api Source
 

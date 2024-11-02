@@ -10,21 +10,22 @@
     "format_type": "JSONL"
   },
   "azure_blob_storage_endpoint": "blob.core.windows.net",
-  "azure_blob_storage_blobs_prefix": "FolderA/FolderB/"
+  "azure_blob_storage_blobs_prefix": "FolderA/FolderB/",
+  "azure_blob_storage_schema_inference_limit": 500
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|azure_blob_storage_endpoint|string||blob.core.windows.net|This is Azure Blob Storage endpoint domain name. Leave default value (or leave it empty if run container from command line) to use Microsoft native from example.|
-|azure_blob_storage_container_name|string||null|The name of the Azure blob storage container.|
-|azure_blob_storage_account_name|string||null|The account's name of the Azure Blob Storage.|
-|azure_blob_storage_account_key|string||null|The Azure blob storage account key.|
-|azure_blob_storage_blobs_prefix|string||null|The Azure blob storage prefix to be applied|
-|azure_blob_storage_schema_inference_limit|integer||null|The Azure blob storage blobs to scan for inferring the schema, useful on large amounts of data with consistent structure|
-|format|object||null|Input data format|
-|format.0.format_type|string|JSONL|null||
+|azure_blob_storage_endpoint |string||blob.core.windows.net|This is Azure Blob Storage endpoint domain name. Leave default value (or leave it empty if run container from command line) to use Microsoft native from example.|
+|azure_blob_storage_container_name |string||null|The name of the Azure blob storage container.|
+|azure_blob_storage_account_name |string||null|The account's name of the Azure Blob Storage.|
+|azure_blob_storage_account_key |string||null|The Azure blob storage account key.|
+|azure_blob_storage_blobs_prefix |string||null|The Azure blob storage prefix to be applied|
+|azure_blob_storage_schema_inference_limit |integer||null|The Azure blob storage blobs to scan for inferring the schema, useful on large amounts of data with consistent structure|
+|format |||null||
+|format.format_type 0|string|JSONL|null||
 
 # Source Azure Blob Storage
 

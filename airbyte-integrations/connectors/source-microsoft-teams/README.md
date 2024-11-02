@@ -1,15 +1,15 @@
 # Source microsoft-teams
 
 ## Example
-```
+```json
 {
   "period": "D7",
   "credentials": {
     "auth_type": "Client",
-    "tenant_id": "tenant-id",
-    "client_id": "client-id",
-    "client_secret": "client-secret",
-    "refresh_token": "refresh-token"
+    "tenant_id": "your_tenant_id",
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "refresh_token": "your_refresh_token"
   }
 }
 ```
@@ -17,17 +17,16 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|period|string||null|Specifies the length of time over which the Team Device Report stream is aggregated. The supported values are: D7, D30, D90, and D180.|
-|credentials|object||null|Choose how to authenticate to Microsoft|
-|credentials.0.auth_type|string|Client|Client||
-|credentials.0.tenant_id|string||null|A globally unique identifier (GUID) that is different than your organization name or domain. Follow these steps to obtain: open one of the Teams where you belong inside the Teams Application -> Click on the … next to the Team title -> Click on Get link to team -> Copy the link to the team and grab the tenant ID form the URL|
-|credentials.0.client_id|string||null|The Client ID of your Microsoft Teams developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Microsoft Teams developer application.|
-|credentials.0.refresh_token|string||null|A Refresh Token to renew the expired Access Token.|
-|credentials.1.auth_type|string|Token|Token||
-|credentials.1.tenant_id|string||null|A globally unique identifier (GUID) that is different than your organization name or domain. Follow these steps to obtain: open one of the Teams where you belong inside the Teams Application -> Click on the … next to the Team title -> Click on Get link to team -> Copy the link to the team and grab the tenant ID form the URL|
-|credentials.1.client_id|string||null|The Client ID of your Microsoft Teams developer application.|
-|credentials.1.client_secret|string||null|The Client Secret of your Microsoft Teams developer application.|
+|period |string||null|Specifies the length of time over which the Team Device Report stream is aggregated. The supported values are: D7, D30, D90, and D180.|
+|credentials.auth_type 0|string|Client|Client||
+|credentials.tenant_id 0|string||null|A globally unique identifier (GUID) that is different than your organization name or domain. Follow these steps to obtain: open one of the Teams where you belong inside the Teams Application -> Click on the … next to the Team title -> Click on Get link to team -> Copy the link to the team and grab the tenant ID form the URL|
+|credentials.client_id 0|string||null|The Client ID of your Microsoft Teams developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Microsoft Teams developer application.|
+|credentials.refresh_token 0|string||null|A Refresh Token to renew the expired Access Token.|
+|credentials.auth_type 1|string|Token|Token||
+|credentials.tenant_id 1|string||null|A globally unique identifier (GUID) that is different than your organization name or domain. Follow these steps to obtain: open one of the Teams where you belong inside the Teams Application -> Click on the … next to the Team title -> Click on Get link to team -> Copy the link to the team and grab the tenant ID form the URL|
+|credentials.client_id 1|string||null|The Client ID of your Microsoft Teams developer application.|
+|credentials.client_secret 1|string||null|The Client Secret of your Microsoft Teams developer application.|
 
 # Microsoft Teams Source 
 

@@ -3,14 +3,12 @@
 ## Example
 ```
 {
-  "account_id": "harvest_account_id",
+  "account_id": "123456",
   "replication_start_date": "2022-01-01T00:00:00Z",
-  "replication_end_date": "2022-12-31T00:00:00Z",
+  "replication_end_date": "2022-01-31T23:59:59Z",
   "credentials": {
-    "auth_type": "Client",
-    "client_id": "harvest_client_id",
-    "client_secret": "harvest_client_secret",
-    "refresh_token": "harvest_refresh_token"
+    "auth_type": "Token",
+    "api_token": "harvest_api_token"
   }
 }
 ```
@@ -18,16 +16,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_id|string||null|Harvest account ID. Required for all Harvest requests in pair with Personal Access Token|
-|replication_start_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
-|replication_end_date|string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data after this date will not be replicated.|
-|credentials|object||null|Choose how to authenticate to Harvest.|
-|credentials.0.auth_type|string|Client|null||
-|credentials.0.client_id|string||null|The Client ID of your Harvest developer application.|
-|credentials.0.client_secret|string||null|The Client Secret of your Harvest developer application.|
-|credentials.0.refresh_token|string||null|Refresh Token to renew the expired Access Token.|
-|credentials.1.auth_type|string|Token|null||
-|credentials.1.api_token|string||null|Log into Harvest and then create new <a href="https://id.getharvest.com/developers"> personal access token</a>.|
+|account_id |string||null|Harvest account ID. Required for all Harvest requests in pair with Personal Access Token|
+|replication_start_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data before this date will not be replicated.|
+|replication_end_date |string||null|UTC date and time in the format 2017-01-25T00:00:00Z. Any data after this date will not be replicated.|
+|credentials.auth_type 0|string|Client|null||
+|credentials.client_id 0|string||null|The Client ID of your Harvest developer application.|
+|credentials.client_secret 0|string||null|The Client Secret of your Harvest developer application.|
+|credentials.refresh_token 0|string||null|Refresh Token to renew the expired Access Token.|
+|credentials.auth_type 1|string|Token|null||
+|credentials.api_token 1|string||null|Log into Harvest and then create new <a href="https://id.getharvest.com/developers"> personal access token</a>.|
 
 # Harvest Source
 

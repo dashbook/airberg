@@ -1,16 +1,16 @@
 # Source pinterest
 
 ## Example
-```json
+```
 {
-  "start_date": "2022-07-28",
-  "status": ["ACTIVE"],
   "credentials": {
     "auth_method": "oauth2.0",
-    "client_id": "your_client_id",
-    "client_secret": "your_client_secret",
-    "refresh_token": "your_refresh_token"
-  }
+    "client_id": "abc123",
+    "client_secret": "xyz456",
+    "refresh_token": "token123"
+  },
+  "start_date": "2022-07-28",
+  "status": ["ACTIVE"]
 }
 ```
 

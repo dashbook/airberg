@@ -5,7 +5,7 @@
 {
   "queue_url": "https://sqs.eu-west-1.amazonaws.com/1234567890/my-example-queue",
   "region": "eu-west-1",
-  "delete_messages": true,
+  "delete_messages": false,
   "max_batch_size": 5,
   "max_wait_time": 5,
   "attributes_to_return": "attr1,attr2",
@@ -18,15 +18,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|queue_url|string||null|URL of the SQS Queue|
-|region|string||null|AWS Region of the SQS Queue|
-|delete_messages|boolean||false|If Enabled, messages will be deleted from the SQS Queue after being read. If Disabled, messages are left in the queue and can be read more than once. WARNING: Enabling this option can result in data loss in cases of failure, use with caution, see documentation for more detail. |
-|max_batch_size|integer||null|Max amount of messages to get in one batch (10 max)|
-|max_wait_time|integer||null|Max amount of time in seconds to wait for messages in a single poll (20 max)|
-|attributes_to_return|string||null|Comma separated list of Mesage Attribute names to return|
-|visibility_timeout|integer||null|Modify the Visibility Timeout of the individual message from the Queue's default (seconds).|
-|access_key|string||null|The Access Key ID of the AWS IAM Role to use for pulling messages|
-|secret_key|string||null|The Secret Key of the AWS IAM Role to use for pulling messages|
+|queue_url |string||null|URL of the SQS Queue|
+|region |string||null|AWS Region of the SQS Queue|
+|delete_messages |boolean||false|If Enabled, messages will be deleted from the SQS Queue after being read. If Disabled, messages are left in the queue and can be read more than once. WARNING: Enabling this option can result in data loss in cases of failure, use with caution, see documentation for more detail. |
+|max_batch_size |integer||null|Max amount of messages to get in one batch (10 max)|
+|max_wait_time |integer||null|Max amount of time in seconds to wait for messages in a single poll (20 max)|
+|attributes_to_return |string||null|Comma separated list of Mesage Attribute names to return|
+|visibility_timeout |integer||null|Modify the Visibility Timeout of the individual message from the Queue's default (seconds).|
+|access_key |string||null|The Access Key ID of the AWS IAM Role to use for pulling messages|
+|secret_key |string||null|The Secret Key of the AWS IAM Role to use for pulling messages|
 
 # Amazon Sqs Source
 

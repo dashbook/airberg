@@ -3,16 +3,16 @@
 ## Example
 ```json
 {
-  "account_sid": "your_account_sid",
-  "auth_token": "your_auth_token"
+  "account_sid": "AC1234567890",
+  "auth_token": "your-auth-token"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|account_sid|string||null|Twilio Account ID|
-|auth_token|string||null|Twilio Auth Token|
+|account_sid |string||null|Twilio Account ID|
+|auth_token |string||null|Twilio Auth Token|
 
 # Twilio Taskrouter Source
 

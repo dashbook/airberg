@@ -3,7 +3,7 @@
 ## Example
 ```json
 {
-  "api_key": "my_secret_api_key",
+  "api_key": "your_api_key_here",
   "query_path": "data/2019/cbp",
   "query_params": "get=NAME,NAICS2017_LABEL,LFO_LABEL,EMPSZES_LABEL,ESTAB,PAYANN,PAYQTR1,EMP&for=us:*&NAICS2017=72&LFO=001&EMPSZES=001"
 }
@@ -12,9 +12,9 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|query_params|string||null|The query parameters portion of the GET request, without the api key|
-|query_path|string||null|The path portion of the GET request|
-|api_key|string||null|Your API Key. Get your key <a href="https://api.census.gov/data/key_signup.html">here</a>.|
+|query_params |string||null|The query parameters portion of the GET request, without the api key|
+|query_path |string||null|The path portion of the GET request|
+|api_key |string||null|Your API Key. Get your key <a href="https://api.census.gov/data/key_signup.html">here</a>.|
 
 # Us Census Source
 

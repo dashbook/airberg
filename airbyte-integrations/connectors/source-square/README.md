@@ -4,12 +4,10 @@
 ```json
 {
   "credentials": {
-    "auth_type": "OAuth",
-    "client_id": "my_client_id",
-    "client_secret": "my_client_secret",
-    "refresh_token": "my_refresh_token"
+    "auth_type": "API Key",
+    "api_key": "secret-api-key-token"
   },
-  "is_sandbox": true,
+  "is_sandbox": false,
   "start_date": "2021-01-01",
   "include_deleted_objects": false
 }
@@ -18,16 +16,15 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null|Choose how to authenticate to Square.|
-|is_sandbox|boolean||false|Determines whether to use the sandbox or production environment.|
-|start_date|string||2021-01-01|UTC date in the format YYYY-MM-DD. Any data before this date will not be replicated. If not set, all data will be replicated.|
-|include_deleted_objects|boolean||false|In some streams there is an option to include deleted objects (Items, Categories, Discounts, Taxes)|
-|credentials.0.auth_type|string|OAuth|null||
-|credentials.0.client_id|string||null|The Square-issued ID of your application|
-|credentials.0.client_secret|string||null|The Square-issued application secret for your application|
-|credentials.0.refresh_token|string||null|A refresh token generated using the above client ID and secret|
-|credentials.1.auth_type|string|API Key|null||
-|credentials.1.api_key|string||null|The API key for a Square application|
+|is_sandbox |boolean||false|Determines whether to use the sandbox or production environment.|
+|start_date |string||2021-01-01|UTC date in the format YYYY-MM-DD. Any data before this date will not be replicated. If not set, all data will be replicated.|
+|include_deleted_objects |boolean||false|In some streams there is an option to include deleted objects (Items, Categories, Discounts, Taxes)|
+|credentials.auth_type 0|string|OAuth|null||
+|credentials.client_id 0|string||null|The Square-issued ID of your application|
+|credentials.client_secret 0|string||null|The Square-issued application secret for your application|
+|credentials.refresh_token 0|string||null|A refresh token generated using the above client ID and secret|
+|credentials.auth_type 1|string|API Key|null||
+|credentials.api_key 1|string||null|The API key for a Square application|
 
 # Square Source
 

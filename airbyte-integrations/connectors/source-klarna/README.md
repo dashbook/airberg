@@ -4,19 +4,19 @@
 ```json
 {
   "region": "eu",
-  "playground": true,
-  "username": "test12345",
-  "password": "secret"
+  "playground": false,
+  "username": "your eid + random string",
+  "password": "your password"
 }
 ```
 
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|region|string||null|Base url region (For playground eu https://docs.klarna.com/klarna-payments/api/payments-api/#tag/API-URLs). Supported 'eu', 'us', 'oc'|
-|playground|boolean||false|Propertie defining if connector is used against playground or production environment|
-|username|string||null|Consists of your Merchant ID (eid) - a unique number that identifies your e-store, combined with a random string (https://developers.klarna.com/api/#authentication)|
-|password|string||null|A string which is associated with your Merchant ID and is used to authorize use of Klarna's APIs (https://developers.klarna.com/api/#authentication)|
+|region |string||null|Base url region (For playground eu https://docs.klarna.com/klarna-payments/api/payments-api/#tag/API-URLs). Supported 'eu', 'us', 'oc'|
+|playground |boolean||false|Propertie defining if connector is used against playground or production environment|
+|username |string||null|Consists of your Merchant ID (eid) - a unique number that identifies your e-store, combined with a random string (https://developers.klarna.com/api/#authentication)|
+|password |string||null|A string which is associated with your Merchant ID and is used to authorize use of Klarna's APIs (https://developers.klarna.com/api/#authentication)|
 
 # Klarna Source
 

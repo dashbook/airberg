@@ -1,7 +1,7 @@
 # Source zapier-supported-storage
 
 ## Example
-```json
+```
 {
   "secret": "my_secret_key"
 }
@@ -10,7 +10,7 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|secret|string||null|Secret key supplied by zapier|
+|secret |string||null|Secret key supplied by zapier|
 
 # Zapier Supported Storage Source
 

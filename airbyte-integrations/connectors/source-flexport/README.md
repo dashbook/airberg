@@ -1,9 +1,9 @@
 # Source flexport
 
 ## Example
-```json
+```
 {
-  "api_key": "1234567890",
+  "api_key": "my_secret_key",
   "start_date": "2022-01-01T00:00:00Z"
 }
 ```
@@ -11,8 +11,8 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|api_key|string||null||
-|start_date|string||null||
+|api_key |string||null||
+|start_date |string||null||
 
 # Flexport Source
 

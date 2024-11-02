@@ -1,14 +1,14 @@
 # Source monday
 
 ## Example
-```json
+```
 {
   "credentials": {
     "auth_type": "oauth2.0",
-    "subdomain": "example-subdomain",
-    "client_id": "example-client-id",
-    "client_secret": "example-client-secret",
-    "access_token": "example-access-token"
+    "client_id": "1234567890",
+    "client_secret": "abcdefghij",
+    "access_token": "abcdefghijklmnopqrstuvwxyz",
+    "subdomain": "example"
   }
 }
 ```
@@ -16,14 +16,13 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|credentials|object||null||
-|credentials.0.subdomain|string|||Slug/subdomain of the account, or the first part of the URL that comes before .monday.com|
-|credentials.0.auth_type|string|oauth2.0|null||
-|credentials.0.client_id|string||null|The Client ID of your OAuth application.|
-|credentials.0.client_secret|string||null|The Client Secret of your OAuth application.|
-|credentials.0.access_token|string||null|Access Token for making authenticated requests.|
-|credentials.1.auth_type|string|api_token|null||
-|credentials.1.api_token|string||null|API Token for making authenticated requests.|
+|credentials.subdomain 0|string|||Slug/subdomain of the account, or the first part of the URL that comes before .monday.com|
+|credentials.auth_type 0|string|oauth2.0|null||
+|credentials.client_id 0|string||null|The Client ID of your OAuth application.|
+|credentials.client_secret 0|string||null|The Client Secret of your OAuth application.|
+|credentials.access_token 0|string||null|Access Token for making authenticated requests.|
+|credentials.auth_type 1|string|api_token|null||
+|credentials.api_token 1|string||null|API Token for making authenticated requests.|
 
 # Monday Source
 
