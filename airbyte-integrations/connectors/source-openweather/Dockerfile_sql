@@ -1,0 +1,13 @@
+FROM dashbook/destination-iceberg:python-sql
+
+WORKDIR /airbyte
+COPY setup.py ./
+COPY source_openweather ./source_openweather
+COPY main.py ./
+COPY --chmod=0755 sync-python.sh /airbyte/entrypoint.sh
+
+RUN pip install "cython<3.0.0" wheel
+RUN pip install "pyyaml==5.4.1" --no-build-isolation
+RUN pip install .
+
+ENTRYPOINT [ "/airbyte/entrypoint.sh"]

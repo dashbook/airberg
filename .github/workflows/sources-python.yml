@@ -85,3 +85,14 @@ jobs:
           tags: dashbook/source-salesforce:sql
           cache-from: type=registry,ref=dashbook/source-salesforce:sql
           cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-openweather/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-openweather:sql
+          cache-from: type=registry,ref=dashbook/source-openweather:sql
+          cache-to: type=inline
