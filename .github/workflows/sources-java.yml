@@ -75,11 +75,11 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:airbyte-integrations/connectors/source-myfile/"
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-mysql/"
           file: Dockerfile_file
           push: true
-          tags: dashbook/source-myfile:file
-          cache-from: type=registry,ref=dashbook/source-myfile:file
+          tags: dashbook/source-mysql:file
+          cache-from: type=registry,ref=dashbook/source-mysql:file
           cache-to: type=inline
       -
         name: Build and push
