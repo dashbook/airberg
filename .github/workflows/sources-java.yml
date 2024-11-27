@@ -61,3 +61,43 @@ jobs:
           tags: dashbook/source-mongodb-v2:sql
           cache-from: type=registry,ref=dashbook/source-mongodb-v2:sql
           cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-postgres/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-postgres:file
+          cache-from: type=registry,ref=dashbook/source-postgres:file
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-myfile/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-myfile:file
+          cache-from: type=registry,ref=dashbook/source-myfile:file
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-kafka/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-kafka:file
+          cache-from: type=registry,ref=dashbook/source-kafka:file
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-mongodb-v2/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-mongodb-v2:file
+          cache-from: type=registry,ref=dashbook/source-mongodb-v2:file
+          cache-to: type=inline

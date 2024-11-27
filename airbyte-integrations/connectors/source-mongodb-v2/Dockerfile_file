@@ -1,0 +1,17 @@
+FROM dashbook/airbyte-java-source-builder:latest AS build
+RUN gradle --no-daemon :airbyte-integrations:connectors:source-mongodb-v2:assemble
+RUN tar -xvf /home/gradle/src/airbyte-integrations/connectors/source-mongodb-v2/build/distributions/source-mongodb-v2*.tar --strip-components=1 
+
+FROM dashbook/destination-iceberg:java-file
+
+WORKDIR /airbyte
+
+ENV AIRBYTE_SOURCE=source-mongodb-v2
+
+COPY --from=build /home/gradle/src/lib /airbyte/lib
+COPY --from=build /home/gradle/src/bin /airbyte/bin
+COPY --from=build --chmod=0755 /home/gradle/src/sync-java.sh /airbyte/bin/entrypoint.sh
+
+ENTRYPOINT [ "/airbyte/bin/entrypoint.sh"]
+
+
