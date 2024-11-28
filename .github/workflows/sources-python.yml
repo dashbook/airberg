@@ -85,7 +85,6 @@ jobs:
           tags: dashbook/source-salesforce:sql
           cache-from: type=registry,ref=dashbook/source-salesforce:sql
           cache-to: type=inline
-
       -
         name: Build and push
         uses: docker/build-push-action@v6
@@ -95,6 +94,16 @@ jobs:
           push: true
           tags: dashbook/source-openweather:sql
           cache-from: type=registry,ref=dashbook/source-openweather:sql
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-faker/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-faker:sql
+          cache-from: type=registry,ref=dashbook/source-faker:sql
           cache-to: type=inline
       -
         name: Build and push
@@ -171,4 +180,14 @@ jobs:
           push: true
           tags: dashbook/source-openweather:file
           cache-from: type=registry,ref=dashbook/source-openweather:file
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-faker/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-faker:file
+          cache-from: type=registry,ref=dashbook/source-faker:file
           cache-to: type=inline
