@@ -89,7 +89,7 @@ class PurchaseGenerator:
                 "id": id,
                 "product_id": product_id,
                 "user_id": user_id + 1,
-                "created_at": created_at,
+                "created_at": format_airbyte_time(created_at),
                 "updated_at": updated_at,
                 "added_to_cart_at": format_airbyte_time(added_to_cart_at) if added_to_cart_at is not None else None,
                 "purchased_at": format_airbyte_time(purchased_at) if purchased_at is not None else None,
