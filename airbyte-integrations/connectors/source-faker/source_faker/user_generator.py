@@ -60,15 +60,6 @@ class UserGenerator:
             "height": person.height(),
             "blood_type": person.blood_type(),
             "weight": person.weight(),
-            "address": {
-                "street_number": address.street_number(),
-                "street_name": address.street_name(),
-                "city": address.city(),
-                "state": address.state(),
-                "province": address.province(),
-                "postal_code": address.postal_code(),
-                "country_code": address.country_code(),
-            },
         }
 
         while not profile["created_at"]:
