@@ -2,7 +2,7 @@
   "documentationUrl": "https://docs.airbyte.io/integrations/sources/microsoft-dataverse",
   "connectionSpecification": {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Microsoft Dataverse Spec",
+    "title": "Microsoft Dataverse / Dynamics 365 Spec",
     "type": "object",
     "required": [
       "url",
@@ -14,30 +14,32 @@
     "properties": {
       "url": {
         "type": "string",
-        "description": "URL to Microsoft Dataverse API",
+        "description": "URL to Microsoft Dataverse / Dynamics 365 instance. This is the Web API endpoint for your organization.",
         "title": "URL",
         "examples": [
-          "https://<org-id>.crm.dynamics.com"
+          "https://<org-name>.crm.dynamics.com",
+          "https://<org-name>.crm4.dynamics.com",
+          "https://<org-name>.crm.dynamics.com"
         ],
         "order": 0
       },
       "tenant_id": {
         "type": "string",
-        "description": "Tenant Id of your Microsoft Dataverse Instance",
+        "description": "Azure Active Directory Tenant ID for your Microsoft Dataverse / Dynamics 365 instance",
         "title": "Tenant Id",
         "airbyte_secret": true,
         "order": 1
       },
       "client_id": {
         "type": "string",
-        "description": "App Registration Client Id",
+        "description": "Azure AD App Registration Client ID with access to your Dataverse / Dynamics 365 environment",
         "title": "Client Id",
         "airbyte_secret": true,
         "order": 2
       },
       "client_secret_value": {
         "type": "string",
-        "description": "App Registration Client Secret",
+        "description": "Azure AD App Registration Client Secret value",
         "title": "Client Secret",
         "airbyte_secret": true,
         "order": 3

@@ -1,4 +1,18 @@
-# Source microsoft-dataverse
+# Microsoft Dataverse / Dynamics 365 Source
+
+## Overview
+
+This connector syncs data from **Microsoft Dataverse** and **Microsoft Dynamics 365** applications.
+
+### What's the relationship between Dataverse and Dynamics 365?
+
+**Microsoft Dataverse** is the underlying data platform that powers **Dynamics 365** applications (Sales, Customer Service, Field Service, Marketing, Project Operations, etc.). They use the **same Web API**, which means:
+
+- This single connector works for both Dataverse and Dynamics 365
+- All Dynamics 365 applications are built on top of Dataverse
+- The API endpoint, authentication, and data access patterns are identical
+
+Whether you're using standalone Dataverse or any Dynamics 365 application, you can use this connector to sync your data.
 
 ## Example
 ```json
@@ -14,15 +28,80 @@
 ## Configuration
 | Name | Type | Constant | Default | Description |
 | --- | --- | --- | --- | --- |
-|url |string||null|URL to Microsoft Dataverse API|
-|tenant_id |string||null|Tenant Id of your Microsoft Dataverse Instance|
-|client_id |string||null|App Registration Client Id|
-|client_secret_value |string||null|App Registration Client Secret|
-|odata_maxpagesize |integer||5000|Max number of results per page. Default=5000|
+|url |string||null|URL to your Dataverse / Dynamics 365 instance (e.g., https://yourorg.crm.dynamics.com)|
+|tenant_id |string||null|Azure AD Tenant ID for your organization|
+|client_id |string||null|Azure AD App Registration Client ID|
+|client_secret_value |string||null|Azure AD App Registration Client Secret|
+|odata_maxpagesize |integer||5000|Max number of results per page (Default: 5000, Max: 5000)|
 
-# Microsoft Dataverse Source
+## Supported Features
 
-This is the repository for the Microsoft Dataverse source connector, written in Python.
+- **Full Refresh Sync** - Retrieve all records from entities
+- **Incremental Sync** - Retrieve only new and updated records (for entities with change tracking enabled)
+- **Change Data Capture (CDC)** - Track deleted records
+- **Dynamic Schema Discovery** - Automatically discovers all standard and custom entities
+- **Pagination** - Handles large datasets efficiently
+
+## Supported Entities
+
+This connector automatically discovers and syncs:
+- All standard Dynamics 365 entities (Accounts, Contacts, Opportunities, Cases, etc.)
+- All custom entities in your environment
+- System entities (where permissions allow)
+
+The actual entities available depend on your Dynamics 365 applications and customizations.
+
+## Authentication Setup
+
+This connector uses OAuth 2.0 client credentials flow via Azure Active Directory.
+
+### Prerequisites
+
+1. **Azure AD App Registration**
+   - Navigate to [Azure Portal](https://portal.azure.com) > Azure Active Directory > App registrations
+   - Click "New registration"
+   - Provide a name (e.g., "Airbyte Dataverse Connector")
+   - Click "Register"
+   - Note the **Application (client) ID** and **Directory (tenant) ID**
+
+2. **Create Client Secret**
+   - In your app registration, go to "Certificates & secrets"
+   - Click "New client secret"
+   - Add a description and choose expiration period
+   - Click "Add"
+   - **Copy the secret value immediately** (you won't be able to see it again)
+
+3. **Grant API Permissions**
+   - In your app registration, go to "API permissions"
+   - Click "Add a permission" > "Dynamics CRM"
+   - Select "Delegated permissions" or "Application permissions"
+   - Add "user_impersonation" permission
+   - Click "Grant admin consent"
+
+4. **Assign Security Role in Dynamics 365**
+   - Navigate to your Dynamics 365 instance
+   - Go to Settings > Security > Application Users
+   - Create a new application user linked to your Azure AD app
+   - Assign appropriate security roles (e.g., System Administrator, System Customizer, or custom role)
+
+### Finding Your Instance URL
+
+Your Dataverse / Dynamics 365 URL follows this pattern:
+- `https://<org-name>.crm.dynamics.com` (North America)
+- `https://<org-name>.crm4.dynamics.com` (Europe)
+- `https://<org-name>.crm5.dynamics.com` (APAC)
+- Other regions have different numbers
+
+You can find it by:
+1. Logging into your Dynamics 365 application
+2. Looking at the URL in your browser
+3. Or in Power Platform Admin Center under "Environments"
+
+---
+
+# Developer Documentation
+
+This is the repository for the Microsoft Dataverse / Dynamics 365 source connector, written in Python.
 For information about how to use this connector within Airbyte, see [the documentation](https://docs.airbyte.io/integrations/sources/microsoft-dataverse).
 
 ## Local development

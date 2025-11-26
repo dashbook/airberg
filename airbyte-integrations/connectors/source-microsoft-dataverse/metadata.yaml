@@ -7,7 +7,7 @@ data:
   githubIssueLabel: source-microsoft-dataverse
   icon: microsoftdataverse.svg
   license: MIT
-  name: Microsoft Dataverse
+  name: Microsoft Dataverse / Dynamics 365
   registries:
     cloud:
       enabled: false
