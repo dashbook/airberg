@@ -10,7 +10,7 @@ echo "Configuring catalog"
 destination-iceberg --config destination.json --catalog discover.json > catalog.json
 
 echo "Getting state"
-destination-iceberg --config destination.json --catalog discover.json --state > state.json
+destination-iceberg --config destination.json --catalog catalog.json --state > state.json
 
 echo "Syncing"
 python main.py read --config source.json --catalog catalog.json --state state.json | destination-iceberg --config destination.json --catalog catalog.json --write
