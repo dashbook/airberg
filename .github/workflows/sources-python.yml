@@ -89,6 +89,16 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-microsoft-dataverse/"
+          file: Dockerfile_sql
+          push: true
+          tags: dashbook/source-microsoft-dataverse:sql
+          cache-from: type=registry,ref=dashbook/source-microsoft-dataverse:sql
+          cache-to: type=inline
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
           context: "{{defaultContext}}:airbyte-integrations/connectors/source-openweather/"
           file: Dockerfile_sql
           push: true
@@ -169,6 +179,17 @@ jobs:
           push: true
           tags: dashbook/source-salesforce:file
           cache-from: type=registry,ref=dashbook/source-salesforce:file
+          cache-to: type=inline
+
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:airbyte-integrations/connectors/source-microsoft-dataverse/"
+          file: Dockerfile_file
+          push: true
+          tags: dashbook/source-microsoft-dataverse:file
+          cache-from: type=registry,ref=dashbook/source-microsoft-dataverse:file
           cache-to: type=inline
 
       -

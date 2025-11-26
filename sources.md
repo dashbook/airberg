@@ -10,6 +10,7 @@ This document contains links to README.md files for every connector whose direct
 - [source-google-sheets](airbyte-integrations/connectors/source-google-sheets/README.md)
 - [source-hubspot](airbyte-integrations/connectors/source-hubspot/README.md)
 - [source-kafka](airbyte-integrations/connectors/source-kafka/README.md)
+- [source-microsoft-dataverse](airbyte-integrations/connectors/source-microsoft-dataverse/README.md)
 - [source-mongodb-v2](airbyte-integrations/connectors/source-mongodb-v2/README.md)
 - [source-mysql](airbyte-integrations/connectors/source-mysql/README.md)
 - [source-openweather](airbyte-integrations/connectors/source-openweather/README.md)
