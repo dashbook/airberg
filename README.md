@@ -16,7 +16,7 @@ The configuration is done with a `source.json` and a `destination.json` file. Th
 
 ### Source config
 
-The `source.json` file contains the configuration parameters for the Airbyte source. The parameters for a specific source can be takes from the [list of sources]().
+The `source.json` file contains the configuration parameters for the Airbyte source. The parameters for a specific source can be takes from the [list of sources](sources.md).
 An example looks like the following:
 
 ```json
