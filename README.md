@@ -69,13 +69,13 @@ This example uses the [Iceberg destination](https://github.com/dashbook/destinat
 
 ```json
 {
-    "catalogName": "bronze",
-    "catalogUrl": "postgres://postgres:$POSTGRES_PASSWORD@postgres:5432",
-    "awsRegion": "us-east-1",
-    "awsAccessKeyId": "$AWS_ACCESS_KEY_ID",
-    "awsSecretAccessKey": "$AWS_SECRET_ACCESS_KEY",
-    "awsEndpoint": "http://localstack:4566",
-    "awsAllowHttp": "true",
+    "catalog_name": "bronze",
+    "catalog_url": "postgres://postgres:$POSTGRES_PASSWORD@postgres:5432",
+    "aws_region": "us-east-1",
+    "aws_access_key_id": "$AWS_ACCESS_KEY_ID",
+    "aws_secret_access_key": "$AWS_SECRET_ACCESS_KEY",
+    "aws_endpoint": "http://localstack:4566",
+    "aws_allow_http": "true",
     "bucket": "s3://example-kafka"
   }
 ```
@@ -88,7 +88,7 @@ Environment variables in configuration files are automatically substituted at ru
 ```json
 {
   "password": "$POSTGRES_PASSWORD",
-  "awsAccessKeyId": "$AWS_ACCESS_KEY_ID"
+  "aws_access_key_id": "$AWS_ACCESS_KEY_ID"
 }
 ```
 
